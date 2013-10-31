@@ -1,0 +1,28 @@
+<entry>
+	<organizer classCode="BATTERY" moodCode="EVN">
+		<templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+		<id root="SomeGUIDGoesHere1"/>
+		<code code="5778-6" displayName="Color of Urine" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+		<statusCode code="completed"/>
+		<effectiveTime value="201310230910+0500"/>
+		<component>
+			<observation classCode="OBS" moodCode="EVN">
+				<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+				<id root="SomeGUIDGoesHere2"/>
+				<code code="5778-6" displayName="Color of Urine" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+				<text>
+					<reference value="#SomeReferenceGoesHere1"/>
+				</text>
+				<statusCode code="completed"/>
+				<effectiveTime value="20131023090823+0500"/>
+				<value xsi:type="ST">Yellow</value>
+				<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+				<referenceRange>
+					<observationRange>
+						<text xsi:type="ST">None-Yellow</text>
+					</observationRange>
+				</referenceRange>
+			</observation>
+		</component>
+	</organizer>
+</entry>
