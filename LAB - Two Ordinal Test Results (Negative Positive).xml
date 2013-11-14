@@ -30,7 +30,7 @@
 				<id root="SomeGUIDGoesHere7"/>
 				<code code="50388-8" displayName="Neisseria gonorrhoeae rRNA" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
 				<text>
-					<reference value="#SomeReferenceGoesHere4"/>
+					<reference value="#SomeReferenceGoesHerHELLOe4"/>
 				</text>
 				<statusCode code="completed"/>
 				<effectiveTime value="201310221426+0500"/>
