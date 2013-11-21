@@ -17,13 +17,6 @@
 			<!-- Representing a result returned as unstructured string-->
 			<value xsi:type="ST">Yellow</value>
 			<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
-			<referenceRange>
-				<observationRange>
-					<text xsi:type="ST">None-Yellow</text>
-					<!-- This interpretation code denotes that this reference range is for normal results. This is not the interpretation a specific patient value-->
-					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
-				</observationRange>
-			</referenceRange>
 		</observation>
 	</component>
 </organizer>
