@@ -15,11 +15,11 @@
 			<statusCode code="completed"/>
 			<effectiveTime value="201310221426+0500"/>
 			<!-- Representing a result of an ordinal test (See LOINC axes) as negative in SNOMED-->
-			<value xsi:type="CO" code="260385009" codeSystemName="SNOMED-CT" displayName ="Negative" codeSystem ="2.16.840.1.113883.6.96" />
+			<value xsi:type="CO" code="260385009" codeSystemName="SNOMED-CT" displayName ="Negative" codeSystem ="2.16.840.1.113883.6.96"/>
 			<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 			<referenceRange>
 				<observationRange>
-					<value xsi:type="CO" code="260385009" codeSystemName="SNOMED-CT" displayName ="Negative" codeSystem ="2.16.840.1.113883.6.96" />
+					<value xsi:type="CO" code="260385009" codeSystemName="SNOMED-CT" displayName ="Negative" codeSystem ="2.16.840.1.113883.6.96"/>
 					<!-- This interpretation code denotes that this reference range is for normal results. This is not the interpretation a specific patient value-->
 					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 				</observationRange>
@@ -37,13 +37,20 @@
 			<statusCode code="completed"/>
 			<effectiveTime value="201310221426+0500"/>
 			<!-- Representing a result of an ordinal test (See LOINC axes) as positive in SNOMED-->
-			<value xsi:type="CO" code="10828004" codeSystemName="SNOMED-CT" displayName ="Positive" codeSystem ="2.16.840.1.113883.6.96" />
+			<value xsi:type="CO" code="10828004" codeSystemName="SNOMED-CT" displayName ="Positive" codeSystem ="2.16.840.1.113883.6.96"/>
 			<interpretationCode code="A" codeSystem="2.16.840.1.113883.5.83"/>
 			<referenceRange>
 				<observationRange>
-					<value xsi:type="CO" code="260385009" codeSystemName="SNOMED-CT" displayName ="Negative" codeSystem ="2.16.840.1.113883.6.96" />
+					<value xsi:type="CO" code="260385009" codeSystemName="SNOMED-CT" displayName ="Negative" codeSystem ="2.16.840.1.113883.6.96"/>
 					<!-- This interpretation code denotes that this reference range is for normal results. This is not the interpretation a specific patient value-->
 					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+				</observationRange>
+			</referenceRange>
+			<referenceRange>
+				<observationRange>
+					<value xsi:type="CO" code="10828004" codeSystemName="SNOMED-CT" displayName ="Positive" codeSystem ="2.16.840.1.113883.6.96"/>
+					<!-- This optional second interpretation code denotes that this reference range is for abnormal results. This is not the interpretation a specific patient value-->
+					<interpretationCode code="A" codeSystem="2.16.840.1.113883.5.83"/>
 				</observationRange>
 			</referenceRange>
 		</observation>
