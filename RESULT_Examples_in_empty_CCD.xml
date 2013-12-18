@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="CDA.xsl"?>
+<!-- This CCD was validated with no warnings/errors with NIST Validator for Ambulatory VDT on December 18, 2013. Note immunizations and procedures would need to be added for "Transition of Care" validation-->
 <ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xmlns="urn:hl7-org:v3" xmlns:cda="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc">
         <realmCode code="US"/>
