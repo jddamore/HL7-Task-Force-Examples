@@ -413,7 +413,7 @@
                                                                         <td>Urine Color</td>
                                                                         <td ID="SomeReferenceGoesHere1">Yellow</td>
                                                                         <td>Normal</td>
-                                                                        <td>Negative</td>
+                                                                        <td></td>
                                                                 </tr>
                                                                 <tr>
                                                                         <th colspan="4">Natriuretic Peptide B [Mass/Volume] In Blood at 10-20-2013 9:08a </th>
@@ -445,35 +445,28 @@
                                                 <content ID="results1">Lab Results For HL7 Example Task Force</content>
                                         </text>
                                         <entry>
-                                                <organizer classCode="BATTERY" moodCode="EVN">
-                                                        <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
-                                                        <id root="f1aa44dd-6f39-4f5c-b267-897c3824b563"/>
-                                                        <code code="5778-6" displayName="Color of Urine" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-                                                        <statusCode code="completed"/>
-                                                        <effectiveTime value="201310230910+0500"/>
-                                                        <component>
-                                                                <observation classCode="OBS" moodCode="EVN">
-                                                                        <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
-                                                                        <id root="f1aa44dd-6f39-4f5c-b267-897c3824b563"/>
-                                                                        <code code="5778-6" displayName="Color of Urine" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-                                                                        <text>
-                                                                                <reference value="#SomeReferenceGoesHere1"/>
-                                                                        </text>
-                                                                        <statusCode code="completed"/>
-                                                                        <effectiveTime value="20131023090823+0500"/>
-																		<!-- Representing a result returned as unstructured string-->
-                                                                        <value xsi:type="ST">Yellow</value>
-                                                                        <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
-                                                                        <referenceRange>
-                                                                                <observationRange>
-                                                                                        <text xsi:type="ST">None-Yellow</text>
-																					<!-- This interpretation code denotes that this reference range is for normal results. This is not the interpretation a specific patient value-->
-																					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
-                                                                                </observationRange>
-                                                                        </referenceRange>
-                                                                </observation>
-                                                        </component>
-                                                </organizer>
+											<organizer classCode="BATTERY" moodCode="EVN">
+												<templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+												<id root="f1aa44dd-6f39-4f5c-b267-897c3824b563"/>
+												<code code="5778-6" displayName="Color of Urine" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+												<statusCode code="completed"/>
+												<effectiveTime value="201310230910+0500"/>
+												<component>
+													<observation classCode="OBS" moodCode="EVN">
+														<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+														<id root="f1aa44dd-6f39-4f5c-b267-897c3824b563"/>
+														<code code="5778-6" displayName="Color of Urine" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+														<text>
+															<reference value="#SomeReferenceGoesHere1"/>
+														</text>
+														<statusCode code="completed"/>
+														<effectiveTime value="20131023090823+0500"/>
+														<!-- Representing a result returned as unstructured string-->
+														<value xsi:type="ST">Yellow</value>
+														<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+													</observation>
+												</component>
+											</organizer>
                                         </entry>
                                         <entry>
                                                 <organizer classCode="BATTERY" moodCode="EVN">
