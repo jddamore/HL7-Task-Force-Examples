@@ -1,4 +1,6 @@
-<substanceAdministration classCode="SBADM" moodCode="EVN">
+<substanceAdministration classCode="SBADM" moodCode="INT">
+	<!-- This medication use case is a medication to be administered. If it has been already administered use moodCode = "EVN". If an ordered drug then use moodCode = "RQO" -->
+	<!-- Dependencies exist between moodCode, statusCode and effectiveTime  -->
 	<templateId root="2.16.840.1.113883.10.20.22.4.16"/>
 	<id root="47d3e719-f688-459d-bcdc-47c6de0767a9"/>
 	<text>
