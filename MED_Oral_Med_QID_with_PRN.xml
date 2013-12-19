@@ -38,7 +38,7 @@
 			<!-- ** Precondition for substance administration ** -->
 			<templateId root="2.16.840.1.113883.10.20.22.4.25"/>
 			<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
-			<!-- If a precondition were specified in medication sig, you would include code here. Include nullFlavor when PRN specified but without precondition-->
+			<!-- If a precondition were specified in medication sig, you would include code here. Include nullFlavor="NI" when PRN specified but without precondition-->
 			<value xsi:type="CD" nullFlavor="NI"  />
 		</criterion>
 	</precondition>
