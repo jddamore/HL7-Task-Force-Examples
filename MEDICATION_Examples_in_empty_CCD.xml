@@ -292,11 +292,39 @@
 									<td>Dec-18-2013 - </td>
 									<td>Active</td>
 								</tr>
+								<tr>
+									<td>
+										<content ID="MedicationName_1" xmlns="urn:hl7-org:v3">Sudafed 30mg Oral Tablet</content>
+									</td>
+									<td>
+										<content ID="MedicationSig_1" xmlns="urn:hl7-org:v3">take 2 tablets every 4-6 hours</content>
+									</td>
+									<td>
+										<content ID="MedicationDosage_1" xmlns="urn:hl7-org:v3">30 MG</content>
+									</td>
+									<td>Jan-18-2014 - </td>
+									<td>Active</td>
+								</tr>
+								<tr>
+									<td>
+										<content ID="MedicationName_2" xmlns="urn:hl7-org:v3">Azithromycin 250mg Oral Tablet</content>
+									</td>
+									<td>
+										<content ID="MedicationSig_2" xmlns="urn:hl7-org:v3">take 2 tablets every 4-6 hours</content>
+									</td>
+									<td>
+										<content ID="MedicationDosage_2" xmlns="urn:hl7-org:v3">250 MG</content>
+									</td>
+									<td>Jan-10-2014 - Jan-14-2014</td>
+									<td>Active</td>
+								</tr>
 							</tbody>
 						</table>
 					</text>
 					<entry typeCode="DRIV">
-						<substanceAdministration classCode="SBADM" moodCode="EVN">
+						<substanceAdministration classCode="SBADM" moodCode="INT">
+							<!-- This medication use case is a medication to be administered. If it has been already administered use moodCode = "EVN". If an ordered drug then use moodCode = "RQO" -->
+							<!-- Dependencies exist between moodCode, statusCode and effectiveTime  -->
 							<templateId root="2.16.840.1.113883.10.20.22.4.16"/>
 							<id root="47d3e719-f688-459d-bcdc-47c6de0767a9"/>
 							<text>
@@ -304,7 +332,7 @@
 								<reference value="#MedicationSig_0"/>
 							</text>
 							<statusCode code="active"/>
-							<!-- This first effectiveTime shows that medication was added on December 18, 201 (not known to have stopped)-->
+							<!-- This first effectiveTime shows that medication was added on December 18, 2013 (not known to have stopped)-->
 							<effectiveTime xsi:type="IVL_TS">
 								<low value="20131218"/>
 								<high nullFlavor="NI"/>
@@ -336,10 +364,120 @@
 									<!-- ** Precondition for substance administration ** -->
 									<templateId root="2.16.840.1.113883.10.20.22.4.25"/>
 									<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
-									<!-- If a precondition were specified in medication sig, you would include code here. Include nullFlavor when PRN specified but without precondition-->
+									<!-- If a precondition were specified in medication sig, you would include code here. Include nullFlavor="NI" when PRN specified but without precondition-->
 									<value xsi:type="CD" nullFlavor="NI"  />
 								</criterion>
 							</precondition>
+						</substanceAdministration>
+					</entry>
+					<entry typeCode="DRIV">
+						<substanceAdministration classCode="SBADM" moodCode="INT">
+							<!-- This medication use case is a medication to be administered. If it has been already administered use moodCode = "EVN". If an ordered drug then use moodCode = "RQO" -->
+							<!-- Dependencies exist between moodCode, statusCode and effectiveTime  -->
+							<templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+							<id root="36edd5f0-0b15-49f6-a395-7752b4f18b77"/>
+							<text>
+								<!-- This reference refers to medication sig information in unstructured portion of section-->
+								<reference value="#MedicationSig_1"/>
+							</text>
+							<statusCode code="active"/>
+							<!-- This first effectiveTime shows that medication was prescribed on January 18, 2014 (not known to have stopped)-->
+							<effectiveTime xsi:type="IVL_TS">
+								<low value="20140118"/>
+								<high nullFlavor="NI"/>
+							</effectiveTime>
+							<!-- This second effectiveTime represents every 4-6 hours from medication sig.-->
+							<effectiveTime xsi:type="PIVL_PPD_TS">
+								<period value="5" unit="h" distributionType="U">
+									<standardDeviation value="1" unit="h"/>
+								</period>
+							</effectiveTime>
+							<routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" displayName="Oral"/>
+							<!-- This relates directly to the code used for medication. Since it's a tablet, then only specified needed in dose is 2x per administration-->
+							<doseQuantity value="2"/>
+							<consumable>
+								<manufacturedProduct classCode="MANU">
+									<!-- ** Medication information ** -->
+									<templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+									<id root="0be61984-eaa5-46b3-b75b-1d1ba28b5fff"/>
+									<manufacturedMaterial>
+										<!-- Medications should be specified at a level corresponding to prescription when possible, such as 30mg oral tablet (branded)-->
+										<code code="1049529" displayName="Sudafed 30 MG Oral Tablet" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm">
+											<originalText>
+												<reference value="#MedicationName_1"/>
+											</originalText>
+										</code>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+						</substanceAdministration>
+					</entry>
+					<entry typeCode="DRIV">
+						<substanceAdministration classCode="SBADM" moodCode="INT">
+							<!-- This medication use case is a medication to be administered. If it has been already administered use moodCode = "EVN". If an ordered drug then use moodCode = "RQO" -->
+							<!-- Dependencies exist between moodCode, statusCode and effectiveTime  -->
+							<templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+							<id root="bc22a9c5-bab4-4348-aa7e-a1b1897c9535"/>
+							<text>
+								<!-- This reference refers to medication sig information in unstructured portion of section-->
+								<reference value="#MedicationSig_2"/>
+							</text>
+							<statusCode code="active"/>
+							<!-- This first effectiveTime shows that medication was prescribed to start on January 10, 2014 for five days ending January 14, 2014-->
+							<effectiveTime xsi:type="IVL_TS">
+								<low value="20140110"/>
+								<high value="20140114"/>
+							</effectiveTime>
+							<!-- This second effectiveTime represents once per day from medication sig. InstituionSpecified = "false" means that it must be administered exactly once per day-->
+							<effectiveTime xsi:type="PIVL_TS" institutionSpecified="false" operator="A">
+								<period value="1" unit="d"/>
+							</effectiveTime>
+							<routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" displayName="Oral"/>
+							<!-- This relates directly to the code used for medication. This medication is administered as an oral table, so no unit is needed, but it has varying dosage over its course. -->
+							<!-- Azithromycin is commonly prescribed 2 tablets on day 1 then 1 tablet daily thereafter. More detail on timing included as entryRelationship with subordinate substanceAdministration-->
+							<doseQuantity>
+								<low value = "1"/>
+								<high value = "2"/>
+							</doseQuantity>
+							<consumable>
+								<manufacturedProduct classCode="MANU">
+									<!-- ** Medication information ** -->
+									<templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+									<id root="a9a55f64-3953-4f2c-b52e-c77399b854ae"/>
+									<manufacturedMaterial>
+										<!-- Medications should be specified at a level corresponding to prescription when possible, such as 250mg oral tablet (non-branded)-->
+										<code code="308460" displayName="Azithromycin 250 MG Oral Tablet" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm">
+											<originalText>
+												<reference value="#MedicationName_2"/>
+											</originalText>
+										</code>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+							<entryRelationship typeCode="COMP">
+								<substanceAdministration classCode="SBADM" moodCode="INT">
+									<!-- This subordinate substanceAdministration shows the first dosing regimen for the medication-->
+									<effectiveTime xsi:type="IVL_TS">
+										<low value="20140110"/>
+										<high value="20140110"/>
+									</effectiveTime>
+									<effectiveTime xsi:type="PIVL_TS" institutionSpecified="false" operator="A">
+										<period value="1" unit="d"/>
+									</effectiveTime>
+									<doseQuantity value="2"/>
+								</substanceAdministration>
+								<substanceAdministration classCode="SBADM" moodCode="INT">
+									<!-- This subordinate substanceAdministration shows the second (and final) dosing regimen for the medication-->
+									<effectiveTime xsi:type="IVL_TS">
+										<low value="20140111"/>
+										<high value="20140114"/>
+									</effectiveTime>
+									<effectiveTime xsi:type="PIVL_TS" institutionSpecified="false" operator="A">
+										<period value="1" unit="d"/>
+									</effectiveTime>
+									<doseQuantity value = "1"/>
+								</substanceAdministration>
+							</entryRelationship>
 						</substanceAdministration>
 					</entry>
 				</section>

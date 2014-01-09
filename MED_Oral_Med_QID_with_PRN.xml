@@ -8,7 +8,7 @@
 		<reference value="#MedicationSig_0"/>
 	</text>
 	<statusCode code="active"/>
-	<!-- This first effectiveTime shows that medication was added on December 18, 201 (not known to have stopped)-->
+	<!-- This first effectiveTime shows that medication was added on December 18, 2013 (not known to have stopped)-->
 	<effectiveTime xsi:type="IVL_TS">
 		<low value="20131218"/>
 		<high nullFlavor="NI"/>
