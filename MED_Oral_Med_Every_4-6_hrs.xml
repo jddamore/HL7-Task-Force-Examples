@@ -13,11 +13,12 @@
 		<low value="20140118"/>
 		<high nullFlavor="NI"/>
 	</effectiveTime>
-	<!-- This second effectiveTime represents every 4-6 hours from medication sig.-->
-	<effectiveTime xsi:type="PIVL_PPD_TS">
-   		<period value="5" unit="h" distributionType="U">
-      			<standardDeviation value="1" unit="h"/>
-   		</period>
+	<!-- This second effectiveTime represents every 4-6 hours from medication sig. InstituionSpecified = "false" means that it should be exactly timed to every 4-6 hours -->
+	<effectiveTime xsi:type="PIVL_TS" institutionSpecified="false" operator="A">
+		<period xsi:type="IVL_PQ">
+			<low value="4" unit="h"/>
+			<high value="6" unit="h"/>
+		</period>
 	</effectiveTime>
 	<routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" displayName="Oral"/>
 	<!-- This relates directly to the code used for medication. Since it's a tablet, then only specified needed in dose is 2x per administration-->
