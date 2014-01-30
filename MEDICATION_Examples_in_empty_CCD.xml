@@ -279,7 +279,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
+								<tr ID="Medication_0">
 									<td>
 										<content ID="MedicationName_0" xmlns="urn:hl7-org:v3">Ibuprofen 600mg Oral Tablet</content>
 									</td>
@@ -292,7 +292,7 @@
 									<td>Dec-18-2013 - </td>
 									<td>Active</td>
 								</tr>
-								<tr>
+								<tr ID="Medication_1">
 									<td>
 										<content ID="MedicationName_1" xmlns="urn:hl7-org:v3">Sudafed 30mg Oral Tablet</content>
 									</td>
@@ -305,7 +305,7 @@
 									<td>Jan-18-2014 - </td>
 									<td>Active</td>
 								</tr>
-								<tr>
+								<tr ID="Medication_2">
 									<td>
 										<content ID="MedicationName_2" xmlns="urn:hl7-org:v3">Azithromycin 250mg Oral Tablet</content>
 									</td>
@@ -328,8 +328,8 @@
 							<templateId root="2.16.840.1.113883.10.20.22.4.16"/>
 							<id root="47d3e719-f688-459d-bcdc-47c6de0767a9"/>
 							<text>
-								<!-- This reference refers to medication sig information in unstructured portion of section-->
-								<reference value="#MedicationSig_0"/>
+								<!-- This reference refers to medication information in unstructured portion of section-->
+								<reference value="#Medication_0"/>
 							</text>
 							<statusCode code="active"/>
 							<!-- This first effectiveTime shows that medication was added on December 18, 2013 (not known to have stopped)-->
@@ -337,7 +337,10 @@
 								<low value="20131218"/>
 								<high nullFlavor="NI"/>
 							</effectiveTime>
-							<!-- This second effectiveTime represents QID from medication sig. InstituionSpecified = "true" means that it can be given 4 times per day but need not be exactly timed to every 6 hours-->
+							<!-- This second effectiveTime represents QID from medication sig. -->
+							<!-- InstituionSpecified = "true" means that it can be given 4 times per day but need not be exactly timed to every 6 hours-->
+							<!-- InstituionSpecified = "false" would mean that timing needs to be administered exactly as structured-->
+							<!-- Operator "A" means that this timing information is in addition to previous effectiveTime information provided-->
 							<effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
 								<period value="6" unit="h"/>
 							</effectiveTime>
@@ -377,8 +380,8 @@
 							<templateId root="2.16.840.1.113883.10.20.22.4.16"/>
 							<id root="36edd5f0-0b15-49f6-a395-7752b4f18b77"/>
 							<text>
-								<!-- This reference refers to medication sig information in unstructured portion of section-->
-								<reference value="#MedicationSig_1"/>
+								<!-- This reference refers to medication information in unstructured portion of section-->
+								<reference value="#Medication_1"/>
 							</text>
 							<statusCode code="active"/>
 							<!-- This first effectiveTime shows that medication was prescribed on January 18, 2014 (not known to have stopped)-->
@@ -386,7 +389,10 @@
 								<low value="20140118"/>
 								<high nullFlavor="NI"/>
 							</effectiveTime>
-							<!-- This second effectiveTime represents every 4-6 hours from medication sig. InstituionSpecified = "false" means that it should be exactly timed to every 4-6 hours -->
+							<!-- This second effectiveTime represents every 4-6 hours from medication sig. -->
+							<!-- InstituionSpecified = "false" means that it should be exactly timed to every 4-6 hours -->
+							<!-- InstituionSpecified = "true" would mean that receiving institution has flexibility in dosing schedule-->
+							<!-- Operator "A" means that this timing information is in addition to previous effectiveTime information provided-->
 							<effectiveTime xsi:type="PIVL_TS" institutionSpecified="false" operator="A">
 								<period xsi:type="IVL_PQ">
 									<low value="4" unit="h"/>
@@ -420,22 +426,25 @@
 							<templateId root="2.16.840.1.113883.10.20.22.4.16"/>
 							<id root="bc22a9c5-bab4-4348-aa7e-a1b1897c9535"/>
 							<text>
-								<!-- This reference refers to medication sig information in unstructured portion of section-->
-								<reference value="#MedicationSig_2"/>
+								<!-- This reference refers to medication information in unstructured portion of section-->
+								<reference value="#Medication_2"/>
 							</text>
 							<statusCode code="active"/>
 							<!-- This first effectiveTime shows that medication was prescribed to start on January 10, 2014 for five days ending January 14, 2014-->
 							<effectiveTime xsi:type="IVL_TS">
 								<low value="20140110"/>
-								<high value="20140114"/>
+								<high value="NI"/>
 							</effectiveTime>
-							<!-- This second effectiveTime represents once per day from medication sig. InstituionSpecified = "false" means that it must be administered exactly once per day-->
+							<!-- This second effectiveTime represents once per day from medication sig. -->
+							<!-- InstituionSpecified = "false" means that it must be administered exactly once per day-->
+							<!-- InstituionSpecified = "true" would mean that receiving institution has flexibility in dosing schedule-->
+							<!-- Operator "A" means that this timing information is in addition to previous effectiveTime information provided-->
 							<effectiveTime xsi:type="PIVL_TS" institutionSpecified="false" operator="A">
 								<period value="1" unit="d"/>
 							</effectiveTime>
 							<routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" displayName="Oral"/>
 							<!-- This relates directly to the code used for medication. This medication is administered as an oral table, so no unit is needed, but it has varying dosage over its course. -->
-							<!-- Azithromycin is commonly prescribed 2 tablets on day 1 then 1 tablet daily thereafter. More detail on timing included as entryRelationship with subordinate substanceAdministration-->
+							<!-- Azithromycin is commonly prescribed 2 tablets on day 1 then 1 tablet daily thereafter. -->
 							<doseQuantity>
 								<low value = "1"/>
 								<high value = "2"/>

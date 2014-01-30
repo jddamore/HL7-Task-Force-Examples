@@ -4,8 +4,8 @@
 	<templateId root="2.16.840.1.113883.10.20.22.4.16"/>
 	<id root="47d3e719-f688-459d-bcdc-47c6de0767a9"/>
 	<text>
-		<!-- This reference refers to medication sig information in unstructured portion of section-->
-		<reference value="#MedicationSig_0"/>
+		<!-- This reference refers to medication information in unstructured portion of section-->
+		<reference value="#Medication_0"/>
 	</text>
 	<statusCode code="active"/>
 	<!-- This first effectiveTime shows that medication was added on December 18, 2013 (not known to have stopped)-->
@@ -13,7 +13,10 @@
 		<low value="20131218"/>
 		<high nullFlavor="NI"/>
 	</effectiveTime>
-	<!-- This second effectiveTime represents QID from medication sig. InstituionSpecified = "true" means that it can be given 4 times per day but need not be exactly timed to every 6 hours-->
+	<!-- This second effectiveTime represents QID from medication sig. -->
+	<!-- InstituionSpecified = "true" means that it can be given 4 times per day but need not be exactly timed to every 6 hours-->
+	<!-- InstituionSpecified = "false" would mean that timing needs to be administered exactly as structured-->
+	<!-- Operator "A" means that this timing information is in addition to previous effectiveTime information provided-->
 	<effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
 		<period value="6" unit="h"/>
 	</effectiveTime>
