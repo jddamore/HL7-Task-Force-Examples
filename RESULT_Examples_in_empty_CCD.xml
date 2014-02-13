@@ -440,10 +440,18 @@
                                                                         <td>Abnormal</td>
                                                                         <td>Negative</td>
                                                                 </tr>
-
+																<tr>
+																		<th colspan="4">Natriuretic Peptide B [Mass/Volume] In Blood at 10-20-2013 9:08a </th>
+																</tr>
+																<tr>
+																		<td>Platelets [#/volume] in Blood</td>
+																		<td ID="SomeReferenceGoesHere5">125 10*3/uL</td>
+																		<td>Low</td>
+																		<td>150-400 10*3/uL</td>
+																</tr>
                                                         </tbody>
                                                 </table>
-                                                <content ID="results1">Lab Results For HL7 Example Task Force</content>
+                                        <content ID="results1">Lab Results For HL7 Example Task Force</content>
                                         </text>
                                         <entry>
 											<organizer classCode="BATTERY" moodCode="EVN">
@@ -562,6 +570,47 @@
                                                         </component>
                                                 </organizer>
                                         </entry>
+										<entry>
+											<organizer classCode="BATTERY" moodCode="EVN">
+												<templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+												<id root="f16043d8-8d93-41a1-9682-a6cc7215572c"/>
+												<code code="26515-7" displayName="Platelets [#/volume] in Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+												<statusCode code="completed"/>
+												<effectiveTime value="201310200908+0500"/>
+												<component>
+													<observation classCode="OBS" moodCode="EVN">
+														<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+														<id root="f16043d8-8d93-41a1-9682-a6cc7215572c"/>
+														<code code="26515-7" displayName="Platelets [#/volume] in Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+														<text>
+															<reference value="#SomeReferenceGoesHere5"/>
+														</text>
+														<statusCode code="completed"/>
+														<effectiveTime value="201310200908+0500"/>
+														<!-- Representing a result which has been translated from a non-UCUM code (e.g. result reported from external lab)-->
+														<value xsi:type="PQ" value="125" unit="10*3/uL">
+															<!-- The translation and originalText are not required but may be optionally shown -->
+															<!-- The units for this lab result requires translation since conformant to UCUM-->
+															<translation nullFlavor="OTH">
+																<originalText>125 THOUS/MCL</originalText>
+															</translation>
+														</value>
+														<interpretationCode code="L" codeSystem="2.16.840.1.113883.5.83"/>
+														<referenceRange>
+															<observationRange>
+																<!-- Reference ranges can be expressed as structured physical quantity interval-->
+																<value xsi:type="IVL_PQ">
+																	<low value="150" unit="10*3/uL"/>
+																	<high value="400" unit="10*3/uL"/>
+																</value>
+																<!-- This interpretation code denotes that this reference range is for normal results. This is not the interpretation a specific patient value-->
+																<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+															</observationRange>
+														</referenceRange>
+													</observation>
+												</component>
+											</organizer>
+										</entry>
                                 </section>
                         </component>
                         <!-- Plan of Care Section -->
