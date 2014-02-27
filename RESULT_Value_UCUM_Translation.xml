@@ -19,9 +19,9 @@
 				</tr>
 				<tr>
 					<td ID="SomeReferenceGoesHere5">Platelets [#/volume] in Blood</td>
-					<td >152 10*3/uL</td>
+					<td >152 THOUS/MCL</td>
 					<td>Normal</td>
-					<td>150-400 10*3/uL</td>
+					<td>150-400</td>
 				</tr>
 			</tbody>
 		</table>
