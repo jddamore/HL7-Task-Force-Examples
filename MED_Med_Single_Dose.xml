@@ -22,7 +22,11 @@
 			<templateId root="2.16.840.1.113883.10.20.22.4.23" />
 			<manufacturedMaterial>
 				<!-- Medications should be specified at a level corresponding to prescription when possible (non-branded below)-->
-				<code code="243670" codeSystem="2.16.840.1.113883.6.88" displayName="Aspirin 81 MG Oral Tablet" />
+				<code code="243670" codeSystem="2.16.840.1.113883.6.88" displayName="Aspirin 81 MG Oral Tablet">
+					<originalText>
+						<reference value="#MedicationName_7"/>
+					</originalText>
+				</code>
 			</manufacturedMaterial>
 		</manufacturedProduct>
 	</consumable>
@@ -42,7 +46,11 @@
 				<manufacturedProduct classCode="MANU">
 					<templateId root="2.16.840.1.113883.10.20.22.4.23" />
 					<manufacturedMaterial>
-						<code code="243670" codeSystem="2.16.840.1.113883.6.88" displayName="Aspirin 81 MG Oral Tablet" />
+						<code code="243670" codeSystem="2.16.840.1.113883.6.88" displayName="Aspirin 81 MG Oral Tablet">
+							<originalText>
+								<reference value="#MedicationName_7"/>
+							</originalText>
+						</code>
 					</manufacturedMaterial>
 				</manufacturedProduct>
 			</product>
