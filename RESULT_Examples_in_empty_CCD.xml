@@ -588,14 +588,15 @@
 														<statusCode code="completed"/>
 														<effectiveTime value="201310200908+0500"/>
 														<!-- Representing a result which has been translated from a non-UCUM code (e.g. result reported from external lab)-->
-														<value xsi:type="PQ" value="125" unit="10*3/uL">
-															<!-- The translation and originalText are not required but may be optionally shown -->
-															<!-- The units for this lab result requires translation since conformant to UCUM-->
-															<translation nullFlavor="OTH">
-																<originalText>125 THOUS/MCL</originalText>
+														<value xsi:type="PQ" value="152" unit="10*3/uL">
+															<!-- The units for this lab result require translation to be conformant to UCUM.-->
+															<!-- The translation and originalText show how the original lab value was translated.-->
+															<!-- This translation element uses xsi:type="PQR" as default. See CDA R2 for details.-->
+															<translation value="152" nullFlavor="OTH">
+																<originalText>THOUS/MCL</originalText>
 															</translation>
 														</value>
-														<interpretationCode code="L" codeSystem="2.16.840.1.113883.5.83"/>
+														<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 														<referenceRange>
 															<observationRange>
 																<!-- Reference ranges can be expressed as structured physical quantity interval-->
