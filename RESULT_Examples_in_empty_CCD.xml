@@ -411,8 +411,8 @@
                                                                         <th colspan="4">Urine Color at 10-23-2013 9:10a</th>
                                                                 </tr>
                                                                 <tr>
-                                                                        <td>Urine Color</td>
-                                                                        <td ID="SomeReferenceGoesHere1">Yellow</td>
+                                                                        <td ID="SomeReferenceGoesHere1">Urine Color</td>
+                                                                        <td >Yellow</td>
                                                                         <td>Normal</td>
                                                                         <td></td>
                                                                 </tr>
@@ -420,8 +420,8 @@
                                                                         <th colspan="4">Natriuretic Peptide B [Mass/Volume] In Blood at 10-20-2013 9:08a </th>
                                                                 </tr>
                                                                 <tr>
-                                                                        <td>Natriuretic Peptide B [Mass/Volume] In Blood</td>
-                                                                        <td ID="SomeReferenceGoesHere2">&lt; 5pg/dL</td>
+                                                                        <td ID="SomeReferenceGoesHere2">Natriuretic Peptide B [Mass/Volume] In Blood</td>
+                                                                        <td >&lt; 5pg/dL</td>
                                                                         <td>Normal</td>
                                                                         <td>0-100 pg/dL</td>
                                                                 </tr>
@@ -429,24 +429,24 @@
                                                                         <th colspan="4">Chlamydia trachomatis/Neisseria gonorrhoeae rRNA panel at 10-22-2013 2:26p</th>
                                                                 </tr>
                                                                 <tr>
-                                                                        <td>Chlamydia trachomatis rRNA</td>
-                                                                        <td ID="SomeReferenceGoesHere3">Negative</td>
+                                                                        <td ID="SomeReferenceGoesHere3">Chlamydia trachomatis rRNA</td>
+                                                                        <td >Negative</td>
                                                                         <td>Normal</td>
                                                                         <td>Negative</td>
                                                                 </tr>
                                                                 <tr>
-                                                                        <td>Neisseria gonorrhoeae rRNA</td>
-                                                                        <td ID="SomeReferenceGoesHere4">Positive</td>
+                                                                        <td ID="SomeReferenceGoesHere4">Neisseria gonorrhoeae rRNA</td>
+                                                                        <td >Positive</td>
                                                                         <td>Abnormal</td>
                                                                         <td>Negative</td>
                                                                 </tr>
 																<tr>
-																		<th colspan="4">Natriuretic Peptide B [Mass/Volume] In Blood at 10-20-2013 9:08a </th>
+																		<th colspan="4">Platelets [#/volume] in Blood at 10-20-2013 9:08a </th>
 																</tr>
 																<tr>
-																		<td>Platelets [#/volume] in Blood</td>
-																		<td ID="SomeReferenceGoesHere5">125 10*3/uL</td>
-																		<td>Low</td>
+																		<td ID="SomeReferenceGoesHere5">Platelets [#/volume] in Blood</td>
+																		<td >152 10*3/uL</td>
+																		<td>Normal</td>
 																		<td>150-400 10*3/uL</td>
 																</tr>
                                                         </tbody>

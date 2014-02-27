@@ -1,42 +1,74 @@
-<organizer classCode="BATTERY" moodCode="EVN">
-	<templateId root="2.16.840.1.113883.10.20.22.4.1"/>
-	<id root="f16043d8-8d93-41a1-9682-a6cc7215572c"/>
-	<code code="26515-7" displayName="Platelets [#/volume] in Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-	<statusCode code="completed"/>
-	<effectiveTime value="201310200908+0500"/>
-	<component>
-		<observation classCode="OBS" moodCode="EVN">
-			<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+<section>
+	<templateId root="2.16.840.1.113883.10.20.22.2.3.1"/>
+	<!-- Results Section with Coded Entries Required-->
+	<code code="30954-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Relevant diagnostic tests and/or laboratory data"/>
+	<title>Results</title>
+	<text>
+		<table border="1">
+			<thead>
+				<tr>
+					<th>Description</th>
+					<th>Value / Unit</th>
+					<th>Interpretation</th>
+					<th>Reference Range</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th colspan="4">Platelets [#/volume] in Blood at 10-20-2013 9:08a </th>
+				</tr>
+				<tr>
+					<td ID="SomeReferenceGoesHere5">Platelets [#/volume] in Blood</td>
+					<td >152 10*3/uL</td>
+					<td>Normal</td>
+					<td>150-400 10*3/uL</td>
+				</tr>
+			</tbody>
+		</table>
+	</text>
+	<entry>
+		<organizer classCode="BATTERY" moodCode="EVN">
+			<templateId root="2.16.840.1.113883.10.20.22.4.1"/>
 			<id root="f16043d8-8d93-41a1-9682-a6cc7215572c"/>
 			<code code="26515-7" displayName="Platelets [#/volume] in Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-			<text>
-				<reference value="#SomeReferenceGoesHere5"/>
-			</text>
 			<statusCode code="completed"/>
 			<effectiveTime value="201310200908+0500"/>
-			<!-- Representing a result which has been translated from a non-UCUM code (e.g. result reported from external lab)-->
-			<value xsi:type="PQ" value="152" unit="10*3/uL">
-				<!-- The units for this lab result require translation to be conformant to UCUM.-->
-				<!-- The translation and originalText show how the original lab value was translated.-->
-				<!-- This translation element of a value type PQ uses xsi:type="PQR". -->
-				<!-- Physical Quantity Representation is the representation of a PQ in a different coding system -->
-				<!-- See CDA R2 for details.-->
-				<translation value="152" nullFlavor="OTH">
-					<originalText>THOUS/MCL</originalText>
-				</translation> 
-			</value>
-			<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
-			<referenceRange>
-				<observationRange>
-					<!-- Reference ranges can be expressed as structured physical quantity interval-->
-					<value xsi:type="IVL_PQ">
-						<low value="150" unit="10*3/uL"/>
-						<high value="400" unit="10*3/uL"/>
+			<component>
+				<observation classCode="OBS" moodCode="EVN">
+					<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+					<id root="f16043d8-8d93-41a1-9682-a6cc7215572c"/>
+					<code code="26515-7" displayName="Platelets [#/volume] in Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+					<text>
+						<reference value="#SomeReferenceGoesHere5"/>
+					</text>
+					<statusCode code="completed"/>
+					<effectiveTime value="201310200908+0500"/>
+					<!-- Representing a result which has been translated from a non-UCUM code (e.g. result reported from external lab)-->
+					<value xsi:type="PQ" value="152" unit="10*3/uL">
+						<!-- The units for this lab result require translation to be conformant to UCUM.-->
+						<!-- The translation and originalText show how the original lab value was translated.-->
+						<!-- This translation element of a value type PQ uses xsi:type="PQR". -->
+						<!-- Physical Quantity Representation is the representation of a PQ in a different coding system -->
+						<!-- See CDA R2 for details.-->
+						<translation value="152" nullFlavor="OTH">
+							<originalText>THOUS/MCL</originalText>
+						</translation>
 					</value>
-					<!-- This interpretation code denotes that this reference range is for normal results. This is not the interpretation a specific patient value-->
 					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
-				</observationRange>
-			</referenceRange>
-		</observation>
-	</component>
-</organizer>
+					<referenceRange>
+						<observationRange>
+							<!-- Reference ranges can be expressed as structured physical quantity interval-->
+							<value xsi:type="IVL_PQ">
+								<low value="150" unit="10*3/uL"/>
+								<high value="400" unit="10*3/uL"/>
+							</value>
+							<!-- This interpretation code denotes that this reference range is for normal results. This is not the interpretation a specific patient value-->
+							<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+						</observationRange>
+					</referenceRange>
+				</observation>
+			</component>
+		</organizer>
+	</entry>
+</section>
+
