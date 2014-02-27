@@ -16,9 +16,9 @@
 			<effectiveTime value="201310200908+0500"/>
 			<!-- Representing a result which has been translated from a non-UCUM code (e.g. result reported from external lab)-->
 			<value xsi:type="PQ" value="152" unit="10*3/uL">
-				<!-- The translation and originalText show how source represented information  -->
-				<!-- The units for this lab result require translation to be conformant to UCUM-->
-				<!-- The translation element uses xsi:type="PQR" as default-->
+				<!-- The units for this lab result require translation to be conformant to UCUM.-->
+				<!-- The translation and originalText show how the original lab value was translated.-->
+				<!-- This translation element uses xsi:type="PQR" as default. See CDA R2 for details.-->
 				<translation value="152" nullFlavor="OTH">
 					<originalText>THOUS/MCL</originalText>
 				</translation> 
