@@ -18,7 +18,9 @@
 			<value xsi:type="PQ" value="152" unit="10*3/uL">
 				<!-- The units for this lab result require translation to be conformant to UCUM.-->
 				<!-- The translation and originalText show how the original lab value was translated.-->
-				<!-- This translation element uses xsi:type="PQR" as default. See CDA R2 for details.-->
+				<!-- This translation element of a value type PQ uses xsi:type="PQR". -->
+				<!-- Physical Quantity Representation is the representation of a PQ in a different coding system -->
+				<!-- See CDA R2 for details.-->
 				<translation value="152" nullFlavor="OTH">
 					<originalText>THOUS/MCL</originalText>
 				</translation> 
