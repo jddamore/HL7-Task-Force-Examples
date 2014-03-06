@@ -1,58 +1,95 @@
-<organizer classCode="BATTERY" moodCode="EVN">
-	<templateId root="2.16.840.1.113883.10.20.22.4.1"/>
-	<id root="b5684bf0-eb6f-46dd-9f2e-b6cbcc4196fd"/>
-	<code code="70163-1" displayName="Chlamydia trachomatis/Neisseria gonorrhoeae rRNA panel" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-	<statusCode code="completed"/>
-	<effectiveTime value="201310221426+0500"/>
-	<component>
-		<observation classCode="OBS" moodCode="EVN">
-			<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
-			<id root="5a6be91a-32d5-4d24-a8bd-07d10a3ef14d"/>
-			<code code="50387-0" displayName="Chlamydia trachomatis rRNA" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-			<text>
-				<reference value="#SomeReferenceGoesHere3"/>
-			</text>
-			<statusCode code="completed"/>
-			<effectiveTime value="201310221426+0500"/>
-			<!-- Representing a result of an ordinal test (See LOINC axes) as negative in SNOMED-->
-			<value xsi:type="CO" code="260385009" codeSystemName="SNOMED-CT" displayName ="Negative" codeSystem ="2.16.840.1.113883.6.96"/>
-			<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
-			<referenceRange>
-				<observationRange>
-					<value xsi:type="CO" code="260385009" codeSystemName="SNOMED-CT" displayName ="Negative" codeSystem ="2.16.840.1.113883.6.96"/>
-					<!-- This interpretation code denotes that this reference range is for normal results. This is not the interpretation a specific patient value-->
-					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
-				</observationRange>
-			</referenceRange>
-		</observation>
-	</component>
-	<component>
-		<observation classCode="OBS" moodCode="EVN">
-			<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
-			<id root="404bba0e-1c76-4265-afb5-1a57b55e128b"/>
-			<code code="50388-8" displayName="Neisseria gonorrhoeae rRNA" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-			<text>
-				<reference value="#SomeReferenceGoesHere4"/>
-			</text>
-			<statusCode code="completed"/>
-			<effectiveTime value="201310221426+0500"/>
-			<!-- Representing a result of an ordinal test (See LOINC axes) as positive in SNOMED-->
-			<value xsi:type="CO" code="10828004" codeSystemName="SNOMED-CT" displayName ="Positive" codeSystem ="2.16.840.1.113883.6.96"/>
-			<interpretationCode code="A" codeSystem="2.16.840.1.113883.5.83"/>
-			<referenceRange>
-				<observationRange>
-					<value xsi:type="CO" code="260385009" codeSystemName="SNOMED-CT" displayName ="Negative" codeSystem ="2.16.840.1.113883.6.96"/>
-					<!-- This interpretation code denotes that this reference range is for normal results. This is not the interpretation a specific patient value-->
-					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
-				</observationRange>
-			</referenceRange>
-			<referenceRange>
-				<observationRange>
-					<value xsi:type="CO" code="10828004" codeSystemName="SNOMED-CT" displayName ="Positive" codeSystem ="2.16.840.1.113883.6.96"/>
-					<!-- This optional second interpretation code denotes that this reference range is for abnormal results. This is not the interpretation a specific patient value-->
-					<interpretationCode code="A" codeSystem="2.16.840.1.113883.5.83"/>
-				</observationRange>
-			</referenceRange>
-		</observation>
-	</component>
-</organizer>
+<section>
+  <templateId root="2.16.840.1.113883.10.20.22.2.3.1"/>
+  <!-- Results Section with Coded Entries Required-->
+  <code code="30954-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Relevant diagnostic tests and/or laboratory data"/>
+  <title>Results</title>
+  <text>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Value / Unit</th>
+          <th>Interpretation</th>
+          <th>Reference Range</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th colspan="4">Chlamydia trachomatis/Neisseria gonorrhoeae rRNA panel at 10-22-2013 2:26p</th>
+        </tr>
+        <tr>
+          <td ID="SomeReferenceGoesHere3">Chlamydia trachomatis rRNA</td>
+          <td >Negative</td>
+          <td>Normal</td>
+          <td>Negative</td>
+        </tr>
+        <tr>
+          <td ID="SomeReferenceGoesHere4">Neisseria gonorrhoeae rRNA</td>
+          <td >Positive</td>
+          <td>Abnormal</td>
+          <td>Negative</td>
+        </tr>
+      </tbody>
+    </table>
+  </text>
+  <entry>
+    <organizer classCode="BATTERY" moodCode="EVN">
+      <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+      <id root="b5684bf0-eb6f-46dd-9f2e-b6cbcc4196fd"/>
+      <code code="70163-1" displayName="Chlamydia trachomatis/Neisseria gonorrhoeae rRNA panel" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+      <statusCode code="completed"/>
+      <effectiveTime value="201310221426+0500"/>
+      <component>
+        <observation classCode="OBS" moodCode="EVN">
+          <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+          <id root="5a6be91a-32d5-4d24-a8bd-07d10a3ef14d"/>
+          <code code="50387-0" displayName="Chlamydia trachomatis rRNA" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+          <text>
+            <reference value="#SomeReferenceGoesHere3"/>
+          </text>
+          <statusCode code="completed"/>
+          <effectiveTime value="201310221426+0500"/>
+          <!-- Representing a result of an ordinal test (See LOINC axes) as negative in SNOMED-->
+          <value xsi:type="CO" code="260385009" codeSystemName="SNOMED-CT" displayName ="Negative" codeSystem ="2.16.840.1.113883.6.96"/>
+          <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+          <referenceRange>
+            <observationRange>
+              <value xsi:type="CO" code="260385009" codeSystemName="SNOMED-CT" displayName ="Negative" codeSystem ="2.16.840.1.113883.6.96"/>
+              <!-- This interpretation code denotes that this reference range is for normal results. This is not the interpretation a specific patient value-->
+              <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+            </observationRange>
+          </referenceRange>
+        </observation>
+      </component>
+      <component>
+        <observation classCode="OBS" moodCode="EVN">
+          <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+          <id root="404bba0e-1c76-4265-afb5-1a57b55e128b"/>
+          <code code="50388-8" displayName="Neisseria gonorrhoeae rRNA" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+          <text>
+            <reference value="#SomeReferenceGoesHere4"/>
+          </text>
+          <statusCode code="completed"/>
+          <effectiveTime value="201310221426+0500"/>
+          <!-- Representing a result of an ordinal test (See LOINC axes) as positive in SNOMED-->
+          <value xsi:type="CO" code="10828004" codeSystemName="SNOMED-CT" displayName ="Positive" codeSystem ="2.16.840.1.113883.6.96"/>
+          <interpretationCode code="A" codeSystem="2.16.840.1.113883.5.83"/>
+          <referenceRange>
+            <observationRange>
+              <value xsi:type="CO" code="260385009" codeSystemName="SNOMED-CT" displayName ="Negative" codeSystem ="2.16.840.1.113883.6.96"/>
+              <!-- This interpretation code denotes that this reference range is for normal results. This is not the interpretation a specific patient value-->
+              <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+            </observationRange>
+          </referenceRange>
+          <referenceRange>
+            <observationRange>
+              <value xsi:type="CO" code="10828004" codeSystemName="SNOMED-CT" displayName ="Positive" codeSystem ="2.16.840.1.113883.6.96"/>
+              <!-- This optional second interpretation code denotes that this reference range is for abnormal results. This is not the interpretation a specific patient value-->
+              <interpretationCode code="A" codeSystem="2.16.840.1.113883.5.83"/>
+            </observationRange>
+          </referenceRange>
+        </observation>
+      </component>
+    </organizer>
+  </entry>
+</section>

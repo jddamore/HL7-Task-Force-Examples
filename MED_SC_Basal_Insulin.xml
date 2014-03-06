@@ -1,43 +1,78 @@
-<substanceAdministration classCode="SBADM" moodCode="INT">
-	<!-- This medication use case is a medication to be administered. If it has been already administered use moodCode = "EVN". If an ordered drug then use moodCode = "RQO" -->
-	<!-- Dependencies exist between moodCode, statusCode and effectiveTime  -->
-	<templateId root="2.16.840.1.113883.10.20.22.4.16"/>
-	<id root="1310a2d3-f888-4722-b4c4-a3c5911ac7f9"/>
-	<text>
-		<!-- This reference refers to medication information in unstructured portion of section-->
-		<reference value="#Medication_6"/>
-	</text>
-	<statusCode code="active"/>
-	<!-- This first effectiveTime shows that medication was added on April 9, 2014 (not known to have stopped)-->
-	<effectiveTime xsi:type="IVL_TS">
-		<low value="20140409"/>
-		<high nullFlavor="NI"/>
-	</effectiveTime>
-	<!-- The second effectiveTime specifies dose frequency, which can be either a period (PIVL_TS) or event (EIVL_TS). -->
-	<!-- This long-lasting insulin is administered once per day before bedtime, which is an event-->
-	<effectiveTime xsi:type="EIVL_TS" operator="A">
-		<event code="HS"/>
-	</effectiveTime>
-	<routeCode code="C38299" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="SUBCUTANEOUS" codeSystemName="National Cancer Institute Thesaurus" />								
-	<!-- Since this dose is not pre-coordinated, specify both the amount with units in UCUM. [IU] is international units -->
-	<!-- Note that this basal insulin is not administered on a sliding scale and a specific dose is administered-->
-	<doseQuantity value="40" unit="[IU]"/>
-	<consumable typeCode="CSM">
-		<manufacturedProduct classCode="MANU">
-			<!-- ** Medication information ** -->
-			<templateId root="2.16.840.1.113883.10.20.22.4.23"/>
-			<manufacturedMaterial classCode="MMAT" determinerCode="KIND">
-				<!-- Medications should be specified at a level corresponding to prescription when possible (branded medication below)-->
-				<code code="847232" codeSystem="2.16.840.1.113883.6.88" displayName="3 ML Insulin Glargine 100 UNT/ML Prefilled Syringe" codeSystemName="RxNorm">
-					<originalText>
-						<reference value="#MedicationName_6"/>
-					</originalText>
-				</code>
-				
-			</manufacturedMaterial>
-			<manufacturerOrganization classCode="ORG" determinerCode="INSTANCE">
-				<name>SANOFI-AVENTIS</name>
-			</manufacturerOrganization>
-		</manufacturedProduct>
-	</consumable>
-</substanceAdministration>
+<section>
+  <templateId root="2.16.840.1.113883.10.20.22.2.1.1"/>
+  <!-- Medication Section (entries required) -->
+  <code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Medication Use"/>
+  <title>MEDICATIONS</title>
+  <text>
+    <table border="1" width="100%">
+      <thead>
+        <tr>
+          <th>Medication</th>
+          <th>Instructions</th>
+          <th>Dosage</th>
+          <th>Effective Dates (start - stop)</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ID="Medication_6">
+          <td>
+            <content ID="MedicationName_6" xmlns="urn:hl7-org:v3">3 ML Insulin Glargine 100 UNT/ML Prefilled Syringe</content>
+          </td>
+          <td>
+            <content ID="MedicationSig_6" xmlns="urn:hl7-org:v3">take 40 units at bedtime</content>
+          </td>
+          <td>
+            <content ID="MedicationDosage_6" xmlns="urn:hl7-org:v3">40 units</content>
+          </td>
+          <td>Jan-10-2014 - Jan-14-2014</td>
+          <td>Active</td>
+        </tr>
+      </tbody>
+    </table>
+  </text>
+  <entry typeCode="DRIV">
+    <substanceAdministration classCode="SBADM" moodCode="INT">
+      <!-- This medication use case is a medication to be administered. If it has been already administered use moodCode = "EVN". If an ordered drug then use moodCode = "RQO" -->
+      <!-- Dependencies exist between moodCode, statusCode and effectiveTime  -->
+      <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+      <id root="1310a2d3-f888-4722-b4c4-a3c5911ac7f9"/>
+      <text>
+        <!-- This reference refers to medication information in unstructured portion of section-->
+        <reference value="#Medication_6"/>
+      </text>
+      <statusCode code="active"/>
+      <!-- This first effectiveTime shows that medication was added on April 9, 2014 (not known to have stopped)-->
+      <effectiveTime xsi:type="IVL_TS">
+        <low value="20140409"/>
+        <high nullFlavor="NI"/>
+      </effectiveTime>
+      <!-- The second effectiveTime specifies dose frequency, which can be either a period (PIVL_TS) or event (EIVL_TS). -->
+      <!-- This long-lasting insulin is administered once per day before bedtime, which is an event-->
+      <effectiveTime xsi:type="EIVL_TS" operator="A">
+        <event code="HS"/>
+      </effectiveTime>
+      <routeCode code="C38299" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="SUBCUTANEOUS" codeSystemName="National Cancer Institute Thesaurus" />
+      <!-- Since this dose is not pre-coordinated, specify both the amount with units in UCUM. [IU] is international units -->
+      <!-- Note that this basal insulin is not administered on a sliding scale and a specific dose is administered-->
+      <doseQuantity value="40" unit="[IU]"/>
+      <consumable typeCode="CSM">
+        <manufacturedProduct classCode="MANU">
+          <!-- ** Medication information ** -->
+          <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+          <manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+            <!-- Medications should be specified at a level corresponding to prescription when possible (branded medication below)-->
+            <code code="847232" codeSystem="2.16.840.1.113883.6.88" displayName="3 ML Insulin Glargine 100 UNT/ML Prefilled Syringe" codeSystemName="RxNorm">
+              <originalText>
+                <reference value="#MedicationName_6"/>
+              </originalText>
+            </code>
+          </manufacturedMaterial>
+          <manufacturerOrganization classCode="ORG" determinerCode="INSTANCE">
+            <name>SANOFI-AVENTIS</name>
+          </manufacturerOrganization>
+        </manufacturedProduct>
+      </consumable>
+    </substanceAdministration>
+  </entry>
+</section>

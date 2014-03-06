@@ -1,22 +1,56 @@
-<organizer classCode="BATTERY" moodCode="EVN">
-	<templateId root="2.16.840.1.113883.10.20.22.4.1"/>
-	<id root="f1aa44dd-6f39-4f5c-b267-897c3824b563"/>
-	<code code="5778-6" displayName="Color of Urine" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-	<statusCode code="completed"/>
-	<effectiveTime value="201310230910+0500"/>
-	<component>
-		<observation classCode="OBS" moodCode="EVN">
-			<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
-			<id root="f1aa44dd-6f39-4f5c-b267-897c3824b563"/>
-			<code code="5778-6" displayName="Color of Urine" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-			<text>
-				<reference value="#SomeReferenceGoesHere1"/>
-			</text>
-			<statusCode code="completed"/>
-			<effectiveTime value="20131023090823+0500"/>
-			<!-- Representing a result returned as unstructured string-->
-			<value xsi:type="ST">Yellow</value>
-			<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
-		</observation>
-	</component>
-</organizer>
+<section>
+  <templateId root="2.16.840.1.113883.10.20.22.2.3.1"/>
+  <!-- Results Section with Coded Entries Required-->
+  <code code="30954-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Relevant diagnostic tests and/or laboratory data"/>
+  <title>Results</title>
+  <text>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Value / Unit</th>
+          <th>Interpretation</th>
+          <th>Reference Range</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th colspan="4">Lab Results For HL7 Example Task Force</th>
+        </tr>
+        <tr>
+          <th colspan="4">Urine Color at 10-23-2013 9:10a</th>
+        </tr>
+        <tr>
+          <td ID="SomeReferenceGoesHere1">Urine Color</td>
+          <td >Yellow</td>
+          <td>Normal</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </text>
+  <entry>
+    <organizer classCode="BATTERY" moodCode="EVN">
+      <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+      <id root="f1aa44dd-6f39-4f5c-b267-897c3824b563"/>
+      <code code="5778-6" displayName="Color of Urine" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+      <statusCode code="completed"/>
+      <effectiveTime value="201310230910+0500"/>
+      <component>
+        <observation classCode="OBS" moodCode="EVN">
+          <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+          <id root="f1aa44dd-6f39-4f5c-b267-897c3824b563"/>
+          <code code="5778-6" displayName="Color of Urine" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+          <text>
+            <reference value="#SomeReferenceGoesHere1"/>
+          </text>
+          <statusCode code="completed"/>
+          <effectiveTime value="20131023090823+0500"/>
+          <!-- Representing a result returned as unstructured string-->
+          <value xsi:type="ST">Yellow</value>
+          <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+        </observation>
+      </component>
+    </organizer>
+  </entry>
+</section>

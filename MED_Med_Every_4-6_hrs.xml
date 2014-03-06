@@ -1,44 +1,132 @@
-<substanceAdministration classCode="SBADM" moodCode="INT">
-	<!-- This medication use case is a medication to be administered. If it has been already administered use moodCode = "EVN". If an ordered drug then use moodCode = "RQO" -->
-	<!-- Dependencies exist between moodCode, statusCode and effectiveTime  -->
-	<templateId root="2.16.840.1.113883.10.20.22.4.16"/>
-	<id root="36edd5f0-0b15-49f6-a395-7752b4f18b77"/>
-	<text>
-		<!-- This reference refers to medication information in unstructured portion of section-->
-		<reference value="#Medication_1"/>
-	</text>
-	<statusCode code="active"/>
-	<!-- This first effectiveTime shows that medication was prescribed on January 18, 2014 (not known to have stopped)-->
-	<effectiveTime xsi:type="IVL_TS">
-		<low value="20140118"/>
-		<high nullFlavor="NI"/>
-	</effectiveTime>
-	<!-- This second effectiveTime represents every 4-6 hours from medication sig. -->
-	<!-- InstituionSpecified = "false" means that it should be exactly timed to every 4-6 hours -->
-	<!-- InstituionSpecified = "true" would mean that receiving institution has flexibility in dosing schedule-->
-	<!-- Operator "A" means that this timing information is in addition to previous effectiveTime information provided-->
-	<effectiveTime xsi:type="PIVL_TS" institutionSpecified="false" operator="A">
-		<period xsi:type="IVL_PQ">
-			<low value="4" unit="h"/>
-			<high value="6" unit="h"/>
-		</period>
-	</effectiveTime>
-	<routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" displayName="Oral"/>
-	<!-- This relates directly to the code used for medication. Since it's a tablet, then only specified needed in dose is 2x per administration-->
-	<doseQuantity value="2"/>
-	<consumable>
-		<manufacturedProduct classCode="MANU">
-			<!-- ** Medication information ** -->
-			<templateId root="2.16.840.1.113883.10.20.22.4.23"/>
-			<id root="0be61984-eaa5-46b3-b75b-1d1ba28b5fff"/>
-			<manufacturedMaterial>
-				<!-- Medications should be specified at a level corresponding to prescription when possible, such as 30mg oral tablet (branded)-->
-				<code code="1049529" displayName="Sudafed 30 MG Oral Tablet" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm">
-					<originalText>
-						<reference value="#MedicationName_1"/>
-					</originalText>
-				</code>
-			</manufacturedMaterial>
-		</manufacturedProduct>
-	</consumable>
-</substanceAdministration>
+<section>
+  <templateId root="2.16.840.1.113883.10.20.22.2.1.1"/>
+  <!-- Medication Section (entries required) -->
+  <code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Medication Use"/>
+  <title>MEDICATIONS</title>
+  <text>
+    <table border="1" width="100%">
+      <thead>
+        <tr>
+          <th>Medication</th>
+          <th>Instructions</th>
+          <th>Dosage</th>
+          <th>Effective Dates (start - stop)</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ID="Medication_0">
+          <td>
+            <content ID="MedicationName_0" xmlns="urn:hl7-org:v3">Ibuprofen 600mg Oral Tablet</content>
+          </td>
+          <td>
+            <content ID="MedicationSig_0" xmlns="urn:hl7-org:v3">take 1 tablet QID PRN</content>
+          </td>
+          <td>
+            <content ID="MedicationDosage_0" xmlns="urn:hl7-org:v3">600 MG</content>
+          </td>
+          <td>Dec-18-2013 - </td>
+          <td>Active</td>
+        </tr>
+        <tr ID="Medication_1">
+          <td>
+            <content ID="MedicationName_1" xmlns="urn:hl7-org:v3">Sudafed 30mg Oral Tablet</content>
+          </td>
+          <td>
+            <content ID="MedicationSig_1" xmlns="urn:hl7-org:v3">take 2 tablets every 4-6 hours</content>
+          </td>
+          <td>
+            <content ID="MedicationDosage_1" xmlns="urn:hl7-org:v3">30 MG</content>
+          </td>
+          <td>Jan-18-2014 - </td>
+          <td>Active</td>
+        </tr>
+        <tr ID="Medication_2">
+          <td>
+            <content ID="MedicationName_2" xmlns="urn:hl7-org:v3">Azithromycin 250mg Oral Tablet</content>
+          </td>
+          <td>
+            <content ID="MedicationSig_2" xmlns="urn:hl7-org:v3">take 2 tablets every 4-6 hours</content>
+          </td>
+          <td>
+            <content ID="MedicationDosage_2" xmlns="urn:hl7-org:v3">250 MG</content>
+          </td>
+          <td>Jan-10-2014 - Jan-14-2014</td>
+          <td>Active</td>
+        </tr>
+        <tr ID="Medication_6">
+          <td>
+            <content ID="MedicationName_6" xmlns="urn:hl7-org:v3">3 ML Insulin Glargine 100 UNT/ML Prefilled Syringe</content>
+          </td>
+          <td>
+            <content ID="MedicationSig_6" xmlns="urn:hl7-org:v3">take 40 units at bedtime</content>
+          </td>
+          <td>
+            <content ID="MedicationDosage_6" xmlns="urn:hl7-org:v3">40 units</content>
+          </td>
+          <td>Jan-10-2014 - Jan-14-2014</td>
+          <td>Active</td>
+        </tr>
+        <tr ID="Medication_7">
+          <td>
+            <content ID="MedicationName_7" xmlns="urn:hl7-org:v3">Aspirin 81mg Oral Tablet</content>
+          </td>
+          <td>
+            <content ID="MedicationSig_7" xmlns="urn:hl7-org:v3">take 2 tablets</content>
+          </td>
+          <td>
+            <content ID="MedicationDosage_7" xmlns="urn:hl7-org:v3">162 MG</content>
+          </td>
+          <td>Jan-10-2014 - Jan-14-2014</td>
+          <td>Active</td>
+        </tr>
+      </tbody>
+    </table>
+  </text>
+  <entry typeCode="DRIV">
+    <substanceAdministration classCode="SBADM" moodCode="INT">
+      <!-- This medication use case is a medication to be administered. If it has been already administered use moodCode = "EVN". If an ordered drug then use moodCode = "RQO" -->
+      <!-- Dependencies exist between moodCode, statusCode and effectiveTime  -->
+      <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+      <id root="36edd5f0-0b15-49f6-a395-7752b4f18b77"/>
+      <text>
+        <!-- This reference refers to medication information in unstructured portion of section-->
+        <reference value="#Medication_1"/>
+      </text>
+      <statusCode code="active"/>
+      <!-- This first effectiveTime shows that medication was prescribed on January 18, 2014 (not known to have stopped)-->
+      <effectiveTime xsi:type="IVL_TS">
+        <low value="20140118"/>
+        <high nullFlavor="NI"/>
+      </effectiveTime>
+      <!-- This second effectiveTime represents every 4-6 hours from medication sig. -->
+      <!-- InstituionSpecified = "false" means that it should be exactly timed to every 4-6 hours -->
+      <!-- InstituionSpecified = "true" would mean that receiving institution has flexibility in dosing schedule-->
+      <!-- Operator "A" means that this timing information is in addition to previous effectiveTime information provided-->
+      <effectiveTime xsi:type="PIVL_TS" institutionSpecified="false" operator="A">
+        <period xsi:type="IVL_PQ">
+          <low value="4" unit="h"/>
+          <high value="6" unit="h"/>
+        </period>
+      </effectiveTime>
+      <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" displayName="Oral"/>
+      <!-- This relates directly to the code used for medication. Since it's a tablet, then only specified needed in dose is 2x per administration-->
+      <doseQuantity value="2"/>
+      <consumable>
+        <manufacturedProduct classCode="MANU">
+          <!-- ** Medication information ** -->
+          <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+          <id root="0be61984-eaa5-46b3-b75b-1d1ba28b5fff"/>
+          <manufacturedMaterial>
+            <!-- Medications should be specified at a level corresponding to prescription when possible, such as 30mg oral tablet (branded)-->
+            <code code="1049529" displayName="Sudafed 30 MG Oral Tablet" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm">
+              <originalText>
+                <reference value="#MedicationName_1"/>
+              </originalText>
+            </code>
+          </manufacturedMaterial>
+        </manufacturedProduct>
+      </consumable>
+    </substanceAdministration>
+  </entry>
+</section>
