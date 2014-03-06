@@ -15,19 +15,6 @@
         </tr>
       </thead>
       <tbody>
-        <tr ID="Medication_0">
-          <td>
-            <content ID="MedicationName_0" xmlns="urn:hl7-org:v3">Ibuprofen 600mg Oral Tablet</content>
-          </td>
-          <td>
-            <content ID="MedicationSig_0" xmlns="urn:hl7-org:v3">take 1 tablet QID PRN</content>
-          </td>
-          <td>
-            <content ID="MedicationDosage_0" xmlns="urn:hl7-org:v3">600 MG</content>
-          </td>
-          <td>Dec-18-2013 - </td>
-          <td>Active</td>
-        </tr>
         <tr ID="Medication_1">
           <td>
             <content ID="MedicationName_1" xmlns="urn:hl7-org:v3">Sudafed 30mg Oral Tablet</content>
@@ -39,45 +26,6 @@
             <content ID="MedicationDosage_1" xmlns="urn:hl7-org:v3">30 MG</content>
           </td>
           <td>Jan-18-2014 - </td>
-          <td>Active</td>
-        </tr>
-        <tr ID="Medication_2">
-          <td>
-            <content ID="MedicationName_2" xmlns="urn:hl7-org:v3">Azithromycin 250mg Oral Tablet</content>
-          </td>
-          <td>
-            <content ID="MedicationSig_2" xmlns="urn:hl7-org:v3">take 2 tablets every 4-6 hours</content>
-          </td>
-          <td>
-            <content ID="MedicationDosage_2" xmlns="urn:hl7-org:v3">250 MG</content>
-          </td>
-          <td>Jan-10-2014 - Jan-14-2014</td>
-          <td>Active</td>
-        </tr>
-        <tr ID="Medication_6">
-          <td>
-            <content ID="MedicationName_6" xmlns="urn:hl7-org:v3">3 ML Insulin Glargine 100 UNT/ML Prefilled Syringe</content>
-          </td>
-          <td>
-            <content ID="MedicationSig_6" xmlns="urn:hl7-org:v3">take 40 units at bedtime</content>
-          </td>
-          <td>
-            <content ID="MedicationDosage_6" xmlns="urn:hl7-org:v3">40 units</content>
-          </td>
-          <td>Jan-10-2014 - Jan-14-2014</td>
-          <td>Active</td>
-        </tr>
-        <tr ID="Medication_7">
-          <td>
-            <content ID="MedicationName_7" xmlns="urn:hl7-org:v3">Aspirin 81mg Oral Tablet</content>
-          </td>
-          <td>
-            <content ID="MedicationSig_7" xmlns="urn:hl7-org:v3">take 2 tablets</content>
-          </td>
-          <td>
-            <content ID="MedicationDosage_7" xmlns="urn:hl7-org:v3">162 MG</content>
-          </td>
-          <td>Jan-10-2014 - Jan-14-2014</td>
           <td>Active</td>
         </tr>
       </tbody>
