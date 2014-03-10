@@ -99,7 +99,7 @@
           <!-- See C-CDA DSTU 383 more detail on effectiveTime/high -->
           <effectiveTime xsi:type="IVL_TS">
             <low value="20140311000000"/>
-            <high value="20140314235959"/>
+            <high value="20140314235959" inclusive="true"/>
           </effectiveTime>
           <!-- This second effectiveTime represents once per day from medication sig. -->
           <!-- InstituionSpecified = "false" means that it must be administered exactly once per day-->
