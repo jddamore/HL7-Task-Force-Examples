@@ -1,0 +1,97 @@
+<section>
+	<templateId root="2.16.840.1.113883.10.20.22.2.6.1"/>
+	<!-- Allergies (entries required) section template -->
+	<code code="48765-2" codeSystem="2.16.840.1.113883.6.1"/>
+	<title>Allergies, Adverse Reactions and Alerts</title>
+	<text>
+		<table>
+			<thead>
+				<tr>
+					<th>Allergen</th>
+					<th>Reaction</th>
+					<th>Severity</th>
+					<th>Documentation Date</th>
+					<th>Start Date</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ID="allergy1">
+					<td ID="allergy1allergen">Cat hair</td>
+					<td ID="allergy1reaction">Rash</td>
+					<td ID="allergy1severity">Moderate</td>
+					<td>Jan 4 2014</td>
+					<td>1998</td>
+				</tr>
+			</tbody>
+		</table>
+	</text>
+	<entry typeCode="DRIV">
+		<act classCode="ACT" moodCode="EVN">
+			<!-- ** Allergy problem act ** -->
+			<templateId root="2.16.840.1.113883.10.20.22.4.30"/>
+			<id root="4a2ac5fc-0c85-4223-baee-c2e254803974" />
+			<code code="48765-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Allergies, adverse reactions, alerts"/>
+			<statusCode code="active"/>
+			<!-- This is the time stamp for when the allergy was first documented as a concern-->
+			<effectiveTime>
+				<low value="20140104123506+0500"/>
+			</effectiveTime>
+			<entryRelationship typeCode="SUBJ" inversionInd="true">
+				<observation classCode="OBS" moodCode="EVN">
+					<!-- allergy observation template -->
+					<templateId root="2.16.840.1.113883.10.20.22.4.7"/>
+					<id root="4a2ac5fc-0c85-4223-baee-c2e254803974"/>
+					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+					<statusCode code="completed"/>
+					<!-- This is the time stamp for the biological onset of the allergy. -->
+					<!-- Just the year is shown since a specific month and date was not reported -->
+					<effectiveTime>
+						<low value="1998"/>
+					</effectiveTime>
+					<!-- This specifies that the allergy is to a substance (cat hair) in contrast to other allergies (drug) -->
+					<value xsi:type="CD" code="419199007" displayName="allergy to substance" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"></value>
+					<participant typeCode="CSM">
+						<participantRole classCode="MANU">
+							<playingEntity classCode="MMAT">
+								<!-- UNII is used to report allergen of a substance -->
+								<code code="1564HD0N96" displayName="Cat hair" codeSystem="2.16.840.1.113883.4.9" codeSystemName="UNII">
+									<originalText>
+										<reference value="#allergy1allergen"/>
+									</originalText>
+								</code>
+							</playingEntity>
+						</participantRole>
+					</participant>
+					<entryRelationship typeCode="MFST" inversionInd="true">
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- Reaction Observation template -->
+							<templateId root="2.16.840.1.113883.10.20.22.4.9"/>
+							<id root="0506c036-adfb-4e6e-b9e1-eea76177ead5"/>
+							<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+							<text>
+								<reference value="#allergy1reaction"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime>
+								<low value="1998"/>
+							</effectiveTime>
+							<value xsi:type="CD" code="64144002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Rash"/>
+						</observation>
+					</entryRelationship>
+					<entryRelationship typeCode="SUBJ" inversionInd="true">
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- Severity Observation template -->
+							<templateId root="2.16.840.1.113883.10.20.22.4.8"/>
+							<code code="SEV" xsi:type="CE" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+							<text>
+								<reference value="#allergy1severity"/>
+							</text>
+							<statusCode code="completed"/>
+							<value xsi:type="CD" code="6736007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="moderate"/>
+						</observation>
+					</entryRelationship>
+				</observation>
+			</entryRelationship>
+		</act>
+	</entry>
+</section>
