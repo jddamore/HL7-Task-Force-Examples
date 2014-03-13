@@ -10,7 +10,7 @@
           <th>Medication</th>
           <th>Instructions</th>
           <th>Dosage</th>
-          <th>Effective Dates (start - stop)</th>
+          <th>Effective Date</th>
           <th>Status</th>
         </tr>
       </thead>
@@ -26,7 +26,7 @@
     </table>
   </text>
   <entry typeCode="DRIV">
-    <substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="true">
+    <substanceAdministration classCode="SBADM" moodCode="EVN">
       <!-- This medication use case is a medication administered a single time in the past. If it to be administered use moodCode = "INT". If an ordered drug then use moodCode = "RQO" -->
       <!-- Dependencies exist between moodCode, statusCode and effectiveTime  -->
       <templateId root="2.16.840.1.113883.10.20.22.4.16" />
