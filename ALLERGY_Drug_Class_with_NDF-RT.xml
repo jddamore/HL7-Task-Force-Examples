@@ -9,7 +9,7 @@
 				<tr>
 					<th>Allergen</th>
 					<th>Reaction</th>
-					<th>Severity</th>
+					<th>Reaction Severity</th>
 					<th>Documentation Date</th>
 					<th>Start Date</th>
 				</tr>
@@ -18,7 +18,7 @@
 				<tr ID="allergy3">
 					<td ID="allergy3allergen">Penicillins (drug class)</td>
 					<td ID="allergy3reaction">Anaphylaxis</td>
-					<td ID="allergy3severity">Severe</td>
+					<td ID="allergy3reactionseverity">Severe</td>
 					<td>Jan 4 2014</td>
 					<td>2006</td>
 				</tr>
@@ -76,20 +76,22 @@
 								<low value="2006"/>
 							</effectiveTime>
 							<value xsi:type="CD" code="39579001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Anaphylaxis"/>
+							<entryRelationship typeCode="SUBJ" inversionInd="true">
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- Severity Observation template -->
+									<templateId root="2.16.840.1.113883.10.20.22.4.8"/>
+									<code code="SEV" xsi:type="CE" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+									<text>
+										<reference value="#allergy3reactionseverity"/>
+									</text>
+									<statusCode code="completed"/>
+									<value xsi:type="CD" code="24484000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Severe"/>
+								</observation>
+							</entryRelationship>
 						</observation>
 					</entryRelationship>
-					<entryRelationship typeCode="SUBJ" inversionInd="true">
-						<observation classCode="OBS" moodCode="EVN">
-							<!-- Severity Observation template -->
-							<templateId root="2.16.840.1.113883.10.20.22.4.8"/>
-							<code code="SEV" xsi:type="CE" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
-							<text>
-								<reference value="#allergy3severity"/>
-							</text>
-							<statusCode code="completed"/>
-							<value xsi:type="CD" code="24484000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Severe"/>
-						</observation>
-					</entryRelationship>
+					<!-- Note that severity may also be specified for observation and has SHOULD conformance in C-CDA 1.1 -->
+					<!-- We have only included allergy severity to a specific reaction as outlined in HL7 Patient Care Committee materials-->
 				</observation>
 			</entryRelationship>
 		</act>
