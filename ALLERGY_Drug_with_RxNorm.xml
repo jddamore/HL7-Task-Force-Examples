@@ -30,7 +30,7 @@
 			<!-- ** Allergy problem act ** -->
 			<templateId root="2.16.840.1.113883.10.20.22.4.30"/>
 			<id root="4a2ac5fc-0c85-4223-baee-c2e254803974" />
-			<code code="48765-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Allergies, adverse reactions, alerts"/>
+			<code code="CONC" codeSystem="2.16.840.1.113883.5.6"/>
 			<statusCode code="active"/>
 			<!-- This is the time stamp for when the allergy was first documented as a concern-->
 			<effectiveTime>
@@ -68,6 +68,7 @@
 							<!-- Reaction Observation template -->
 							<templateId root="2.16.840.1.113883.10.20.22.4.9"/>
 							<id root="0506c036-adfb-4e6e-b9e1-eea76177ead5"/>
+							<!-- This code was not specified in C-CDA IG 1.1 although using ASSERTION aligns with C-CDA IG 2.0-->
 							<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
 							<text>
 								<reference value="#allergy2reaction"/>
