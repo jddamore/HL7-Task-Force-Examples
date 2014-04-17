@@ -201,6 +201,35 @@
 									<td>Jan 4 2014</td>
 									<td>2006</td>
 								</tr>
+								<tr ID="allergy4">
+									<td ID="allergy4allergen">Latex</td>
+									<td ID="allergy4reaction">Rash</td>
+									<td ID="allergy4reactionseverity">Moderate</td>
+									<td>Jan 4 2014</td>
+									<td>Jan 3 2014</td>
+								</tr>
+								<tr ID="allergy5">
+									<td ID="allergy5allergen">Egg</td>
+									<td ID="allergy5reaction">Rash</td>
+									<td ID="allergy5reactionseverity">Moderate</td>
+									<td>Jan 4 2014</td>
+									<td>1998</td>
+								</tr>
+								<tr ID="allergy6">
+										<td ID="allergy6allergen">Epineprhine</td>
+										<td>
+											<content ID="allergy6reaction">Ventricular tachycardia</content>
+											<br />
+											<content ID="allergy6reaction2">Tremor</content>
+										</td>
+										<td>
+											<content ID="allergy6reactionseverity">Severe</content>
+											<br />
+											<content ID="allergy6reactionseverity2">Moderate</content>
+										</td>
+										<td>Jan 4 2014</td>
+										<td>Jan 3 2014</td>
+								</tr>
 							</tbody>
 						</table>
 					</text>
@@ -411,6 +440,253 @@
 													</text>
 													<statusCode code="completed"/>
 													<value xsi:type="CD" code="24484000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Severe"/>
+												</observation>
+											</entryRelationship>
+										</observation>
+									</entryRelationship>
+									<!-- Note that severity may also be specified for observation and has SHOULD conformance in C-CDA 1.1 -->
+									<!-- We have only included allergy severity to a specific reaction as outlined in HL7 Patient Care Committee materials-->
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<entry typeCode="DRIV">
+						<act classCode="ACT" moodCode="EVN">
+							<!-- ** Allergy problem act ** -->
+							<templateId root="2.16.840.1.113883.10.20.22.4.30"/>
+							<id root="0abffc67-af4e-4345-b917-eed43f641b93" />
+							<code code="CONC" codeSystem="2.16.840.1.113883.5.6"/>
+							<statusCode code="active"/>
+							<!-- This is the time stamp for when the allergy was first documented as a concern-->
+							<effectiveTime>
+								<low value="20140104123506+0500"/>
+							</effectiveTime>
+							<entryRelationship typeCode="SUBJ" inversionInd="true">
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- allergy observation template -->
+									<templateId root="2.16.840.1.113883.10.20.22.4.7"/>
+									<id root="0abffc67-af4e-4345-b917-eed43f641b93"/>
+									<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+									<statusCode code="completed"/>
+									<!-- This is the time stamp for the biological onset of the allergy. -->
+									<!-- This documents that the allergy began at given year month and day, although hour and minute not specified-->
+									<effectiveTime>
+										<low value="20140103"/>
+									</effectiveTime>
+									<!-- This specifies that the allergy is a propensity to adverse reactions to substance -->
+									<value xsi:type="CD" code="418038007" displayName="Propensity to adverse reactions to substance (disorder)" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"></value>
+									<participant typeCode="CSM">
+										<participantRole classCode="MANU">
+											<playingEntity classCode="MMAT">
+												<!-- UNII is used to report allergen of a substance -->
+												<code code="2LQ0UUW8IN" displayName="Natural Latex Rubber" codeSystem="2.16.840.1.113883.4.9" codeSystemName="UNII">
+													<originalText>
+														<reference value="#allergy4allergen"/>
+													</originalText>
+												</code>
+											</playingEntity>
+										</participantRole>
+									</participant>
+									<entryRelationship typeCode="MFST" inversionInd="true">
+										<observation classCode="OBS" moodCode="EVN">
+											<!-- Reaction Observation template -->
+											<templateId root="2.16.840.1.113883.10.20.22.4.9"/>
+											<id root="14d1b466-feee-4f4d-a82e-a03754327e1a"/>
+											<!-- This code was not specified in C-CDA IG 1.1 although using ASSERTION aligns with C-CDA IG 2.0-->
+											<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+											<text>
+												<reference value="#allergy4reaction"/>
+											</text>
+											<statusCode code="completed"/>
+											<effectiveTime>
+												<low value="20140103"/>
+											</effectiveTime>
+											<value xsi:type="CD" code="64144002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Rash"/>
+											<entryRelationship typeCode="SUBJ" inversionInd="true">
+												<observation classCode="OBS" moodCode="EVN">
+													<!-- Severity Observation template -->
+													<templateId root="2.16.840.1.113883.10.20.22.4.8"/>
+													<code code="SEV" xsi:type="CE" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+													<text>
+														<reference value="#allergy4reactionseverity"/>
+													</text>
+													<statusCode code="completed"/>
+													<value xsi:type="CD" code="6736007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="moderate"/>
+												</observation>
+											</entryRelationship>
+										</observation>
+									</entryRelationship>
+									<!-- Note that severity may also be specified for observation and has SHOULD conformance in C-CDA 1.1 -->
+									<!-- We have only included allergy severity to a specific reaction as outlined in HL7 Patient Care Committee materials-->
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<entry typeCode="DRIV">
+						<act classCode="ACT" moodCode="EVN">
+							<!-- ** Allergy problem act ** -->
+							<templateId root="2.16.840.1.113883.10.20.22.4.30"/>
+							<id root="0fffb34f-c1e0-47c2-92af-c414a3ff21ec" />
+							<code code="CONC" codeSystem="2.16.840.1.113883.5.6"/>
+							<statusCode code="active"/>
+							<!-- This is the time stamp for when the allergy was first documented as a concern-->
+							<effectiveTime>
+								<low value="20140104123506+0500"/>
+							</effectiveTime>
+							<entryRelationship typeCode="SUBJ" inversionInd="true">
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- allergy observation template -->
+									<templateId root="2.16.840.1.113883.10.20.22.4.7"/>
+									<id root="0fffb34f-c1e0-47c2-92af-c414a3ff21ec"/>
+									<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+									<statusCode code="completed"/>
+									<!-- This is the time stamp for the biological onset of the allergy. -->
+									<!-- Just the year is shown since a specific month and date was not reported -->
+									<effectiveTime>
+										<low value="1998"/>
+									</effectiveTime>
+									<!-- This specifies that the allergy is to a substance (cat hair) in contrast to other allergies (drug) -->
+									<value xsi:type="CD" code="414285001" displayName="Food allergy (disorder)" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"></value>
+									<participant typeCode="CSM">
+										<participantRole classCode="MANU">
+											<playingEntity classCode="MMAT">
+												<!-- UNII is used to report allergen of a food -->
+												<code code="291P45F896" displayName="Egg" codeSystem="2.16.840.1.113883.4.9" codeSystemName="UNII">
+													<originalText>
+														<reference value="#allergy5allergen"/>
+													</originalText>
+												</code>
+											</playingEntity>
+										</participantRole>
+									</participant>
+									<entryRelationship typeCode="MFST" inversionInd="true">
+										<observation classCode="OBS" moodCode="EVN">
+											<!-- Reaction Observation template -->
+											<templateId root="2.16.840.1.113883.10.20.22.4.9"/>
+											<id root="d89ce431-e0f1-4f8d-a81f-489b6ed91f09"/>
+											<!-- This code was not specified in C-CDA IG 1.1 although using ASSERTION aligns with C-CDA IG 2.0-->
+											<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+											<text>
+												<reference value="#allergy5reaction"/>
+											</text>
+											<statusCode code="completed"/>
+											<effectiveTime>
+												<low value="1998"/>
+											</effectiveTime>
+											<value xsi:type="CD" code="64144002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Rash"/>
+											<entryRelationship typeCode="SUBJ" inversionInd="true">
+												<observation classCode="OBS" moodCode="EVN">
+													<!-- Severity Observation template -->
+													<templateId root="2.16.840.1.113883.10.20.22.4.8"/>
+													<code code="SEV" xsi:type="CE" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+													<text>
+														<reference value="#allergy5reactionseverity"/>
+													</text>
+													<statusCode code="completed"/>
+													<value xsi:type="CD" code="6736007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="moderate"/>
+												</observation>
+											</entryRelationship>
+										</observation>
+									</entryRelationship>
+									<!-- Note that severity may also be specified for observation and has SHOULD conformance in C-CDA 1.1 -->
+									<!-- We have only included allergy severity to a specific reaction as outlined in HL7 Patient Care Committee materials-->
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<entry typeCode="DRIV">
+						<act classCode="ACT" moodCode="EVN">
+							<!-- ** Allergy problem act ** -->
+							<templateId root="2.16.840.1.113883.10.20.22.4.30"/>
+							<id root="57b4e23d-43c0-465d-b907-c653388ee14b" />
+							<code code="CONC" codeSystem="2.16.840.1.113883.5.6"/>
+							<statusCode code="active"/>
+							<!-- This is the time stamp for when the allergy was first documented as a concern-->
+							<effectiveTime>
+								<low value="20140104123506+0500"/>
+							</effectiveTime>
+							<entryRelationship typeCode="SUBJ" inversionInd="true">
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- allergy observation template -->
+									<templateId root="2.16.840.1.113883.10.20.22.4.7"/>
+									<id root="57b4e23d-43c0-465d-b907-c653388ee14b"/>
+									<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+									<statusCode code="completed"/>
+									<!-- This is the time stamp for the biological onset of the allergy. -->
+									<!-- Just the year is shown since a specific month and date was not reported -->
+									<effectiveTime>
+										<low value="20140103"/>
+									</effectiveTime>
+									<!-- This specifies that the allergy is to a medication in contrast to other allergies (substance) -->
+									<value xsi:type="CD" code="59037007" displayName="Drug intolerance (disorder)" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"></value>
+									<participant typeCode="CSM">
+										<participantRole classCode="MANU">
+											<playingEntity classCode="MMAT">
+												<!-- RxNorm is used to report specific drug allergies. Note to use NDF-RT for drug classes -->
+												<!-- Best practice is to report drug allergies at ingredient level (e.g. penicillin) not at the adminsitration level (e.g. 10mg tablet)-->
+												<code code="3992" displayName="epinephrine" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm">
+													<originalText>
+														<reference value="#allergy6allergen"/>
+													</originalText>
+												</code>
+											</playingEntity>
+										</participantRole>
+									</participant>
+									<entryRelationship typeCode="MFST" inversionInd="true">
+										<observation classCode="OBS" moodCode="EVN">
+											<!-- Reaction Observation template -->
+											<templateId root="2.16.840.1.113883.10.20.22.4.9"/>
+											<id root="0506c036-adfb-4e6e-b9e1-eea76177ead5"/>
+											<!-- This code was not specified in C-CDA IG 1.1 although using ASSERTION aligns with C-CDA IG 2.0-->
+											<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+											<text>
+												<reference value="#allergy6reaction"/>
+											</text>
+											<statusCode code="completed"/>
+											<effectiveTime>
+												<low value="20140103"/>
+											</effectiveTime>
+											<value xsi:type="CD" code="25569003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Ventricular tachycardia"/>
+											<entryRelationship typeCode="SUBJ" inversionInd="true">
+												<observation classCode="OBS" moodCode="EVN">
+													<!-- Severity Observation template -->
+													<templateId root="2.16.840.1.113883.10.20.22.4.8"/>
+													<code code="SEV" xsi:type="CE" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+													<text>
+														<reference value="#allergy6reactionseverity"/>
+													</text>
+													<statusCode code="completed"/>
+													<value xsi:type="CD" code="24484000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Severe"/>
+												</observation>
+											</entryRelationship>
+										</observation>
+									</entryRelationship>
+									<!-- Note that multiple reactions may be recorded to the same substance ([0..*] cardinality in C-CDA 1.1)-->
+									<entryRelationship typeCode="MFST" inversionInd="true">
+										<observation classCode="OBS" moodCode="EVN">
+											<!-- Reaction Observation template -->
+											<templateId root="2.16.840.1.113883.10.20.22.4.9"/>
+											<id root="fea0b775-f3fe-4e0a-9c4f-4a5c235c2af0"/>
+											<!-- This code was not specified in C-CDA IG 1.1 although using ASSERTION aligns with C-CDA IG 2.0-->
+											<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+											<text>
+												<reference value="#allergy6reaction2"/>
+											</text>
+											<statusCode code="completed"/>
+											<effectiveTime>
+												<low value="20140103"/>
+											</effectiveTime>
+											<value xsi:type="CD" code="26079004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Tremor"/>
+											<entryRelationship typeCode="SUBJ" inversionInd="true">
+												<observation classCode="OBS" moodCode="EVN">
+													<!-- Severity Observation template -->
+													<templateId root="2.16.840.1.113883.10.20.22.4.8"/>
+													<code code="SEV" xsi:type="CE" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+													<text>
+														<reference value="#allergy6reactionseverity2"/>
+													</text>
+													<statusCode code="completed"/>
+													<value xsi:type="CD" code="6736007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Moderate"/>
 												</observation>
 											</entryRelationship>
 										</observation>
