@@ -62,7 +62,7 @@
 						<participantRole classCode="MANU">
 							<playingEntity classCode="MMAT">
 								<!-- RxNorm is used to report specific drug allergies. Note to use NDF-RT for drug classes -->
-								<!-- Best practice is to report drug allergies at ingredient level (e.g. penicillin) not at the adminsitration level (e.g. 10mg tablet)-->
+								<!-- Best practice is to report drug allergies at ingredient level (e.g. epinephrine) not at the adminsitration level (e.g. 0.3mL 0.5mg/mL Prefilled Syringe)-->
 								<code code="3992" displayName="epinephrine" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm">
 									<originalText>
 										<reference value="#allergy6allergen"/>
@@ -90,7 +90,7 @@
 								<observation classCode="OBS" moodCode="EVN">
 									<!-- Severity Observation template -->
 									<templateId root="2.16.840.1.113883.10.20.22.4.8"/>
-									<code code="SEV" xsi:type="CE" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+									<code code="SEV" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
 									<text>
 										<reference value="#allergy6reactionseverity"/>
 									</text>
@@ -120,7 +120,7 @@
 								<observation classCode="OBS" moodCode="EVN">
 									<!-- Severity Observation template -->
 									<templateId root="2.16.840.1.113883.10.20.22.4.8"/>
-									<code code="SEV" xsi:type="CE" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+									<code code="SEV" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
 									<text>
 										<reference value="#allergy6reactionseverity2"/>
 									</text>

@@ -17,7 +17,7 @@
 			<tbody>
 				<tr ID="allergy5">
 					<td ID="allergy5allergen">Egg</td>
-					<td ID="allergy5reaction">Rash</td>
+					<td ID="allergy5reaction">Hives</td>
 					<td ID="allergy5reactionseverity">Moderate</td>
 					<td>Jan 4 2014</td>
 					<td>1998</td>
@@ -48,7 +48,7 @@
 					<effectiveTime>
 						<low value="1998"/>
 					</effectiveTime>
-					<!-- This specifies that the allergy is to a substance (cat hair) in contrast to other allergies (drug) -->
+					<!-- This specifies that the allergy is to a food in contrast to other allergies (drug) -->
 					<value xsi:type="CD" code="414285001" displayName="Food allergy (disorder)" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"></value>
 					<participant typeCode="CSM">
 						<participantRole classCode="MANU">
@@ -76,12 +76,12 @@
 							<effectiveTime>
 								<low value="1998"/>
 							</effectiveTime>
-							<value xsi:type="CD" code="64144002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Rash"/>
+							<value xsi:type="CD" code="247472004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Hives"/>
 							<entryRelationship typeCode="SUBJ" inversionInd="true">
 								<observation classCode="OBS" moodCode="EVN">
 									<!-- Severity Observation template -->
 									<templateId root="2.16.840.1.113883.10.20.22.4.8"/>
-									<code code="SEV" xsi:type="CE" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+									<code code="SEV" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
 									<text>
 										<reference value="#allergy5reactionseverity"/>
 									</text>

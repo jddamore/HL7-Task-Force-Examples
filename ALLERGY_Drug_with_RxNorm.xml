@@ -82,7 +82,7 @@
 								<observation classCode="OBS" moodCode="EVN">
 									<!-- Severity Observation template -->
 									<templateId root="2.16.840.1.113883.10.20.22.4.8"/>
-									<code code="SEV" xsi:type="CE" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+									<code code="SEV" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
 									<text>
 										<reference value="#allergy2reactionseverity"/>
 									</text>

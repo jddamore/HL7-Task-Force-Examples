@@ -17,8 +17,8 @@
 			<tbody>
 				<tr ID="allergy4">
 					<td ID="allergy4allergen">Latex</td>
-					<td ID="allergy4reaction">Rash</td>
-					<td ID="allergy4reactionseverity">Moderate</td>
+					<td ID="allergy4reaction">Anaphylaxis</td>
+					<td ID="allergy4reactionseverity">Severe</td>
 					<td>Jan 4 2014</td>
 					<td>Jan 3 2014</td>
 				</tr>
@@ -76,17 +76,17 @@
 							<effectiveTime>
 								<low value="20140103"/>
 							</effectiveTime>
-							<value xsi:type="CD" code="64144002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Rash"/>
+							<value xsi:type="CD" code="39579001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Anaphylaxis"/>
 							<entryRelationship typeCode="SUBJ" inversionInd="true">
 								<observation classCode="OBS" moodCode="EVN">
 									<!-- Severity Observation template -->
 									<templateId root="2.16.840.1.113883.10.20.22.4.8"/>
-									<code code="SEV" xsi:type="CE" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+									<code code="SEV" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
 									<text>
 										<reference value="#allergy4reactionseverity"/>
 									</text>
 									<statusCode code="completed"/>
-									<value xsi:type="CD" code="6736007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="moderate"/>
+									<value xsi:type="CD" code="24484000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="severe"/>
 								</observation>
 							</entryRelationship>
 						</observation>
