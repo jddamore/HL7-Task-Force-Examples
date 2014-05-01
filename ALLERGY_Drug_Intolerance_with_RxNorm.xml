@@ -58,6 +58,26 @@
 					</effectiveTime>
 					<!-- This specifies that the allergy is to a medication in contrast to other allergies (substance) -->
 					<value xsi:type="CD" code="59037007" displayName="Drug intolerance (disorder)" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"></value>
+					<informant>
+						<assignedEntity>
+							<id extension="1234567" root="1.some.fictional.oid.1"/>
+							<addr>
+								<streetAddressLine>21 North Ave.</streetAddressLine>
+								<city>Burlington</city>
+								<state>MA</state>
+								<postalCode>02368</postalCode>
+								<country>US</country>
+							</addr>
+							<telecom value="tel:+1(555)555-1003"/>
+							<assignedPerson>
+								<name>
+									<given>Patient</given>
+									<given>Henry</given>
+									<family>Eight</family>
+								</name>
+							</assignedPerson>
+						</assignedEntity>
+					</informant>
 					<participant typeCode="CSM">
 						<participantRole classCode="MANU">
 							<playingEntity classCode="MMAT">
