@@ -38,7 +38,7 @@
 			<effectiveTime>
 				<low value="20140104123506+0500"/>
 			</effectiveTime>
-			<entryRelationship typeCode="SUBJ" inversionInd="true">
+			<entryRelationship typeCode="SUBJ">
 				<observation classCode="OBS" moodCode="EVN">
 					<!-- allergy observation template -->
 					<!-- Updated tempalteId for C-CDA R2.0-->
