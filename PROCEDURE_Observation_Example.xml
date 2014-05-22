@@ -42,7 +42,6 @@
 			<!-- When choosing an observation, value records relevant findings-->
 			<value xsi:type="CD" code="251135002" codeSystem="2.16.840.1.113883.6.96" displayName="Borderline normal ECG" codeSystemName="SNOMED-CT" />
 			<!-- targetSiteCode indicates the body site addressed by observation and must be from value set 2.16.840.1.113883.3.88.12.3221.8.9-->
-			<methodCode code="268400002" codeSystem="2.16.840.1.113883.6.96" displayName="12 lead ECG" codeSystemName="SNOMED-CT" />
 		</observation>
 	</entry>
 </section>
