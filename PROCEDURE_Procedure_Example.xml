@@ -25,14 +25,13 @@
 		<procedure moodCode="EVN" classCode="PROC">
 			<templateId root="2.16.840.1.113883.10.20.22.4.14" />
 			<id root="64af26d5-88ef-4169-ba16-c6ef16a1824f"/>
-			<code xsi:type="CE" code="6025007" displayName="Laparoscopic appendectomy" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT">
+			<code code="6025007" displayName="Laparoscopic appendectomy" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT">
 				<originalText>
-					Laparoscopic appendectomy
 					<reference value="#ProcedureDesc1" />
 				</originalText>
-				<translation xsi:type="CE" codeSystem="2.16.840.1.113883.6.12" codeSystemName="CPT" code="44970" displayName="Laparoscopic Appendectomy" />
-				<translation xsi:type="CE" codeSystem="2.16.840.1.113883.6.4" codeSystemName="ICD-10-PCS" code="0DTJ4ZZ" displayName="Resection of Appendix, Percutaneous Endoscopic Approach" />
-				<translation xsi:type="CE" codeSystem="2.16.840.1.113883.6.104" codeSystemName="ICD-9-CM" code="47.01" displayName="Laparoscopic appendectomy" />
+				<translation codeSystem="2.16.840.1.113883.6.12" codeSystemName="CPT" code="44970" displayName="Laparoscopic Appendectomy" />
+				<translation codeSystem="2.16.840.1.113883.6.4" codeSystemName="ICD-10-PCS" code="0DTJ4ZZ" displayName="Resection of Appendix, Percutaneous Endoscopic Approach" />
+				<translation codeSystem="2.16.840.1.113883.6.104" codeSystemName="ICD-9-CM" code="47.01" displayName="Laparoscopic appendectomy" />
 			</code>
 			<text>
 				<reference value="#Procedure1" />
