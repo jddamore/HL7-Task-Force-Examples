@@ -53,7 +53,7 @@
 					<participant typeCode="CSM">
 						<participantRole classCode="MANU">
 							<playingEntity classCode="MMAT">
-								<!-- UNII is used to report allergen of a food -->
+								<!-- UNII is the preferred in C-CDA R 1.1 although per DSTU 381 SNOMED is also allowed in code element -->
 								<code code="291P45F896" displayName="Egg" codeSystem="2.16.840.1.113883.4.9" codeSystemName="UNII">
 									<originalText>
 										<reference value="#allergy5allergen"/>
