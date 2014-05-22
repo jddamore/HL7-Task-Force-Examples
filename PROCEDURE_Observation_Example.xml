@@ -25,14 +25,14 @@
 		<observation classCode="OBS" moodCode="EVN">
 			<templateId root="2.16.840.1.113883.10.20.22.4.13"/>
 			<id root="c03e5445-af1b-4911-a419-e2782f21448c"/>
-			<code xsi:type="CE" code="268400002" codeSystem="2.16.840.1.113883.6.96" displayName="12 lead ECG" codeSystemName="SNOMED-CT">
+			<code code="268400002" codeSystem="2.16.840.1.113883.6.96" displayName="12 lead ECG" codeSystemName="SNOMED-CT">
 				<originalText>
-					Electrocardiogram (12-Lead)<reference value="#ProcedureDesc2"/>
+					<reference value="#ProcedureDesc2"/>
 				</originalText>
-				<translation xsi:type="CE" code="93000" codeSystem="2.16.840.1.113883.6.12" displayName="Electrocardiogram, complete" codeSystemName="CPT" />
-				<translation xsi:type="CE" code="G8704" codeSystem="2.16.840.1.113883.6.13" displayName="12-Lead Electrocardiogram (Ecg) Performed" codeSystemName="HCPCS"/>
-				<translation xsi:type="CE" code="89.52" codeSystem="2.16.840.1.113883.6.104" displayName="Electrocardiogram" codeSystemName="ICD-9 Procedure"/>
-				<translation xsi:type="CE" code="4A02X4Z" codeSystem="2.16.840.1.113883.6.4" displayName="Measurement of Cardiac Electrical Activity, External Approach" codeSystemName="ICD-10 Procedure"/>
+				<translation code="93000" codeSystem="2.16.840.1.113883.6.12" displayName="Electrocardiogram, complete" codeSystemName="CPT" />
+				<translation code="G8704" codeSystem="2.16.840.1.113883.6.13" displayName="12-Lead Electrocardiogram (Ecg) Performed" codeSystemName="HCPCS"/>
+				<translation code="89.52" codeSystem="2.16.840.1.113883.6.104" displayName="Electrocardiogram" codeSystemName="ICD-9 Procedure"/>
+				<translation code="4A02X4Z" codeSystem="2.16.840.1.113883.6.4" displayName="Measurement of Cardiac Electrical Activity, External Approach" codeSystemName="ICD-10 Procedure"/>
 			</code>
 			<text>
 				<reference value="#Procedure2" />
