@@ -50,9 +50,9 @@
 					<effectiveTime>
 						<!-- This represents the date of biological onset. This can be before the patient vistited the clinician, as illustrated in this example-->
 						<low value="20140402" />
-						<!-- This represents the date of resolution. Since this a boundary condition, if you wish to include the full day, the boundary becomes the start of next day -->
+						<!-- This represents the date of resolution. Since this a boundary condition, if you wish to include the full day, the boundary should be padded or be the start of next day -->
 						<!-- This reflects a common confusion point since people often consider dates to include the day at the boundary, but this ia RIM-related boundary constraint-->
-						<high value="20140406"/>
+						<high value="20140405235959+0500"/>
 					</effectiveTime>
 					<!-- This is a SNOMED code as the primary vocabulary for problem lists-->
 					<value xsi:type="CD" code="363746003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Acute pharyngitis">
