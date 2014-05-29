@@ -22,8 +22,7 @@
 					<td>05/20/2014 7:36pm</td>
 					<!-- You can consolidate Systolic and Diastolic in human view if desired but should retain separate references-->
 					<td>
-						<content ID="SystolicBP_2">120</content>/
-						<content ID="DiastolicBP_2">80</content>mm[Hg]
+						<content ID="SystolicBP_2">120</content>/<content ID="DiastolicBP_2">80</content>mm[Hg]
 					</td>
 					<td ID="Pulse_2">80 /min</td>
 					<td ID="Temp_2">99.0 F</td>
@@ -44,7 +43,7 @@
 			<code code="46680005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Vital signs"/>
 			<statusCode code="completed"/>
 			<effectiveTime value="20140520193605+0500"/>
-			<!-- Each vital sign should be its own compenent. Note that systolic and diastolic BP must be separate components-->
+			<!-- Each vital sign should be its own component. Note that systolic and diastolic BP must be separate components-->
 			<component>
 				<observation classCode="OBS" moodCode="EVN">
 					<templateId root="2.16.840.1.113883.10.20.22.4.27"/>
@@ -125,7 +124,7 @@
 					<statusCode code="completed"/>
 					<effectiveTime value="20140520193605+0500"/>
 					<!-- Note the UCUM conformant way to specify inches-->
-					<value xsi:type="PQ" value="67" unit="[in_i]" />
+					<value xsi:type="PQ" value="67" unit="[in_us]" />
 				</observation>
 			</component>
 			<component>
