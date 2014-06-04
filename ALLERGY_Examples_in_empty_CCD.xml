@@ -619,6 +619,26 @@
 									</effectiveTime>
 									<!-- This specifies that the allergy is to a medication in contrast to other allergies (substance) -->
 									<value xsi:type="CD" code="59037007" displayName="Drug intolerance (disorder)" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"></value>
+									<informant>
+										<assignedEntity>
+											<!-- This is a fictional OID and identifier for the patient. This should be adapted to local implementation -->
+											<id root="2.16.840.1.113883.3.3208.101.2" extension="20130607100800-Patient1"/>
+											<addr use="HP">
+												<streetAddressLine>1111 StreetName St.</streetAddressLine>
+												<city>Silver Spring</city>
+												<state>MD</state>
+												<postalCode>20901</postalCode>
+												<country>US</country>
+											</addr>
+											<telecom value="tel:+1(301)111-1111" use="HP"/>
+											<assignedPerson>
+												<name>
+													<given>Patient</given>
+													<family>One</family>
+												</name>
+											</assignedPerson>
+										</assignedEntity>
+									</informant>
 									<participant typeCode="CSM">
 										<participantRole classCode="MANU">
 											<playingEntity classCode="MMAT">

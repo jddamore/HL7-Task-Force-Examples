@@ -1,8 +1,15 @@
-# These are some example C-CDAs created by John D'Amore for the HL7 Example Task Force
+# These are some example C-CDAs created by John D'Amore of Diameter Health for the HL7 Example Task Force. See http://www.diameterhealth.com for more information on me and what I'm working on. 
 
 
 ### What's here now
-Four lab entries and five medication entries. Note that not all have been approved by HL7
+* 6 examples of allergies
+* 7 examples of medications
+* 3 examples of procedures
+* 5 examples of lab results
+* 2 examples of vital signs
+* 1 example of a problem
+Note that some of these may have been reviewed by HL7 task force and HL7 Structured Documents Working Group. See http://wiki.hl7.org/index.php?title=CDA_Example_Task_Force for more details
+
 
 ### Why?
 *Lots* of people will be implementing CCDA very soon; many have already started.
