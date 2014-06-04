@@ -1,0 +1,83 @@
+<section>
+	<templateId root="2.16.840.1.113883.10.20.22.2.1.1"/>
+	<!-- Medication Section (entries required) -->
+	<code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Medication Use"/>
+	<title>MEDICATIONS</title>
+	<text>
+		<table border="1" width="100%">
+			<thead>
+				<tr>
+					<th>Medication</th>
+					<th>Instructions</th>
+					<th>Dosage</th>
+					<th>Effective Dates (start - stop)</th>
+					<th>Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ID="Medication_9">
+					<td>
+						<content ID="MedicationName_9" xmlns="urn:hl7-org:v3">Penicillin G 100000 UNT/ML Injectable Solution</content>
+					</td>
+					<td>
+						<content ID="MedicationSig_9" xmlns="urn:hl7-org:v3">Adminsiter via IV infusion of normal saline(Administered antepartum in hospital)</content>
+					</td>
+					<td>
+						<content ID="MedicationDosage_9" xmlns="urn:hl7-org:v3">50mL (5 million units)</content>
+					</td>
+					<td>Apr-09-2014 10:52pm - Apr-09-2014 11:36pm </td>
+					<td>Active</td>
+				</tr>
+			</tbody>
+		</table>
+	</text>
+	<entry typeCode="DRIV">
+		<substanceAdministration classCode="SBADM" moodCode="EVN">
+			<!-- This medication use case is a medication administered by IV while in hospital. If it has been already administered use moodCode = "EVN". -->
+			<!-- If it is intended use "INT" or if ordered drug then use moodCode = "RQO" - Dependencies exist between moodCode, statusCode and effectiveTime  -->
+			<templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+			<id root="d29909b3-dba9-4001-b4c2-cc4ca52b62c4"/>
+			<text>
+				<!-- This reference refers to medication information in unstructured portion of section-->
+				<reference value="#Medication_9"/>
+			</text>
+			<statusCode code="completed"/>
+			<!-- This first effectiveTime shows that medication was started and ended-->
+			<effectiveTime xsi:type="IVL_TS">
+				<low value="201404092252+0500"/>
+				<high value="201404092336+0500"/>
+			</effectiveTime>
+			<!-- The second effectiveTime specifies dose frequency, which can be either a period (PIVL_TS) or event (EIVL_TS). -->
+			<!-- Since this medication was administed one-time, no regular dose frequency is reported-->
+			<routeCode code="C38276" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INTRAVENOUS" codeSystemName="National Cancer Institute Thesaurus" />
+			<!-- Since this dose is not pre-coordinated, specify both the amount with units in UCUM. [IU] is international units -->
+			<!-- Note that this basal insulin is not administered on a sliding scale and a specific dose is administered-->
+			<doseQuantity value="50" unit="mL"/>
+			<consumable typeCode="CSM">
+				<manufacturedProduct classCode="MANU">
+					<!-- ** Medication information ** -->
+					<templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+					<manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+						<!-- Medications should be specified at a level corresponding to prescription when possible (generic specified product shown below)-->
+						<code code="617881" codeSystem="2.16.840.1.113883.6.88" displayName="Penicillin G 100000 UNT/ML Injectable Solution" codeSystemName="RxNorm">
+							<originalText>
+								<reference value="#MedicationName_9"/>
+							</originalText>
+						</code>
+					</manufacturedMaterial>
+				</manufacturedProduct>
+			</consumable>
+			<participant typeCode="CSM">
+				<participantRole classCode="MANU">
+					<templateId root="2.16.840.1.113883.10.20.22.4.24"/>
+					<!-- Drug Vehicle template -->
+					<code code="412307009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="drug vehicle" />
+					<playingEntity classCode="MMAT">
+						<code code="125464" displayName="Normal Saline" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm"/>
+						<name>Normal Saline</name>
+					</playingEntity>
+				</participantRole>
+			</participant>
+		</substanceAdministration>
+	</entry>
+</section>
