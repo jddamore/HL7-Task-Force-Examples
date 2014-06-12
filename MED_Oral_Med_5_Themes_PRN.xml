@@ -1,0 +1,326 @@
+<section>
+	<templateId root="2.16.840.1.113883.10.20.22.2.1.1"/>
+	<!-- Medication Section (entries required) -->
+	<code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Medication Use"/>
+	<title>MEDICATIONS</title>
+	<text>
+		<table border="1" width="100%">
+			<thead>
+				<tr>
+					<th>Medication</th>
+					<th>Instructions</th>
+					<th>Dosage</th>
+					<th>Effective Dates (start - stop)</th>
+					<th>Status</th>
+				</tr>
+			</thead>
+			<!-- These five examples illustrate multiple ways that a medication can be prescribed for pain-->
+			<!-- Examples 1-4 use precondition to specify the PRN, but the example 5 uses an indication since PRN not directly specified-->
+			<!-- These examples were first developed by George Cole for review by the CDA example task force-->
+			<tbody>
+				<tr ID="Medication_0">
+					<td>
+						<content ID="MedicationName_0">Ibuprofen 600mg Oral Tablet</content>
+					</td>
+					<td>
+						<content ID="MedicationSig_0">take 1 tablet QID PRN</content>
+					</td>
+					<td>
+						<content ID="MedicationDosage_0">600 MG</content>
+					</td>
+					<td>Mar-10-2013 - </td>
+					<td>Active</td>
+				</tr>
+				<tr ID="Medication_1">
+					<td>
+						<content ID="MedicationName_1">Ibuprofen 600mg Oral Tablet</content>
+					</td>
+					<td>
+						<content ID="MedicationSig_1">take 1 tablet QID PRN as Directed</content>
+					</td>
+					<td>
+						<content ID="MedicationDosage_1">600 MG</content>
+					</td>
+					<td>Mar-10-2013 - </td>
+					<td>Active</td>
+				</tr>
+				<tr ID="Medication_2">
+					<td>
+						<content ID="MedicationName_2">Ibuprofen 600mg Oral Tablet</content>
+					</td>
+					<td>
+						<content ID="MedicationSig_2">take 1 tablet QID PRN for joint pain</content>
+					</td>
+					<td>
+						<content ID="MedicationDosage_2">600 MG</content>
+					</td>
+					<td>Mar-10-2013 - </td>
+					<td>Active</td>
+				</tr>
+				<tr ID="Medication_3">
+					<td>
+						<content ID="MedicationName_3">Ibuprofen 600mg Oral Tablet</content>
+					</td>
+					<td>
+						<content ID="MedicationSig_3">take 1 tablet QID as needed for joint pain</content>
+					</td>
+					<td>
+						<content ID="MedicationDosage_3">600 MG</content>
+					</td>
+					<td>Mar-10-2013 - </td>
+					<td>Active</td>
+				</tr>
+				<tr ID="Medication_4">
+					<td>
+						<content ID="MedicationName_4">Ibuprofen 600mg Oral Tablet</content>
+					</td>
+					<td>
+						<content ID="MedicationSig_4">take 1 tablet QID for <content ID="MedicationIndication_4">joint pain</content></content>
+					</td>
+					<td>
+						<content ID="MedicationDosage_4">600 MG</content>
+					</td>
+					<td>Mar-10-2013 - </td>
+					<td>Active</td>
+				</tr>
+			</tbody>
+		</table>
+	</text>
+
+	<!-- Example #1 - Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours PRN -->
+
+	<entry>
+		<substanceAdministration classCode="SBADM" moodCode="EVN">
+			<templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+			<id extension="100035" root="1.3.6.1.4.1.22812.3.99930.3.4.9"/>
+			<id extension="100013" root="1.3.6.1.4.1.22812.3.99930.3.4.9"/>
+			<text>
+				<reference value="#Medication_0"/>
+			</text>
+			<statusCode code="active"/>
+			<effectiveTime xsi:type="IVL_TS">
+				<low value="20110310000000-0500"/>
+				<high nullFlavor="NI"/>
+			</effectiveTime>
+			<effectiveTime xsi:type="PIVL_TS" institutionSpecified="false" operator="A">
+				<period value="6" unit="h"/>
+			</effectiveTime>
+			<doseQuantity value="1"/>
+			<consumable typeCode="CSM">
+				<manufacturedProduct classCode="MANU">
+					<templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+					<manufacturedMaterial>
+						<code code="308182" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm" displayName="Ibuprofen 600mg Oral Tablet">
+							<originalText>
+								<reference value="#MedicationName_0"/>
+							</originalText>
+							<translation code="67253014050" codeSystem="2.16.840.1.113883.6.69" codeSystemName="NDC" displayName="Ibuprofen 600mg Oral Tablet"/>
+						</code>
+						<name>Ibuprofen</name>
+					</manufacturedMaterial>
+				</manufacturedProduct>
+			</consumable>
+			<precondition typeCode="PRCN">
+				<criterion>
+					<!-- ** Precondition for substance administration ** -->
+					<templateId root="2.16.840.1.113883.10.20.22.4.25"/>
+					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+					<!-- If a precondition were specified in medication sig, you would include code here. Include nullFlavor="NI" when PRN specified but without precondition-->
+					<value xsi:type="CD" nullFlavor="NI"  />
+				</criterion>
+			</precondition>
+		</substanceAdministration>
+	</entry>
+
+	<!-- Example # 2 - Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours PRN as Directed 
+	as basic PRN, but the question now becomes: what is "as directed"? Is it a patient instruction or precondition?
+	"as directed" is coded here as a precondition using a SNOMED code-->
+	<entry>
+		<substanceAdministration classCode="SBADM" moodCode="EVN">
+			<templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+			<id extension="200035" root="1.3.6.1.4.1.22812.3.99930.3.4.9"/>
+			<id extension="200013" root="1.3.6.1.4.1.22812.3.99930.3.4.9"/>
+			<text>
+				<reference value="#Medication_1"/>
+			</text>
+			<statusCode code="active"/>
+			<effectiveTime xsi:type="IVL_TS">
+				<low value="20110310000000-0500"/>
+				<high nullFlavor="NI"/>
+			</effectiveTime>
+			<effectiveTime xsi:type="PIVL_TS" institutionSpecified="false" operator="A">
+				<period value="6" unit="h"/>
+			</effectiveTime>
+			<doseQuantity value="1"/>
+			<consumable typeCode="CSM">
+				<manufacturedProduct classCode="MANU">
+					<templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+					<manufacturedMaterial>
+						<code code="308182" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm" displayName="Ibuprofen 600mg Oral Tablet">
+							<originalText>
+								<reference value="#MedicationName_1"/>
+							</originalText>
+							<translation code="67253014050" codeSystem="2.16.840.1.113883.6.69" codeSystemName="NDC" displayName="Ibuprofen 600mg Oral Tablet"/>
+						</code>
+						<name>Ibuprofen</name>
+					</manufacturedMaterial>
+				</manufacturedProduct>
+			</consumable>
+			<precondition typeCode="PRCN">
+				<criterion>
+					<!-- ** Precondition for substance administration ** -->
+					<templateId root="2.16.840.1.113883.10.20.22.4.25"/>
+					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+					<!-- as directed as the precondition -->
+					<value xsi:type="CD" code="422135004" codeSystem="2.16.840.1.113883.6.96" displayName="As directed for" />
+				</criterion>
+			</precondition>
+		</substanceAdministration>
+	</entry>
+
+
+	<!-- Example # 3 - Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours PRN for joint pain 
+	adding for joint pain raises the question: is this a precondition or an indication? 
+	coded here as an precondition-->
+	<entry>
+		<substanceAdministration classCode="SBADM" moodCode="EVN">
+			<templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+			<id extension="300035" root="1.3.6.1.4.1.22812.3.99930.3.4.9"/>
+			<id extension="300013" root="1.3.6.1.4.1.22812.3.99930.3.4.9"/>
+			<text>
+				<reference value="#Medication_2"/>
+			</text>
+			<statusCode code="active"/>
+			<effectiveTime xsi:type="IVL_TS">
+				<low value="20110310000000-0500"/>
+				<high nullFlavor="NI"/>
+			</effectiveTime>
+			<effectiveTime xsi:type="PIVL_TS" institutionSpecified="false" operator="A">
+				<period value="6" unit="h"/>
+			</effectiveTime>
+			<doseQuantity value="1"/>
+			<consumable typeCode="CSM">
+				<manufacturedProduct classCode="MANU">
+					<templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+					<manufacturedMaterial>
+						<code code="308182" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm" displayName="Ibuprofen 600mg Oral Tablet">
+							<originalText>
+								<reference value="#MedicationName_2"/>
+							</originalText>
+							<translation code="67253014050" codeSystem="2.16.840.1.113883.6.69" codeSystemName="NDC" displayName="Ibuprofen 600mg Oral Tablet"/>
+						</code>
+						<name>Ibuprofen</name>
+					</manufacturedMaterial>
+				</manufacturedProduct>
+			</consumable>
+			<precondition typeCode="PRCN">
+				<criterion>
+					<!-- ** Precondition for substance administration ** -->
+					<templateId root="2.16.840.1.113883.10.20.22.4.25"/>
+					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+					<!-- joint pain -->
+					<value xsi:type="CD" code="57676002" codeSystem="2.16.840.1.113883.6.96" displayName="Joint pain" />
+				</criterion>
+			</precondition>
+		</substanceAdministration>
+	</entry>
+
+
+	<!-- Example # 4 - Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours as needed for joint pain 
+	maybe this is not a realistic example, but the question this raises is:  does the phrase "as needed" constitute 
+	a PRCN as if PRN had been used instead of "as needed" ? propose that Yes, they are the same -->
+	<entry>
+		<substanceAdministration classCode="SBADM" moodCode="EVN">
+			<templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+			<id extension="400035" root="1.3.6.1.4.1.22812.3.99930.3.4.9"/>
+			<id extension="400013" root="1.3.6.1.4.1.22812.3.99930.3.4.9"/>
+			<text>
+				<reference value="#Medication_3"/>
+			</text>
+			<statusCode code="active"/>
+			<effectiveTime xsi:type="IVL_TS">
+				<low value="20110310000000-0500"/>
+				<high nullFlavor="NI"/>
+			</effectiveTime>
+			<effectiveTime xsi:type="PIVL_TS" institutionSpecified="false" operator="A">
+				<period value="6" unit="h"/>
+			</effectiveTime>
+			<doseQuantity value="1"/>
+			<consumable typeCode="CSM">
+				<manufacturedProduct classCode="MANU">
+					<templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+					<manufacturedMaterial>
+						<code code="308182" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm" displayName="Ibuprofen 600mg Oral Tablet">
+							<originalText>
+								<reference value="#MedicationName_3"/>
+							</originalText>
+							<translation code="67253014050" codeSystem="2.16.840.1.113883.6.69" codeSystemName="NDC" displayName="Ibuprofen 600mg Oral Tablet"/>
+						</code>
+						<name>Ibuprofen</name>
+					</manufacturedMaterial>
+				</manufacturedProduct>
+			</consumable>
+			<precondition typeCode="PRCN">
+				<criterion>
+					<!-- ** Precondition for substance administration ** -->
+					<templateId root="2.16.840.1.113883.10.20.22.4.25"/>
+					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+					<!-- joint pain -->
+					<value xsi:type="CD" code="57676002" codeSystem="2.16.840.1.113883.6.96" displayName="Joint pain" />
+				</criterion>
+			</precondition>
+		</substanceAdministration>
+	</entry>
+
+	<!-- Example # 5 - Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours for joint pain 
+	as if "for" was worded as "because of" coded with an indication, no precondition -->
+	<entry>
+		<substanceAdministration classCode="SBADM" moodCode="EVN">
+			<templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+			<id extension="500035" root="1.3.6.1.4.1.22812.3.99930.3.4.9"/>
+			<id extension="500013" root="1.3.6.1.4.1.22812.3.99930.3.4.9"/>
+			<text>
+				<reference value="#Medication_4"/>
+			</text>
+			<statusCode code="active"/>
+			<effectiveTime xsi:type="IVL_TS">
+				<low value="20110310000000-0500"/>
+				<high nullFlavor="NI"/>
+			</effectiveTime>
+			<effectiveTime xsi:type="PIVL_TS" institutionSpecified="false" operator="A">
+				<period value="6" unit="h"/>
+			</effectiveTime>
+			<doseQuantity value="1"/>
+			<consumable typeCode="CSM">
+				<manufacturedProduct classCode="MANU">
+					<templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+					<manufacturedMaterial>
+						<code code="308182" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm" displayName="Ibuprofen 600mg Oral Tablet">
+							<originalText>
+								<reference value="#MedicationName_4"/>
+							</originalText>
+							<translation code="67253014050" codeSystem="2.16.840.1.113883.6.69" codeSystemName="NDC" displayName="Ibuprofen 600mg Oral Tablet"/>
+						</code>
+						<name>Ibuprofen</name>
+					</manufacturedMaterial>
+				</manufacturedProduct>
+			</consumable>
+			<!-- a problem indication of joint pain -->
+			<entryRelationship typeCode="RSON">
+				<observation classCode="OBS" moodCode="EVN">
+					<templateId root="2.16.840.1.113883.10.20.22.4.19"/>
+					<id extension="44" root="1.3.6.1.4.1.22812.3.99930.3.4.1.3"/>
+					<code codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="404684003"/>
+					<text>
+						<reference value="#MedicationIndication_4"/>
+					</text>
+					<statusCode code="completed"/>
+					<effectiveTime>
+						<low nullFlavor="NI"/>
+					</effectiveTime>
+					<value xsi:type="CD" code="57676002" codeSystem="2.16.840.1.113883.6.96" displayName="Joint pain" />
+				</observation>
+			</entryRelationship>
+		</substanceAdministration>
+	</entry>
+</section>
