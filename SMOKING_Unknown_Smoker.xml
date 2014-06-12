@@ -1,0 +1,30 @@
+<section>
+	<templateId root="2.16.840.1.113883.10.20.22.2.17"/>
+	<code code="29762-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Social History"/>
+	<title>Social History</title>
+	<text>
+		<list>
+			<caption>Smoking Status</caption>
+			<item>
+				<content>Unknown if ever smoked</content>
+				<content>Started: </content>
+				<content>Stopped:</content>
+				<content>Recorded June 6, 2014 10:32am</content>
+			</item>
+		</list>
+	</text>
+	<!-- A best practice is to only include one smoking status per patient to avoid confusion. -->
+	<!-- While multiple smoking statuses are permissible in C-CDA 1.1, a cardinality revision in C-CDA 2.0 is proposed. -->
+	<entry>
+		<observation classCode="OBS" moodCode="EVN">
+			<templateId root="2.16.840.1.113883.10.20.22.4.78"/>
+			<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+			<statusCode code="completed"/>
+			<effectiveTime>
+				<!-- effectiveTime/low may be populated with observation date when smoking status is unknown or never a smoker-->
+				<low value="201406061032+0500"/>
+			</effectiveTime>
+			<value xsi:type="CD" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="266927001" displayName="Unknown if ever smoked"/>
+		</observation>
+	</entry>
+</section>

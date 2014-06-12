@@ -1,0 +1,34 @@
+<section>
+	<templateId root="2.16.840.1.113883.10.20.22.2.17"/>
+	<code code="29762-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Social History"/>
+	<title>Social History</title>
+	<text>
+		<list>
+			<caption>Smoking Status</caption>
+			<item>
+				<content>Former Smoker</content>
+				<content>Started: January 1994</content>
+				<content>Stopped: March 2011</content>
+				<content>Recorded June 6, 2014 10:32am</content>
+			</item>
+		</list>
+	</text>
+	<!-- A best practice is to only include one smoking status per patient to avoid confusion. -->
+	<!-- While multiple smoking statuses are permissible in C-CDA 1.1, a cardinality revision in C-CDA 2.0 is proposed. -->
+	<entry>
+		<observation classCode="OBS" moodCode="EVN">
+			<templateId root="2.16.840.1.113883.10.20.22.4.78"/>
+			<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+			<statusCode code="completed"/>
+			<effectiveTime>
+				<!-- effectiveTime/low is the date when the person started smoking. -->
+				<low value="199401"/>
+				<!-- effectiveTime/high is the date when the person stopped smoking and only used for former smokers. --> 
+				<!-- This is a point of common confusion given its divergence from other principles. This is NOT the date the person stopped being a "former smoker." -->
+				<!-- Smoking status may be revised -->
+				<high value="201103"/>
+			</effectiveTime>
+			<value xsi:type="CD" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="8517006" displayName="Former smoker"/>
+		</observation>
+	</entry>
+</section>

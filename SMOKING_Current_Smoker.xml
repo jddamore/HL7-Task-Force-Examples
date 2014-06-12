@@ -1,0 +1,49 @@
+<section>
+	<templateId root="2.16.840.1.113883.10.20.22.2.17"/>
+	<code code="29762-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Social History"/>
+	<title>Social History</title>
+	<text>
+		<list>
+			<caption>Smoking Status</caption>
+			<item>
+				<content>Status: Current every day smoker</content>
+				<content ID="SmokingDetail1">Detail: Moderate smoker (10-19 cigs/day)</content>
+				<content>Started: 1992</content>
+				<content>Stopped:</content>
+				<content>Recorded June 6, 2014 10:32am</content>
+			</item>
+		</list>
+	</text>
+	<!-- A best practice is to only include one smoking status per patient to avoid confusion. -->
+	<!-- While multiple smoking statuses are permissible in C-CDA 1.1, a cardinality revision in C-CDA 2.0 is proposed. -->
+	<entry>
+		<observation classCode="OBS" moodCode="EVN">
+			<templateId root="2.16.840.1.113883.10.20.22.4.78"/>
+			<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+			<statusCode code="completed"/>
+			<effectiveTime>
+				<!-- effectiveTime/low is populated with the date the patient started smoking-->
+				<!-- This is an example of year precision timing when month and day are not specified-->
+				<low value="1992"/>
+				<!-- effectiveTime/high should not be populated with observation date for a current smoker-->
+			</effectiveTime>
+			<value xsi:type="CD" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="449868002" displayName="Current every day smoker"/>
+		</observation>
+	</entry>
+	<!--- You can used a social history observation template entry for additional smoking detail, such as smoking quantity-->
+	<entry>
+		<observation classCode="OBS" moodCode="EVN">
+			<!-- ** Social history observation template ** -->
+			<!--- You can used a social history observation template entry for additional smoking detail, such as smoking quantity-->
+			<templateId root="2.16.840.1.113883.10.20.22.4.38"/>
+			<id root="45efb604-7049-4a2e-ad33-d38556c9636c"/>
+			<code code="229819007" codeSystem="2.16.840.1.113883.6.96" displayName="Tobacco use and exposure"/>
+			<statusCode code="completed"/>
+			<effectiveTime>
+				<low value="1992"/>
+			</effectiveTime>
+			<!--- This code would not work for a smoking status since not in the HL7 or MU accceptable value set-->
+			<value xsi:type="CD" codeSystem="2.16.840.1.113883.6.96" code="160604004" displayName="Moderate cigarette smoker (10-19 cigs/day)"/>
+		</observation>
+	</entry>
+</section>
