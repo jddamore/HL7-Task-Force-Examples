@@ -479,6 +479,15 @@
 								<content>Recorded June 6, 2014 10:32am</content>
 							</item>
 						</list>
+						<list>
+							<caption>Smoking Status</caption>
+							<item>
+								<content>Never smoked</content>
+								<content>Started: </content>
+								<content>Stopped:</content>
+								<content>Recorded June 6, 2014 10:32am</content>
+							</item>
+						</list>
 					</text>
 					<!-- A best practice is to only include one smoking status per patient to avoid confusion. -->
 					<!-- DON'T DO THIS...THE MULTIPLE ENTRIES BELOW ARE FOR VALIDATION ONLY!!!-->
@@ -588,6 +597,37 @@
 							</effectiveTime>
 							<!--- This code would not work for a smoking status since not in the HL7 or MU accceptable value set-->
 							<value xsi:type="CD" codeSystem="2.16.840.1.113883.6.96" code="160604004" displayName="Moderate cigarette smoker (10-19 cigs/day)"/>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.22.4.78"/>
+							<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+							<statusCode code="completed"/>
+							<effectiveTime>
+								<!-- effectiveTime/low is nullFlavor when smoking status is unknown.-->
+								<!-- Please note that there may be revisions to this assignment in C-CDA R2.0-->
+								<!-- Other nullFlavors have been discussed and may be appropriate -->
+								<low nullFlavor="NA"/>
+							</effectiveTime>
+							<!-- The use of a specfic SNOMED code for unknown smoker is an encouraged variation from C-CDA practices in other sections -->
+							<value xsi:type="CD" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="266919005" displayName="Never Smoker"/>
+							<author>
+								<time value="201406061032+0500"/>
+								<assignedAuthor>
+									<id root="2.16.840.1.113883.4.6" extension="99999999"/>
+									<!-- Root means NPI number. -->
+									<code code="200000000X" codeSystem="2.16.840.1.113883.6.101"
+									displayName="Allopathic and Osteopathic Physicians"/>
+									<telecom use="WP" value="tel:+1(555)555-1002"/>
+									<assignedPerson>
+										<name>
+											<given>Henry</given>
+											<family>Seven</family>
+										</name>
+									</assignedPerson>
+								</assignedAuthor>
+							</author>
 						</observation>
 					</entry>
 				</section>
