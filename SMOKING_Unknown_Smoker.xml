@@ -28,6 +28,22 @@
 			</effectiveTime>
 			<!-- The use of a specfic SNOMED code for unknown smoker is an encouraged variation from C-CDA practices in other sections -->
 			<value xsi:type="CD" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="266927001" displayName="Unknown if ever smoked"/>
+			<author>
+				<time value="201406061032+0500"/>
+				<assignedAuthor>
+					<id root="2.16.840.1.113883.4.6" extension="99999999"/>
+					<!-- Root means NPI number. -->
+					<code code="200000000X" codeSystem="2.16.840.1.113883.6.101"
+					displayName="Allopathic and Osteopathic Physicians"/>
+					<telecom use="WP" value="tel:+1(555)555-1002"/>
+					<assignedPerson>
+						<name>
+							<given>Henry</given>
+							<family>Seven</family>
+						</name>
+					</assignedPerson>
+				</assignedAuthor>
+			</author>
 		</observation>
 	</entry>
 </section>
