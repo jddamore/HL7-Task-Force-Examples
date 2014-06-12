@@ -22,6 +22,7 @@
 			<statusCode code="completed"/>
 			<effectiveTime>
 				<!-- effectiveTime/low is the date when the person started smoking. -->
+				<!-- The month is included if the patient remembers to the month of status-->
 				<low value="199401"/>
 				<!-- effectiveTime/high is the date when the person stopped smoking and only used for former smokers. --> 
 				<!-- This is a point of common confusion given its divergence from other principles. This is NOT the date the person stopped being a "former smoker." -->
@@ -29,6 +30,22 @@
 				<high value="201103"/>
 			</effectiveTime>
 			<value xsi:type="CD" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="8517006" displayName="Former smoker"/>
+						<author>
+				<time value="201406061032+0500"/>
+				<assignedAuthor>
+					<id root="2.16.840.1.113883.4.6" extension="99999999"/>
+					<!-- Root means NPI number. -->
+					<code code="200000000X" codeSystem="2.16.840.1.113883.6.101"
+					displayName="Allopathic and Osteopathic Physicians"/>
+					<telecom use="WP" value="tel:+1(555)555-1002"/>
+					<assignedPerson>
+						<name>
+							<given>Henry</given>
+							<family>Seven</family>
+						</name>
+					</assignedPerson>
+				</assignedAuthor>
+			</author>
 		</observation>
 	</entry>
 </section>
