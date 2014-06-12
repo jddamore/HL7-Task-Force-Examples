@@ -24,6 +24,7 @@
 				<!-- effectiveTime/low may be populated with observation date when smoking status is unknown or never a smoker-->
 				<low value="201406061032+0500"/>
 			</effectiveTime>
+			<!-- The use of a specfici SNOMED code for unknown smoker is an encouraged variation from C-CDA practices in other sections -->
 			<value xsi:type="CD" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="266927001" displayName="Unknown if ever smoked"/>
 		</observation>
 	</entry>
