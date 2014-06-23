@@ -1,3 +1,16 @@
+<!-- These five examples illustrate multiple ways that a medication can be prescribed for pain-->
+<!--           These examples are meant to illustrate the coding of a medication precondition or indication -->
+<!-- Examples 1-4 use precondition to specify the PRN, but the example 5 uses an indication since PRN not directly specified
+
+		Summary of the 5 examples:
+			Example #1 - Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours PRN
+			Example # 2 - Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours PRN as Directed
+			Example # 3 - Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours PRN for joint pain
+			Example # 4 - Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours as needed for joint pain
+			Example # 5 - Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours for joint pain
+
+		The section and all content below are purely for the purposes of illustrating the differences in the 5 examples - obviously these would not appear together in one patient document.
+-->
 <section>
 	<templateId root="2.16.840.1.113883.10.20.22.2.1.1"/>
 	<!-- Medication Section (entries required) -->
@@ -14,9 +27,6 @@
 					<th>Status</th>
 				</tr>
 			</thead>
-			<!-- These five examples illustrate multiple ways that a medication can be prescribed for pain-->
-			<!-- Examples 1-4 use precondition to specify the PRN, but the example 5 uses an indication since PRN not directly specified-->
-			<!-- These examples were first developed by George Cole for review by the CDA example task force-->
 			<tbody>
 				<tr ID="Medication_0">
 					<td>
