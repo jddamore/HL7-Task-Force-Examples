@@ -50,7 +50,7 @@
 	<entry>
 		<observation classCode="OBS" moodCode="EVN">
 			<!-- ** Social history observation template ** -->
-			<!--- You can used a social history observation template entry for additional smoking detail, such as smoking quantity-->
+			<!--- You can use a social history observation template entry for additional smoking detail, such as smoking quantity-->
 			<!-- For C-CDA R2.0, a change to the template  may be required to Tobacco use template. Please check final publication release. -->
 			<templateId root="2.16.840.1.113883.10.20.22.4.38"/>
 			<id root="45efb604-7049-4a2e-ad33-d38556c9636c"/>
