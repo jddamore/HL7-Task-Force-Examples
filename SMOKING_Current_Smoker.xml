@@ -60,7 +60,11 @@
 				<low value="1992"/>
 			</effectiveTime>
 			<!--- This code would not work for a smoking status since not in the HL7 or MU accceptable value set-->
-			<value xsi:type="CD" codeSystem="2.16.840.1.113883.6.96" code="160604004" displayName="Moderate cigarette smoker (10-19 cigs/day)"/>
+			<value xsi:type="CD" codeSystem="2.16.840.1.113883.6.96" code="160604004" displayName="Moderate cigarette smoker (10-19 cigs/day)">
+				<originalText>
+					<reference value="#SmokingDetail1" />
+				</originalText>
+			</value>
 			<author>
 				<time value="201406061032+0500"/>
 				<assignedAuthor>
