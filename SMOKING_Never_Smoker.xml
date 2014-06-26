@@ -21,7 +21,7 @@
 			<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
 			<statusCode code="completed"/>
 			<effectiveTime>
-				<!-- effectiveTime/low is nullFlavor when smoking status is unknown.-->
+				<!-- effectiveTime/low is nullFlavor when smoking status is never a smoker.-->
 				<!-- Please note that there may be revisions to this assignment in C-CDA R2.0-->
 				<!-- Other nullFlavors have been discussed and may be appropriate -->
 				<low nullFlavor="NA"/>
