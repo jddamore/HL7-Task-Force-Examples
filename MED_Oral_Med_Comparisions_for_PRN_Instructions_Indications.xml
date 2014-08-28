@@ -91,7 +91,10 @@
 				<low value="20130310"/>
 				<high nullFlavor="NI"/>
 			</effectiveTime>
-			<effectiveTime xsi:type="PIVL_TS" institutionSpecified="false" operator="A">
+			<!-- for the frequency of every 6 hours, we omit the institutionSpecified="false" attribute as false is the default value 
+				the reader is referred to the Frequency examples for more information.
+			-->
+			<effectiveTime xsi:type="PIVL_TS" operator="A">
 				<period value="6" unit="h"/>
 			</effectiveTime>
 			<doseQuantity value="1"/>
@@ -135,7 +138,10 @@
 				<low value="20130310"/>
 				<high nullFlavor="NI"/>
 			</effectiveTime>
-			<effectiveTime xsi:type="PIVL_TS" institutionSpecified="false" operator="A">
+			<!-- for the frequency of every 6 hours, we omit the institutionSpecified="false" attribute as false is the default value 
+				the reader is referred to the Frequency examples for more information.
+			-->			
+			<effectiveTime xsi:type="PIVL_TS" operator="A">
 				<period value="6" unit="h"/>
 			</effectiveTime>
 			<doseQuantity value="1"/>
@@ -183,7 +189,10 @@
 				<low value="20130310"/>
 				<high nullFlavor="NI"/>
 			</effectiveTime>
-			<effectiveTime xsi:type="PIVL_TS" institutionSpecified="false" operator="A">
+			<!-- for the frequency of every 6 hours, we omit the institutionSpecified="false" attribute as false is the default value 
+				the reader is referred to the Frequency examples for more information.
+			-->
+			<effectiveTime xsi:type="PIVL_TS" operator="A">
 				<period value="6" unit="h"/>
 			</effectiveTime>
 			<doseQuantity value="1"/>
