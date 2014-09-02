@@ -1,0 +1,94 @@
+<!-- 
+		Summary of example:
+
+			Instruction (NOT a PRN) - Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours  as Directed
+
+		For comparison purposes, it may be worth looking at the following additional examples:
+
+			1. PRN with a coded precondition - Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours PRN for joint pain
+
+			2. Indication (NOT a PRN) - Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours for joint pain
+-->
+<section>
+	<templateId root="2.16.840.1.113883.10.20.22.2.1.1"/>
+	<!-- Medication Section (entries required) -->
+	<code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Medication Use"/>
+	<title>MEDICATIONS</title>
+	<text>
+		<table border="1" width="100%">
+			<thead>
+				<tr>
+					<th>Medication</th>
+					<th>Instructions</th>
+					<th>Dosage</th>
+					<th>Effective Dates (start - stop)</th>
+					<th>Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ID="Medication_1">
+					<td>
+						<content ID="MedicationName_1">Ibuprofen 600mg Oral Tablet</content>
+					</td>
+					<td>
+						<content ID="MedicationSig_1">take 1 tablet Every 6 Hours <content ID="MedicationInstruction_1">as Directed</content></content>
+					</td>
+					<td>
+						<content ID="MedicationDosage_1">600 MG</content>
+					</td>
+					<td>Mar-10-2013 - </td>
+					<td>Active</td>
+				</tr>
+			</tbody>
+		</table>
+	</text>
+
+	<!-- Instructions; similar to above but NOT a PRN - Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours as Directed -->
+	<entry>
+		<substanceAdministration classCode="SBADM" moodCode="EVN">
+			<templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+			<id extension="200035" root="1.3.6.1.4.1.22812.3.99930.3.4.9"/>
+			<id extension="200013" root="1.3.6.1.4.1.22812.3.99930.3.4.9"/>
+			<text>
+				<reference value="#Medication_1"/>
+			</text>
+			<statusCode code="active"/>
+			<effectiveTime xsi:type="IVL_TS">
+				<low value="20130310"/>
+				<high nullFlavor="NI"/>
+			</effectiveTime>
+			<!-- for the frequency of every 6 hours, we omit the institutionSpecified="false" attribute as false is the default value 
+				the reader is referred to the Frequency examples for more information.
+			-->			
+			<effectiveTime xsi:type="PIVL_TS" operator="A">
+				<period value="6" unit="h"/>
+			</effectiveTime>
+			<doseQuantity value="1"/>
+			<consumable typeCode="CSM">
+				<manufacturedProduct classCode="MANU">
+					<templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+					<manufacturedMaterial>
+						<code code="197806" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm" displayName="Ibuprofen 600mg Oral Tablet">
+							<originalText>
+								<reference value="#MedicationName_1"/>
+							</originalText>
+							<translation code="00603402221" codeSystem="2.16.840.1.113883.6.69" codeSystemName="NDC" displayName="Ibuprofen 600mg Oral Tablet"/>
+						</code>
+						<name>Ibuprofen</name>
+					</manufacturedMaterial>
+				</manufacturedProduct>
+			</consumable>
+			<!-- Instructions -->
+			<entryRelationship typeCode="SUBJ" inversionInd="true">
+				<act classCode="ACT" moodCode="INT">
+					<templateId root="2.16.840.1.113883.10.20.22.4.20"/>
+					<code code="423564006" displayName="Provider instructions for treatment" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
+					<text>
+						<reference value="#MedicationInstruction_1"/>
+					</text>
+					<statusCode code="completed"/>
+				</act>
+			</entryRelationship>
+		</substanceAdministration>
+	</entry>
+</section>
