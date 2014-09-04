@@ -48,10 +48,10 @@
         <high nullFlavor="NI"/>
       </effectiveTime>
       <!-- This second effectiveTime represents every 4-6 hours from medication sig. -->
-      <!-- InstituionSpecified = "false" means that it should be exactly timed to every 4-6 hours -->
-      <!-- InstituionSpecified = "true" would mean that receiving institution has flexibility in dosing schedule-->
-      <!-- Operator "A" means that this timing information is in addition to previous effectiveTime information provided-->
-      <effectiveTime xsi:type="PIVL_TS" institutionSpecified="false" operator="A">
+  	  <!-- InstituionSpecified = "false" is implied in ths omission of this attribute and means that it must be administered exactly once per day-->
+	  <!-- InstituionSpecified = "true"which is not default would mean that receiving institution has flexibility in dosing schedule-->
+	  <!-- Operator "A" means that this timing information is in addition to previous effectiveTime information provided-->
+      <effectiveTime xsi:type="PIVL_TS" operator="A">
         <period xsi:type="IVL_PQ">
           <low value="4" unit="h"/>
           <high value="6" unit="h"/>

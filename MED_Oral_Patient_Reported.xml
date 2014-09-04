@@ -49,6 +49,9 @@
 				<high value="20140510235959+0500"/>
 			</effectiveTime>
 			<!-- The second effectiveTime specifies dose frequency, which can be either a period (PIVL_TS) or event (EIVL_TS). -->
+			<!-- InstituionSpecified = "false" is implied in ths omission of this attribute and means that it must be administered exactly once per day-->
+			<!-- InstituionSpecified = "true" which is not default would mean that receiving institution has flexibility in dosing schedule-->
+			<!-- Operator "A" means that this timing information is in addition to previous effectiveTime information provided-->
 			<!-- The patient reports taking the medication once per day -->
 			<effectiveTime xsi:type="PIVL_TS" operator="A">
 				<period value="1" unit="d" />
