@@ -1,7 +1,7 @@
 <!-- 
 		Summary of example:
 
-			Instruction (NOT a PRN) - Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours  as Directed
+			Instruction (NOT a PRN) - Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours  with food
 
 		For comparison purposes, it may be worth looking at the following additional examples:
 
@@ -31,7 +31,7 @@
 						<content ID="MedicationName_1">Ibuprofen 600mg Oral Tablet</content>
 					</td>
 					<td>
-						<content ID="MedicationSig_1">take 1 tablet Every 6 Hours <content ID="MedicationInstruction_1">as Directed</content></content>
+						<content ID="MedicationSig_1">take 1 tablet Every 6 Hours <content ID="MedicationInstruction_1">with food</content></content>
 					</td>
 					<td>
 						<content ID="MedicationDosage_1">600 MG</content>
@@ -43,7 +43,7 @@
 		</table>
 	</text>
 
-	<!-- Instructions; similar to above but NOT a PRN - Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours as Directed -->
+	<!-- Instructions; similar to above but NOT a PRN - Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours with food -->
 	<entry>
 		<substanceAdministration classCode="SBADM" moodCode="EVN">
 			<templateId root="2.16.840.1.113883.10.20.22.4.16"/>
@@ -78,11 +78,13 @@
 					</manufacturedMaterial>
 				</manufacturedProduct>
 			</consumable>
-			<!-- Instructions -->
+			<!-- Instructions 
+				Additional Note: careful consideration should be given as to whether or not an instruction is actually a precondition. Note also that including both a precondition and an instruction may be appropriate.
+			-->
 			<entryRelationship typeCode="SUBJ" inversionInd="true">
 				<act classCode="ACT" moodCode="INT">
 					<templateId root="2.16.840.1.113883.10.20.22.4.20"/>
-					<code code="423564006" displayName="Provider instructions for treatment" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
+					<code code="422037009" displayName="Provider medication administration instructions" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
 					<text>
 						<reference value="#MedicationInstruction_1"/>
 					</text>
