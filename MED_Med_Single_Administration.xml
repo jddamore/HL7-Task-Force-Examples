@@ -37,6 +37,7 @@
 			</text>
 			<statusCode code="completed"/>
 			<!-- This is a one-time administration, so low and high times are not used -->
+			<!-- It is xsi:type = "TS", but that cannot be explicitly declared given the base CDA schema -->
 			<!-- This format was determined as appropriate in San Antonio meeting, January 2014 -->
 			<!-- See DSTU 423 of C-CDA 1.1 for more information http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=423 -->
 			<effectiveTime value="201309111603-0700"/>
