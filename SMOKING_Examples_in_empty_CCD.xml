@@ -1,8 +1,13 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="CDA.xsl"?>
-<!-- This CCD was validated with no warnings/errors with NIST Validator for Ambulatory VDT on December 18, 2013. Note immunizations and procedures would need to be added for "Transition of Care" validation-->
+<!-- This is an empty C-CDA skeleton which will be used by HL7 CDA Example Task Force -->
+<!-- This document was based on prior work by Lisa Nelson and Brian Weiss. contact John D'Amore with questions -->
+<!-- See http://wiki.hl7.org/index.php?title=CDA_Example_Task_Force -->
 <ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xmlns="urn:hl7-org:v3" xmlns:cda="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc">
+ xsi:schemaLocation="urn:hl7-org:v3 ../90%20HL7/00%20Standard%20-%20C-CDA/20130409%20C-CDA%20R1dot1_2012JUL/Updated_CDA_Schema_Files_Extension_Support/CDA_Schema_Files/infrastructure/cda/CDA_SDTC.xsd"
+ xmlns="urn:hl7-org:v3"
+ xmlns:cda="urn:hl7-org:v3"
+ xmlns:sdtc="urn:hl7-org:sdtc">
 	<realmCode code="US"/>
 	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
 	<templateId root="2.16.840.1.113883.10.20.22.1.1"/>
@@ -11,8 +16,8 @@
 	<!-- CCD -->
 	<id root="2.16.840.1.113883.3.3208.101.1" extension="20130607100315-CCDA-CCD"/>
 	<code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="34133-9" displayName="Summarization of Episode Note"/>
-	<title>This is a CCD skeleton with some sample vital signs created for HL7 Example Task Force - Based on C-CDA Skeleton developed by Lisa Nelson</title>
-	<effectiveTime value="20131031110101+0500"/>
+	<title>Empty CCD Skeleton That Validates on TTT. Note this was based on work by Lisa Nelson and Brian Weiss</title>
+	<effectiveTime value="20130607000000-0000"/>
 	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
 	<languageCode code="en-US"/>
 	<recordTarget>
@@ -164,284 +169,75 @@
 		<structuredBody>
 			<!-- Allergies Section -->
 			<component>
-				<section>
+				<!-- nullFlavor of NI indicates No Information.-->
+				<!-- Validator currently checks for entries even in case of nullFlavor - this will need to be updated if approved.-->
+				<section nullFlavor="NI">
 					<templateId root="2.16.840.1.113883.10.20.22.2.6.1"/>
 					<!-- Allergies (entries required) section -->
 					<code code="48765-2" codeSystem="2.16.840.1.113883.6.1" displayName="Allergies, adverse reactions, alerts" codeSystemName="LOINC"/>
 					<title>ALLERGIES</title>
-					<text>
-						<content ID="allergy1">No Information About Allergies</content>
-					</text>
-					<entry typeCode="DRIV">
-						<act classCode="ACT" moodCode="EVN">
-							<templateId root="2.16.840.1.113883.10.20.22.4.30"/>
-							<!-- Allergy Problem Act entry -->
-							<id root="2.16.840.1.113883.3.3208.101.10" extension="20130607104400-AllergyProblem"/>
-							<code code="48765-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Allergies, adverse reactions, alerts"/>
-							<statusCode code="active"/>
-							<effectiveTime>
-								<low nullFlavor="NI"/>
-								<high nullFlavor="NI"/>
-							</effectiveTime>
-							<entryRelationship typeCode="SUBJ">
-								<observation classCode="OBS" moodCode="EVN" nullFlavor="NI">
-									<templateId root="2.16.840.1.113883.10.20.22.4.7"/>
-									<!-- Allergy - Intolerance Observation -->
-									<id root="2.16.840.1.113883.3.3208.101.10" extension="20130607105900-AllergyObservation"/>
-									<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
-									<statusCode code="completed"/>
-									<effectiveTime>
-										<low nullFlavor="NI"/>
-										<high nullFlavor="NI"/>
-									</effectiveTime>
-									<value xsi:type="CD" nullFlavor="NI">
-										<originalText>
-											<reference value="#allergy1"/>
-										</originalText>
-									</value>
-									<participant typeCode="CSM">
-										<!-- Participant added to meet "SHOULD" and avoid validator warning -->
-										<participantRole classCode="MANU">
-											<playingEntity classCode="MMAT">
-												<code nullFlavor="NI">
-													<originalText>
-														<reference value="#allergy1"/>
-													</originalText>
-												</code>
-											</playingEntity>
-										</participantRole>
-									</participant>
-									<entryRelationship typeCode="MFST" inversionInd="true">
-										<observation classCode="OBS" moodCode="EVN" nullFlavor="NI">
-											<templateId root="2.16.840.1.113883.10.20.22.4.9"/>
-											<!-- Reaction Observation - added to meet "SHOULD" and avoid validator warning -->
-											<id root="2.16.840.1.113883.3.3208.101.10" extension="20130607151500-ReactionObservation"/>
-											<code nullFlavor="NI"/>
-											<text>
-												<reference value="#allergy1"/>
-											</text>
-											<statusCode code="completed"/>
-											<effectiveTime>
-												<low nullFlavor="NI"/>
-												<high nullFlavor="NI"/>
-											</effectiveTime>
-											<value xsi:type="CD" code="183964008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Treatment not indicated"/>
-											<!-- using this SNOMED code to meet SHALL requirement for code -->
-											<entryRelationship typeCode="SUBJ" inversionInd="true">
-												<observation classCode="OBS" moodCode="EVN" nullFlavor="NI">
-													<templateId root="2.16.840.1.113883.10.20.22.4.8"/>
-													<!-- Severity Observation -->
-													<code code="SEV" xsi:type="CE" nullFlavor="NI"/>
-													<text>
-														<reference value="#allergy1"/>
-													</text>
-													<statusCode code="completed"/>
-													<value xsi:type="CD" code="255604002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Mild"/>
-													<!-- using this SNOMED code to meet SHALL requirement for code -->
-												</observation>
-											</entryRelationship>
-										</observation>
-									</entryRelationship>
-									<entryRelationship typeCode="SUBJ" inversionInd="true">
-										<observation classCode="OBS" moodCode="EVN">
-											<templateId root="2.16.840.1.113883.10.20.22.4.8"/>
-											<!-- Severity Observation - added to meet "SHOULD" and avoid validator warning -->
-											<code code="SEV" xsi:type="CE" nullFlavor="NI"/>
-											<text>
-												<reference value="#allergy1"/>
-											</text>
-											<statusCode code="completed"/>
-											<value xsi:type="CD" code="255604002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Mild"/>
-											<!-- using this SNOMED code to meet SHALL requirement for code -->
-										</observation>
-									</entryRelationship>
-								</observation>
-							</entryRelationship>
-						</act>
-					</entry>
+					<text>No Information</text>
 				</section>
 			</component>
 			<!-- Medication Section -->
 			<component>
-				<section>
+				<!-- nullFlavor of NI indicates No Information.-->
+				<!-- Validator currently checks for entries even in case of nullFlavor - this will need to be updated if approved.-->
+				<section nullFlavor="NI">
 					<templateId root="2.16.840.1.113883.10.20.22.2.1.1"/>
 					<!-- Medication Section (entries required) -->
 					<code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Medication Use"/>
 					<title>MEDICATIONS</title>
-					<text>
-						<content ID="meds1">No Information About Medications</content>
-					</text>
-					<entry typeCode="DRIV">
-						<substanceAdministration moodCode="EVN" classCode="SBADM" nullFlavor="NI">
-							<templateId root="2.16.840.1.113883.10.20.22.4.16"/>
-							<!-- Medication Activity -->
-							<id root="2.16.840.1.113883.3.3208.101.10" extension="20130607111500-MedicationActivity"/>
-							<text>
-								<reference value="#meds1"/>
-							</text>
-							<statusCode code="completed"/>
-							<effectiveTime xsi:type="IVL_TS">
-								<low nullFlavor="NI"/>
-								<high nullFlavor="NI"/>
-							</effectiveTime>
-							<effectiveTime xsi:type="PIVL_TS" operator="A" nullFlavor="NI"/>
-							<!-- Added to meet the "SHOULD" and avoid the warning from the validator -->
-							<doseQuantity nullFlavor="NI"/>
-							<!-- Added to meet the "SHOULD" and avoid the warning from the validator -->
-							<consumable>
-								<manufacturedProduct classCode="MANU">
-									<templateId root="2.16.840.1.113883.10.20.22.4.23"/>
-									<!-- Medication Information -->
-									<manufacturedMaterial>
-										<code nullFlavor="NI">
-											<originalText>
-												<reference value="#meds1"/>
-											</originalText>
-										</code>
-									</manufacturedMaterial>
-								</manufacturedProduct>
-							</consumable>
-						</substanceAdministration>
-					</entry>
+					<text>No Information</text>
 				</section>
 			</component>
 			<!-- Problem Section -->
 			<component>
-				<section>
+				<!-- nullFlavor of NI indicates No Information.-->
+				<!-- Validator currently checks for entries even in case of nullFlavor - this will need to be updated if approved.-->
+				<section nullFlavor="NI">
+					<!-- conforms to Problems section with entries required -->
 					<templateId root="2.16.840.1.113883.10.20.22.2.5.1"/>
-					<!-- Problem Section with Coded Entries Required -->
-					<code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Problem List"/>
+					<code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+						displayName="PROBLEM LIST"/>
 					<title>PROBLEMS</title>
-					<text>
-						<content ID="problems1">No Information About Problems</content>
-					</text>
-					<entry typeCode="DRIV">
-						<act classCode="ACT" moodCode="EVN">
-							<templateId root="2.16.840.1.113883.10.20.22.4.3"/>
-							<!-- Problem Concern Act (Condition) -->
-							<id root="2.16.840.1.113883.3.3208.101.10" extension="20130607113300-ProblemConcern"/>
-							<code code="CONC" displayName="Concern" codeSystem="2.16.840.1.113883.5.6" codeSystemName="HL7ActClass"/>
-							<statusCode code="active"/>
-							<effectiveTime>
-								<low nullFlavor="NI"/>
-								<high nullFlavor="NI"/>
-							</effectiveTime>
-							<entryRelationship typeCode="SUBJ">
-								<observation classCode="OBS" moodCode="EVN" nullFlavor="NI">
-									<templateId root="2.16.840.1.113883.10.20.22.4.4"/>
-									<!-- Problem Observation -->
-									<id root="2.16.840.1.113883.3.3208.101.10" extension="20130607113430-ProblemObservation"/>
-									<code nullFlavor="NI"/>
-									<text>
-										<reference value="#problems1"/>
-									</text>
-									<statusCode code="completed" />
-									<effectiveTime>
-										<low nullFlavor="NI"/>
-										<high nullFlavor="NI"/>
-									</effectiveTime>
-									<value xsi:type="CD" nullFlavor="NI" />
-								</observation>
-							</entryRelationship>
-						</act>
-					</entry>
+					<text>No Information</text>
 				</section>
 			</component>
 			<!-- Procedures Section -->
 			<component>
-				<section>
+				<!-- nullFlavor of NI indicates No Information.-->
+				<!-- Validator currently checks for entries even in case of nullFlavor - this will need to be updated if approved.-->
+				<section nullFlavor="NI">
 					<templateId root="2.16.840.1.113883.10.20.22.2.7.1"/>
 					<!-- Procedures Section with Coded Entries Required-->
 					<code code="47519-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Procedures"/>
 					<title>PROCEDURES</title>
-					<text>
-						<content ID="procedures1">No Information About Procedures</content>
-					</text>
-					<entry typeCode="DRIV">
-						<act classCode="ACT" moodCode="EVN">
-							<templateId root="2.16.840.1.113883.10.20.22.4.12"/>
-							<!-- Procedure Activity Act-->
-							<id root="2.16.840.1.113883.3.3208.101.10" extension="20130607114600-ProcedureActivity"/>
-							<code xsi:type="CE" nullFlavor="NI">
-								<originalText>
-									<reference value="#procedures1"/>
-								</originalText>
-							</code>
-							<statusCode code="completed" />
-							<effectiveTime nullFlavor="NI"/>
-							<performer>
-								<!-- Added to meet "SHOULD" requirment and avoid validator warning -->
-								<assignedEntity>
-									<id root="2.16.840.1.113883.3.3208.101.3" extension="20130607154800-UnknownPersonnel"/>
-									<addr nullFlavor="NI"/>
-									<telecom nullFlavor="NI"/>
-									<representedOrganization nullFlavor="NI">
-										<id root="2.16.840.1.113883.3.3208.101.5" extension="20130607155400-UnknownOrg" />
-										<telecom nullFlavor="NI" />
-										<addr nullFlavor="NI" />
-									</representedOrganization>
-								</assignedEntity>
-							</performer>
-						</act>
-					</entry>
+					<text>No Information</text>
 				</section>
 			</component>
 			<!-- Results Section -->
 			<component>
-				<section>
+				<!-- nullFlavor of NI indicates No Information.-->
+				<!-- Validator currently checks for entries even in case of nullFlavor - this will need to be updated if approved.-->
+				<section nullFlavor="NI">
 					<templateId root="2.16.840.1.113883.10.20.22.2.3.1"/>
 					<!-- Results Section with Coded Entries Required-->
 					<code code="30954-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Relevant diagnostic tests and/or laboratory data"/>
 					<title>RESULTS</title>
-					<text>
-						<content ID="results1">No Information About Results</content>
-					</text>
-					<entry typeCode="DRIV">
-						<organizer classCode="CLUSTER" moodCode="EVN">
-							<templateId root="2.16.840.1.113883.10.20.22.4.1"/>
-							<!-- Result Organizer -->
-							<id root="2.16.840.1.113883.3.3208.101.10" extension="20130607113300-ResultOrganizer"/>
-							<code xsi:type="CE" nullFlavor="NI"/>
-							<statusCode code="completed"/>
-							<effectiveTime>
-								<low nullFlavor="NI"/>
-								<high value="20130607000000-0000"/>
-							</effectiveTime>
-							<!-- Up until now. -->
-							<!-- Brian's sample had a weird date in here. -->
-							<component>
-								<observation classCode="OBS" moodCode="EVN" >
-									<!-- removed this: nullFlavor="NI"-->
-									<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
-									<!-- Results Observation -->
-									<id nullFlavor="NI"/>
-									<code nullFlavor="NI" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-									<!-- No code here -->
-									<text>
-										<reference value="#results1"/>
-									</text>
-									<statusCode code="completed"/>
-									<effectiveTime>
-										<low nullFlavor="NI"/>
-										<high value="20130607000000-0000"/>
-									</effectiveTime>
-									<!-- Up until now. -->
-									<value  xsi:type="CD" nullFlavor="NI"/>
-									<interpretationCode nullFlavor="NI"/>
-								</observation>
-							</component>
-						</organizer>
-					</entry>
+					<text>No Information</text>
 				</section>
 			</component>
 			<!-- Plan of Care Section -->
 			<component>
-				<section>
+				<!-- nullFlavor of NI indicates No Information.-->
+				<!-- Validator currently checks for entries even in case of nullFlavor - this will need to be updated if approved.-->
+				<section nullFlavor="NI">
 					<templateId root="2.16.840.1.113883.10.20.22.2.10"/>
 					<!-- Plan of Care Section-->
 					<code code="18776-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Plan of Care"/>
 					<title>PLAN OF CARE</title>
-					<text>No Information About Plan of Care</text>
+					<text>No Information</text>
 				</section>
 			</component>
 			<!-- Social History (with Smoking Status Observation) -->
@@ -634,38 +430,14 @@
 			</component>
 			<!-- Vital Signs Section (entries required) -->
 			<component>
-				<section>
+				<!-- nullFlavor of NI indicates No Information.-->
+				<!-- Validator currently checks for entries even in case of nullFlavor - this will need to be updated if approved.-->
+				<section nullFlavor="NI">
 					<templateId root="2.16.840.1.113883.10.20.22.2.4.1"/>
 					<!-- Vital Signs (entries required) -->
 					<code code="8716-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Vital Signs"/>
 					<title>VITAL SIGNS</title>
-					<text>
-						<content ID="vitalsigns1">No Information About Vital Signs</content>
-					</text>
-					<entry typeCode="DRIV">
-						<organizer classCode="CLUSTER" moodCode="EVN">
-							<templateId root="2.16.840.1.113883.10.20.22.4.26" />
-							<!-- Vital Signs Organizer -->
-							<id root="2.16.840.1.113883.3.3208.101.10" extension="20130607125100-VitalSignsOrganizer"/>
-							<code code="46680005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Vital signs"/>
-							<statusCode code="completed"/>
-							<effectiveTime nullFlavor="NI"/>
-							<component>
-								<observation classCode="OBS" moodCode="EVN" nullFlavor="NI">
-									<templateId root="2.16.840.1.113883.10.20.22.4.27"/>
-									<!-- Vital Signs Observation -->
-									<id root="2.16.840.1.113883.3.3208.101.10" extension="20130607125100-VitalSignsObservation"/>
-									<code nullFlavor="NI"/>
-									<text>
-										<reference value="#vitalsigns1"/>
-									</text>
-									<statusCode code="completed"/>
-									<effectiveTime nullFlavor="NI"/>
-									<value xsi:type="PQ" nullFlavor="NI"/>
-								</observation>
-							</component>
-						</organizer>
-					</entry>
+					<text>No Information</text>
 				</section>
 			</component>
 		</structuredBody>
