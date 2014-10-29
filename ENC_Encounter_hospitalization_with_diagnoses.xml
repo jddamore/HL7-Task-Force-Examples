@@ -1,5 +1,7 @@
 <section> 
-	<!-- Created for discussion on 10/23 Example task force. -->
+	<!-- Created for discussion on SDWG CDA Example Task Force. -->
+	<!-- This is an example of a hospitalization as may be shown in encounters section. -->
+	<!-- This example demonstrates how billable diagnoses could be included, if they are available -->
 	<templateId root="2.16.840.1.113883.10.20.22.2.22"/>
 	<id root="6bc0419f-0398-4a56-8642-7054cbef448c"/>
 	<code code="46240-8" codeSystem="2.16.840.1.113883.6.1" displayName="Encounters" codeSystemName="LOINC"/>
@@ -49,7 +51,7 @@
 			</sdtc:dischargeDispositionCode>
 			<performer typeCode="PRF">
 				<time>
-					<low value="201301291222" />
+					<low value="201410281222+0500" />
 					<high value="201410311504+0500" />
 				</time>
 				<assignedEntity classCode="ASSIGNED">
@@ -74,7 +76,7 @@
 			<participant typeCode="LOC">
 				<templateId root="2.16.840.1.113883.10.20.22.4.32"/>
 				<participantRole classCode="SDLOC">
-					<code code="1060-3" codeSystem="2.16.840.1.113883.1.11.20275" codeSystemName="Healthcare Service Location" displayName="Inpatient medical ward" />
+					<code code="1060-3" codeSystem="2.16.840.1.113883.5.4" codeSystemName="Healthcare Service Location" displayName="Inpatient medical ward" />
 					<addr use="WP">
 						<streetAddressLine>1002 Healthcare Dr</streetAddressLine>
 						<city>Portland</city>
@@ -121,7 +123,6 @@
 								<originalText>
 									<reference value="#Enc1_Dx1" />
 								</originalText>
-								<!-- These are common translations of the SNOMED code, ICd-9 and ICD-10 are often used in billing-->
 								<translation xsi:type="CD" code="428.0" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD-9" displayName="Congestive heart failure, unspecified" />
 							</value>
 						</observation>
@@ -162,11 +163,10 @@
 								<originalText>
 									<reference value="#Enc1_Dx2" />
 								</originalText>
-								<!-- These are common translations of the SNOMED code, ICd-9 and ICD-10 are often used in billing-->
 								<translation xsi:type="CD" code="250.00" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD-9" displayName="Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled" />
 							</value>
 						</observation>
-				</entryRelationship>
+					</entryRelationship>
 				</act>
 			</entryRelationship>
 		</encounter>
