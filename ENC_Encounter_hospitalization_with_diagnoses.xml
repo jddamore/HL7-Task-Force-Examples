@@ -42,10 +42,12 @@
 			<code nullFlavor="OTH">
 				<translation code="IMP" codeSystem="2.16.840.1.113883.5.4" displayName="Inpatient" codeSystemName="Act Encounter Code - Act Code"/>
 			</code>
+			<!-- for a hospitalization, the low and high effectiveTimes would logically be admission and discharge date/time. --> 
 			<effectiveTime xsi:type="IVL_TS">
 				<low value ="201410281222+0500" />
 				<high value="201410311504+0500" /> 
 			</effectiveTime>
+			<!-- Note that sdtc extension is used to document dischargeDisposition in encounters -->
 			<sdtc:dischargeDispositionCode code="04" displayName="Discharged/Transferred to a Facility that Provides Custodial or Supportive Care" 
 				codeSystem="2.16.840.1.113883.6.301.5" codeSystemName="NUBC UB-04 FL17">
 			</sdtc:dischargeDispositionCode>
