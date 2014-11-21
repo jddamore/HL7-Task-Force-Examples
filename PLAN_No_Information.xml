@@ -14,59 +14,17 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td id="ProcedureDesc1">No Planned Test or Procedure</td>
+					<td id="ProcedureDesc1">No Planned Test</td>
 				</tr>
 			</tbody>
 		</table>
 	</text>
 	<entry typeCode="DRIV">
-		<!-- For this example, I included the negationInd per Benjamin Flessner's recommendation -->
+		<!-- For this example, we are recommended action.negationInd task force recommendation -->
 		<observation classCode="OBS" moodCode="INT" negationInd="true">
 			<templateId root="2.16.840.1.113883.10.20.22.4.44" extension="2014-06-09"/>
 			<id root="c03e5445-af1b-4911-a419-e2782f21448c"/>
 			<code nullFlavor="OTH">
-				<originalText>
-					<reference value="#ProcedureDesc1"/>
-				</originalText>
-			</code>
-			<statusCode code="completed"/>
-			<!-- nullFlavor of NA used since no time is applicable in this context.-->
-			<effectiveTime nullFlavor="NA"/>
-			<!-- nullFlavor of NA used since no value is applicable in this context.-->
-			<value nullFlavor="NA" />
-		</observation>
-	</entry>
-</section>
-
-<!-- This is an example of where a generalized code is used to represent the negation of any planned procedure -->
-<section>
-	<templateId root="2.16.840.1.113883.10.20.22.2.10.1.2" extension="2014-06-09"/>
-	<code code="18776-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Treatment Plan"/>
-	<title>Plan of Treatment</title>
-	<text>
-		<table>
-			<thead>
-				<tr>
-					<th>Description</th>
-					<th>Date and Time (Range)</th>
-					<th>Status</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td id="ProcedureDesc1">No Planned Test or Procedure</td>
-				</tr>
-			</tbody>
-		</table>
-	</text>
-	<entry typeCode="DRIV">
-		<!-- For this example, I included the negationInd per Benjamin Flessner's recommendation -->
-		<observation classCode="OBS" moodCode="INT" negationInd="true">
-			<templateId root="2.16.840.1.113883.10.20.22.4.44" extension="2014-06-09"/>
-			<id root="c03e5445-af1b-4911-a419-e2782f21448c"/>
-			<!-- Here's where the generalized code would go. -->
-			<!-- An alternative to this LOINC code could be 75321-0 of clinical finding -->
-			<code code="29300-1" codeSystem="2.16.840.1.113883.6.1" displayName="Procedure">
 				<originalText>
 					<reference value="#ProcedureDesc1"/>
 				</originalText>
