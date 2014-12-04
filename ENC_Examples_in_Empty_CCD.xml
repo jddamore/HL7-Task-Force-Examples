@@ -260,6 +260,7 @@
 					  <table>
 						  <thead>
 							  <tr>
+								  <th>Encounter Type</th>
 								  <th>Provider</th>
 								  <th>Primary Diagnosis</th>
 								  <th>Other Diagnoses</th>
@@ -271,6 +272,7 @@
 						  </thead>
 						  <tbody>
 							  <tr>
+								  <td ID="Enc1_Type">Inpatient</td>
 								  <td>James Getwell, DO</td>
 								  <td ID="Enc1_Dx1">Congestive Heart Failure</td>
 								  <td>
@@ -290,12 +292,18 @@
 						  <id root="248b2c03-2013-e138-07d1-001A64958C30"/>
 						  <!-- CPT code should be used for ambulatory visits, but for a hosptialization, another codeSystem is more appropriate-->
 						  <code nullFlavor="OTH">
+							  <originalText>
+								  <reference value="#Enc1_Type"/>
+							  </originalText>
 							  <translation code="IMP" codeSystem="2.16.840.1.113883.5.4" displayName="Inpatient" codeSystemName="Act Encounter Code - Act Code"/>
 						  </code>
+
+						  <!-- for a hospitalization, the low and high effectiveTimes would logically be admission and discharge date/time. -->
 						  <effectiveTime xsi:type="IVL_TS">
 							  <low value ="201410281222+0500" />
 							  <high value="201410311504+0500" />
 						  </effectiveTime>
+						  <!-- Note that sdtc extension is used to document dischargeDisposition in encounters -->
 						  <sdtc:dischargeDispositionCode code="04" displayName="Discharged/Transferred to a Facility that Provides Custodial or Supportive Care"
 							  codeSystem="2.16.840.1.113883.6.301.5" codeSystemName="NUBC UB-04 FL17">
 						  </sdtc:dischargeDispositionCode>
@@ -341,7 +349,6 @@
 						  </participant>
 						  <entryRelationship typeCode="SUBJ">
 							  <!-- This is the primary diagnosis on the bill -->
-							  <sequenceNumber value="1" />
 							  <!-- Hospital discharge diagnosis act -->
 							  <act moodCode="EVN" classCode="ACT">
 								  <templateId root="2.16.840.1.113883.10.20.22.4.33"/>
@@ -357,7 +364,7 @@
 									  <observation classCode="OBS" moodCode="EVN">
 										  <templateId root="2.16.840.1.113883.10.20.22.4.4" />
 										  <id root="20cdd1a0-6136-4939-802f-edfebe9320bc" />
-										  <!-- We'll use the type of diagnosis, since this is a coded claim, not from problem list-->
+										  <!-- We'll use the type of diagnosis, since this is a coded diagnosis, not from problem list-->
 										  <code codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="282291009" displayName="Diagnosis" />
 										  <text>
 											  <reference value="#Enc1_Dx1" />
@@ -367,7 +374,9 @@
 											  <!-- This represents the date of biological onset. Since this is a coded diagnosis, this may not be documented.-->
 											  <low nullFlavor="UNK" />
 										  </effectiveTime>
-										  <!-- This is a hospital discharge diagnosis, so te ICD-9 (or ICD-10) diagnosis is in translation. -->
+										  <!-- This denotes that the diagnosis is the principal diagnosis. There is generally only a single diagnosis for coded bill.-->
+										  <priorityCode code="63161005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Principal"/>
+										  <!-- This is a hospital discharge diagnosis, so the ICD-9 (or ICD-10) diagnosis is in translation. -->
 										  <!-- If a SNOMED is available for this, it could be included, but mapping back from ICD-9 may not always be possible. -->
 										  <value xsi:type="CD" nullFlavor="OTH">
 											  <originalText>
@@ -380,8 +389,6 @@
 							  </act>
 						  </entryRelationship>
 						  <entryRelationship typeCode="SUBJ">
-							  <!-- This is a secondary diagnosis on the bill. Other values greater than 2 could be present for additional diagnoses-->
-							  <sequenceNumber value="2" />
 							  <!-- Hospital discharge diagnosis act -->
 							  <act moodCode="EVN" classCode="ACT">
 								  <templateId root="2.16.840.1.113883.10.20.22.4.33"/>
@@ -397,7 +404,7 @@
 									  <observation classCode="OBS" moodCode="EVN">
 										  <templateId root="2.16.840.1.113883.10.20.22.4.4" />
 										  <id root="5f9b714d-a6ec-4f8f-95ae-ea75e5a54bac" />
-										  <!-- We'll use the type of diagnosis, since this is a coded claim, not from problem list-->
+										  <!-- We'll use the type of diagnosis, since this is a coded diagnosis, not from problem list-->
 										  <code codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="282291009" displayName="Diagnosis" />
 										  <text>
 											  <reference value="#Enc1_Dx2" />
@@ -407,7 +414,9 @@
 											  <!-- This represents the date of biological onset. Since this is a coded diagnosis, this may not be documented.-->
 											  <low nullFlavor="UNK" />
 										  </effectiveTime>
-										  <!-- This is a hospital discharge diagnosis, so te ICD-9 (or ICD-10) diagnosis is in translation. -->
+										  <!-- This denotes that the diagnosis is a secondary diagnosis. There may be multiple secondary diagnoses on coded bills.-->
+										  <priorityCode code="2603003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Secondary"/>
+										  <!-- This is a hospital discharge diagnosis, so the ICD-9 (or ICD-10) diagnosis is in translation. -->
 										  <!-- If a SNOMED is available for this, it could be included, but mapping back from ICD-9 may not always be possible. -->
 										  <value xsi:type="CD" nullFlavor="OTH">
 											  <originalText>
