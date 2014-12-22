@@ -16,6 +16,10 @@
 				<tr>
 					<td id="ProcedureDesc1">No Planned Test</td>
 				</tr>
+				<tr>
+					<td>Colonoscopy</td>
+					<td>20120512</td>
+				</tr>
 			</tbody>
 		</table>
 	</text>
@@ -24,6 +28,8 @@
 		<observation classCode="OBS" moodCode="INT" negationInd="true">
 			<templateId root="2.16.840.1.113883.10.20.22.4.44" extension="2014-06-09"/>
 			<id root="c03e5445-af1b-4911-a419-e2782f21448c"/>
+			<!--If a code is available for the general concept for which there is no information (e.g. Problem), use that 
+			    code in the code attribute, otherwise use a nullFlavor of OTH -->
 			<code nullFlavor="OTH">
 				<originalText>
 					<reference value="#ProcedureDesc1"/>
@@ -35,5 +41,18 @@
 			<!-- nullFlavor of NA used since no value is applicable in this context.-->
 			<value nullFlavor="NA" />
 		</observation>
+	</entry>
+	<entry typeCode="DRIV">
+		<observation classCode="OBS" moodCode="RQO">
+        	<!-- ** Plan of care activity observation ** -->
+        		<templateId root="2.16.840.1.113883.10.20.22.4.44"/>
+        		<id root="9a6d1bac-17d3-4195-89a4-1121bc809b4a"/>
+        		<code code="73761001" codeSystem="2.16.840.1.113883.6.96"
+	        		codeSystemName="SNOMED CT" displayName="Colonoscopy"/>
+        		<statusCode code="new"/>
+        		<effectiveTime>
+        			<center value="20120512"/>
+        		</effectiveTime>
+    		</observation>
 	</entry>
 </section>
