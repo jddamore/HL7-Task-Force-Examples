@@ -63,7 +63,7 @@
       <text>
         <reference value="#PlannedProcedure1" />
       </text>
-      <statusCode code="new" />
+      <statusCode code="active" />
       <!-- Effective times can be either a value or interval. For procedures with start and stop times, an interval would be more appropriate -->
       <effectiveTime value="20150502" />
       <!-- methodCode indicates how the procedure was performed. It cannot conflict with the code used for procedure-->
