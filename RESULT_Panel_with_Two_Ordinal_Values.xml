@@ -83,6 +83,7 @@
 							<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 						</observationRange>
 					</referenceRange>
+					<!-- Here is how additional reference ranges may be included-->
 					<referenceRange>
 						<observationRange>
 						 	<text>A positive value is an abnormal result</text>
