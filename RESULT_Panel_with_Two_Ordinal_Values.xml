@@ -54,6 +54,7 @@
 					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 					<referenceRange>
 						<observationRange>
+							<text>A negative value is a normal result</text>
 							<value xsi:type="CO" code="260385009" codeSystemName="SNOMED-CT" displayName ="Negative" codeSystem ="2.16.840.1.113883.6.96"/>
 							<!-- This interpretation code denotes that this reference range is for normal results. This is not the interpretation a specific patient value-->
 							<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
@@ -76,6 +77,7 @@
 					<interpretationCode code="A" codeSystem="2.16.840.1.113883.5.83"/>
 					<referenceRange>
 						<observationRange>
+							<text>A negative value is a normal result</text>
 							<value xsi:type="CO" code="260385009" codeSystemName="SNOMED-CT" displayName ="Negative" codeSystem ="2.16.840.1.113883.6.96"/>
 							<!-- This interpretation code denotes that this reference range is for normal results. This is not the interpretation a specific patient value-->
 							<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
@@ -83,6 +85,7 @@
 					</referenceRange>
 					<referenceRange>
 						<observationRange>
+						 	<text>A positive value is an abnormal result</text>
 							<value xsi:type="CO" code="10828004" codeSystemName="SNOMED-CT" displayName ="Positive" codeSystem ="2.16.840.1.113883.6.96"/>
 							<!-- This optional second interpretation code denotes that this reference range is for abnormal results. This is not the interpretation a specific patient value-->
 							<interpretationCode code="A" codeSystem="2.16.840.1.113883.5.83"/>
