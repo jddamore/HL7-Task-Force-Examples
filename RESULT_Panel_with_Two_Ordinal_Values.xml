@@ -15,16 +15,16 @@
 			</thead>
 			<tbody>
 				<tr>
-					<th colspan="4">Chlamydia trachomatis/Neisseria gonorrhoeae rRNA panel at 10-22-2013 2:26p</th>
+					<th colspan="4">Chlamydia trachomatis and Neisseria gonorrhoeae rRNA panel - Urine by Probe and target amplification method at 10-22-2013 2:26p</th>
 				</tr>
 				<tr ID="LabResult3">
-					<td>Chlamydia trachomatis rRNA</td>
+					<td>Chlamydia trachomatis rRNA [Presence] in Urine by Probe and target amplification method R</td>
 					<td>Negative</td>
 					<td>Normal</td>
 					<td>Negative</td>
 				</tr>
 				<tr ID="LabResult4">
-					<td>Neisseria gonorrhoeae rRNA</td>
+					<td>Neisseria gonorrhoeae rRNA [Presence] in Urine by Probe and target amplification method R</td>
 					<td>Positive</td>
 					<td>Abnormal</td>
 					<td>Negative</td>
@@ -36,14 +36,14 @@
 		<organizer classCode="BATTERY" moodCode="EVN">
 			<templateId root="2.16.840.1.113883.10.20.22.4.1"/>
 			<id root="b5684bf0-eb6f-46dd-9f2e-b6cbcc4196fd"/>
-			<code code="70163-1" displayName="Chlamydia trachomatis/Neisseria gonorrhoeae rRNA panel" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+			<code code="70161-5" displayName="Chlamydia trachomatis and Neisseria gonorrhoeae rRNA panel - Urine by Probe and target amplification method" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
 			<statusCode code="completed"/>
 			<effectiveTime value="201310221426+0500"/>
 			<component>
 				<observation classCode="OBS" moodCode="EVN">
 					<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
 					<id root="5a6be91a-32d5-4d24-a8bd-07d10a3ef14d"/>
-					<code code="50387-0" displayName="Chlamydia trachomatis rRNA" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+					<code code="42931-6" displayName="Chlamydia trachomatis rRNA [Presence] in Urine by Probe and target amplification method R" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
 					<text>
 						<reference value="#LabResult3"/>
 					</text>
@@ -66,7 +66,7 @@
 				<observation classCode="OBS" moodCode="EVN">
 					<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
 					<id root="404bba0e-1c76-4265-afb5-1a57b55e128b"/>
-					<code code="50388-8" displayName="Neisseria gonorrhoeae rRNA" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+					<code code="60256-5" displayName="Neisseria gonorrhoeae rRNA [Presence] in Urine by Probe and target amplification method R" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
 					<text>
 						<reference value="#LabResult4"/>
 					</text>
