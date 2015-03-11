@@ -53,8 +53,10 @@
 					<participant typeCode="CSM">
 						<participantRole classCode="MANU">
 							<playingEntity classCode="MMAT">
-								<!-- UNII is the preferred in C-CDA R 1.1 although per DSTU 381 SNOMED is also allowed in code element -->
-								<code code="291P45F896" displayName="Egg" codeSystem="2.16.840.1.113883.4.9" codeSystemName="UNII">
+								<!-- SNOMED or UNII may be used for allergies in both C-CDA 1.1 and 2.0 -->
+								<!-- SNOMED was added to C-CDA 1.1 by DSTU  381 and illustrated below -->
+								<!-- Note that the SNOMED code for 'latex allergy' is not appropriate since the allergy is conveyed elsewhere in the observation observation -->
+								<code code="102263004" displayName="Eggs (edible)" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
 									<originalText>
 										<reference value="#allergy5allergen"/>
 									</originalText>
