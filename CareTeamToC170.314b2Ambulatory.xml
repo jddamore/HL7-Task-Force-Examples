@@ -8,18 +8,19 @@ B)	Care Team
 <documentationOf>
 		<serviceEvent classCode="PCPR">
 			<id extension="5283815" root="1.3.6.1.4.1.22812.4.99930.4.3.8"/>
-			<!-- the service event being documented is shown as happening from 10 - 11 Pacific Time  on 8/15/2012-->
+			<!-- The service event being documented is shown as happening from 10 - 11 Pacific Time  on 8/15/2012. 
+			     The date is in the Test Data for §170.314(b)(2) Transitions of care the test data. -->
 			<effectiveTime>
 				<low value="20120815100000-0800"/>
 				<high value="20120815110000-0800"/>
 			</effectiveTime>
 			<!-- Preferably, the patient’s key healthcare care team members would be listed, particularly their primary physician and any active consulting physicians, therapists, and counselors (CONF:16753).
-
 					there are two Care Team members, so two performer elements
 			 -->
 			<performer typeCode="PRF">
 				<!-- we infer from the test data description that Dr Khan is the PCP -->
-				<functionCode codeSystem="2.16.840.1.113883.5.88" code="PCP" displayName="Primary Care Physician" />
+				<!-- MAY provide functionCode CONF:16818-->
+				<functionCode codeSystem="2.16.840.1.113883.5.88" code="PCP" displayName="Primary Care Physician"/>
 				<!-- we do not know how long Dr Kahn has been associated with the patient	-->
 				<time>
 					<low nullFlavor="UNK"/>
@@ -38,7 +39,7 @@ B)	Care Team
 						<postalCode>97005</postalCode>
 						<country>US</country>
 					</addr>
-					<!-- work phone -->
+					<!-- work place-->
 					<telecom value="tel:+1-(555)555-1004" use="WP"/>
 					<assignedPerson>
 						<name>
