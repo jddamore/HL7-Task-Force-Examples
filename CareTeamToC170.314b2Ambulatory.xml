@@ -4,6 +4,11 @@ B)	Care Team
 •	Dr. Samir Khan, Tel, 555-555-1004, Get Well Clinic, 1004 Healthcare Dr. Portland, OR 97005 
 •	Nancy Nightingale, RN, 555-555-1014, Get Well Clinic, 1004 Healthcare Dr. Portland, OR 97005 
 
+This example includes members of the Care Team who are performing care services in the documentationOf/serviceEvent.
+Based on current implementation guidance, additional active members (not involved in these care services) of the patient's 
+Care Team should be represented in documentationOf/serviceEvent.
+When the document is about a single encounter, the componentOf/encompassingEncounter is more appropriate for members responsible
+for or participating in the encounter.
  -->
 <documentationOf>
 		<serviceEvent classCode="PCPR">
@@ -15,8 +20,8 @@ B)	Care Team
 				<high value="20120815110000-0800"/>
 			</effectiveTime>
 			<!-- Preferably, the patient’s key healthcare care team members would be listed, particularly their primary physician and any active consulting physicians, therapists, and counselors (CONF:16753).
-					there are two Care Team members, so two performer elements
-			 -->
+					there are two Care Team members, so two performer elements. 
+								 -->
 			<performer typeCode="PRF">
 				<!-- we infer from the test data description that Dr Khan is the PCP -->
 				<!-- MAY provide functionCode CONF:16818-->
