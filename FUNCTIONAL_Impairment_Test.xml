@@ -1,0 +1,79 @@
+<section>
+	<!-- Based on Transitions of Care test scenario, inpatient for MU2 170.314(b)(2)-->
+	<templateId root="2.16.840.1.113883.10.20.22.2.14"/>
+	<code code="47420-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Functional Status"/>
+	<title>Functional and Cognitive Status</title>
+	<!-- Narrative organized as a single table. Some systems may prefer separate tables for functional vs. cognitive assessments -->
+	<text>
+		<table>
+			<thead>
+				<tr>
+					<th colspan="4">Functional and Cognitive Status</th>
+				</tr> 
+				<tr>
+					<th>Assessment</th>
+					<th>Date</th>
+					<th>Results</th>
+					<th>Comments</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ID="FS_Narrative1">
+					<td>Functional Status</td> 
+					<td>August 15 2012, 5:32pm</td>
+					<td ID="FS_Finding1">Memory Impairment</td>
+					<td></td>
+				</tr>
+				<tr ID="FS_Narrative2">
+					<td>Cognitive Status</td> 
+					<td>August 15 2012, 5:32pm</td>
+					<td ID="FS_Finding2">Dependence on walking stick</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</text>
+	<entry>
+		<observation classCode="OBS" moodCode="EVN">
+			<!-- Template for Functional Status Problem Observation. Note other templates may apply. -->
+			<!-- We chose Problem Observation over Result Observation since we didn't have an indication a specific test was performed. -->
+			<templateId root="2.16.840.1.113883.10.20.22.4.68"/>
+			<id root="e4f9eb37-52ca-4e95-90f3-570dace107e6"/>
+			<code codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="248536006" displayName="Functional limitation"/>
+			<text>
+				<reference value="#FS_Narrative1"/>
+			</text>
+			<statusCode code="completed"/>
+			<effectiveTime>
+				<low value="20120815173215+0500"/>
+			</effectiveTime>
+			<value xsi:type="CD" code="386807006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Memory impairment">
+				<originalText>
+					<reference value="#FS_Finding1"/>
+				</originalText>
+			</value>
+		</observation>
+	</entry>
+	<entry>
+		<!-- Template for Cognitive  Status Problem Observation. Note other templates may apply. -->
+		<!-- While only a single assessment was stated in test data, MU Stage 2 requires both functional and cognitive assessments as part of common data set. -->
+		<!-- We chose Problem Observation over Result Observation since we didn't have an indication a specific test was performed. -->
+		<observation classCode="OBS" moodCode="EVN">
+			<templateId root="2.16.840.1.113883.10.20.22.4.73"/>
+			<id root="faa09c19-fa1f-4a6c-ae79-10a3b711550f"/>
+			<code codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="373930000" displayName="Cognitive function finding"/>
+			<text>
+				<reference value="#FS_Narrative2"/>
+			</text>
+			<statusCode code="completed"/>
+			<effectiveTime>
+				<low value="20120815173215+0500"/>
+			</effectiveTime>
+			<value xsi:type="CD" code="105504002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="No Impairment">
+				<originalText>
+					<reference value="#FS_Finding2"/>
+				</originalText>
+			</value>
+		</observation>
+	</entry>
+</section>
