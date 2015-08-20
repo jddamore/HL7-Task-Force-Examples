@@ -45,13 +45,13 @@
           <effectiveTime value="201310200908+0500"/>
           <!-- Representing a result which has been translated from a non-UCUM code (e.g. result reported from external lab)-->
           <value xsi:type="PQ" value="152" unit="10*3/uL" />
+          <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
           <entryRelationship typeCode="COMP">
               <observation classCode="OBS" moodCode="EVN">
                   <code code="246514001" displayName="units" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
                   <value xsi:type="ST">THOUS/MCL</value>
               </observation>
           </entryRelationship>
-          <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
           <referenceRange>
             <observationRange>
               <!-- Reference ranges can be expressed as structured physical quantity interval-->
