@@ -49,7 +49,9 @@
           <entryRelationship typeCode="COMP">
               <observation classCode="OBS" moodCode="EVN">
                   <code code="246514001" displayName="units" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
-                  <value xsi:type="ST">THOUS/MCL</value>
+                  <value xsi:type="CD" code="mg/dL" codeSystem="2.16.840.1.113883.6.8" codeSystemName="UCUM">
+                    <originalText>THOUS/MCL</originalText>
+                  </value>
               </observation>
           </entryRelationship>
           <referenceRange>
