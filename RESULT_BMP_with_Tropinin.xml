@@ -49,7 +49,7 @@
 				</tr>
 				<tr ID="Result6">
 					<td>Creatinine</td>
-					<td>140 mg/dL</td>
+					<td>1.2 mg/dL</td>
 					<td>Normal</td>
 					<td>0.8-1.3 mg/dL</td>
 				</tr>
@@ -117,21 +117,21 @@
 				<observation classCode="OBS" moodCode="EVN">
 					<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
 					<id root="3ee6ac58-d22c-4416-9acc-c1c75c1c2c91"/>
-					<code code="2947-0" displayName="Sodium" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+					<code code="6298-4" displayName="Potassium" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
 					<text>
 						<reference value="#Result2"/>
 					</text>
 					<statusCode code="completed"/>
 					<effectiveTime value="201210020908+0500"/>
-					<value xsi:type="PQ" value="140" unit="mmol/L" />
+					<value xsi:type="PQ" value="4.2" unit="mmol/L" />
 					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 					<referenceRange>
 						<observationRange>
 							<text>3.5-5.2 mmol/L</text>
 							<!-- Reference ranges can be expressed as structured physical quantity interval-->
 							<value xsi:type="IVL_PQ">
-								<low value="135" unit="mmol/L"/>
-								<high value="145" unit="mmol/L"/>
+								<low value="3.5" unit="mmol/L"/>
+								<high value="5.2" unit="mmol/L"/>
 							</value>
 							<!-- This interpretation code denotes that this reference range is for normal results. This is not the interpretation a specific patient value-->
 							<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
@@ -143,13 +143,13 @@
 				<observation classCode="OBS" moodCode="EVN">
 					<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
 					<id root="0431a3ec-8ad6-49da-9de1-0a8704b7609d"/>
-					<code code="2947-0" displayName="Sodium" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+					<code code="2069-3" displayName="Chloride" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
 					<text>
 						<reference value="#Result3"/>
 					</text>
 					<statusCode code="completed"/>
 					<effectiveTime value="201210020908+0500"/>
-					<value xsi:type="PQ" value="140" unit="mmol/L" />
+					<value xsi:type="PQ" value="98" unit="mmol/L" />
 					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 					<referenceRange>
 						<observationRange>
@@ -169,13 +169,13 @@
 				<observation classCode="OBS" moodCode="EVN">
 					<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
 					<id root="70c62997-9f12-4b7c-9023-0cdf249336a7"/>
-					<code code="2947-0" displayName="Sodium" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+					<code code="2028-9" displayName="Carbon Dioxide" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
 					<text>
 						<reference value="#Result4"/>
 					</text>
 					<statusCode code="completed"/>
 					<effectiveTime value="201210020908+0500"/>
-					<value xsi:type="PQ" value="140" unit="mmol/L" />
+					<value xsi:type="PQ" value="24" unit="mmol/L" />
 					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 					<referenceRange>
 						<observationRange>
@@ -195,13 +195,13 @@
 				<observation classCode="OBS" moodCode="EVN">
 					<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
 					<id root="e3db8661-71b7-4cf3-a666-4ed9e127e134"/>
-					<code code="2947-0" displayName="Sodium" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+					<code code="6299-2" displayName="Blood Urea Nitrogen" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
 					<text>
 						<reference value="#Result5"/>
 					</text>
 					<statusCode code="completed"/>
 					<effectiveTime value="201210020908+0500"/>
-					<value xsi:type="PQ" value="140" unit="mmol/L" />
+					<value xsi:type="PQ" value="10" unit="md/dL" />
 					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 					<referenceRange>
 						<observationRange>
@@ -221,13 +221,13 @@
 				<observation classCode="OBS" moodCode="EVN">
 					<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
 					<id root="21261c16-b527-49f2-916b-2ad5dabf4381"/>
-					<code code="2947-0" displayName="Sodium" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+					<code code="38483-4" displayName="Creatinine" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
 					<text>
 						<reference value="#Result6"/>
 					</text>
 					<statusCode code="completed"/>
 					<effectiveTime value="201210020908+0500"/>
-					<value xsi:type="PQ" value="140" unit="mmol/L" />
+					<value xsi:type="PQ" value="1.2" unit="mg/dL" />
 					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 					<referenceRange>
 						<observationRange>
@@ -247,13 +247,13 @@
 				<observation classCode="OBS" moodCode="EVN">
 					<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
 					<id root="7e68c2a8-a507-413b-aed4-87de5081b369"/>
-					<code code="2947-0" displayName="Sodium" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+					<code code="2339-0" displayName="Glucose" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
 					<text>
 						<reference value="#Result7"/>
 					</text>
 					<statusCode code="completed"/>
 					<effectiveTime value="201210020908+0500"/>
-					<value xsi:type="PQ" value="140" unit="mmol/L" />
+					<value xsi:type="PQ" value="185" unit="mmol/L" />
 					<interpretationCode code="H" codeSystem="2.16.840.1.113883.5.83"/>
 					<referenceRange>
 						<observationRange>
