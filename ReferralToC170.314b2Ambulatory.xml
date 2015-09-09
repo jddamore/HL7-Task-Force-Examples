@@ -11,7 +11,9 @@ This example includes details of the referral as text and Planned Encounter disc
 	<title>Plan of Care</title>
 	<!-- one Planned Encounter in the human readable text and as a discrete entry -->
 	<text>
+		<!-- this section may contain many different Planned items, so we use the table caption to help identify each -->
 		<table>
+			<caption>Planned Encounters</caption>
 			<thead>
 				<tr>
 					<th>Name</th>
@@ -22,9 +24,11 @@ This example includes details of the referral as text and Planned Encounter disc
 			<tbody>
 				<tr>
 					<td ID="ID0EFFFFFFCA">
-						<content ID="ID0EFAAAAACA">Pulmonary Function Tests; Dr. Penny Puffer, Tel: 555-555-1049, 1047 Healthcare Drive, Portland OR 97005</content></td>
+						<content ID="ID0EFAAAAACA">Pulmonary Function Tests; Dr. Penny Puffer, Tel: 555-555-1049, 1047 Healthcare Drive, Portland OR 97005</content>
+					</td>
 					<td>17-Aug-2012</td>
-					<td>based upon Encounter Diagnosis: <content ID="ID0EAAAAAAAAACA">Costal Chondritis</content></td>
+					<td>based upon Encounter Diagnosis: <content ID="ID0EAAAAAAAAACA">Costal Chondritis</content>
+					</td>
 				</tr>
 			</tbody>
 		</table>
@@ -36,87 +40,79 @@ This example includes details of the referral as text and Planned Encounter disc
 			<!-- Planned Encounter templateId -->
 			<templateId root="2.16.840.1.113883.10.20.22.4.40"/>
 			<id extension="52487" root="1.3.6.1.42424242.4.99930.4.3.4"/>
-			<!-- templateId and id are all that are required, even all that are specified in C-CDA R1.1; with C-CDA R2.0 the documentation changes quite a bit -->
-			<!-- use an entryRelationship and an encounter activity to give all details of the Planned Encounter -->
+			<!-- templateId and id are all that are required or specified in C-CDA R1.1; with C-CDA R2.0 the documentation changes quite a bit -->
+			<!-- code from the Encounter Type value set -->
+			<code codeSystem="2.16.840.1.113883.6.12" codeSystemName="CPT" code="94060" displayName="Pulmonary function tests">
+				<!-- referencing back to the text of the type-->
+				<originalText>
+					<reference value="#ID0EFAAAAACA"/>
+				</originalText>
+			</code>
+			<text>
+				<!-- referencing the entire text -->
+				<reference value="#ID0EFFFFFFCA"/>
+			</text>
+			<effectiveTime>
+				<!-- appointment requested for Test date + 2 days , so 8/17/2012 -->
+				<low value="20120817000000"/>
+			</effectiveTime>
+			<!-- the requested Penny Puffer provider -->
+			<performer typeCode="PRF">
+				<assignedEntity>
+					<id extension="3333333333" root="2.16.840.1.113883.4.6"/>
+					<addr>
+						<streetAddressLine>1047 Healthcare Dr</streetAddressLine>
+						<city>Portland</city>
+						<state>OR</state>
+						<postalCode>97005</postalCode>
+						<country>US</country>
+					</addr>
+					<telecom value="tel:+1-(555)555-1049"/>
+					<assignedPerson>
+						<name>
+							<family>Puffer</family>
+							<given>Penny</given>
+							<prefix>Dr</prefix>
+						</name>
+					</assignedPerson>
+				</assignedEntity>
+			</performer>
+			<!-- Penny Puffer office location -->
+			<participant typeCode="LOC">
+				<participantRole classCode="SDLOC">
+					<templateId root="2.16.840.1.113883.10.20.22.4.32"/>
+					<code code="1212-0" codeSystem="2.16.840.1.113883.6.259" displayName="Any Age Mixed Acuity Unit"/>
+					<telecom nullFlavor="UNK"/>
+					<playingEntity classCode="PLC">
+						<name>Dr. Penny Puffer Office</name>
+					</playingEntity>
+				</participantRole>
+			</participant>
+			<!-- this references the encounter diagnosis -->
 			<entryRelationship typeCode="REFR">
-				<!-- encounter activity -->
-				<encounter classCode="ENC" moodCode="EVN">
-					<templateId root="2.16.840.1.113883.10.20.22.4.49"/>
-					<id extension="52487" root="1.3.6.1.42424242.4.99930.4.3.4"/>
-					<!-- code from the Encounter Type value set -->
-					<code codeSystem="2.16.840.1.113883.6.12" codeSystemName="CPT" code="94060" displayName="Pulmonary function tests">
-						<!-- referencing back to the text of the type-->
-						<originalText>
-							<reference value="#ID0EFAAAAACA"/>
-						</originalText>
-					</code>
-					<text>
-						<!-- referencing the entire text -->
-						<reference value="#ID0EFFFFFFCA"/>
-					</text>
-					<effectiveTime>
-						<!-- appointment requested for Test date + 2 days , so 8/17/2012 -->
-						<low value="20120817000000"/>
-					</effectiveTime>
-					<!-- the requested Penny Puffer provider -->
-					<performer typeCode="PRF">
-						<assignedEntity>
-							<id extension="3333333333" root="2.16.840.1.113883.4.6"/>
-							<addr>
-								<streetAddressLine>1047 Healthcare Dr</streetAddressLine>
-								<city>Portland</city>
-								<state>OR</state>
-								<postalCode>97005</postalCode>
-								<country>US</country>
-							</addr>
-							<telecom value="tel:+1-(555)555-1049"/>
-							<assignedPerson>
-								<name>
-									<family>Puffer</family>
-									<given>Penny</given>
-									<prefix>Dr</prefix>
-								</name>
-							</assignedPerson>
-						</assignedEntity>
-					</performer>
-					<!-- Penny Puffer office location -->
-					<participant typeCode="LOC">
-						<participantRole classCode="SDLOC">
-							<templateId root="2.16.840.1.113883.10.20.22.4.32"/>
-							<code code="1212-0" codeSystem="2.16.840.1.113883.6.259" displayName="Any Age Mixed Acuity Unit"/>
-							<telecom nullFlavor="UNK"/>
-							<playingEntity classCode="PLC">
-								<name>Dr. Penny Puffer Office</name>
-							</playingEntity>
-						</participantRole>
-					</participant>
-					<!-- this references the encounter diagnosis -->
-					<entryRelationship typeCode="REFR">
-						<act classCode="ACT" moodCode="EVN">
-							<templateId root="2.16.840.1.113883.10.20.22.4.80"/>
-							<code code="29308-4" displayName="Encounter Diagnosis" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-							<entryRelationship typeCode="SUBJ">
-								<observation classCode="OBS" moodCode="EVN">
-									<templateId root="2.16.840.1.113883.10.20.22.4.4"/>
-									<id extension="45678" root="1.3.6.1.4.1.22812.4.99930.4.4.1.2.1"/>
-									<code codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="282291009" displayName="Diagnosis"/>
-									<text>
-										<reference value="#ID0EAAAAAAAAACA"/>
-									</text>
-									<statusCode code="completed"/>
-									<effectiveTime>
-										<low nullFlavor="UNK"/>
-									</effectiveTime>
-									<value xsi:type="CD" nullFlavor="UNK">
-										<originalText>
-											<reference value="#ID0EAAAAAAAAACA"/>
-										</originalText>
-									</value>
-								</observation>
-							</entryRelationship>
-						</act>
+				<act classCode="ACT" moodCode="EVN">
+					<templateId root="2.16.840.1.113883.10.20.22.4.80"/>
+					<code code="29308-4" displayName="Encounter Diagnosis" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+					<entryRelationship typeCode="SUBJ">
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.22.4.4"/>
+							<id extension="45678" root="1.3.6.1.4.1.22812.4.99930.4.4.1.2.1"/>
+							<code codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="282291009" displayName="Diagnosis"/>
+							<text>
+								<reference value="#ID0EAAAAAAAAACA"/>
+							</text>
+							<statusCode code="completed"/>
+							<effectiveTime>
+								<low value="20120815000000"/>
+							</effectiveTime>
+							<value xsi:type="CD" code="203523006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+								<originalText>
+									<reference value="#ID0EAAAAAAAAACA"/>
+								</originalText>
+							</value>
+						</observation>
 					</entryRelationship>
-				</encounter>
+				</act>
 			</entryRelationship>
 		</encounter>
 	</entry>
