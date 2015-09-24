@@ -86,9 +86,9 @@ there are systems that might very well represent the data in the Plan of Treatme
 					<telecom value="tel:+1-(555)555-1049"/>
 					<assignedPerson>
 						<name>
-							<family>Puffer</family>
-							<given>Penny</given>
 							<prefix>Dr</prefix>
+							<given>Penny</given>
+							<family>Puffer</family>
 						</name>
 					</assignedPerson>
 				</assignedEntity>

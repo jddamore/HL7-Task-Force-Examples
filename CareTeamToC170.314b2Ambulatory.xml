@@ -48,9 +48,9 @@ for or participating in the encounter.
 					<telecom value="tel:+1-(555)555-1004" use="WP"/>
 					<assignedPerson>
 						<name>
-							<family>Khan</family>
+							<prefix qualifier="TITLE">Dr</prefix>						
 							<given>Samir</given>
-							<prefix qualifier="TITLE">Dr</prefix>
+							<family>Khan</family>
 						</name>
 					</assignedPerson>
 				</assignedEntity>
@@ -76,8 +76,8 @@ for or participating in the encounter.
 					<telecom value="tel:+1-(555)555-1014" use="WP"/>
 					<assignedPerson>
 						<name>
-							<family>Nightingale</family>
 							<given>Nancy</given>
+							<family>Nightingale</family>
 							<suffix qualifier="TITLE">RN</suffix>
 						</name>
 					</assignedPerson>
