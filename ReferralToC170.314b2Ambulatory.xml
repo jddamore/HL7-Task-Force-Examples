@@ -17,9 +17,7 @@ there are systems that might very well represent the data in the Plan of Treatme
 	<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.1"/>
 	<code code="42349-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Reason For Referral"/>
 	<title>Reason For Referral</title>
-	<text>
-		<content ID="ID0EAADACA">Pulmonary function tests, Dr. Penny Puffer, Tel: 555-555-1049, 1047 Healthcare Drive, Portland, OR 97005, Scheduled date: 08/17/2012</content>
-	</text>
+	<text>Pulmonary function tests, Dr. Penny Puffer, Tel: 555-555-1049, 1047 Healthcare Drive, Portland, OR 97005, Scheduled date: 08/17/2012</text>
 </section>
 
 <!-- here is the optional section for Plan of Care with the Planned Encounter -->
@@ -45,7 +43,7 @@ there are systems that might very well represent the data in the Plan of Treatme
 						<content ID="ID0EFAAAAACA">Pulmonary Function Tests; Dr. Penny Puffer, Tel: 555-555-1049, 1047 Healthcare Drive, Portland OR 97005</content>
 					</td>
 					<td>17-Aug-2012</td>
-					<td>based upon Encounter Diagnosis: <content ID="ID0EAAAAAAAAACA">Costal Chondritis</content>
+					<td>Indication: <content ID="ID0EAAAAAAAAACA">Encounter Diagnosis - Costal Chondritis</content>
 					</td>
 				</tr>
 			</tbody>
@@ -123,11 +121,7 @@ there are systems that might very well represent the data in the Plan of Treatme
 						<low value="20120815"/>
 					</effectiveTime>
 					<!-- includes the code for Costal Chondritis -->
-					<value xsi:type="CD" code="64109004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Costal Chondritis">
-						<originalText>
-							<reference value="#ID0EAAAAAAAAACA"/>
-						</originalText>
-					</value>
+					<value xsi:type="CD" code="64109004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Costal Chondritis"/>
 				</observation>
 			</entryRelationship>
 		</encounter>
