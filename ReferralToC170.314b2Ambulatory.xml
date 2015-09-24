@@ -43,7 +43,7 @@ there are systems that might very well represent the data in the Plan of Treatme
 						<content ID="ID0EFAAAAACA">Pulmonary Function Tests; Dr. Penny Puffer, Tel: 555-555-1049, 1047 Healthcare Drive, Portland OR 97005</content>
 					</td>
 					<td>17-Aug-2012</td>
-					<td>Indication: <content ID="ID0EAAAAAAAAACA">Encounter Diagnosis - Costal Chondritis</content>
+					<td ID="ID0EAAAAAAAAACA">Indication: Costal Chondritis</content>
 					</td>
 				</tr>
 			</tbody>
