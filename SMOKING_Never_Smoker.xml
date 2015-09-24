@@ -20,12 +20,10 @@
 			<templateId root="2.16.840.1.113883.10.20.22.4.78"/>
 			<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
 			<statusCode code="completed"/>
-			<effectiveTime>
-				<!-- effectiveTime/low is nullFlavor when smoking status is never a smoker.-->
-				<!-- Please note that there may be revisions to this assignment in C-CDA R2.0-->
-				<!-- Other nullFlavors have been discussed and may be appropriate -->
-				<low nullFlavor="NA"/>
-			</effectiveTime>
+			<!-- effectiveTime/low is no longer required based on R1.1 errata 596 (http://www.hl7.org/dstucomments/showdetail_comment.cfm?commentid=596) -->
+			<!-- nullFlavor is appropriate when smoking status is never a smoker. Other nullFlavors have been discussed and may be appropriate -->
+			<!-- Prior to errata 596 effectiveTime/low was required and the example task force put nullFlavor there: low nullFlavor="NA" -->
+			<effectiveTime nullFlavor="NA"/>
 			<!-- The use of a specfic SNOMED code for unknown smoker is an encouraged variation from C-CDA practices in other sections -->
 			<value xsi:type="CD" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="266919005" displayName="Never Smoker"/>
 			<author>
