@@ -731,7 +731,7 @@ for or participating in the encounter.
 											<playingEntity classCode="MMAT">
 												<code code="7982"
 												displayName="Penicillin G benzathine"
-												codeSystem="2.16.840.1.113883.6.96"
+												codeSystem="2.16.840.1.113883.6.88"
 												codeSystemName="RxNorm">
 												<originalText>
 												<reference value="#allergy4allergen"/>
@@ -790,10 +790,9 @@ for or participating in the encounter.
 							<code code="48765-2" codeSystem="2.16.840.1.113883.6.1"
 								codeSystemName="LOINC"
 								displayName="Allergies, adverse reactions, alerts"/>
-							<statusCode code="completed"/>
+							<statusCode code="active"/>
 							<effectiveTime>
 								<low nullFlavor="UNK"/>
-								<high nullFlavor="UNK"/>
 							</effectiveTime>
 							<entryRelationship typeCode="SUBJ">
 								<observation classCode="OBS" moodCode="EVN">
@@ -805,20 +804,20 @@ for or participating in the encounter.
 									<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
 									<statusCode code="completed"/>
 									<effectiveTime>
-										<low nullFlavor="UNK"/>
+										<low value="20120815"/>
 									</effectiveTime>
 									<value xsi:type="CD" codeSystem="2.16.840.1.113883.6.96"
 										code="416098002" displayName="drug allergy"
 										codeSystemName="SNOMED CT">
 										<originalText>
-											<reference value="#ID0EDAMACA"/>
+											<reference value="#allergy5"/>
 										</originalText>
 									</value>
 									<participant typeCode="CSM">
 										<participantRole classCode="MANU">
 											<playingEntity classCode="MMAT">
 												<code code="2670" displayName="Codeine"
-												codeSystem="2.16.840.1.113883.6.96"
+												codeSystem="2.16.840.1.113883.6.88"
 												codeSystemName="RxNorm">
 												<originalText>
 												<reference value="#allergy5allergen"/>
@@ -847,7 +846,7 @@ for or participating in the encounter.
 											<code code="ASSERTION"
 												codeSystem="2.16.840.1.113883.5.4"/>
 											<text>
-												<reference value="#allergy4reaction"/>
+												<reference value="#allergy5reaction"/>
 											</text>
 											<statusCode code="completed"/>
 											<effectiveTime>
@@ -857,7 +856,7 @@ for or participating in the encounter.
 												codeSystem="2.16.840.1.113883.6.96"
 												codeSystemName="SNOMED CT" displayName="nausea">
 												<originalText>
-												<reference value="#ID0ECACAMACA"/>
+												<reference value="#allergy5reactionseverity"/>
 												</originalText>
 											</value>
 											<entryRelationship typeCode="SUBJ" inversionInd="true">
