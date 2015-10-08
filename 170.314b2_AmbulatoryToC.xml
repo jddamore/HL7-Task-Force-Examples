@@ -605,12 +605,17 @@ for or participating in the encounter.
 							<effectiveTime xsi:type="PIVL_TS" operator="A">
 								<period value="6" unit="h"/>
 							</effectiveTime>
-							<doseQuantity value="1"/>
+							<!-- the routeCode is optional; this example shows use of the specified Medication Route FDA  value set, where the codeSystemName is from the PHIN VADS source of values
+									https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.113883.3.88.12.3221.8.7
+							-->
+							<routeCode codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" code="C38216" displayName="RESPIRATORY (INHALATION)"/>
+							<!-- the dose of 2 puffs is output, with the units expressed in UCUM -->
+							<doseQuantity value="2" unit="{Puffs}"/>
 							<consumable typeCode="CSM">
 								<manufacturedProduct classCode="MANU">
 									<templateId root="2.16.840.1.113883.10.20.22.4.23"/>
 									<manufacturedMaterial>
-										<code code="197806" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm" displayName="Albuterol 0.09 MG/ACTUAT">
+										<code code="573621" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm" displayName="Albuterol 0.09 MG/ACTUAT">
 											<originalText>
 												<reference value="#MedicationName_2"/>
 											</originalText>
