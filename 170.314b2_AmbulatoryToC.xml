@@ -672,26 +672,28 @@ for or participating in the encounter.
 									<td ID="allergy4reaction">Hives</td>
 									<td ID="allergy4reactionseverity">Severe</td>
 									<td>August 15 2012</td>
-									<td>August 15 2012</td>
+									<td>2010</td>
 								</tr>
 								<tr ID="allergy5">
 									<td ID="allergy5allergen">Codeine</td>
 									<td ID="allergy5reaction">Nausea </td>
 									<td ID="allergy5reactionseverity">Mild to moderate</td>
 									<td>August 15 2012</td>
-									<td>August 15 2012</td>
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
 					</text>
-					<entry typeCode="DRIV">
+					<entry>
 						<act classCode="ACT" moodCode="EVN">
 							<!-- ** Allergy problem act ** -->
 							<templateId root="2.16.840.1.113883.10.20.22.4.30"/>
 							<id root="0abffc67-af4e-4345-b917-eed43f641b93"/>
 							<code code="CONC" codeSystem="2.16.840.1.113883.5.6"/>
 							<statusCode code="active"/>
-							<!-- This is the time stamp for when the allergy was first documented as a concern-->
+							<!-- This is the time stamp for when the allergy was first documented as a concern
+									this value is not in the test data
+							-->
 							<effectiveTime>
 								<low value="20120815100000-0800"/>
 							</effectiveTime>
@@ -703,9 +705,11 @@ for or participating in the encounter.
 									<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
 									<statusCode code="completed"/>
 									<!-- This is the time stamp for the biological onset of the allergy. -->
-									<!-- This documents that the allergy began at given year month and day, although hour and minute not specified-->
+									<!-- This documents that the allergy began at given year
+											this value is not in the test data; to record that the onset is unknown we would have <low nullFlavor="UNK"/> as is shown in the second allergy entry
+									-->
 									<effectiveTime>
-										<low value="20120815"/>
+										<low value="2010"/>
 									</effectiveTime>
 									<!-- This specifies that the allergy is a drug allergy -->
 									<value xsi:type="CD" code="416098002" displayName="drug allergy" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
@@ -735,6 +739,7 @@ for or participating in the encounter.
 												<low value="20140103"/>
 											</effectiveTime>
 											<value xsi:type="CD" code="247472004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="hives"/>
+											<!-- the severity of the reaction is not in the test data but is shown here for the purpose of expressing what may be representative of real world data -->
 											<entryRelationship typeCode="SUBJ" inversionInd="true">
 												<observation classCode="OBS" moodCode="EVN">
 													<!-- Severity Observation template -->
@@ -763,7 +768,7 @@ for or participating in the encounter.
 							<code code="48765-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Allergies, adverse reactions, alerts"/>
 							<statusCode code="active"/>
 							<effectiveTime>
-								<low nullFlavor="UNK"/>
+								<low value="20120815"/>
 							</effectiveTime>
 							<entryRelationship typeCode="SUBJ">
 								<observation classCode="OBS" moodCode="EVN">
@@ -772,8 +777,9 @@ for or participating in the encounter.
 									<id extension="6136187001091" root="1.3.6.1.4.1.42424242.4.99930.4.4.10.2"/>
 									<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
 									<statusCode code="completed"/>
+									<!-- the test data does not tell us about the Onset date of the medication allergy -->
 									<effectiveTime>
-										<low value="20120815"/>
+										<low nullFlavor="UNK"/>
 									</effectiveTime>
 									<value xsi:type="CD" codeSystem="2.16.840.1.113883.6.96" code="416098002" displayName="drug allergy" codeSystemName="SNOMED CT">
 										<originalText>
@@ -792,14 +798,6 @@ for or participating in the encounter.
 											</playingEntity>
 										</participantRole>
 									</participant>
-									<entryRelationship typeCode="SUBJ" inversionInd="true">
-										<observation classCode="OBS" moodCode="EVN">
-											<templateId root="2.16.840.1.113883.10.20.22.4.28"/>
-											<code code="33999-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Status"/>
-											<statusCode code="completed"/>
-											<value xsi:type="CE" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="55561003" displayName="Active"/>
-										</observation>
-									</entryRelationship>
 									<entryRelationship typeCode="MFST" inversionInd="true">
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="2.16.840.1.113883.10.20.22.4.9"/>
@@ -814,15 +812,16 @@ for or participating in the encounter.
 											</effectiveTime>
 											<value xsi:type="CD" code="422587007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="nausea">
 												<originalText>
-													<reference value="#allergy5reactionseverity"/>
+													<reference value="#allergy5reaction"/>
 												</originalText>
 											</value>
+											<!-- the severity of the reaction is not in the test data but is shown here for the purpose of expressing what may be representative of real world data -->
 											<entryRelationship typeCode="SUBJ" inversionInd="true">
 												<observation classCode="OBS" moodCode="EVN">
 													<templateId root="2.16.840.1.113883.10.20.22.4.8"/>
 													<code code="SEV" displayName="Severity Observation" codeSystem="2.16.840.1.113883.5.4" codeSystemName="HL7ActCode"/>
 													<text>
-														<reference value="#allergy4reactionseverity"/>
+														<reference value="#allergy5reactionseverity"/>
 													</text>
 													<statusCode code="completed"/>
 													<value xsi:type="CD" displayName="Mild to moderate" code="371923003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
