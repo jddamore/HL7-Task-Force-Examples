@@ -92,10 +92,34 @@
 	</recordTarget>
 	<!-- end of A) -->
 	<!-- multiple participants may be authors of a document - see CDA R2 documentation at 4.2.2.2 author 
-			this show, by example, that a software system was the author of the document; notice that the softwareName, which may include version, 
-			is often useful information should questions arise about the content 
-			**Additional discussion is needed on SDWG on appropriateness of including other authors here, or within sections they author.
-			  Consider what gets propogated to XDS metadata** -->
+		this shows a software system was the author of the document; notice that the softwareName, which may include version, 
+		is often useful information should questions arise about the content
+		Also, the example task force includes Dr. Khan here (header), but some systems would include the authors at each section authored.
+		Based on local policy additional authors could be listed in the header (Nurse involved, etc.)
+		Data provenance is a tricky topic and one that is still under discussion in SDWG and HL7. -->
+	<author>
+		<time value="20120815110000-0800"/>
+		<assignedAuthor>
+			<id root="2.16.840.1.113883.4.6" extension="1111111111"/>
+			<id extension="91171" root="1.3.6.1.4.1.42424242.4.99930.4"/>
+			<addr use="WP">
+				<streetAddressLine>Get Well Clinic</streetAddressLine>
+				<streetAddressLine>1004 Healthcare Dr</streetAddressLine>
+				<city>Portland</city>
+				<state>OR</state>
+				<postalCode>97005</postalCode>
+				<country>US</country>
+			</addr>
+			<telecom value="tel:+1-(555)555-1004" use="WP"/>
+			<assignedPerson>
+				<name>
+					<prefix qualifier="TITLE">Dr</prefix>
+					<given>Samir</given>
+					<family>Khan</family>
+				</name>
+			</assignedPerson>
+		</assignedAuthor>
+	</author>
 	<author>
 		<time value="20120815110000-0800"/>
 		<assignedAuthor>
