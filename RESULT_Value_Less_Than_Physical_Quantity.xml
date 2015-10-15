@@ -46,10 +46,10 @@
           <!-- Representing a result of less than with type of interval -->
           <value xsi:type="IVL_PQ">
             <!-- The lower bound for most physical measures of less than will be zero-->
-			<!-- Note that if the inclusive attribute is not specified, then it defaults to true -->
+	    <!-- Note that if the inclusive attribute is not specified, then it defaults to true -->
             <low value="0" unit="pg/mL" inclusive="true"/>
             <!-- The upper bound is based upon information returned in lab result, such as less than or equal to 5pg/mL (Note this is different than less than)-->
-			<!-- Note that if the inclusive attribute is not specified, then it defaults to true -->
+	    <!-- Note that if the inclusive attribute is not specified, then it defaults to true -->
             <high value="5" unit="pg/mL" inclusive="true"/>
           </value>
           <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
