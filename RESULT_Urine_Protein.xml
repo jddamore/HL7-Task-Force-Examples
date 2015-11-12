@@ -45,8 +45,10 @@
 					</text>
 					<statusCode code="completed"/>
 					<effectiveTime value="20131023090823+0500"/>
-					<value xsi:type="INT" value="2"/>
+					<!-- Today Coded Ordinal is not commonly used, so most vendors will support ST -->
 					<value xsi:type="ST">2+</value>
+					<!-- Not common to uses CO today, but understand how this coud be useful -->
+					<!-- OR use CD with SNOMED code (260348001) for ++  -->
 					<value xsi:type="CO" code="167276005" codeSystemName="SNOMED-CT" displayName ="Urine Protein 2+" codeSystem ="2.16.840.1.113883.6.96"/>
 					<interpretationCode code="H" codeSystem="2.16.840.1.113883.5.83"/>
 				</observation>
