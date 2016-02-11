@@ -101,7 +101,8 @@
 			<templateId root="2.16.840.1.113883.10.20.22.4.1"/>
 			<id root="cda1fc54-59fb-412d-86e0-acf6b78aa9a6"/>
 			<!-- Note that we've included the first set of lab results in a BATTERY classCode and under the Basic Metabolic Panel -->
-			<!-- This information was not specifically noted in test script. A more appropriate code may be applicable based on lab order -->
+			<!-- Note the code for Basic Metabolic Panel IN BLOOD was not specifically noted in test script.  -->
+			<!-- Warning: Basic Metabolic Panels in SERUM are more common in the real-word, but does not align with with provided test scenario. -->
 			<!-- Technically this Basic Metabolic Panel order returns slightly different LOINC codes (e.g. CO2 would be 20565-8), but it's close overall. -->
 			<code code="51990-0" displayName="Basic Metabolic Panel - Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
 				<originalText>
@@ -116,7 +117,7 @@
 					<id root="d8fe6100-c31a-4b8c-b97d-57a6bd415bf7"/>
 					<!-- There was significant discussion on what should be in the displayName, our current decision was to show LOINC long name-->
 					<!-- Note that displayName will not correspond to human readable and originalText used for referencing that information-->
-					<code code="2947-0" displayName="Sodium" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+					<code code="2947-0" displayName="Sodium [Moles/​volume] in Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
 						<originalText>
 							<reference value="#ResultName1" />
 						</originalText>
@@ -206,6 +207,7 @@
 				<observation classCode="OBS" moodCode="EVN">
 					<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
 					<id root="70c62997-9f12-4b7c-9023-0cdf249336a7"/>
+					<!-- Note that this exception is base on LOINC code in test data. CO2 code of 20565-8 (In Blood) would more accurately align with panel ordered --> 
 					<code code="2028-9" displayName="Carbon dioxide, total [Moles/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
 						<originalText>
 							<reference value="#ResultName4" />
@@ -341,7 +343,7 @@
 			<templateId root="2.16.840.1.113883.10.20.22.4.1"/>
 			<id root="950c948f-e5b2-4973-b7c0-e9ee08875e04"/>
 			<!-- For an individual result which may be ordered independently, we choose a CLUSTER classCode and used the specific LOINC code as organizer/code-->
-			<code code="6598-7" displayName="Troponin T" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+			<code code="6598-7" displayName="Troponin T.Cardiac [Mass/Volume] In Serum Or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
 				<originalText>
 					<reference value="#PanelName2" />
 				</originalText>
@@ -385,7 +387,7 @@
 			<templateId root="2.16.840.1.113883.10.20.22.4.1"/>
 			<id root="a4307cb2-b3b4-4f42-be03-1d9077376f4a"/>
 			<!-- For an individual result which may be ordered independently, we choose a CLUSTER classCode and used the specific LOINC code as organizer/code-->
-			<code code="6598-7" displayName="Troponin T" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+			<code code="6598-7" displayName="Troponin T.Cardiac [Mass/Volume] In Serum Or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
 				<originalText>
 					<reference value="#PanelName3" />
 				</originalText>
