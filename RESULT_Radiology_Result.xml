@@ -33,34 +33,36 @@
         <tr>
           <th colspan="4">Electornicially signed: Hermione Seaven, MD 02-25-2015 10:32a</th>
         </tr>
-
       </tbody>
     </table>
   </text>
   <entry>
-    <organizer classCode="BATTERY" moodCode="EVN">
+    <organizer classCode="CLUSTER" moodCode="EVN">
+      <!-- Selected CLUSTER since not a set of tests -->
       <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+      <!-- Results Organizer -->
       <id root="e1aa44dd-6f39-4f5c-b267-897c3821b563"/>
-      <code code="71020" displayName="Chest X-Ray 2 Views" codeSystem="2.16.840.1.113883.6.12" codeSystemName="LOINC"/>
+      <code code="71020" displayName="Chest X-Ray 2 Views" codeSystem="2.16.840.1.113883.6.12" codeSystemName="CPT"/>
       <statusCode code="completed"/>
-      <effectiveTime value="201310230910+0500"/>
+      <effectiveTime value="201310230910-0500"/>
       <component>
         <observation classCode="OBS" moodCode="EVN">
           <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+          <!-- Results Observation -->
           <id root="e1aa44dd-6f39-2f5c-b267-897c3824b563"/>
           <code code="36643-5" displayName="Chest X-ray 2 Views" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
           <text>
             <reference value="#Result1"/>
           </text>
           <statusCode code="completed"/>
-          <effectiveTime value="20150225091059+0500"/>
+          <effectiveTime value="20150225091059-0500"/>
           <value xsi:type="ED">
             <reference value="Result1OriginalText"></reference>
           </value>
           <interpretationCode nullFlavor="NI"/>
           <targetSiteCode code="416550000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Chest and Abdomen" />
           <author>
-            <time value="20150225103206+0500"/>
+            <time value="20150225103206-0500"/>
             <assignedAuthor>
               <id extension="66666" root="2.16.840.1.113883.4.6"/>
               <code code="111NR0200X" codeSystem="2.16.840.1.113883.6.101" codeSystemName="NUCC" displayName="Radiology"/>
