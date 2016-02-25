@@ -110,7 +110,7 @@
 				</originalText>		
 			</code>
 			<statusCode code="completed"/>
-			<effectiveTime value="201210020908+0500"/>
+			<effectiveTime value="201210020908-0500"/>
 			<component>
 				<observation classCode="OBS" moodCode="EVN">
 					<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
@@ -126,7 +126,7 @@
 						<reference value="#Result1"/>
 					</text>
 					<statusCode code="completed"/>
-					<effectiveTime value="201210020908+0500"/>
+					<effectiveTime value="201210020908-0500"/>
 					<value xsi:type="PQ" value="140" unit="mmol/L" />
 					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 					<referenceRange>
@@ -156,7 +156,7 @@
 						<reference value="#Result2"/>
 					</text>
 					<statusCode code="completed"/>
-					<effectiveTime value="201210020908+0500"/>
+					<effectiveTime value="201210020908-0500"/>
 					<value xsi:type="PQ" value="4.2" unit="mmol/L" />
 					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 					<referenceRange>
@@ -186,7 +186,7 @@
 						<reference value="#Result3"/>
 					</text>
 					<statusCode code="completed"/>
-					<effectiveTime value="201210020908+0500"/>
+					<effectiveTime value="201210020908-0500"/>
 					<value xsi:type="PQ" value="98" unit="mmol/L" />
 					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 					<referenceRange>
@@ -217,7 +217,7 @@
 						<reference value="#Result4"/>
 					</text>
 					<statusCode code="completed"/>
-					<effectiveTime value="201210020908+0500"/>
+					<effectiveTime value="201210020908-0500"/>
 					<value xsi:type="PQ" value="24" unit="mmol/L" />
 					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 					<referenceRange>
@@ -247,7 +247,7 @@
 						<reference value="#Result5"/>
 					</text>
 					<statusCode code="completed"/>
-					<effectiveTime value="201210020908+0500"/>
+					<effectiveTime value="201210020908-0500"/>
 					<value xsi:type="PQ" value="10" unit="md/dL" />
 					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 					<referenceRange>
@@ -277,7 +277,7 @@
 						<reference value="#Result6"/>
 					</text>
 					<statusCode code="completed"/>
-					<effectiveTime value="201210020908+0500"/>
+					<effectiveTime value="201210020908-0500"/>
 					<value xsi:type="PQ" value="1.2" unit="mg/dL" />
 					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 					<referenceRange>
@@ -307,7 +307,7 @@
 						<reference value="#Result7"/>
 					</text>
 					<statusCode code="completed"/>
-					<effectiveTime value="201210020908+0500"/>
+					<effectiveTime value="201210020908-0500"/>
 					<value xsi:type="PQ" value="185" unit="mmol/L" />
 					<interpretationCode code="H" codeSystem="2.16.840.1.113883.5.83"/>
 					<referenceRange>
@@ -349,7 +349,7 @@
 				</originalText>
 			</code>
 			<statusCode code="completed"/>
-			<effectiveTime value="201210020908+0500"/>
+			<effectiveTime value="201210020908-0500"/>
 			<component>
 				<observation classCode="OBS" moodCode="EVN">
 					<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
@@ -363,7 +363,7 @@
 						<reference value="#Result8"/>
 					</text>
 					<statusCode code="completed"/>
-					<effectiveTime value="201210020908+0500"/>
+					<effectiveTime value="201210020908-0500"/>
 					<value xsi:type="PQ" value="0.01" unit="ng/mL" />
 					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 					<referenceRange>
@@ -392,7 +392,7 @@
 					<reference value="#PanelName3" />
 				</originalText>
 			</code>			<statusCode code="completed"/>
-			<effectiveTime value="201210031008+0500"/>
+			<effectiveTime value="201210031008-0500"/>
 			<component>
 				<observation classCode="OBS" moodCode="EVN">
 					<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
@@ -406,7 +406,7 @@
 						<reference value="#Result9"/>
 					</text>
 					<statusCode code="completed"/>
-					<effectiveTime value="201210031008+0500"/>
+					<effectiveTime value="201210031008-0500"/>
 					<value xsi:type="PQ" value="0.01" unit="ng/mL" />
 					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 					<referenceRange>
