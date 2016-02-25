@@ -54,7 +54,7 @@
           </text>
           <statusCode code="completed"/>
           <effectiveTime value="20150225091059+0500"/>
-          <value xsi:type="ST">
+          <value xsi:type="ED">
             <reference value="Result1OriginalText"></reference>
           </value>
           <interpretationCode nullFlavor="NI"/>
