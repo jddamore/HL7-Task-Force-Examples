@@ -110,7 +110,7 @@
 				</originalText>		
 			</code>
 			<statusCode code="completed"/>
-			<effectiveTime value="201210020908-0500"/>
+			<!-- You could include an organizer/effectiveTime value="201210020908-0500" but it's not included in the test data --> 
 			<component>
 				<observation classCode="OBS" moodCode="EVN">
 					<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
@@ -349,7 +349,7 @@
 				</originalText>
 			</code>
 			<statusCode code="completed"/>
-			<effectiveTime value="201210020908-0500"/>
+			<!-- You could include an organizer/effectiveTime value="201210020908-0500" but it's not included in the test data --> 
 			<component>
 				<observation classCode="OBS" moodCode="EVN">
 					<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
@@ -392,7 +392,7 @@
 					<reference value="#PanelName3" />
 				</originalText>
 			</code>			<statusCode code="completed"/>
-			<effectiveTime value="201210031008-0500"/>
+			<!-- You could include an organizer/effectiveTime value="201210031008-0500" but it's not included in the test data --> 
 			<component>
 				<observation classCode="OBS" moodCode="EVN">
 					<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
