@@ -63,7 +63,6 @@
             <reference value="#Result1OriginalText" />
           </value>
           <interpretationCode nullFlavor="NI"/>
-          <targetSiteCode code="416550000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Chest and Abdomen" />
           <author>
 			<!-- This is the timestamp of when the author (i.e. the radiologist) interepreted the chest x-ray-->
             <time value="20150225103206-0500"/>
