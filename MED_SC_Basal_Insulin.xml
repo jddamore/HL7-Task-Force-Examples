@@ -17,15 +17,15 @@
       <tbody>
         <tr ID="Medication_6">
           <td>
-            <content ID="MedicationName_6" xmlns="urn:hl7-org:v3">3 ML Insulin Glargine 100 UNT/ML Prefilled Syringe</content>
+            <content ID="MedicationName_6">3 ML Insulin Glargine 100 UNT/ML Pen Injector [Lantus]</content>
           </td>
           <td>
-            <content ID="MedicationSig_6" xmlns="urn:hl7-org:v3">take 40 units at bedtime</content>
+            <content ID="MedicationSig_6">Adminster 40 units at bedtime</content>
           </td>
           <td>
-            <content ID="MedicationDosage_6" xmlns="urn:hl7-org:v3">40 units</content>
+            <content>40 units</content>
           </td>
-          <td>Apr-09-2014 - </td>
+          <td>Jan-09-2009 - </td>
           <td>Active</td>
         </tr>
       </tbody>
@@ -44,15 +44,16 @@
       <statusCode code="active"/>
       <!-- This first effectiveTime shows that medication was added on April 9, 2014 (not known to have stopped)-->
       <effectiveTime xsi:type="IVL_TS">
-        <low value="20140409"/>
+        <low value="20090109"/>
         <high nullFlavor="NI"/>
       </effectiveTime>
       <!-- The second effectiveTime specifies dose frequency, which can be either a period (PIVL_TS) or event (EIVL_TS). -->
-      <!-- This long-lasting insulin is administered once per day before bedtime, which is an event-->
+      <!-- This long-lasting insulin is administered once per day before bedtime (code = "HS"), which is an event-->
       <effectiveTime xsi:type="EIVL_TS" operator="A">
         <event code="HS"/>
       </effectiveTime>
-      <routeCode code="C38299" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="SUBCUTANEOUS" codeSystemName="National Cancer Institute Thesaurus" />
+	  <!-- This route uses the NCI (National Cancer Institute) Thesauraus code system, which is constrained to the value set of 2.16.840.1.113883.3.88.12.3221.8.7 (FDA Medication Route) -->
+      <routeCode code="C38299" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="SUBCUTANEOUS" codeSystemName="NCI Thesaurus" />
       <!-- Since this dose is not pre-coordinated, specify both the amount with units in UCUM. [IU] is international units -->
       <!-- Note that this basal insulin is not administered on a sliding scale and a specific dose is administered-->
       <doseQuantity value="40" unit="[IU]"/>
@@ -62,7 +63,8 @@
           <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
           <manufacturedMaterial classCode="MMAT" determinerCode="KIND">
             <!-- Medications should be specified at a level corresponding to prescription when possible (branded medication below)-->
-            <code code="847232" codeSystem="2.16.840.1.113883.6.88" displayName="3 ML Insulin Glargine 100 UNT/ML Prefilled Syringe" codeSystemName="RxNorm">
+            <!-- Note the medication code specified in the test data is 261551, but that is not used since it's not an administered product (just brand name)-->
+            <code code="847232" codeSystem="2.16.840.1.113883.6.88" displayName="3 ML Insulin Glargine 100 UNT/ML Pen Injector [Lantus]" codeSystemName="RxNorm">
               <originalText>
                 <reference value="#MedicationName_6"/>
               </originalText>
@@ -73,6 +75,21 @@
           </manufacturerOrganization>
         </manufacturedProduct>
       </consumable>
+	  <entryRelationship typeCode="COMP">
+		<substanceAdministration classCode="SBADM" moodCode="INT">
+		  <templateId root="2.16.840.1.113883.10.20.22.4.147"/>
+		    <code code="76662-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Medication Instructions"/>
+		    <text>
+				<!-- Reference into the section.text to a tag that ONLY contains free text SIG -->
+			  <reference value="#MedicationSig_6"/>
+			</text>
+			<consumable>
+			  <manufacturedProduct>
+				<manufacturedLabeledDrug nullFlavor="NA"/>
+			  </manufacturedProduct>
+			</consumable>
+		</substanceAdministration>
+	  </entryRelationship>
     </substanceAdministration>
   </entry>
 </section>
