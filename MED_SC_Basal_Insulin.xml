@@ -40,7 +40,7 @@
         <reference value="#Medication_6"/>
       </text>
       <statusCode code="active"/>
-      <!-- This first effectiveTime shows that medication was added on April 9, 2014 (not known to have stopped)-->
+      <!-- This first effectiveTime shows that medication was added on January 9, 2009 (not known to have stopped)-->
       <effectiveTime xsi:type="IVL_TS">
         <low value="20090109"/>
         <high nullFlavor="NI"/>
