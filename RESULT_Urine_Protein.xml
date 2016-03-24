@@ -16,7 +16,7 @@
 			<tbody>
 				<tr ID="Result9">
 					<td>Urine Protein</td>
-					<td>Urine Protein 2+</td>
+					<td>2+</td>
 					<td>High</td>
 					<td></td>
 				</tr>
@@ -28,14 +28,13 @@
 			<templateId root="2.16.840.1.113883.10.20.22.4.1"/>
 			<id root="a4307cb2-b3b4-4f42-be03-1d9077376f4b"/>
 			<!-- For an individual result which may be ordered independently, we choose a CLUSTER classCode and used the specific LOINC code as organizer/code-->
-			<code code="20454-5" displayName="Urine Protein" codeSystem="2.16.840.1.113883.6.19" codesystemname="LOINC"/>		
+			<code code="20454-5" displayName="Protein [Presence] in Urine by Test strip" codeSystem="2.16.840.1.113883.6.19" codesystemname="LOINC"/>		
 			<statusCode code="completed"/>
-			<effectiveTime value="20131023090823+0500"/>
 			<component>
 				<observation classCode="OBS" moodCode="EVN">
 					<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
 					<id root="f1r43t34t465657676yrt6rty597c3824b363"/>
-					<code code="20454-5" displayName="Urine Protein" codeSystem="2.16.840.1.113883.6.19" codesystemname="LOINC">
+					<code code="20454-5" displayName="Protein [Presence] in Urine by Test strip" codeSystem="2.16.840.1.113883.6.19" codesystemname="LOINC">
 						<translation>
 							<code code="50456001" dispalyname= "Urine Protein" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
 						</translation> 
@@ -44,12 +43,9 @@
 						<reference value="#Result9"/>
 					</text>
 					<statusCode code="completed"/>
-					<effectiveTime value="20131023090823+0500"/>
+					<effectiveTime value="20131023090823-0500"/>
 					<!-- Today Coded Ordinal is not commonly used, so most vendors will support ST -->
 					<value xsi:type="ST">2+</value>
-					<!-- Not common to uses CO today, but understand how this coud be useful -->
-					<!-- OR use CD with SNOMED code (260348001) for ++  -->
-					<value xsi:type="CO" code="167276005" codeSystemName="SNOMED-CT" displayName ="Urine Protein 2+" codeSystem ="2.16.840.1.113883.6.96"/>
 					<interpretationCode code="H" codeSystem="2.16.840.1.113883.5.83"/>
 				</observation>
 			</component>
