@@ -1,5 +1,6 @@
 <section>
 	<!-- Based on Transitions of Care test scenario, inpatient for MU2 170.314(b)(2)-->
+	<!-- Note that in C-CDA 1.1, functional and cognitive status are within the same section -->
 	<!-- Note that functional and mental status are separate sections in C-CDA 2.0 & 2.1 -->
 	<templateId root="2.16.840.1.113883.10.20.22.2.14"/>
 	<code code="47420-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Functional Status"/>
@@ -20,13 +21,14 @@
 			</thead>
 			<tbody>
 				<tr ID="FS_Narrative1">
-					<td>Functional Status</td> 
+					<td>Cognitive Status</td> 
+					<!-- Some systems may just report this to day rather than hour and minute timestamp. Both of which are acceptable. -->
 					<td>August 15 2012, 5:32pm</td>
 					<td ID="FS_Finding1">Memory Impairment</td>
 					<td></td>
 				</tr>
 				<tr ID="FS_Narrative2">
-					<td>Cognitive Status</td> 
+					<td>Functional Status</td> 
 					<td>August 15 2012, 5:32pm</td>
 					<td ID="FS_Finding2">Dependence on walking stick</td>
 					<td></td>
@@ -36,7 +38,7 @@
 	</text>
 	<entry>
 		<!-- Template for Cognitive  Status Problem Observation. Note other templates may apply. -->
-		<!-- While only a single assessment was stated in test data, MU Stage 2 requires both functional and cognitive assessments as part of common data set. -->
+		<!-- While only a single assessment was stated in test data, MU Stage 2 requires both functional and cognitive assessments as part of care transitions. -->
 		<!-- We chose Problem Observation over Result Observation since we didn't have an indication a specific test was performed. -->
 		<observation classCode="OBS" moodCode="EVN">
 			<templateId root="2.16.840.1.113883.10.20.22.4.73"/>
@@ -47,9 +49,10 @@
 			</text>
 			<statusCode code="completed"/>
 			<effectiveTime>
-				<low value="20120815173215+0500"/>
+				<!-- Some systems may just report this to day rather than hour and minute timestamp. Both of which are acceptable. -->
+				<low value="20120815173215-0500"/>
 			</effectiveTime>
-			<value xsi:type="CD" code=" 386807006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Memory impairment">
+			<value xsi:type="CD" code="386807006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Memory impairment">
 				<originalText>
 					<reference value="#FS_Finding1"/>
 				</originalText>
@@ -68,7 +71,8 @@
 			</text>
 			<statusCode code="completed"/>
 			<effectiveTime>
-				<low value="20120815173215+0500"/>
+				<!-- Some systems may just report this to day rather than hour and minute timestamp. Both of which are acceptable. -->
+				<low value="20120815173215-0500"/>
 			</effectiveTime>
 			<value xsi:type="CD" code="105504002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Dependence on walking stick">
 				<originalText>
