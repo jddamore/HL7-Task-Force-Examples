@@ -1,0 +1,109 @@
+<component>
+  <section>
+    <templateId root="2.16.840.1.113883.10.20.22.2.23" extension="2014-06-09"/>
+    <code code="46264-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Medical Equipment"/>
+    <title>Implants</title>
+    <text>
+      <table>
+        <thead>
+          <tr>
+            <th>Implanted</th>
+            <th>Area</th>
+            <th>Manufacturer</th>
+            <th>Device Identifier</th>
+            <th>Details</th>
+            <th>Model</th>
+            <th>Serial Number</th>
+            <th>Lot</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td ID="implant1">Drug Eluting Coronary Stent (TAXUS 3.00 mm)</td>
+            <td>Left Anterior Descending Coronary Artery</td>
+            <td>Boston Scientific</td>
+            <td>(01)00848486001048(11)160330(10)ABC124</td>
+            <td>LIBERTE TAXUS Stent 3.00mm diameter implanted 04/13/2016 by Fleming, Barry</td>
+            <td>Z-0068-2010</td>
+            <td>0111-066-31456</td>
+            <td>ABC124</td>
+          </tr>
+          <tr>
+            <td ID="implant2">Drug Eluting Coronary Stent (TAXUS 2.75 mm)</td>
+            <td>Left Anterior Descending Coronary Artery</td>
+            <td>Boston Scientific</td>
+            <td>(01)00848486001048(11)160542(10)ABC125</td>
+            <td>LIBERTE TAXUS Stent 2.75mm diameter implanted 04/13/2016 by Fleming, Barry</td>
+            <td>Z-0068-2010</td>
+            <td>0111-066-31456</td>
+            <td>ABC125</td>
+          </tr>
+        </tbody>
+      </table>
+    </text>
+    <entry>
+      <procedure classCode="PROC" moodCode="EVN">
+        <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09"/>
+        <id extension="27456789" root="1.2.840.114350.1.13.5552.1.7.2.737780"/>
+        <code code="609153008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED" displayName="Percutaneous insertion of drug eluting stent into coronary artery using fluoroscopic guidance"/>
+        <!-- Procedure is completed, even though the implant is still active -->
+        <statusCode code="completed"/>
+        <effectiveTime>
+          <!-- Placed Date -->
+          <low value="20160413"/>
+        </effectiveTime>
+        <targetSiteCode code="59438005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Structure of anterior descending branch of left coronary artery" />
+        <participant typeCode="DEV">
+          <participantRole classCode="MANU">
+            <templateId root="2.16.840.1.113883.10.20.22.4.37"/>
+            <id assigningAuthorityName="FDA" extension="(01)00848486001048(11)160330(10)ABC124" root="2.16.840.1.113883.3.3719"/>
+            <playingDevice>
+              <code nullFlavor="UNK">
+                <originalText>
+                  <reference value="#implant1"/>
+                </originalText>
+              </code>
+            </playingDevice>
+            <!-- From Product Instance template:
+                 The scopingEntity/id should correspond to FDA or the appropriate issuing agency. -->
+            <scopingEntity>
+              <id root="2.16.840.1.113883.3.3719"/>
+            </scopingEntity>
+          </participantRole>
+        </participant>
+      </procedure>
+    </entry>
+	    <entry>
+      <procedure classCode="PROC" moodCode="EVN">
+        <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09"/>
+        <id extension="246456891" root="1.2.840.114350.1.13.5552.1.7.2.737780"/>
+        <code code="609153008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED" displayName="Percutaneous insertion of drug eluting stent into coronary artery using fluoroscopic guidance"/>
+        <!-- Procedure is completed, even though the implant is still active -->
+        <statusCode code="completed"/>
+        <effectiveTime>
+          <!-- Placed Date -->
+          <low value="20160413"/>
+        </effectiveTime>
+        <targetSiteCode code="59438005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Structure of anterior descending branch of left coronary artery" />
+        <participant typeCode="DEV">
+          <participantRole classCode="MANU">
+            <templateId root="2.16.840.1.113883.10.20.22.4.37"/>
+            <id assigningAuthorityName="FDA" extension="(01)00848486001048(11)160542(10)ABC125" root="2.16.840.1.113883.3.3719"/>
+            <playingDevice>
+              <code nullFlavor="UNK">
+                <originalText>
+                  <reference value="#implant2"/>
+                </originalText>
+              </code>
+            </playingDevice>
+            <!-- From Product Instance template:
+                 The scopingEntity/id should correspond to FDA or the appropriate issuing agency. -->
+            <scopingEntity>
+              <id root="2.16.840.1.113883.3.3719"/>
+            </scopingEntity>
+          </participantRole>
+        </participant>
+      </procedure>
+    </entry>
+  </section>
+</component>
