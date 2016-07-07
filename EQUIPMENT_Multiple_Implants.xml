@@ -1,6 +1,6 @@
 <component>
   <section>
-    <templateId root="2.16.840.1.113883.10.20.22.2.23" extension="2014-06-09"/>
+    <templateId root="2.16.840.1.113883.10.20.22.2.23"/>
     <code code="46264-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Medical Equipment"/>
     <title>Implants</title>
     <text>
