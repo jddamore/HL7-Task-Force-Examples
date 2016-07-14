@@ -9,36 +9,36 @@
       <table>
         <thead>
           <tr>
-            <th>Implanted</th>
+            <th>Implant</th>
             <th>Area</th>
             <th>Manufacturer</th>
             <th>Device Identifier</th>
-            <th>Details</th>
             <th>Model</th>
             <th>Serial Number</th>
             <th>Lot</th>
+            <th>Date and Provider</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td ID="implant1">Drug Eluting Coronary Stent (TAXUS 3.00 mm)</td>
+            <td ID="implant1">Drug Eluting Coronary Stent (LIBERTE TAXUS 3.00 mm)</td>
             <td>Left Anterior Descending Coronary Artery</td>
             <td>Boston Scientific</td>
             <td>(01)00848486001048(11)160330(10)ABC124</td>
-            <td>LIBERTE TAXUS Stent 3.00mm diameter implanted 04/13/2016 by Fleming, Barry</td>
             <td>Z-0068-2010</td>
             <td>0111-066-31456</td>
             <td>ABC124</td>
+            <td>Implanted 04/13/2016 by Fleming, Barry</td>
           </tr>
           <tr>
-            <td ID="implant2">Drug Eluting Coronary Stent (TAXUS 2.75 mm)</td>
+            <td ID="implant2">Drug Eluting Coronary Stent (LIBERTE TAXUS 2.75 mm)</td>
             <td>Left Anterior Descending Coronary Artery</td>
             <td>Boston Scientific</td>
             <td>(01)00848486001048(11)160542(10)ABC125</td>
-            <td>LIBERTE TAXUS Stent 2.75mm diameter implanted 04/13/2016 by Fleming, Barry</td>
             <td>Z-0068-2010</td>
             <td>0111-066-31456</td>
             <td>ABC125</td>
+            <td>Implanted 04/13/2016 by Fleming, Barry</td>
           </tr>
         </tbody>
       </table>
@@ -78,7 +78,7 @@
     <entry>
       <procedure classCode="PROC" moodCode="EVN">
         <templateId root="2.16.840.1.113883.10.20.22.4.14"/>
-        <!-- Note that since this is the same procedure, the id extension is the same as prior entry -->
+        <!-- Note that since this is the same procedure, the id is the same as prior entry -->
         <id extension="27456789" root="1.2.840.114350.1.13.5552.1.7.2.737780"/>
         <code code="609153008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED" displayName="Percutaneous insertion of drug eluting stent into coronary artery using fluoroscopic guidance"/>
         <!-- Procedure is completed, even though the implant is still active -->
