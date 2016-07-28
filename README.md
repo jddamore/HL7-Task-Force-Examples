@@ -1,25 +1,24 @@
-# These are some example C-CDAs created by John D'Amore of Diameter Health for the HL7 Example Task Force. See http://www.diameterhealth.com for more information on me and what I'm working on. 
+# These are some example C-CDAs created by John D'Amore of Diameter Health. 
 
+## Not all samples have been approved by HL7 Example Task Force, so check out the http://wiki.hl7.org/index.php?title=CDA_Example_Task_Force to see where things are. See http://www.diameterhealth.com for more information on me and what I'm working on. 
 
 ### What's here now
-* 6 examples of allergies
-* 7 examples of medications
-* 3 examples of procedures
-* 5 examples of lab results
-* 2 examples of vital signs
-* 1 example of a problem
-Note that some of these may have been reviewed by HL7 task force and HL7 Structured Documents Working Group. See http://wiki.hl7.org/index.php?title=CDA_Example_Task_Force for more details
+* 6 examples of allergies (+1 complete CCDA file)
+* 1 example of care plan (missing complete CCDA file)
+* 1 example of demographics (+1 complete CCDA file)
+* 2 examples of functional and cognitive status (+2 complete CCDA files)
+* 6 examples of lab results (+2 complete CCDA files)
+* 9 examples of medications (+1 complete CCDA file)
+* 1 example of a problem (+1 complete CCDA file)
+* 4 examples of procedures (+1 complete CCDA file)
+* 3 examples of smoking history (+1 complete CCDA file)
+* 2 examples of vital signs (+1 complete CCDA file)
 
+The reason why we include complete files above is so that we can validate the XML using industry standard tools, such as the NIST TT Validator. 
 
 ### Why?
-*Lots* of people will be implementing CCDA very soon; many have already started.
-But there are big questions about how to do what, and while an excellent 
-implementation guide is a must, examples matter too.  The community would
-benefit immensely from a public collection of examples that can be:
- * dissected,
- * discussed, and 
- * corrected over time.
-(Note I stole the above text from CHB/J Mandel's Github repo for C-CDA documents submitted by EHR/HIT. Check that out @ https://github.com/chb/sample_ccdas)
+*Lots* of people have implemented CCDA and it's the primary document standard in MU2 (and soon MU3)
+(Note: if you'd like to submit a public sample, shcek@ https://github.com/chb/sample_ccdas)
 
 ### Fine print
 Samples posted here may not been approved by HL7 or any other body. They are educated guesses and may change over time. The C-CDA Skeleton being used in my examples was developed by Lisa Nelson and is available at https://groups.google.com/forum/#!forum/ccda_samples

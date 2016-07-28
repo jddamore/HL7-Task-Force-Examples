@@ -49,12 +49,14 @@
 						<low value="20140103"/>
 					</effectiveTime>
 					<!-- This specifies that the allergy is a propensity to adverse reactions to substance -->
-					<value xsi:type="CD" code="418038007" displayName="Propensity to adverse reactions to substance (disorder)" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"></value>
+					<value xsi:type="CD" code="418038007" displayName="Propensity to adverse reactions to substance (disorder)" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
 					<participant typeCode="CSM">
 						<participantRole classCode="MANU">
 							<playingEntity classCode="MMAT">
-								<!-- UNII is the preferred in C-CDA R 1.1 although per DSTU 381 SNOMED is also allowed in code element -->
-								<code code="2LQ0UUW8IN" displayName="Natural Latex Rubber" codeSystem="2.16.840.1.113883.4.9" codeSystemName="UNII">
+								<!-- SNOMED or UNII may be used for allergies in both C-CDA 1.1 and 2.0 -->
+								<!-- SNOMED was added to C-CDA 1.1 by DSTU  381 and illustrated below -->
+								<!-- Note that the SNOMED code for 'latex allergy' is not appropriate since the allergy is conveyed elsewhere in the observation -->
+								<code code="111088007" displayName="Latex" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
 									<originalText>
 										<reference value="#allergy4allergen"/>
 									</originalText>

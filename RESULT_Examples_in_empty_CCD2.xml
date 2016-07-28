@@ -1,0 +1,688 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="CDA.xsl"?>
+<!-- This is an empty C-CDA skeleton which will be used by HL7 CDA Example Task Force -->
+<!-- This document was based on prior work by Lisa Nelson and Brian Weiss. contact John D'Amore with questions -->
+<!-- See http://wiki.hl7.org/index.php?title=CDA_Example_Task_Force -->
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="urn:hl7-org:v3 ../90%20HL7/00%20Standard%20-%20C-CDA/20130409%20C-CDA%20R1dot1_2012JUL/Updated_CDA_Schema_Files_Extension_Support/CDA_Schema_Files/infrastructure/cda/CDA_SDTC.xsd"
+ xmlns="urn:hl7-org:v3"
+ xmlns:cda="urn:hl7-org:v3"
+ xmlns:sdtc="urn:hl7-org:sdtc">
+	<realmCode code="US"/>
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<templateId root="2.16.840.1.113883.10.20.22.1.1"/>
+	<!-- C-CDA -->
+	<templateId root="2.16.840.1.113883.10.20.22.1.2"/>
+	<!-- CCD -->
+	<id root="2.16.840.1.113883.3.3208.101.1" extension="20130607100315-CCDA-CCD"/>
+	<code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="34133-9" displayName="Summarization of Episode Note"/>
+	<title>Empty CCD Skeleton That Validates on TTT. Note this was based on work by Lisa Nelson and Brian Weiss</title>
+	<effectiveTime value="20130607000000-0000"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+	<languageCode code="en-US"/>
+	<recordTarget>
+		<patientRole>
+			<id root="2.16.840.1.113883.3.3208.101.2" extension="20130607100800-Patient1"/>
+			<addr use="HP">
+				<streetAddressLine>1111 StreetName St.</streetAddressLine>
+				<city>Silver Spring</city>
+				<state>MD</state>
+				<postalCode>20901</postalCode>
+				<country>US</country>
+			</addr>
+			<telecom value="tel:+1(301)111-1111" use="HP"/>
+			<patient>
+				<name use="L">
+					<given>Patient</given>
+					<family>One</family>
+				</name>
+				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" displayName="Male" codeSystemName="AdministrativeGender"/>
+				<birthTime value="19300911"/>
+				<maritalStatusCode code="M" displayName="Married" codeSystem="2.16.840.1.113883.5.2" codeSystemName="MaritalStatus"/>
+				<raceCode code="2106-3" displayName="White"
+				   codeSystem="2.16.840.1.113883.6.238"
+				   codeSystemName="OMB Standards for Race and Ethnicity"/>
+				<ethnicGroupCode code="2186-5" displayName="Not Hispanic or Latino"
+				   codeSystem="2.16.840.1.113883.6.238"
+				   codeSystemName="OMB Standards for Race and Ethnicity"/>
+				<languageCommunication>
+					<languageCode code="eng"/>
+					<modeCode code="ESP" displayName="Expressed spoken" codeSystem="2.16.840.1.113883.5.60" codeSystemName="LanguageAbilityMode"/>
+					<proficiencyLevelCode code="E" displayName="Excellent" codeSystem="2.16.840.1.113883.5.61" codeSystemName="LanguageAbilityProficiency"/>
+				</languageCommunication>
+			</patient>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<time value="20130607000000"/>
+		<assignedAuthor>
+			<id extension="22222" root="2.16.840.1.113883.4.6"/>
+			<code code="207QA0505X" codeSystem="2.16.840.1.113883.6.101"
+			   displayName="Adult Medicine" codeSystemName="NUCC"/>
+			<addr use="HP">
+				<streetAddressLine>2222 StreetName St.</streetAddressLine>
+				<city>Silver Spring</city>
+				<state>MD</state>
+				<postalCode>20901</postalCode>
+				<country>US</country>
+			</addr>
+			<telecom value="tel:+1(301)222-2222" use="WP"/>
+			<assignedPerson>
+				<name>
+					<given>Doctor</given>
+					<family>Second</family>
+					<suffix>MD</suffix>
+				</name>
+			</assignedPerson>
+		</assignedAuthor>
+	</author>
+	<dataEnterer>
+		<assignedEntity>
+			<id extension="33333" root="2.16.840.1.113883.4.6"/>
+			<code code="364SA2200X" displayName="Adult Health" codeSystem="2.16.840.1.113883.6.101" codeSystemName="NUCC"/>
+			<addr use="WP">
+				<streetAddressLine>3333 StreetName St.</streetAddressLine>
+				<city>Silver Spring</city>
+				<state>MD</state>
+				<postalCode>20901</postalCode>
+				<country>US</country>
+			</addr>
+			<telecom value="tel:+1(301)333-3333" use="WP"/>
+			<assignedPerson>
+				<name>
+					<given>Nurse</given>
+					<family>Tertiary</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</dataEnterer>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id extension="44444" root="2.16.840.1.113883.4.6"/>
+				<name>CDA PRO Fictional Hospital</name>
+				<telecom value="tel:+1(301)444-4444" use="WP"/>
+				<addr use="WP">
+					<streetAddressLine>4444 StreetName St.</streetAddressLine>
+					<city>Silver Spring</city>
+					<state>MD</state>
+					<postalCode>20901</postalCode>
+					<country>US</country>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<legalAuthenticator>
+		<time value="20130607000000"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<id root="2.16.840.1.113883.3.3208.101.3" extension="20130607102400-Authenticator1"/>
+			<addr use="WP">
+				<streetAddressLine>5555 StreetName St.</streetAddressLine>
+				<city>Silver Spring</city>
+				<state>MD</state>
+				<postalCode>20901</postalCode>
+				<country>US</country>
+			</addr>
+			<telecom value="tel:+1(301)555-5555" use="WP"/>
+			<assignedPerson>
+				<name>
+					<given>Physician</given>
+					<family>Fifthly</family>
+					<suffix>MD</suffix>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+	<documentationOf>
+		<serviceEvent classCode="PCPR">
+			<effectiveTime>
+				<low value="19330316"/>
+				<high value="20130607"/>
+			</effectiveTime>
+			<performer typeCode="PRF">
+				<assignedEntity>
+					<id extension="66666" root="2.16.840.1.113883.4.6"/>
+					<code code="207RC0000X" codeSystem="2.16.840.1.113883.6.101" codeSystemName="NUCC"
+					   displayName="Cardiovascular Disease"/>
+					<addr>
+						<streetAddressLine>6666 StreetName St.</streetAddressLine>
+						<city>Silver Spring</city>
+						<state>MD</state>
+						<postalCode>20901</postalCode>
+						<country>US</country>
+					</addr>
+					<telecom value="tel:+1(301)666-6666" use="WP"/>
+					<assignedPerson>
+						<name>
+							<given>Heartly</given>
+							<family>Sixer</family>
+							<suffix>MD</suffix>
+						</name>
+					</assignedPerson>
+				</assignedEntity>
+			</performer>
+		</serviceEvent>
+	</documentationOf>
+	<!-- CDA Body -->
+	<component>
+		<structuredBody>
+			<!-- Allergies Section -->
+			<component>
+				<!-- nullFlavor of NI indicates No Information.-->
+				<!-- Validator currently checks for entries even in case of nullFlavor - this will need to be updated if approved.-->
+				<section nullFlavor="NI">
+					<templateId root="2.16.840.1.113883.10.20.22.2.6.1"/>
+					<!-- Allergies (entries required) section -->
+					<code code="48765-2" codeSystem="2.16.840.1.113883.6.1" displayName="Allergies, adverse reactions, alerts" codeSystemName="LOINC"/>
+					<title>ALLERGIES</title>
+					<text>No Information</text>
+				</section>
+			</component>
+			<!-- Medication Section -->
+			<component>
+				<!-- nullFlavor of NI indicates No Information.-->
+				<!-- Validator currently checks for entries even in case of nullFlavor - this will need to be updated if approved.-->
+				<section nullFlavor="NI">
+					<templateId root="2.16.840.1.113883.10.20.22.2.1.1"/>
+					<!-- Medication Section (entries required) -->
+					<code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Medication Use"/>
+					<title>MEDICATIONS</title>
+					<text>No Information</text>
+				</section>
+			</component>
+			<!-- Problem Section -->
+			<component>
+				<!-- nullFlavor of NI indicates No Information.-->
+				<!-- Validator currently checks for entries even in case of nullFlavor - this will need to be updated if approved.-->
+				<section nullFlavor="NI">
+					<!-- conforms to Problems section with entries required -->
+					<templateId root="2.16.840.1.113883.10.20.22.2.5.1"/>
+					<code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+						displayName="PROBLEM LIST"/>
+					<title>PROBLEMS</title>
+					<text>No Information</text>
+				</section>
+			</component>
+			<!-- Procedures Section -->
+			<component>
+				<!-- nullFlavor of NI indicates No Information.-->
+				<!-- Validator currently checks for entries even in case of nullFlavor - this will need to be updated if approved.-->
+				<section nullFlavor="NI">
+					<templateId root="2.16.840.1.113883.10.20.22.2.7.1"/>
+					<!-- Procedures Section with Coded Entries Required-->
+					<code code="47519-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Procedures"/>
+					<title>PROCEDURES</title>
+					<text>No Information</text>
+				</section>
+			</component>
+			<!-- Results Section -->
+			<component>
+				<section>
+					<templateId root="2.16.840.1.113883.10.20.22.2.3.1"/>
+					<!-- Results Section with Coded Entries Required-->
+					<code code="30954-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Relevant diagnostic tests and/or laboratory data"/>
+					<title>Results</title>
+					<text>
+						<table border="1">
+							<thead>
+								<tr>
+									<th>Description</th>
+									<th>Value / Unit</th>
+									<th>Interpretation</th>
+									<th>Reference Range</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- Note that in the human readable portions, we have drawn text directly from the sample test script (See 170.314(b)(2) – 2: Inpatient)-->
+								<!-- The use of acronyms may not be appropriate in all instances when communicating lab results and should be evaluated for appropriateness-->
+								<tr>
+									<!-- To break up the data into lab orders, we've chosten to use a breaker row with column span.-->
+									<!-- There are other ways to format, but the Example Task Force thought important that relevant labs be grouped-->
+									<td colspan="4">
+										<content ID="PanelName1">
+											Basic Metabolic Panel
+										</content>
+										<!-- Rather than repeat the time on each human readable result, we've just included once.-->
+										at 10-02-2012 9:08a
+									</td>
+								</tr>
+								<tr ID="Result1">
+									<td ID="Result1Name">Na</td>
+									<td>140 mmol/L</td>
+									<td>Normal</td>
+									<td>135-145 mmol/L</td>
+								</tr>
+								<tr ID="Result2">
+									<td ID="Result2Name">K</td>
+									<td>4.2 mmol/L</td>
+									<td>Normal</td>
+									<td>3.5-5.2 mmol/L</td>
+								</tr>
+								<tr ID="Result3">
+									<td ID="Result3Name">Cl</td>
+									<td>98 mmol/L</td>
+									<td>Normal</td>
+									<td>95-110 mmol/L</td>
+								</tr>
+								<tr ID="Result4">
+									<td ID="Result4Name">CO2</td>
+									<td>24 mmol/L</td>
+									<td>Normal</td>
+									<td>23-29 mmol/L</td>
+								</tr>
+								<tr ID="Result5">
+									<td ID="Result5Name">BUN</td>
+									<td>10 mg/dL</td>
+									<td>Normal</td>
+									<td>8-24 mg/dL</td>
+								</tr>
+								<tr ID="Result6">
+									<td ID="Result6Name">Cr</td>
+									<td>1.2 mg/dL</td>
+									<td>Normal</td>
+									<td>0.8-1.3 mg/dL</td>
+								</tr>
+								<tr ID="Result7">
+									<td ID="Result7Name">Glu</td>
+									<td>185 mg/dL</td>
+									<td>High</td>
+									<td>70-140 mg/dL</td>
+								</tr>
+								<tr>
+									<td colspan="4">
+										<content ID="PanelName2">Troponin T </content>
+										at 10-02-2012 9:08p
+									</td>
+								</tr>
+								<tr ID="Result8">
+									<td ID="Result8Name">Troponin T</td>
+									<td>0.01 ng/mL</td>
+									<td>Normal</td>
+									<td>0.0-0.10 ng/mL</td>
+								</tr>
+								<tr>
+									<td colspan="4">
+										<content ID="PanelName3">Troponin T </content>
+										at 10-03-2012 10:08a
+									</td>
+								</tr>
+								<tr ID="Result9">
+									<td ID="Result9Name">Troponin T</td>
+									<td>0.01 ng/mL</td>
+									<td>Normal</td>
+									<td>0.0-0.10 ng/mL</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<organizer classCode="BATTERY" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+							<id root="cda1fc54-59fb-412d-86e0-acf6b78aa9a6"/>
+							<!-- Note that we've included the first set of lab results in a BATTERY classCode and under the Basic Metabolic Panel -->
+							<!-- This information was not specifically noted in test script. A more appropriate code may be applicable based on lab order -->
+							<!-- Technically this Basic Metabolic Panel order returns slightly different LOINC codes (e.g. CO2 would be 20565-8), but it's close overall. -->
+							<code code="51990-0" displayName="Basic Metabolic Panel - Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+								<originalText>
+									<reference value="#PanelName1" />
+								</originalText>
+							</code>
+							<statusCode code="completed"/>
+							<effectiveTime value="201210020908+0500"/>
+							<component>
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+									<id root="d8fe6100-c31a-4b8c-b97d-57a6bd415bf7"/>
+									<!-- There was significant discussion on what should be in the displayName, our current decision was to show LOINC long name-->
+									<!-- Note that displayName will not correspond to human readable and originalText used for referencing that information-->
+									<code code="2947-0" displayName="Sodium" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+										<originalText>
+											<reference value="#ResultName1" />
+										</originalText>
+									</code>
+									<text>
+										<reference value="#Result1"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="201210020908+0500"/>
+									<value xsi:type="PQ" value="140" unit="mmol/L" />
+									<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+									<referenceRange>
+										<observationRange>
+											<text>135-145 mmol/L</text>
+											<!-- Reference ranges can be expressed as structured physical quantity interval-->
+											<value xsi:type="IVL_PQ">
+												<low value="135" unit="mmol/L"/>
+												<high value="145" unit="mmol/L"/>
+											</value>
+											<!-- This interpretation code denotes that this reference range is for normal results. This is not the interpretation of specific patient result-->
+											<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+										</observationRange>
+									</referenceRange>
+								</observation>
+							</component>
+							<component>
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+									<id root="3ee6ac58-d22c-4416-9acc-c1c75c1c2c91"/>
+									<code code="6298-4" displayName="Potassium [Moles/​volume] in Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+										<originalText>
+											<reference value="#ResultName2" />
+										</originalText>
+									</code>
+									<text>
+										<reference value="#Result2"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="201210020908+0500"/>
+									<value xsi:type="PQ" value="4.2" unit="mmol/L" />
+									<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+									<referenceRange>
+										<observationRange>
+											<text>3.5-5.2 mmol/L</text>
+											<!-- Reference ranges can be expressed as structured physical quantity interval-->
+											<value xsi:type="IVL_PQ">
+												<low value="3.5" unit="mmol/L"/>
+												<high value="5.2" unit="mmol/L"/>
+											</value>
+											<!-- This interpretation code denotes that this reference range is for normal results. This is not the interpretation of specific patient result-->
+											<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+										</observationRange>
+									</referenceRange>
+								</observation>
+							</component>
+							<component>
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+									<id root="0431a3ec-8ad6-49da-9de1-0a8704b7609d"/>
+									<code code="2069-3" displayName="Chloride [Moles/volume] in Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+										<originalText>
+											<reference value="#ResultName3" />
+										</originalText>
+									</code>
+									<text>
+										<reference value="#Result3"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="201210020908+0500"/>
+									<value xsi:type="PQ" value="98" unit="mmol/L" />
+									<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+									<referenceRange>
+										<observationRange>
+											<text>95-110 mmol/L</text>
+											<!-- Reference ranges can be expressed as structured physical quantity interval-->
+											<value xsi:type="IVL_PQ">
+												<low value="95" unit="mmol/L"/>
+												<high value="110" unit="mmol/L"/>
+											</value>
+											<!-- This interpretation code denotes that this reference range is for normal results. This is not the interpretation of specific patient result-->
+											<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+										</observationRange>
+									</referenceRange>
+								</observation>
+							</component>
+							<component>
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+									<id root="70c62997-9f12-4b7c-9023-0cdf249336a7"/>
+									<code code="2028-9" displayName="Carbon dioxide, total [Moles/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+										<originalText>
+											<reference value="#ResultName4" />
+										</originalText>
+									</code>
+									<text>
+										<reference value="#Result4"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="201210020908+0500"/>
+									<value xsi:type="PQ" value="24" unit="mmol/L" />
+									<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+									<referenceRange>
+										<observationRange>
+											<text>23-29 mmol/L</text>
+											<!-- Reference ranges can be expressed as structured physical quantity interval-->
+											<value xsi:type="IVL_PQ">
+												<low value="23" unit="mmol/L"/>
+												<high value="29" unit="mmol/L"/>
+											</value>
+											<!-- This interpretation code denotes that this reference range is for normal results. This is not the interpretation of specific patient result-->
+											<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+										</observationRange>
+									</referenceRange>
+								</observation>
+							</component>
+							<component>
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+									<id root="e3db8661-71b7-4cf3-a666-4ed9e127e134"/>
+									<code code="6299-2" displayName="Urea nitrogen [Mass/volume] in Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+										<originalText>
+											<reference value="#ResultName5" />
+										</originalText>
+									</code>
+									<text>
+										<reference value="#Result5"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="201210020908+0500"/>
+									<value xsi:type="PQ" value="10" unit="md/dL" />
+									<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+									<referenceRange>
+										<observationRange>
+											<text>8-24 mg/dL</text>
+											<!-- Reference ranges can be expressed as structured physical quantity interval-->
+											<value xsi:type="IVL_PQ">
+												<low value="8" unit="mg/dL"/>
+												<high value="24" unit="mg/dL"/>
+											</value>
+											<!-- This interpretation code denotes that this reference range is for normal results. This is not the interpretation of specific patient result-->
+											<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+										</observationRange>
+									</referenceRange>
+								</observation>
+							</component>
+							<component>
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+									<id root="21261c16-b527-49f2-916b-2ad5dabf4381"/>
+									<code code="38483-4" displayName="Creatinine [Mass/volume] in Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+										<originalText>
+											<reference value="#ResultName6" />
+										</originalText>
+									</code>
+									<text>
+										<reference value="#Result6"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="201210020908+0500"/>
+									<value xsi:type="PQ" value="1.2" unit="mg/dL" />
+									<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+									<referenceRange>
+										<observationRange>
+											<text>0.8-1.3 mg/dL</text>
+											<!-- Reference ranges can be expressed as structured physical quantity interval-->
+											<value xsi:type="IVL_PQ">
+												<low value="0.8" unit="mg/dL"/>
+												<high value="1.3" unit="mg/dL"/>
+											</value>
+											<!-- This interpretation code denotes that this reference range is for normal results. This is not the interpretation of specific patient result-->
+											<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+										</observationRange>
+									</referenceRange>
+								</observation>
+							</component>
+							<component>
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+									<id root="7e68c2a8-a507-413b-aed4-87de5081b369"/>
+									<code code="2339-0" displayName="Glucose [Mass/volume] in Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+										<originalText>
+											<reference value="#ResultName7" />
+										</originalText>
+									</code>
+									<text>
+										<reference value="#Result7"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="201210020908+0500"/>
+									<value xsi:type="PQ" value="185" unit="mmol/L" />
+									<interpretationCode code="H" codeSystem="2.16.840.1.113883.5.83"/>
+									<referenceRange>
+										<observationRange>
+											<text>70-140 mg/dL</text>
+											<!-- Reference ranges can be expressed as structured physical quantity interval-->
+											<value xsi:type="IVL_PQ">
+												<low value="70" unit="mg/dL"/>
+												<high value="140" unit="mg/dL"/>
+											</value>
+											<!-- This interpretation code denotes that this reference range is for normal results. This is not the interpretation of specific patient result-->
+											<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+										</observationRange>
+									</referenceRange>
+									<referenceRange>
+										<observationRange>
+											<text>70-140 mg/dL</text>
+											<!-- Reference ranges can be expressed as structured physical quantity interval-->
+											<value xsi:type="IVL_PQ">
+												<low value="141" unit="mg/dL"/>
+												<high nullFlavor="PINF"/>
+											</value>
+											<!-- This interpretation code denotes that this reference range is for high results. This is not the interpretation of specific patient result-->
+											<interpretationCode code="H" codeSystem="2.16.840.1.113883.5.83"/>
+										</observationRange>
+									</referenceRange>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+					<entry>
+						<organizer classCode="CLUSTER" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+							<id root="950c948f-e5b2-4973-b7c0-e9ee08875e04"/>
+							<!-- For an individual result which may be ordered independently, we choose a CLUSTER classCode and used the specific LOINC code as organizer/code-->
+							<code code="6598-7" displayName="Troponin T" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+								<originalText>
+									<reference value="#PanelName2" />
+								</originalText>
+							</code>
+							<statusCode code="completed"/>
+							<effectiveTime value="201210020908+0500"/>
+							<component>
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+									<id root="01323ca7-4a72-4ae3-963d-af903df828d2"/>
+									<code code="6598-7" displayName="Troponin T.Cardiac [Mass/Volume] In Serum Or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+										<originalText>
+											<reference value="#ResultName8" />
+										</originalText>
+									</code>
+									<text>
+										<reference value="#Result8"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="201210020908+0500"/>
+									<value xsi:type="PQ" value="0.01" unit="ng/mL" />
+									<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+									<referenceRange>
+										<observationRange>
+											<text>0.0-0.1 ng/mL</text>
+											<!-- This interpretation code denotes that this reference range is for normal results. This is not the interpretation of specific patient result-->
+											<value xsi:type="IVL_PQ">
+												<low value="0.0" unit="ng/mL"/>
+												<high value="0.1" unit="ng/mL"/>
+											</value>
+											<!-- This interpretation code denotes that this reference range is for normal results. This is not the interpretation a specific patient value-->
+											<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+										</observationRange>
+									</referenceRange>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+					<entry>
+						<organizer classCode="CLUSTER" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+							<id root="a4307cb2-b3b4-4f42-be03-1d9077376f4a"/>
+							<!-- For an individual result which may be ordered independently, we choose a CLUSTER classCode and used the specific LOINC code as organizer/code-->
+							<code code="6598-7" displayName="Troponin T" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+								<originalText>
+									<reference value="#PanelName3" />
+								</originalText>
+							</code>
+							<statusCode code="completed"/>
+							<effectiveTime value="201210031008+0500"/>
+							<component>
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+									<id root="bf9c0a26-4524-4395-b3ce-100450b9c9ac"/>
+									<code code="6598-7" displayName="Troponin T.Cardiac [Mass/Volume] In Serum Or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+										<originalText>
+											<reference value="#ResultName9" />
+										</originalText>
+									</code>
+									<text>
+										<reference value="#Result9"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime value="201210031008+0500"/>
+									<value xsi:type="PQ" value="0.01" unit="ng/mL" />
+									<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+									<referenceRange>
+										<observationRange>
+											<text>0.0-0.1 ng/mL</text>
+											<!-- Reference ranges can be expressed as structured physical quantity interval-->
+											<value xsi:type="IVL_PQ">
+												<low value="0.0" unit="ng/mL"/>
+												<high value="0.1" unit="ng/mL"/>
+											</value>
+											<!-- This interpretation code denotes that this reference range is for normal results. This is not the interpretation of specific patient result-->
+											<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+										</observationRange>
+									</referenceRange>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+				</section>
+			</component>
+			<!-- Plan of Care Section -->
+			<component>
+				<!-- nullFlavor of NI indicates No Information.-->
+				<!-- Validator currently checks for entries even in case of nullFlavor - this will need to be updated if approved.-->
+				<section nullFlavor="NI">
+					<templateId root="2.16.840.1.113883.10.20.22.2.10"/>
+					<!-- Plan of Care Section-->
+					<code code="18776-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Plan of Care"/>
+					<title>PLAN OF CARE</title>
+					<text>No Information</text>
+				</section>
+			</component>
+			<!-- Social History (with Smoking Status Observation) -->
+			<component>
+				<!-- nullFlavor of NI indicates No Information.-->
+				<!-- Validator currently checks for entries even in case of nullFlavor - this will need to be updated if approved.-->
+				<section nullFlavor="NI">
+					<templateId root="2.16.840.1.113883.10.20.22.2.17"/>
+					<!-- Social History Section -->
+					<code code="29762-2" codeSystem="2.16.840.1.113883.6.1" displayName="Social History"/>
+					<title>SOCIAL HISTORY</title>
+					<text>No Information</text>
+				</section>
+			</component>
+			<!-- Vital Signs Section (entries required) -->
+			<component>
+				<!-- nullFlavor of NI indicates No Information.-->
+				<!-- Validator currently checks for entries even in case of nullFlavor - this will need to be updated if approved.-->
+				<section nullFlavor="NI">
+					<templateId root="2.16.840.1.113883.10.20.22.2.4.1"/>
+					<!-- Vital Signs (entries required) -->
+					<code code="8716-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Vital Signs"/>
+					<title>VITAL SIGNS</title>
+					<text>No Information</text>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>
+

@@ -57,12 +57,12 @@
             <high value="20140310235959" inclusive="true"/>
             <!-- inclusive indicator is optional -->
           </effectiveTime>
-          <!-- This second effectiveTime represents once per day from medication sig. -->
-          <!-- InstituionSpecified = "false" means that it must be administered exactly once per day-->
-          <!-- InstituionSpecified = "true" would mean that receiving institution has flexibility in dosing schedule-->
-          <!-- Operator "A" means that this timing information is in addition to previous effectiveTime information provided-->
-          <effectiveTime xsi:type="PIVL_TS" institutionSpecified="false" operator="A">
-            <period value="1" unit="d"/>
+		  <!-- This second effectiveTime represents once per day from medication sig. -->
+		  <!-- InstituionSpecified = "false" is implied in ths omission of this attribute and means that it must be administered exactly once per day-->
+		  <!-- InstituionSpecified = "true" which is not default would mean that receiving institution has flexibility in dosing schedule-->
+		  <!-- Operator "A" means that this timing information is in addition to previous effectiveTime information provided-->
+ 		  <effectiveTime xsi:type="PIVL_TS" operator="A">
+				<period value="1" unit="d"/>
           </effectiveTime>
           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" displayName="Oral"/>
           <!-- This relates directly to the code used for medication. This medication is administered as an oral table, so no unit is needed -->
@@ -105,13 +105,13 @@
             <low value="20140311000000"/>
             <high value="20140314235959" inclusive="true"/>
           </effectiveTime>
-          <!-- This second effectiveTime represents once per day from medication sig. -->
-          <!-- InstituionSpecified = "false" means that it must be administered exactly once per day-->
-          <!-- InstituionSpecified = "true" would mean that receiving institution has flexibility in dosing schedule-->
-          <!-- Operator "A" means that this timing information is in addition to previous effectiveTime information provided-->
-          <effectiveTime xsi:type="PIVL_TS" institutionSpecified="false" operator="A">
-            <period value="1" unit="d"/>
-          </effectiveTime>
+		  <!-- This second effectiveTime represents once per day from medication sig. -->
+		  <!-- InstituionSpecified = "false" is implied in ths omission of this attribute and means that it must be administered exactly once per day-->
+		  <!-- InstituionSpecified = "true" which is not default would mean that receiving institution has flexibility in dosing schedule-->
+		  <!-- Operator "A" means that this timing information is in addition to previous effectiveTime information provided-->
+		  <effectiveTime xsi:type="PIVL_TS" operator="A">
+			<period value="1" unit="d"/>
+		  </effectiveTime>
           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" displayName="Oral"/>
           <!-- This relates directly to the code used for medication. This medication is administered as an oral table, so no unit is needed, but it has varying dosage over its course. -->
           <!-- Azithromycin is commonly prescribed 2 tablets on day 1 then 1 tablet daily thereafter. -->

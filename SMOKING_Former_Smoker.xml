@@ -7,7 +7,7 @@
 			<caption>Smoking Status</caption>
 			<item>
 				<content>Former Smoker</content>
-				<content>Started: January 1994</content>
+				<content>Started: 1994</content>
 				<content>Stopped: March 2011</content>
 				<content>Recorded June 6, 2014 10:32am</content>
 			</item>
@@ -23,7 +23,7 @@
 			<effectiveTime>
 				<!-- effectiveTime/low is the date when the person started smoking. -->
 				<!-- The month is included if the patient remembers to the month of status-->
-				<low value="199401"/>
+				<low value="1994"/>
 				<!-- effectiveTime/high is the date when the person stopped smoking and only used for former smokers. --> 
 				<!-- This is a point of common confusion given its divergence from other principles. This is NOT the date the person stopped being a "former smoker." -->
 				<!-- Smoking status may be revised -->
