@@ -35,7 +35,7 @@
 									<td>
 										<content styleCode="xLabel">Laboratory: </content>
 										<content> Value Labs</content>
-										<content> 2474, Rocky place Beaverton OR</content>
+										<content> 2474, Rocky place Beaverton OR 97006</content>
 										<content> tel:+1-(555)666-1002</content>
 									</td>
 									<td>
@@ -81,6 +81,7 @@
 										<streetAddressLine>2474, Rocky place</streetAddressLine>
 										<city>Beaverton</city>
 										<state>OR</state>
+										<postalCode>97006</postalCode>
 									</addr>
 									<telecom value="tel:+1-(555)666-1002"/>
 									<representedOrganization>
@@ -90,6 +91,7 @@
 											<streetAddressLine>2474, Rocky place</streetAddressLine>
 											<city>Beaverton</city>
 											<state>OR</state>
+											<postalCode>97006</postalCode>
 										</addr>
 									</representedOrganization>
 								</assignedEntity>
