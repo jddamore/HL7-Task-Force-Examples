@@ -52,10 +52,8 @@
 									<td>
 										<content styleCode="xLabel xSecondary">Range: </content>
 										<content styleCode="xSecondary">1.005</content>
-										<content styleCode="xSecondary"> 1</content>
 										<content styleCode="xSecondary"> - </content>
 										<content styleCode="xSecondary">1.030</content>
-										<content styleCode="xSecondary"> 1</content>
 										<br/>
 									</td>
 								</tr>
