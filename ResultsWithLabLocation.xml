@@ -53,6 +53,7 @@
 						</td>
 						<td>
 							<content styleCode="xLabel xSecondary">Range: </content>
+							<!-- SDWG Example agreed to ID reference here since moving to td would mean text 'Range' is in observation -->
 							<content ID="_08b7d0ee-aff1-4144-a3a5-c89d56d855ad">
 								<content styleCode="xSecondary">1.005</content>
 								<content styleCode="xSecondary"> - </content>
