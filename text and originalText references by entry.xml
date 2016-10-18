@@ -1,0 +1,302 @@
+<component>
+	<!-- The following section is fictitious - it exists solely for the purpose of showing examples of text/reference and originalText/reference from discrete entry children. As such, many elements are omitted and replaced by ... comments. The text and content in the discrete entry elements does not use actual clinical content, but instead relies on filler text commonly used in publishing and graphic design. -->
+	<section>
+		<!--  ... -->
+		<text>
+			<!-- The text in this section is created strictly to illustrate how discrete entry child elements make references into the human readable text. A mixture of paragraph, table, and lists will be used for this text section, but their use is to just illustrate different referncing techniques. -->
+			<!-- ... -->
+			<!-- this paragraph is used for a simple act -->
+			<paragraph ID="simpleActFullTextReference">
+				<content ID="simpleActCodeReference">Lorem ipsum dolor sit amet</content>, consectetur adipiscing elit.</paragraph>
+			<!-- .... -->
+			<!-- this table is used for a simple observation -->
+			<table>
+				<tbody>
+					<tr ID="simpleObservationFullTextReference">
+						<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+						<td ID="simpleObservationCodeReference">Proin facilisis iaculis nisi, luctus aliquam metus.</td>
+						<td ID="simpleObservationValueReference">Duis id consequat arcu, sit amet fermentum leo.</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- .... -->
+			<!-- this table is used for an encounter -->
+			<table>
+				<tbody>
+					<tr ID="encounterFullTextReference">
+						<td>
+							<content ID="encounterCodeReference">Praesent vitae dignissim risus</content>
+							<br/>
+							<content>labeltext: </content>
+							<content ID="encounterChildRelationshipReference">Praesent efficitur ullamcorper ullamcorper</content>
+							<br/>
+							<content>labeltext: </content>
+							<content ID="encounterChildRelationshipReference2">Curabitur semper porttitor felis</content>
+						</td>
+						<td>
+							<content>mightBeSomeDate </content>
+							<br/>
+							<content>mightbeSomeProviderName</content>
+							<br/>
+							<content>mightbeSomeFacilityName</content>
+							<br/>
+							<content>mightbeSomeAddress</content>
+							<br/>
+							<content>mightbeSomePhoneNumber</content>
+						</td>
+						<td>
+							<content>labeltext: </content>
+							<content ID="encounterDischargeDispositionCodeRef">Pellentesque pellentesque ipsum id tincidunt venenatis.</content>
+							<br/>
+							<content>
+								<content>labeltext:</content>
+								<content styleCode="xSecondary" ID="encounterCommentActivityReference">Vestibulum nunc nisl, vulputate eget ornare eget, blandit ut ex.</content>
+							</content>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- ... -->
+			<!-- this table is used for a simple procedure -->
+			<table>
+				<tbody>
+					<tr ID="procedureFullTextReference">
+						<td>
+							<content ID="procedureCodeTextReference">Vestibulum nunc nisl</content>
+						</td>
+						<td>
+							<content>labelText: </content>
+							<content>mmm DD YYYY</content>
+							<br/>
+							<content>labelText: </content>
+							<content ID="procedureSiteCodeReference">Vulputate eget  </content>
+						</td>
+						<td>
+							<content>labeltext: </content>
+							<content ID="procedureMethodCodeReference">Ornare eget </content>
+							<br/>
+							<content>labeltext: </content>
+							<content ID="procedureCommentTextReference">Quisque iaculis ornare tellus, at mollis arcu faucibus sed</content>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- this table is used for a simple sunstanceAdministration -->
+			<table>
+				<tbody>
+					<tr ID="simpleSubstanceAdministrationFullTextReference">
+						<td>
+							<content>
+								<content ID="substanceAdministrationProductCodeTextReference">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</content>
+								<content ID="substanceAdministrationFreeTextSIGReference"> Aenean commodo ligula eget dolor. Aenean massa.</content>
+								<br/>
+								<!-- ... -->
+								<content ID="substanceAdministrationInstructionTextReference"> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</content>
+							</content>
+						</td>
+						<td>
+							<!-- ... -->
+						</td>
+						<td>
+							<!-- ... -->
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- this list is used for a simple supply -->
+			<list>
+				<item ID="NonMedicinalSupplyFullTextReference">Maecenas nec odio et ante tincidunt tempus.</item>
+			</list>
+		</text>
+		<!-- The entry elements below would not likely ever be found all in one section. They are here simply to help illustrate how to reference the human readable text. Examples of real content are given in comments but the text and any content within the entry elements and children are all fictitious. -->
+		<!-- this first entry illustrates an act, the basic class of the RIM, but in C-CDA terms the act is used for both Allergy and Problem Concerns, Authorization Activity, Comment Activity and a few other acts.
+							we'll illustrate a simple act first, then later a more complex act that wraps an observation.
+-->
+		<entry>
+			<!-- illustrating a simple act -->
+			<act classCode="ACT" moodCode="EVN">
+				<!-- ... -->
+				<!-- the code is a required element of act; @displayName is an optional attribute, and when present it should represent a name (some say the name) as defined for the @code in the given @codeSystem -->
+				<code code="12345" codeSystem="1.2.3.4.5.6.7.8.42" displayName="loreum ipsum">
+					<!-- it is not unusual for the code of an act to be specified in an Implementation Guide and often times text of the code is not in the human readable text, so originalText SHALL NOT be present in those cases
+									however, If some of the human readable text is a representation of the code, we SHOULD include a reference to that text using the originalText/reference construct 
+								-->
+					<originalText>
+						<!-- the value of this reference begins with hashtag, and is followed by text that is the value of an ID element in the human readable text 
+											notice that the referenced text is similar to but different than the @displayName  of the code element
+											from an interoperability perspective, this pattern is a SHOULD as access to the human readable text reflecting the (code, codeSystem) in use is beneficial to consuming systems
+									-->
+						<reference value="#simpleActCodeReference"/>
+					</originalText>
+				</code>
+				<!-- when present, the text/reference points to the entire text of the act 
+									from an interoperability perspective, this pattern is a MAY as access to the entire human readable text of the act is sometimes useful, but generally not programatically useful (NLP may be needed)
+							-->
+				<text>
+					<!-- notice that the ID containing the referenced value is on an element that includes all text of the act.
+										in this case, the element is a paragraph, but might be a table, tbody, tr, etc....elements that typically wrap more entire concepts, not just pieces of content
+										Example referenced content, using Comment Activity: Patient is having difficulty paying co-pays for these medications.
+								-->
+					<reference value="#simpleActFullTextReference"/>
+				</text>
+				<!-- ... -->
+			</act>
+		</entry>
+		<!-- This entry shows a simple observation.  In C-CDA terms this might be an Advance Directive Observation, Caregiver Characteristics, Characteristics of Home Environment, Smoking Status, Tobacco Use, etc....we'll cover observations contained within act and component later -->
+		<entry>
+			<observation classCode="OBS" moodCode="EVN">
+				<!-- ... -->
+				<code code="2345" codeSystem="1.2.3.4.5.6.7.8.42" displayName="proin facilisis">
+					<!--If some of the human readable text is a representation of the code, we SHOULD include a reference to that text using the originalText/reference construct 
+									if, however, the code is bound to some constant by an Implementation Guide and it is not represented in the human readable text then the originalText/reference SHALL NOT be present
+								-->
+					<originalText>
+											notice that the referenced text is similar to but different than the @displayName  of the code element
+											from an interoperability perspective, this pattern is a SHOULD as access to the human readable text reflecting the (code, codeSystem) in use is beneficial to consuming systems
+									-->
+									<reference value="#simpleObservationCodeReference"/>
+					</originalText>
+				</code>
+				<!-- when present, the text/reference points to the entire text of the act 
+									from an interoperability perspective, this pattern is a MAY as access to the entire human readable text of the act is sometimes useful, but generally not programatically useful (NLP may be needed)
+							-->
+				<text>
+					<!-- notice that the ID containing the referenced value is on an element that includes all text of the act.
+										in this case, the element is a tr, but might be a table, tbody, etc....elements that typically wrap more entire concepts, not just pieces of content
+									Example referenced content, using Tobacco Use: Ex-heavy cigarette smoker 20 to 39 per day Recorded: Jan-1988 Comment: suspect still smoking on occasion.
+								-->
+					<reference value="#simpleObservationFullTextReference"/>
+				</text>
+				<!-- ... -->
+				<value xsi:type="CD" code="3456" codeSystem="1.2.3.4.5.6.7.8.42" displayName="duis id consequat">
+					<!--If some of the human readable text is a representation of the value, we SHOULD include a reference to that text using the originalText/reference construct 
+									if, however, the value is bound to some constant by an Implementation Guide and it is not represented in the human readable text, then the originalText/reference SHALL NOT be present
+								-->
+					<originalText>
+						<!--		notice that the referenced text is similar to but different than the @displayName  of the code element
+											from an interoperability perspective, this pattern is a SHOULD as access to the human readable text reflecting the (code, codeSystem) in use is beneficial to consuming systems
+											Example referenced content, using Tobacco Use: Ex-heavy cigarette smoker 20 to 39 per day
+												(where the (code, codeSystem) on the value element would be (266924008, 2.16.840.1.113883.6.96))
+									-->
+						<reference value="#simpleObservationValueReference"/>
+					</originalText>
+				</value>
+			</observation>
+		</entry>
+		<!-- This illustrates a simple encounter. In C-CDA the encounter activity may be in an Encounters Section, or ir may be the child of other acts -->
+		<entry>
+			<encounter classCode="ENC" moodCode="EVN">
+				<!-- ... -->
+				<!-- the code of an encounter provides us with the encounter type, and SHOULD have an originalText/reference as we expect the human readable to reflect the type of encounter -->
+				<code code="4567" codeSystem="1.2.3.4.5.6.7.8.42" displayName="praesent vitae">
+					<originalText>
+						<!-- Example of referenced text: ED Visit 
+											note that the reference is does not include the label in the human readable content; we do not want the reference to return labelText: ED Visit
+									-->
+						<reference value="#encounterCodeReference"/>
+					</originalText>
+				</code>
+				<!-- a reference to the entire human readable text of the encounter is useful -->
+				<text>
+					<!-- Example of referenced text: ED Visit Encounter Reason: Acute Anxiety Encounter Diagnosis: Acute onset Anxiety 10/11/14 Acupun, Allison Rex ED 3000 New Bern Ave Raleigh 27610 tel:+1-(919)350-8000 Discharge Disposition: Discharged/transferred to an intermediate-care facility (ICF) Comments: noted uncontrollable rocking -->
+					<reference value="#encounterFullTextReference"/>
+				</text>
+				<!-- ... -->
+				<!-- if there is a discharge disposition for the encounter, and there is human readable content reflecting the code, then the originalText/reference SHOULD be present 
+								yes, some extensions have originalText/refence children
+							-->
+				<sdtc:dischargeDispositionCode code="xx" codeSystem="1.2.3.4.5.6.7.8.42">
+					<originalText>
+						<reference value="#encounterDischargeDispositionCodeRef"/>
+					</originalText>
+				</sdtc:dischargeDispositionCode>
+			</encounter>
+		</entry>
+		<!-- This illustrates a simple procedure. In C-CDA there are several procedure templates but we'll focus on Procedure Activity Procedure -->
+		<entry>
+			<procedure classCode="PROC" moodCode="EVN">
+				<!-- ... -->
+				<!-- the code of a procedure is significant, so also the originalText/refernece is a SHOULD -->
+				<code code="5678" codeSystem="1.2.3.4.5.6.7.8.42" displayName="praesent efficitur">
+					<originalText>
+						<reference value="#procedureCodeTextReference"/>
+					</originalText>
+				</code>
+				<!-- we may reference the entire text of the procedure
+									Example: Appendectomy Date: Feb 3rd 2013 Site: Right Abdomen Method: Transverse Incision Comments: patient is NPO
+							-->
+				<text>
+					<reference value="#procedureFullTextReference"/>
+				</text>
+				<!-- ... -->
+				<!-- when the method of a procedure is reflected in the human readable text we SHOULD have originalText/reference -->
+				<methodCode code="6789" codeSystem="1.2.3.4.5.6.7.8.42" displayName="ornare eget">
+					<originalText>
+						<reference value="#procedureMethodCodeReference"/>
+					</originalText>
+				</methodCode>
+				<!-- when the target site of a procedure is reflected in the human readable text we SHOULD have originalText/reference -->
+				<targetSiteCode code="7890" codeSystem="1.2.3.4.5.6.7.8.42" displayName="vulputate eget">
+					<originalText>
+						<reference value="#procedureSiteCodeReference"/>
+					</originalText>
+				</targetSiteCode>
+				<!-- ... -->
+			</procedure>
+		</entry>
+		<!-- This illustrates a simple substanceAdministration. In C-CDA this is used for both Immunization and Medication Activity -->
+		<entry>
+			<substanceAdministration classCode="SBADM" moodCode="EVN">
+				<!-- ... -->
+				<!-- the entire text of the substanceAdministration
+									Example, of a medication: 0.3 ML Enoxaparin Sodium 100 MG/ML Prefilled Syringe 100 MG injected DAILY AS DIRECTED. Site: Upper abdomen Quantity: 100 Refills: 5001 Administer one syringe daily for 7 days. Call for signs of bleeding. Ordered: 1-Jan-2013 Primari, Phillip Start: 14-Jul-2014 End: 14-Jul-2014 Reaction: Hives (Moderate), Abdominal pain (Severe), Vomiting (Severe) Indication: DVT Generic substitution allowed. Comment: Patient is having difficulty paying co-pays for this medication
+							-->
+				<text>
+					<reference value="#simpleSubstanceAdministrationFullTextReference"/>
+				</text>
+				<consumable>
+					<manufacturedProduct classCode="MANU">
+						<!-- ... -->
+						<manufacturedMaterial>
+							<code code="89012" codeSystem="1.2.3.4.5.6.7.8.42" displayName="lorem ipsum dolor sit amet">
+								<originalText>
+									<!-- notice this reference is just to a piece of the entire substanceAdministration text, and that the reference text is different than the code @displayName -->
+									<reference value="#substanceAdministrationProductCodeTextReference"/>
+								</originalText>
+							</code>
+							<name>lorem ipsum</name>
+						</manufacturedMaterial>
+					</manufacturedProduct>
+				</consumable>
+				<!-- ... -->
+				<!-- because of the importance of the following entryRelationship, we show actual templateId content for the Medication Free Text SIG and recommend viewing this as a SHOULD -->
+				<entryRelationship typeCode="COMP">
+					<substanceAdministration classCode="SBADM" moodCode="INT">
+						<templateId root="2.16.840.1.113883.10.20.22.4.147"/>
+						<code code="76662-6" codeSystem="2.16.840.1.113883.6.1"/>
+						<text>
+							<reference value="#substanceAdministrationFreeTextSIGReference"/>
+						</text>
+						<consumable>
+							<manufacturedProduct>
+								<manufacturedLabeledDrug nullFlavor="NA"/>
+							</manufacturedProduct>
+						</consumable>
+					</substanceAdministration>
+				</entryRelationship>
+				<!-- ... -->
+			</substanceAdministration>
+		</entry>
+		<!-- This illustrates a simple supply. in C-CDA this is used as a Non-Medicinal Supply Activity, a Planned Supply, or via entryRelationships as various supply activities. -->
+		<entry>
+			<supply classCode="SPLY" moodCode="EVN">
+				<!-- ... -->
+				<!-- Example, using non-medicinal supply: VVV Cardiac Pacemaker 22-Feb2016 to 26-Feb-2016 Status: normal Quantity: 1 Supplied: yes -->
+				<text>
+					<reference value="#NonMedicinalSupplyFullTextReference"/>
+				</text>
+				<!-- ... -->
+			</supply>
+		</entry>
+	</section>
+</component>
