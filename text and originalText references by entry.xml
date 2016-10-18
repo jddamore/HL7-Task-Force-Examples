@@ -151,7 +151,7 @@
 									if, however, the code is bound to some constant by an Implementation Guide and it is not represented in the human readable text then the originalText/reference SHALL NOT be present
 								-->
 					<originalText>
-											notice that the referenced text is similar to but different than the @displayName  of the code element
+									<!--	notice that the referenced text is similar to but different than the @displayName  of the code element
 											from an interoperability perspective, this pattern is a SHOULD as access to the human readable text reflecting the (code, codeSystem) in use is beneficial to consuming systems
 									-->
 									<reference value="#simpleObservationCodeReference"/>
