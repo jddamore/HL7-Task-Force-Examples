@@ -107,6 +107,53 @@
 			<list>
 				<item ID="NonMedicinalSupplyFullTextReference">Maecenas nec odio et ante tincidunt tempus.</item>
 			</list>
+			<!-- this table used for an organizer and components -->
+			<table>
+				<tbody>
+					<tr>
+						<td>
+							<content ID="ResultOrganizerCodeTextReference">Lorem ipsum dolor sit amet</content>
+						</td>
+						<td>
+							<content>labetText: </content>
+							<content>DD-mmm-YYYY</content>
+							<br/>
+							<!-- ... -->
+						</td>
+						<td>
+							<!-- ... -->
+						</td>
+					</tr>
+					<tr ID="ResultComponentFullTextReference">
+						<td>
+						</td>
+						<td>
+							<content ID="ResultComponentCodeTextReference">Proin iaculis tempus justo</content>
+							<content> nn</content>
+							<content> UCUM_Units</content>
+							<content ID="ResultComponentInterpretationCodeTextReference"> (Semper)</content>
+						</td>
+						<td>
+							<content ID="ResultComponentReferenceRangeTextReference">
+								<content>labelText: </content>
+								<content>111</content>
+								<content> {MG/DL}</content>
+								<content> - </content>
+								<content>222</content>
+								<content> {MG/DL}</content>
+							</content>
+							<br/>
+							<content>labeltext: </content>
+							<content ID="ResultComponentMethodCodeTextReference">Elementum </content>
+							<br/>
+							<content>labelText: </content>
+							<content ID="ResultComponentSiteCodeTextReference">Tincidunt </content>
+							<br/>
+							<!-- ... -->
+						</td>
+					</tr>								
+				</tbody>
+			</table>			
 		</text>
 		<!-- The entry elements below would not likely ever be found all in one section. They are here simply to help illustrate how to reference the human readable text. Examples of real content are given in comments but the text and any content within the entry elements and children are all fictitious. -->
 		<!-- this first entry illustrates an act, the basic class of the RIM, but in C-CDA terms the act is used for both Allergy and Problem Concerns, Authorization Activity, Comment Activity and a few other acts.
@@ -298,5 +345,62 @@
 				<!-- ... -->
 			</supply>
 		</entry>
+		<!-- This illustrates an organizer. In C-CDA this is most typically used for Results and Vital Signs, but may be used in other sections -->
+		<entry>
+			<!-- Example, from results: Complete Blood Count -->
+			<organizer classCode="BATTERY" moodCode="EVN">
+				<!-- ... -->
+				<code code="nnnn" codeSystem="1.2.3.4.5.6.7.8.42" displayName="lorem ipsum">
+					<originalText>
+						<reference value="#ResultOrganizerCodeTextReference"/>
+					</originalText>
+				</code>							
+				<statusCode code="completed"/>
+				<!-- ... -->
+				<component>
+					<observation classCode="OBS" moodCode="EVN">
+						<!-- ... -->
+						<code code="nnnn" codeSystem="1.2.3.4.5.6.7.8.42" displayName="proin iaculis">
+							<originalText>
+								<reference value="#ResultComponentCodeTextReference"/>
+							</originalText>
+						</code>
+						<!-- Example, from results: WBC 21 10^3/ul (High) Range: 100	 mg/dL - 900 mg/dL Method: PICC Line Site: Site Right Arm Comments: Specimen Lysed -->
+						<text>
+							<reference value="#ResultComponentFullTextReference"/>
+						</text>
+						<!-- .... -->
+						<interpretationCode code="x" codeSystem="1.2.3.4.5.6.7.8.42" displayName="semper">
+							<originalText>
+								<reference value="#ResultComponentInterpretationCodeTextReference"/>
+							</originalText>
+						</interpretationCode>
+						<methodCode code="nnnn" codeSystem="2.16.840.1.113883.6.96" displayName="elementum ">
+							<originalText>
+								<reference value="#ResultComponentMethodCodeTextReference"/>
+							</originalText>
+						</methodCode>
+						<targetSiteCode code="nnnn" codeSystem="2.16.840.1.113883.6.96" displayName="tincidunt ">
+							<originalText>
+								<reference value="#ResultComponentSiteCodeTextReference"/>
+							</originalText>
+						</targetSiteCode>
+						<!-- ... -->
+						<referenceRange>
+							<observationRange>
+								<text>
+									<reference value="#ResultComponentReferenceRangeTextReference"/>
+								</text>
+								<value xsi:type="IVL_PQ">
+									<low value="111" unit="UCUM_UNIT"/>
+									<high value="222" unit="UCUM_UNIT"/>
+								</value>
+							</observationRange>
+						</referenceRange>
+					</observation>
+				</component>													
+				<!-- ... -->
+			</organizer>
+		</entry>		
 	</section>
 </component>
