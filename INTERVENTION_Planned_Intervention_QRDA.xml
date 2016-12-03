@@ -28,7 +28,7 @@
 			<id root="85fa4b62-e3a9-4385-b064-fe04cca35adc" />
 			<code code="362956003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Intervention" />
 			<statusCode code="active" />
-			<entryRelationship typeCode="RSON">
+			<entryRelationship typeCode="REFR">
 				<!-- This is a planned encounter. While this could also be recorded in plan of treatment, interventions may affect quality measurement -->
 				<encounter classCode="ENC" moodCode="ARQ">
 					<templateId root="2.16.840.1.113883.10.20.22.4.40" extension="2014-06-09" />
