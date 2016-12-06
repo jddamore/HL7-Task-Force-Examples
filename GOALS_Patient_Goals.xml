@@ -1,0 +1,130 @@
+<!-- Note that this goal example has not yet been validated with schema/schematron -->
+<section>
+	<!-- Goals Section -->
+	<templateId root="2.16.840.1.113883.10.20.22.2.60"/>
+	<code code="61146-7" displayName="Goals" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+	<title>Goals Section</title>
+	<text>
+		<table border="1" width="100%">
+			<thead>
+				<tr>
+					<th>Goal</th>
+					<th>Value</th>
+					<th>Date</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ID="Goal1">
+					<td ID="Goal1Code">Goal established during assessment</td>
+					<td ID="Goal1Value">Need to exercise more and eat better</td>
+					<td>May 23, 2015</td>
+				</tr>
+				<tr ID="Goal2">
+					<td ID="Goal1Code">BMI</td>
+					<td ID="Goal2Value">25</td>
+					<td>May 23, 2015</td>
+				</tr>
+			</tbody>
+		</table>
+	</text>
+	<entry>
+		<!-- Goal Observation -->
+		<observation classCode="OBS" moodCode="GOL">
+			<!-- Goal Observation -->
+			<templateId root="2.16.840.1.113883.10.20.22.4.121"/>
+			<id root="3700b3b0-fbed-11e2-b778-0800200c9a66"/>
+			<code code="58144-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Resident's overall goal established during assessment process">
+				<originalText>
+					<reference value="#Goal1Code" />
+				</originalText>
+			</code>
+			<text>
+				<reference value="#Goal1" />
+			</text>
+			<statusCode code="active"/>
+			<effectiveTime value="20150523"/>
+			<value xsi:type="ED">
+				<reference value="#Goal1Value" />
+			</value>
+			<author>
+				<templateId root="2.16.840.1.113883.10.20.22.4.119"/>
+				<time value="20150523"/>
+				<assignedAuthor>
+					<id root="d839038b-7171-4165-a760-467925b43857"/>
+					<code code="163W00000X" displayName="Registered nurse" codeSystem="2.16.840.1.113883.6.101" codeSystemName="Healthcare Provider Taxonomy (HIPAA)"/>
+					<assignedPerson>
+						<name>
+							<given>Mary</given>
+							<family>McDonald</family>
+							<suffix>RN</suffix>
+						</name>
+					</assignedPerson>
+				</assignedAuthor>
+			</author>
+			<!-- Patient Author -->
+			<author typeCode="AUT">
+				<templateId root="2.16.840.1.113883.10.20.22.4.119"/>
+				<time/>
+				<assignedAuthor>
+					<!-- This id can point back to the record target already described in the CDA header -->
+					<!-- This particular example points back to the record target -->
+					<id extension="996-756-495" root="2.16.840.1.113883.19.5"/>
+				</assignedAuthor>
+			</author>
+		</observation>
+	</entry>
+	<entry>
+		<!-- Goal Observation -->
+		<observation classCode="OBS" moodCode="GOL">
+			<!-- Goal Observation -->
+			<templateId root="2.16.840.1.113883.10.20.22.4.121"/>
+			<id root="3700b3b0-fbed-11e2-b788-0800200c9a66"/>
+			<code code="39156-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Body Mass Index">
+				<originalText>
+					<reference value="#Goal2Code" />
+				</originalText>
+			</code>
+			<text>
+				<reference value="#Goal2" />
+			</text>
+			<statusCode code="active"/>
+			<effectiveTime value="20150523"/>
+			<value xsi:type="PQ" value="25" />
+			<author>
+				<templateId root="2.16.840.1.113883.10.20.22.4.119"/>
+				<time value="20150653"/>
+				<assignedAuthor>
+					<id root="d839038b-7172-4165-a760-467925b43857"/>
+					<code code="163W00000X" displayName="Registered nurse" codeSystem="2.16.840.1.113883.6.101" codeSystemName="Healthcare Provider Taxonomy (HIPAA)"/>
+					<assignedPerson>
+						<name>
+							<given>Mary</given>
+							<family>McDonald</family>
+							<suffix>RN</suffix>
+						</name>
+					</assignedPerson>
+				</assignedAuthor>
+			</author>
+			<!-- Patient Author -->
+			<author typeCode="AUT">
+				<templateId root="2.16.840.1.113883.10.20.22.4.119"/>
+				<time/>
+				<assignedAuthor>
+					<!-- This id can point back to the record target already described in the CDA header -->
+					<!-- This particular example points back to the record target -->
+					<id extension="996-756-495" root="2.16.840.1.113883.19.5"/>
+				</assignedAuthor>
+			</author>
+			<entryRelationship typeCode="REFR">
+				<act classCode="ACT" moodCode="EVN">
+					<templateId root="2.16.840.1.113883.10.20.22.4.122"/>
+					<!-- This ID equals the problem  (i.e. obesity) -->
+					<id root="ab1791b0-5c71-11db-6662-6666666c6a66"/>
+					<!-- The code is nulled to "NP" Not Present" -->
+					<code nullFlavor="NP"/>
+					<statusCode code="completed"/>
+				</act>
+			</entryRelationship>
+		</observation>
+	</entry>
+</section>
