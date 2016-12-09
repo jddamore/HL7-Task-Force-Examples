@@ -94,8 +94,9 @@
 				the reader is referred to the Frequency examples for more information: 
 					http://hl7-c-cda-examples.herokuapp.com/examples/22 
 				or https://docs.google.com/document/d/1Y0Z458o_MrR2aPnpx6EygO6hpI88Bl95esjRWZ0agtY/edit
+				institutionSpecified="true" for a PRN medication
 			-->
-			<effectiveTime xsi:type="PIVL_TS" operator="A">
+			<effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
 				<period value="6" unit="h"/>
 			</effectiveTime>
 			<doseQuantity value="1"/>
