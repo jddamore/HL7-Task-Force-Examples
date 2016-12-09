@@ -1,17 +1,17 @@
 <!-- These examples illustrate multiple ways that a medication can be prescribed for pain
-			These examples are meant to illustrate for comparison purposes only!  
-				DO NOT COPY as an example of a Medication Section 
--->
-<!-- 
-		Summary of examples:
+     These examples are meant to illustrate for comparison purposes only!  
+     DO NOT COPY as an example of a Medication Section. These would not appear together in one patient document.
+     
+     Summary of examples:
 
-			1. PRN with a coded precondition - Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours PRN for joint pain
+		1. PRN with a coded precondition  
+   		Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours PRN for joint pain
 
-			2. Instructions; similar to above but NOT a PRN - Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours with food
+		2. Instructions; similar to above but NOT a PRN 
+		Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours with food
 
-			3. Indication; again, NOT a PRN - Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours for joint pain
-
-		The section and all content below are purely for the purposes of illustrating the differences in the 3 examples - obviously these would not appear together in one patient document.
+		3. Indication; again, NOT a PRN - 
+		Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours for joint pain
 -->
 <section>
 	<!-- Medication Section (entries required) (V2) -->
@@ -69,11 +69,10 @@
 	</text>
 
 	<!-- 1. PRN with a coded precondition - Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours PRN for joint pain 
-			compare to "Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours PRN"
-				adding "for joint pain" raises the question: is this a precondition or an indication? 
-					coded here as an precondition with a code
-
-			note the following wording would be coded the same way, with a coded precondition: Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours as needed for joint pain
+	compare to "Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours PRN"
+	coded here as an precondition with a code
+	note the following wording would be coded the same way, with a coded precondition:
+ 	Ibuprofen 600mg Oral Tablet, 1 tablet Every 6 Hours as needed for joint pain
 	-->
 	<entry>
 		<substanceAdministration classCode="SBADM" moodCode="EVN">
@@ -90,11 +89,10 @@
 				<low value="20130310"/>
 				<high nullFlavor="NI"/>
 			</effectiveTime>
-			<!-- for the frequency of every 6 hours, we omit the institutionSpecified="false" attribute as false is the default value 
-				the reader is referred to the Frequency examples for more information: 
-					http://hl7-c-cda-examples.herokuapp.com/examples/22 
-				or https://docs.google.com/document/d/1Y0Z458o_MrR2aPnpx6EygO6hpI88Bl95esjRWZ0agtY/edit
+			<!-- 
 				institutionSpecified="true" for a PRN medication
+				See http://hl7-c-cda-examples.herokuapp.com/examples/22 or https://docs.google.com/document/d/1Y0Z458o_MrR2aPnpx6EygO6hpI88Bl95esjRWZ0agtY/edit
+			-->
 			-->
 			<effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
 				<period value="6" unit="h"/>
@@ -165,6 +163,10 @@
 			<effectiveTime xsi:type="PIVL_TS" operator="A">
 				<period value="6" unit="h"/>
 			</effectiveTime>
+			<!-- This is the event to take with food -->
+			<effectiveTime xsi:type="EIVL_TS" operator="A">
+        			<event code="C"/>
+     			 </effectiveTime>
 			<doseQuantity value="1"/>
 			<consumable typeCode="CSM">
 				<manufacturedProduct classCode="MANU">
