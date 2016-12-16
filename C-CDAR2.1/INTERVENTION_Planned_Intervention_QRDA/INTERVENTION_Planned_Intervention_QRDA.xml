@@ -1,0 +1,63 @@
+<!-- Intervention Act -->
+<section>
+	<templateId root="2.16.840.1.113883.10.20.21.2.3" extension="2015-08-01" />
+	<code code="62387-6" displayName="Interventions Provided" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+	<title>Interventions Section</title>
+	<text>
+		<table>
+			<thead>
+				<tr>
+					<th>Intervention</th>
+					<th>Date</th>
+					<th>Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ID="Interventions2">
+					<td ID="Interventions2Code">Referral to psychiatry service</td>
+					<td>03/29/2016</td>
+					<td>Active</td>
+				</tr>
+			</tbody>
+		</table>
+	</text>
+	<entry>
+		<!-- moodCode for request for appointment -->
+		<act classCode="ACT" moodCode="ARQ">
+			<templateId root="2.16.840.1.113883.10.20.22.4.146" extension="2015-08-01" />
+			<id root="85fa4b62-e3a9-4385-b064-fe04cca35adc" />
+			<code code="362956003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Intervention" />
+			<statusCode code="active" />
+			<entryRelationship typeCode="REFR">
+				<!-- This is a planned encounter. While this could also be recorded in plan of treatment, interventions may affect quality measurement -->
+				<encounter classCode="ENC" moodCode="ARQ">
+					<templateId root="2.16.840.1.113883.10.20.22.4.40" extension="2014-06-09" />
+					<id root="9c0f070c-2e9e-4be1-a5b5-ff6d0f68123d"/>
+					<code code="183524004" codeSystem="2.16.840.1.113883.6.96" displayName="Referral to psychiatry service" codeSystemName="SNOMED-CT">
+						<originalText>
+							<reference value="#Interventions2Code" />
+						</originalText>
+					</code>
+					<text>
+						<reference value="#Interventions2" />
+					</text>
+					<statusCode code="active"/>
+					<effectiveTime value="20160329" />
+				</encounter>
+			</entryRelationship>
+			<!--- Planned interventions must be related to a goal. An entry reference is used here -->
+			<entryRelationship typeCode="RSON">
+				<act classCode="ACT" moodCode="EVN">
+					<templateId root="2.16.840.1.113883.10.20.22.4.122" />
+					<!-- This id should reference the goal of the internvetion -->
+					<id root="3700b3b0-fbed-11e2-b778-0800200c9a69" />
+					<code nullFlavor="NP" />
+					<statusCode code="completed" />
+				</act>
+			</entryRelationship>
+		</act>
+	</entry>
+</section>
+
+
+
