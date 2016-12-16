@@ -16,7 +16,7 @@ TBD
 
 Comments
 
-This is an example of a food allergy with information on both allergic reaction and reaction severity. It was based upon discussion with Russ Leftwich and Lisa Nelson in coordination with Patient Care Committee. See DSTU 219 for update regarding act/code.
+This is an example of adding a SNOMED qualifier to an amiguous ICD-9 which could be used in qualifying patients related to QRDA/eCQM measure
 
 Custodian
 
@@ -24,4 +24,4 @@ John D'Amore jdamore@diameterhealth.com (GitHub: jddamore)
 
 Keywords
 
-problem, qualifier
+problem, qualifier, QRDA, eCQM
