@@ -1,7 +1,9 @@
 Approval Status
 
 Approval Status: Not Yet Approved
+
 SDWG: Not yet reviewed
+
 C-CDA 2.1 Example: https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/C-CDAR2.1/PAYERS_in_Empty_C-CDA.xml
 
 Reference to full CDA sample: TBD
