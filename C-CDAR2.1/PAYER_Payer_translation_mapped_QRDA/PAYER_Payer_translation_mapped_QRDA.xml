@@ -14,7 +14,11 @@
 				<templateId root="2.16.840.1.113883.10.20.22.4.61" extension="2015-08-01"/>
 				<templateId root="2.16.840.1.113883.10.20.22.4.61"/>
 				<id root="3e676a50-7aac-11db-9fe1-0800200c9a66"/>
-				<code code="AP" displayName="Auto policy" codeSystem="2.16.840.1.113883.3.88.12.3221.5.2" />
+				<!-- This example is when you can't map the code into codeSystem 2.16.840.1.113883.3.88.12.3221.5.2
+				For this example, it doesn't inlcude a Medicare drug benefit code -->
+				<code nullFlavor="NI">
+					<translation code="122" codeSystem="2.16.840.1.113883.3.221.5" displayName="Medicare Drug Benefit" /> 
+				</code>
 				<statusCode code="completed"/>
 				<!-- Insurance Company Information -->
 				<performer typeCode="PRF">
