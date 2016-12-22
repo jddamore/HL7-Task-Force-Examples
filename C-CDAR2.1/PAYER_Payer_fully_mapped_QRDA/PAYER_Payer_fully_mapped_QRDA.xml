@@ -1,4 +1,4 @@
-<!-- BEWARE using this sample, it's not yet been C-CDA validated or discussed with HL7 Example Task Force -->
+<!-- BEWARE using this sample, it's not yet been discussed with HL7 Example Task Force -->
 <section>
 	<templateId root="2.16.840.1.113883.10.20.22.2.18" extension="2015-08-01"/>
 	<code code="48768-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Payer"/>
