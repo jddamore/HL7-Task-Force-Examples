@@ -15,8 +15,8 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr ID="Problem14">
-					<td ID="ProblemDescription14">Below Knee Amputation</td>
+				<tr ID="Problem1">
+					<td ID="ProblemDescription1">Below Knee Amputation</td>
 					<td>
 						<content>Onset: Apr 2 2014</content>
 					</td>
@@ -45,7 +45,7 @@
 						<translation code="75326-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Problem"/>
 					</code>
 					<text>
-						<reference value="#Problem14" />
+						<reference value="#Problem1" />
 					</text>
 					<statusCode code="completed" />
 					<effectiveTime>
@@ -55,7 +55,7 @@
 					<!-- This is a SNOMED code as the primary vocabulary for problem lists. It would be preferable to have a SNOMED code but no direct translation is available here. -->
 					<value xsi:type="CD" nullFlavor="OTH">
 						<originalText>
-							<reference value="#ProblemDescription14" />
+							<reference value="#ProblemDescription1" />
 						</originalText>
 						<translation xsi:type="CD" code="V49.75" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD-9" displayName="Below Knee Amputation Status" />
 					</value>
