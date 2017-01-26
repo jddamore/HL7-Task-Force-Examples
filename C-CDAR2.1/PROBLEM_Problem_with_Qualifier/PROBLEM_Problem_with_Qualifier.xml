@@ -61,7 +61,7 @@
 							<!-- This is an example of a qualifer which would affect a quality measure (e.g. cms 123 Diabetes Foot Exam) -->
 							<!-- a qualifier may be a child element to <value> or <translation>. Here we use translation since it refines an ICD-9 code-->
 							<qualifier>
-								<name code="363698007" codeSystem="2.16.840.1.113883.6.96" displayName="Finding site" />
+								<name code="272741003" codeSystem="2.16.840.1.113883.6.96" displayName="Laterality (attribute)" />
 								<value code="7771000" codeSystem="2.16.840.1.113883.6.96" displayName="Left"/>
 							</qualifier>
 						</translation>	
