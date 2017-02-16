@@ -14,7 +14,7 @@ Medication Information: 2.16.840.1.113883.10.20.22.4.23:2014-06-09
 
 https://ttpedge.sitenv.org/ttp/#/validators
 
-Reference to full CDA sample: 
+Reference to full CDA sample: https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/C-CDAR2.1/MEDICATIONS_in_empty_C-CDA_2.1.xml
 
 ##Comments
 
