@@ -57,7 +57,26 @@
           <low value="20160413"/>
         </effectiveTime>
         <targetSiteCode code="59438005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Structure of anterior descending branch of left coronary artery" />
-        <participant typeCode="DEV">
+        <performer typeCode="PRF">
+			<assignedEntity>
+				<id extension="2222222222" root="2.16.840.1.113883.4.6" />
+				<addr>
+					<streetAddressLine>#456, Lincon Street</streetAddressLine>
+					<streetAddressLine>Wilson Garden</streetAddressLine>
+					<city>Colorado</city>
+					<postalCode>80203</postalCode>
+					<country>US</country>
+				</addr>
+				<telecom value="tel:+1-(859)085-0945" />
+				<assignedPerson>
+					<name>
+						<family>Barry</family>
+						<given>Fleming</given>
+					</name>
+				</assignedPerson>
+			</assignedEntity>
+		</performer>
+		<participant typeCode="DEV">
           <participantRole classCode="MANU">
             <templateId root="2.16.840.1.113883.10.20.22.4.37"/>
             <id assigningAuthorityName="FDA" extension="(01)00848486001048(11)160330(10)ABC124" root="2.16.840.1.113883.3.3719"/>
@@ -91,7 +110,26 @@
           <low value="20160413"/>
         </effectiveTime>
         <targetSiteCode code="59438005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Structure of anterior descending branch of left coronary artery" />
-        <participant typeCode="DEV">
+        <performer typeCode="PRF">
+			<assignedEntity>
+				<id extension="2222222222" root="2.16.840.1.113883.4.6" />
+				<addr>
+					<streetAddressLine>#456, Lincon Street</streetAddressLine>
+					<streetAddressLine>Wilson Garden</streetAddressLine>
+					<city>Colorado</city>
+					<postalCode>80203</postalCode>
+					<country>US</country>
+				</addr>
+				<telecom value="tel:+1-(859)085-0945" />
+				<assignedPerson>
+					<name>
+						<family>Barry</family>
+						<given>Fleming</given>
+					</name>
+				</assignedPerson>
+			</assignedEntity>
+		</performer>
+		<participant typeCode="DEV">
           <participantRole classCode="MANU">
             <templateId root="2.16.840.1.113883.10.20.22.4.37"/>
             <id assigningAuthorityName="FDA" extension="(01)00848486001048(11)160542(10)ABC125" root="2.16.840.1.113883.3.3719"/>
