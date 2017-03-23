@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section>
+    <templateId root="2.16.840.1.113883.10.20.22.2.18" />
+    <templateId root="2.16.840.1.113883.10.20.22.2.18" extension="2015-08-01" />
+    <code code="48768-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Payers" />
+    <title>Insurance Providers</title>
+    <text>
+        <paragraph>Insurance information for Linsey Nelson via Mark Nelson's Insurance</paragraph>
+        (more narrative to follow; focusing on the entries for now)
+    </text>
+    <entry typeCode="DRIV">
+        <!--  ****  Coverage entry template  **** -->
+        <act classCode="ACT" moodCode="DEF">
+            <templateId root="2.16.840.1.113883.10.20.22.4.60" />
+            <templateId root="2.16.840.1.113883.10.20.22.4.60" extension="2015-08-01" />
+            <!-- Unique ID for the coverage, not the member, group or policy ID -->
+            <id root="1fe2cdd0-7aad-11db-9fe1-0800200c9a66" />
+            <code code="48768-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Payment sources" />
+            <statusCode code="completed" />
+            <entryRelationship typeCode="COMP">
+                <!-- Indicates the first policy in Linsey's coverage -->
+                <sequenceNumber value="1" />
+                <!-- Policy Activity -->
+                <act classCode="ACT" moodCode="EVN">
+                    <templateId root="2.16.840.1.113883.10.20.22.4.61" />
+                    <templateId root="2.16.840.1.113883.10.20.22.4.61" extension="2015-08-01" />
+                    <!-- Policy/Program ID (aka group #)
+                         root should be unique Identifier for health plan, in this case, UnitedHealthCare-->
+                    <id root="1.3.6.1.4.1.3443" extension="9R9073" />
+                    <!-- Insurance Type root code from C-CDA 1.1 value set, translation from C-CDA 2.1 value set -->
+                    <code code="GP" codeSystem="2.16.840.1.113883.3.88.12.3221.5.2" codeSystemName="Insurance Type Code" displayName="Group Policy">
+                        <translation code="72" codeSystem="2.16.840.1.113883.3.221.5" codeSystemName="Source of Payment Typology (PHDSC)" displayName="PPO" />
+                    </code>
+                    <statusCode code="completed"/>
+                    <!-- Payer (SHALL) - identified by typeCode=PRF and assignedEntity/code NOT = GUAR -->
+                    <performer typeCode="PRF">
+                        <templateId root="2.16.840.1.113883.10.20.22.4.87" />
+                        <!-- Dates of coverage (could be here or under covered party)-->
+                        <time>
+                            <low value="20141125" />
+                            <high nullFlavor="UNK" />
+                        </time>
+                        <assignedEntity>
+                            <!-- ID for the payer - OID is UnitedHealthcare, extension is policty #  -->
+                            <id root="1.3.6.1.4.1.3443" extension="87726" />
+                            <code code="PAYOR" codeSystem="2.16.840.1.113883.5.110" codeSystemName="HL7 RoleCode" />
+                            <addr use="WP">
+                                <streetAddressLine>PO Box 30555</streetAddressLine>
+                                <city>Salt Lake City</city>
+                                <state>UT</state>
+                                <postalCode>84130-0567</postalCode>
+                                <country>US</country>
+                            </addr>
+                            <telecom value="tel:+(577)574-3210" use="WP" />
+                            <representedOrganization>
+                                <!-- Payor's Name -->
+                                <name>UnitedHealthcare</name>
+                                <!-- the payor is the entity and the organization. Need not repeat telecom/addr here, but could. -->
+                            </representedOrganization>
+                        </assignedEntity>
+                    </performer>
+                    <!-- Guarantor (SHOULD) - identified by typeCode=PRF and assignedEntity/code=GUAR -->
+                    <performer typeCode="PRF">
+                        <templateId root="2.16.840.1.113883.10.20.22.4.88" />
+                        <!-- SHOULD contain effectiveTime; indicates when this guarantor is responsible for payment -->
+                        <time>
+                            <low nullFlavor="UNK" />
+                            <high nullFlavor="UNK" />
+                        </time>
+                        <assignedEntity>
+                            <!-- ID for the guarantor; would match recordTarget/id if guarantor is patient -->
+                            <id root="1.2.3.4.5" extension="Id4Mark"/>
+                            <code code="GUAR" codeSystem="2.16.840.1.113883.5.111" codeSystemName="HL7 RoleCode" />
+                            <!-- Guarantor's address/phone, if known
+                            <addr use="HP">
+                            </addr>
+                            <telecom value="tel:+(781)555-1212" use="HP" /> -->
+                            <assignedPerson>
+                                <name>
+                                    <given>Mark</given>
+                                    <given>A</given>
+                                    <family>Nelson</family>
+                                </name>
+                            </assignedPerson>
+                        </assignedEntity>
+                    </performer>
+                    <!-- Covered Party (SHALL), identified by typecode=COV -->
+                    <participant typeCode="COV">
+                        <templateId root="2.16.840.1.113883.10.20.22.4.89.2" />
+                        <!-- Dates of coverage (see also payor dates, but as coverage, makes more sense here)-->
+                        <time>
+                            <low value="20141125" />
+                            <high nullFlavor="UNK" />
+                        </time>
+                        <participantRole classCode="PAT">
+                            <!-- Health plan ID for patient. 
+                                 root should be OID or GUID identifying this plan's membership IDs -->
+                            <id root="1.3.6.1.4.1.3443" extension="944283475-04" />
+                            <!-- Type of coverage. In this case, Linsey is a family member -->
+                            <code code="FAMDEP" codeSystem="2.16.840.1.113883.5.111" displayName="Family Dependent"/>
+                            <!-- Covered party's addr/telecom, if known
+                            <addr use="HP">
+                            </addr> -->
+                            <playingEntity>
+                                <name>
+                                    <given>Linsey</given>
+                                    <family>Nelson</family>
+                                </name>
+                            </playingEntity>
+                            <!-- Birth time of covered party, required  -->
+                            <sdtc:birthTime nullFlavor="UNK" xmlns:sdtc="urn:hl7-org:sdtc"/>
+                        </participantRole>
+                    </participant>
+                    <!-- Subscriber (Policy Holder) SHOULD be present, but SHALL NOT be present if the subscriber is the patient (e.g. the Covered Party)
+                         Identified by typeCode=HLD (policy holder)-->
+                    <participant typeCode="HLD">
+                        <templateId root="2.16.840.1.113883.10.20.22.4.90.2" />
+                        <participantRole>
+                            <!-- Health plan ID for policy holder 
+                                 root should be OID or GUID identifying this plan's membership IDs -->
+                            <id root="1.3.6.1.4.1.3443" extension="944283475-01" />
+                            <!-- Policy holder's addr/telecom, if known
+                            <addr use="HP">
+                            </addr> -->
+                        </participantRole>
+                    </participant>
+                    <!-- Describes the Health Plan (SHALL) (could also be an authorization activity describing an individual authorization) -->
+                    <entryRelationship typeCode="REFR">
+                        <act classCode="ACT" moodCode="DEF">
+                            <templateId root="2.16.840.1.113883.10.20.1.19" />
+                            <!-- Plan ID -->
+                            <id root="1.3.6.1.4.1.3443" extension="911-87726-04" />
+                            <!-- Plan type;  -->
+                            <code code="72" codeSystem="2.16.840.1.113883.3.221.5" codeSystemName="Source of Payment Typology (PHDSC)" displayName="PPO" />
+                            <!-- alternate code that could be used 
+                            <code code="EHCPOL" codeSystem='2.16.840.1.113883.5.4' codeSystemName='ActCode' displayName="Extended Healthcare" /> -->
+                            <text>UnitedHealthcare Choice</text>
+                        </act>
+                    </entryRelationship>
+                </act>
+            </entryRelationship>
+            <entryRelationship>
+                <!-- Indicates the 2nd policy in Linsey's coverage -->
+                <sequenceNumber value="2" />
+                <act>
+                    <!-- Very similar (verbose) structure. Changes would be:
+                       id/@root attributes would correspond to Cigna (or Cypress...)
+                       act/id/@extension would be S63 for the group number
+                       performer/../addr & telecom would be updated for Cigna
+                       performer/../id/@extension would be 62308 for the Payer (entire guarantor performer would be identical)
+                       participant/../id/@extionsion would be based on S63000087 for Mark and Linsey
+                    -->
+                </act>
+            </entryRelationship>
+        </act>
+    </entry>
+</section>
