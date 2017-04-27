@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="CDA.xsl"?>
+<!--
+This document was adapted from C-CDA_R2_Progress_Note.xml published with Hl7 C-CDA 2.0 implementation guide
+Certain elements have been removed to highlight the particular attribute of relatedDocument/parentDocument
+parentDocument can be used to demonstrate that this progress note appends (i.e. updates) previous clinical documents
+ -->
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xmlns:mif="urn:hl7-org:v3/mif">
+	<!-- ** CDA Header ** -->
+	<realmCode code="US"/>
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<!-- US General Header Template -->
+	<templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2015-08-01"/>
+	<!-- Progress Note (V2) Template  -->
+	<templateId root="2.16.840.1.113883.10.20.22.1.9" extension="2015-08-01"/>
+	<id extension="999022" root="2.16.840.1.113883.19"/>
+	<code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="11506-3" displayName="Provider-unspecified Progress note"/>
+	<title>Progress Note (Append to previous notes)</title>
+	<effectiveTime value="20050329171504+0500"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+	<languageCode code="en-US"/>
+	<setId extension="111199021" root="2.16.840.1.113883.19"/>
+	<versionNumber value="1"/>
+	<recordTarget>
+		<patientRole>
+			<!-- Fake ID using HL7 example OID. -->
+			<id extension="12345" root="2.16.840.1.113883.19"/>
+			<!-- Fake Social Security Number using the actual SSN OID. -->
+			<id extension="111-00-1234" root="2.16.840.1.113883.4.1"/>
+			<!-- HP is "primary home" from codeSystem 2.16.840.1.113883.5.1119 -->
+			<addr use="HP">
+				<streetAddressLine>17 Daws Rd.</streetAddressLine>
+				<city>Blue Bell</city>
+				<state>MA</state>
+				<postalCode>02368</postalCode>
+				<!-- US is "United States" from ISO 3166-1 Country Codes: 1.0.3166.1 -->
+				<country>US</country>
+			</addr>
+			<telecom value="tel:(781)555-1212" use="HP"/>
+			<!-- HP is "primary home" from HL7 AddressUse 2.16.840.1.113883.5.1119 -->
+			<patient>
+				<name use="L">
+					<!-- L is "Legal" from HL7 EntityNameUse 2.16.840.1.113883.5.45 -->
+					<prefix>Mr.</prefix>
+					<given>Adam</given>
+					<given qualifier="CL">Frankie</given>
+					<!-- CL is "Call me" from HL7 EntityNamePartQualifier 2.16.840.1.113883.5.43 -->
+					<family>Everyman</family>
+				</name>
+				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" displayName="Male"/>
+				<birthTime value="19541125"/>
+				<maritalStatusCode code="M" displayName="Married" codeSystem="2.16.840.1.113883.5.2" codeSystemName="MaritalStatusCode"/>
+				<raceCode code="2106-3" displayName="White" codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race &amp; Ethnicity - CDC"/>
+				<ethnicGroupCode code="2186-5" displayName="Not Hispanic or Latino" codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race &amp; Ethnicity - CDC"/>
+				<languageCommunication>
+					<languageCode code="fr-CN"/>
+					<modeCode code="RWR" displayName="Recieve Written" codeSystem="2.16.840.1.113883.5.60" codeSystemName="LanguageAbilityMode"/>
+					<preferenceInd value="true"/>
+				</languageCommunication>
+			</patient>
+			<providerOrganization>
+				<!-- Organizations SHOULD have an NPI; this is a real root; fake extension -->
+				<id root="2.16.840.1.113883.4.6" extension="111122223333"/>
+				<name>Good Health Clinic</name>
+				<telecom use="WP" value="tel:(781)555-1212"/>
+				<addr>
+					<streetAddressLine>21 North Ave</streetAddressLine>
+					<city>Burlington</city>
+					<state>MA</state>
+					<postalCode>02368</postalCode>
+					<country>USA</country>
+				</addr>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<!-- ATTENTION: 
+	Please note that dataEnterer, informant, informationRecipient, legalAuthenticator, authenticator, participant and  inFulfillmentOf have been omitted from this sample
+	These elements may be appropriate for progress notes in general, but this sample omits to focus on relatedDocument -->
+	<author>
+		<time value="20050329224411+0500"/>
+		<assignedAuthor>
+			<id extension="KP00017" root="2.16.840.1.113883.19.5"/>
+			<addr>
+				<streetAddressLine>21 North Ave.</streetAddressLine>
+				<city>Burlington</city>
+				<state>MA</state>
+				<postalCode>02368</postalCode>
+				<country>USA</country>
+			</addr>
+			<telecom use="WP" value="tel:(555)555-1003"/>
+			<assignedPerson>
+				<name>
+					<given>Henry</given>
+					<family>Seven</family>
+				</name>
+			</assignedPerson>
+		</assignedAuthor>
+	</author>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id root="2.16.840.1.113883.19.5"/>
+				<name>Good Health Clinic</name>
+				<telecom value="tel:(555)555-1212" use="WP"/>
+				<addr use="WP">
+					<streetAddressLine>17 Daws Rd.</streetAddressLine>
+					<city>Blue Bell</city>
+					<state>MA</state>
+					<postalCode>02368</postalCode>
+					<country>USA</country>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<documentationOf typeCode="DOC">
+		<serviceEvent classCode="PCPR">
+			<templateId root="2.16.840.1.113883.10.20.21.3.1"/>
+			<effectiveTime>
+				<low value="20100601"/>
+				<high value="20100915"/>
+			</effectiveTime>
+			<performer typeCode="PRF">
+				<functionCode code="PCP" codeSystem="2.16.840.1.113883.5.88" codeSystemName="ParticipationFunction" displayName="Primary Care Provider">
+					<originalText>Primary Care Provider</originalText>
+				</functionCode>
+				<time>
+					<low value="20020716"/>
+					<high value="20070915"/>
+				</time>
+				<assignedEntity>
+					<id extension="PseudoMD-1" root="2.16.840.1.113883.19"/>
+					<code code="200000000X" displayName="Allopathic and Osteopathic Physicians" codeSystemName="Provider Codes" codeSystem="2.16.840.1.113883.6.101"/>
+					<addr/>
+					<telecom value="tel:+1(301)975-3251" use="HP"/>
+					<assignedPerson>
+						<name>
+							<prefix>Dr.</prefix>
+							<given>Pseudo</given>
+							<family>Physician-1</family>
+						</name>
+					</assignedPerson>
+					<representedOrganization>
+						<id root="2.16.840.1.113883.3.72.5"/>
+						<name>Test Laboratory</name>
+						<telecom value="tel:+1(301)975-3252" use="HP"/>
+						<addr/>
+					</representedOrganization>
+				</assignedEntity>
+			</performer>
+		</serviceEvent>
+	</documentationOf>
+	<!-- This shows an append (APND) typeCode. 
+	Two others typeCode alternatives are  available for RPLC (replace) and XTRF (transform) -->
+	<relatedDocument typeCode="APND">
+		<parentDocument>
+			<id root="223769be-f6ee-4b04-a0ce-b56ae998c882"/>
+			<code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="11506-3" displayName="Provider-unspecified Progress note"/>
+			<!-- Are these necessary and/or useful in this context? 
+			<setId root="004bb033-b948-4f4c-b5bf-a8dbd7d8dd40"/>
+			<versionNumber value="1"/>
+			-->
+		</parentDocument>
+	</relatedDocument>
+	<!-- Multiple documents may be specified by repeating relatedDocument -->
+	<relatedDocument typeCode="APND">
+		<parentDocument>
+			<id root="323769be-f6ee-4b04-a0ce-b56ae998c883"/>
+			<code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="34900-1" displayName="General Medicine Progress note"/>
+			<!-- Are these necessary and/or useful in this context? 
+			<setId root="004bb033-b948-4f4c-b5bf-a8dbd7d8dd40"/>
+			<versionNumber value="1"/>
+			-->
+		</parentDocument>
+	</relatedDocument>
+	<componentOf>
+		<encompassingEncounter>
+			<id extension="9937012" root="2.16.840.1.113883.19"/>
+			<code codeSystem="2.16.840.1.113883.6.12" codeSystemName="CPT-4" code="99213" displayName="Evaluation and Management"/>
+			<effectiveTime>
+				<low value="20050329"/>
+				<high value="20050329"/>
+			</effectiveTime>
+			<location>
+				<healthCareFacility>
+					<id root="2.16.540.1.113883.19.2"/>
+				</healthCareFacility>
+			</location>
+		</encompassingEncounter>
+	</componentOf>
+<!-- ******************************************************** CDA Body  ******************************************************** 
+Minimal data have been included here which would be "appended" to the parent note. 
+Other sections may be included, however, this represents a minimally necessary conformant progress note
+-->
+	<component>
+		<structuredBody>
+
+<!-- ************************************ ASSESSMENT AND PLAN ************************************ -->
+			<component>
+				<section>
+					<templateId root="2.16.840.1.113883.10.20.22.2.9" extension="2014-06-09"/>
+					<code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="51847-2" displayName="ASSESSMENT AND PLAN"/>
+					<title>ASSESSMENT AND PLAN</title>
+					<text>
+						Assessmet 
+						<list listType="ordered">
+							<item>Recurrent GI bleed of unknown etiology; hypotension perhaps secondary to this but as likely secondary to polypharmacy.</item>
+							<item>Acute on chronic anemia secondary to #1.</item>
+							<item>Azotemia, acute renal failure with volume loss secondary to #1.</item>
+							<item>Hyperkalemia secondary to #3 and on ACE and K+ supplement.</item>
+							<item>Other chronic diagnoses as noted above, currently stable.</item>
+						</list>
+						Plan 
+						<list listType="ordered">
+							<item>Refer to Dr. Eight to evaluate medication dosing possibly causing hypotension.</item>
+							<item>Refer to Dr. Nephro to evaluate for hemodialysis.</item>
+						</list>
+					</text>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>
