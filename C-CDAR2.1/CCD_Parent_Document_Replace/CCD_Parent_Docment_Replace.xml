@@ -289,7 +289,7 @@
 				displayName="Burn by Fire"/>
 			<effectiveTime>
 				<low value="2015072218-0500"/>
-				<high value="2015072223-5000"/>
+				<high value="2015072223-0500"/>
 			</effectiveTime>
 			<!-- since there are two Care Team members we need two performer elements. -db -->
 			<!-- Note: example of Care Team here:
