@@ -1,4 +1,4 @@
-Approval Status: Not Yet Approved
+Approval Status: Task Force approved on May 4, 2017
 
 SDWG: Not yet reviewed
 
