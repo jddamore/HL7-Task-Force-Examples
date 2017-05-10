@@ -428,7 +428,7 @@
 					<templateId root="2.16.840.1.113883.10.20.22.2.5.1"/>
 					<code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="PROBLEM LIST"/>
 					<title>Problems</title>
-					<text ID="Concern_1">
+					<text>
 						No Information
 					</text>
 				</section>
@@ -468,7 +468,7 @@
 					<code code="46264-8" codeSystem="2.16.840.1.113883.6.1" />
 					<title>Medical Equipment</title>
 					<text>
-						<paragraph ID="Proc2">No information</paragraph>
+						<paragraph>No information</paragraph>
 					</text>				
 				</section>
 			</component>
@@ -650,8 +650,7 @@
 					<code code="75310-3" displayName="Health Concerns Document"
 						codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
 					<title>Health Concerns</title>
-					<!--Including ID at text element is allowed -->
-					<text ID="HealthConcern_1">No Known Health Concerns on 07/22/2015</text>
+					<text>No Known Health Concerns on 07/22/2015</text>
 				</section>
 			</component>		
 
