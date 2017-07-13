@@ -120,7 +120,7 @@
 					<reference typeCode="REFR">
 						<externalObservation classCode="OBS" moodCode="EVN">
 							<!-- This refers to the observation/id of the original observation -->
-							<!-- If there are multiple id elements, all should included -->
+							<!-- If there are multiple id elements, all should be included -->
 							<id extension="10241104348" root="1.3.6.1.4.1.22812.4.111.0.4.1.2.1"/>
 							<code code="55607006" displayName="Problem" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
 								<translation code="75326-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Problem"/>
