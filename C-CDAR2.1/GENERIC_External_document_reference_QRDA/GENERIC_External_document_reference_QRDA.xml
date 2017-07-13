@@ -32,6 +32,8 @@
 			<templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01"/>
 			<!-- Since this represents an element which has been imported from the original document 
 			but may vary from original act, a different GUID is used to idenitfy  -->
+			<!-- Some systems may also include the original id here. This example did 
+			not since the externalObservation is more appropriate -->
 			<id root="11526f79-94a3-4682-a969-0f3d039db732"/>
 			<code code="CONC" codeSystem="2.16.840.1.113883.5.6"/>
 			<statusCode code="active"/>
@@ -44,6 +46,8 @@
 					<templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01"/>
 					<!-- Since this represents an element which has been imported from the original document 
 					but may vary from original observation, a different GUID is used to idenitfy  -->
+					<!-- Some systems may also include the original id here. This example did 
+					not since the externalObservation is more appropriate -->
 					<id root="35e97377-b63b-4e6a-a53e-9cfb016bea0b"/>
 					<code code="55607006" displayName="Problem"
 						codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
