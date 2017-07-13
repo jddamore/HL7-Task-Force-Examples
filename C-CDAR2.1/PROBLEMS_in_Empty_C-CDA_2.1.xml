@@ -550,83 +550,177 @@
 				<!-- An example of how to use a qualifier. This example shows presence of a problem/value/translation, although it could also be used to refine the problem/value -->
 				<!-- The use of qualifiers could also be used on other sections, such as qualifying a procedure -->
 				<!-- An example of how to use a qualifier. This example shows presence of a problem/value/translation, although it could also be used to refine the problem/value -->
-<!-- The use of qualifiers could also be used on other sections, such as qualifying a procedure -->
-<section>
-	<templateId root="2.16.840.1.113883.10.20.22.2.5.1" extension="2015-08-01"/>
-	<code code="11450-4" codeSystem="2.16.840.1.113883.6.1" displayName="Problem List"/>
-	<title>Problem List</title>
-	<text>
-		<table>
-			<thead>
-				<tr>
-					<th>Name</th>
-					<th>Dates</th>
-					<th>Location/Qualifier</th>
-					<th>Status</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr ID="Problem14">
-					<td ID="ProblemDescription14">Below Knee Amputation</td>
-					<td>
-						<content>Onset: Apr 2 2014</content>
-					</td>
-					<td>Left</td>
-					<td>Active</td>
-				</tr>
-			</tbody>
-		</table>
-	</text>
-	<entry>
-		<act classCode="ACT" moodCode="EVN">
-			<templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01"/>
-			<id root="e5fbc288-659f-4aeb-a5e1-eb7cc8fcdfaf" />
-			<code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
-			<!-- While clinicians can track resolved problems, generally active problems will have active concern status and resolved concerns will be completed -->
-			<statusCode code="active" />
-			<effectiveTime>
-				<!-- This represents the time that the clinician began tracking the concern. This may frequently be an EHR timestamp-->
-				<low value="20140403124536+0500" />
-			</effectiveTime>
-			<entryRelationship typeCode="SUBJ">
-				<observation classCode="OBS" moodCode="EVN">
-					<templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01"/>
-					<id root="ac416033-3cc1-4485-ab31-36ce7669f55c" />
-					<code codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="55607006" displayName="Problem" >
-						<translation code="75326-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Problem"/>
-					</code>
+				<!-- The use of qualifiers could also be used on other sections, such as qualifying a procedure -->
+				<section>
+					<templateId root="2.16.840.1.113883.10.20.22.2.5.1" extension="2015-08-01"/>
+					<code code="11450-4" codeSystem="2.16.840.1.113883.6.1" displayName="Problem List"/>
+					<title>Problem List</title>
 					<text>
-						<reference value="#Problem14" />
+						<table>
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Dates</th>
+									<th>Location/Qualifier</th>
+									<th>Status</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ID="Problem14">
+									<td ID="ProblemDescription14">Below Knee Amputation</td>
+									<td>
+										<content>Onset: Apr 2 2014</content>
+									</td>
+									<td>Left</td>
+									<td>Active</td>
+								</tr>
+								<tr ID="Problem1">
+									<td ID="Problem1Value">Community Acquired Pneumonia</td>
+									<td>Onset: February 27 2014</td>
+									<td>Active</td>
+								</tr>
+							</tbody>
+						</table>
 					</text>
-					<statusCode code="completed" />
-					<effectiveTime>
-						<!-- This represents the date of biological onset. This can be before the patient vistited the clinician, as illustrated in this example-->
-						<low value="20140402" />
-					</effectiveTime>
-					<!-- This is a SNOMED code as the primary vocabulary for problem lists. It would be preferable to have a SNOMED code but no direct translation is available here. -->
-					<value xsi:type="CD" nullFlavor="OTH">
-						<originalText>
-							<reference value="#ProblemDescription14" />
-						</originalText>
-						<translation xsi:type="CD" code="V49.75" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD-9" displayName="Below Knee Amputation Status" />
-					</value>
-					<targetSiteCode xsi:type="CD" code="30021000" codeSystem="2.16.840.1.113883.6.96" displayName="Lower leg structure">
-							<!-- This is an example of a qualifer which would affect a quality measure (e.g. cms 123 Diabetes Foot Exam) -->
-							<!-- a qualifier may be a child element to <value> or <translation>. Here we use translation since it refines an ICD-9 code-->
-							<qualifier>
-								<name code="272741003" codeSystem="2.16.840.1.113883.6.96" displayName="Laterality" />
-								<value code="7771000" codeSystem="2.16.840.1.113883.6.96" displayName="Left"/>
-							</qualifier>
-					</targetSiteCode>
-				</observation>
-			</entryRelationship>
-		</act>
-	</entry>
-</section>
-
-
-
-
+					<entry>
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01"/>
+							<id root="e5fbc288-659f-4aeb-a5e1-eb7cc8fcdfaf" />
+							<code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
+							<!-- While clinicians can track resolved problems, generally active problems will have active concern status and resolved concerns will be completed -->
+							<statusCode code="active" />
+							<effectiveTime>
+								<!-- This represents the time that the clinician began tracking the concern. This may frequently be an EHR timestamp-->
+								<low value="20140403124536+0500" />
+							</effectiveTime>
+							<entryRelationship typeCode="SUBJ">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01"/>
+									<id root="ac416033-3cc1-4485-ab31-36ce7669f55c" />
+									<code codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="55607006" displayName="Problem" >
+										<translation code="75326-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Problem"/>
+									</code>
+									<text>
+										<reference value="#Problem14" />
+									</text>
+									<statusCode code="completed" />
+									<effectiveTime>
+										<!-- This represents the date of biological onset. This can be before the patient vistited the clinician, as illustrated in this example-->
+										<low value="20140402" />
+									</effectiveTime>
+									<!-- This is a SNOMED code as the primary vocabulary for problem lists. It would be preferable to have a SNOMED code but no direct translation is available here. -->
+									<value xsi:type="CD" nullFlavor="OTH">
+										<originalText>
+											<reference value="#ProblemDescription14" />
+										</originalText>
+										<translation xsi:type="CD" code="V49.75" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD-9" displayName="Below Knee Amputation Status" />
+									</value>
+									<targetSiteCode xsi:type="CD" code="30021000" codeSystem="2.16.840.1.113883.6.96" displayName="Lower leg structure">
+										<!-- This is an example of a qualifer which would affect a quality measure (e.g. cms 123 Diabetes Foot Exam) -->
+										<!-- a qualifier may be a child element to <value> or <translation>. Here we use translation since it refines an ICD-9 code-->
+										<qualifier>
+											<name code="272741003" codeSystem="2.16.840.1.113883.6.96" displayName="Laterality" />
+											<value code="7771000" codeSystem="2.16.840.1.113883.6.96" displayName="Left"/>
+										</qualifier>
+									</targetSiteCode>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<entry>
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.22.4.3" />
+							<templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01"/>
+							<!-- Since this represents an element which has been imported from the original document 
+			but may vary from original act, a different GUID is used to idenitfy  -->
+							<id root="11526f79-94a3-4682-a969-0f3d039db732"/>
+							<code code="CONC" codeSystem="2.16.840.1.113883.5.6"/>
+							<statusCode code="active"/>
+							<effectiveTime>
+								<low value="20140302124536+0500"/>
+							</effectiveTime>
+							<entryRelationship typeCode="SUBJ">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.22.4.4" />
+									<templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01"/>
+									<!-- Since this represents an element which has been imported from the original document 
+					but may vary from original observation, a different GUID is used to idenitfy  -->
+									<id root="35e97377-b63b-4e6a-a53e-9cfb016bea0b"/>
+									<code code="55607006" displayName="Problem"
+						codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+										<translation code="75326-9" codeSystem="2.16.840.1.113883.6.1"
+							codeSystemName="LOINC" displayName="Problem"/>
+									</code>
+									<text>
+										<reference value="#Problem1"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime>
+										<low value="20140227"/>
+									</effectiveTime>
+									<value xsi:type="CD" code="385093006" codeSystem="2.16.840.1.113883.6.96"
+						codeSystemName="SNOMED CT" displayName="Community Acquired Pneumonia">
+										<originalText>
+											<reference value="#Problem1Value" />
+										</originalText>
+									</value>
+									<author>
+										<templateId root="2.16.840.1.113883.10.20.22.4.119"/>
+										<time value="20140302124536"/>
+										<assignedAuthor>
+											<id extension="66666" root="2.16.840.1.113883.4.6"/>
+											<code code="207RC0000X" codeSystem="2.16.840.1.113883.6.101"
+								codeSystemName="NUCC" displayName="Cardiovascular Disease"/>
+											<addr>
+												<streetAddressLine>6666 StreetName St.</streetAddressLine>
+												<city>Silver Spring</city>
+												<state>MD</state>
+												<postalCode>20901</postalCode>
+												<country>US</country>
+											</addr>
+											<telecom value="tel:+1(301)666-6666" use="WP"/>
+											<assignedPerson>
+												<name>
+													<given>Heartly</given>
+													<family>Sixer</family>
+													<suffix>MD</suffix>
+												</name>
+											</assignedPerson>
+										</assignedAuthor>
+									</author>
+									<!-- This reference refers to the external document where the problem was documented -->
+									<!-- It uses a template for externalDocument from the QRDA 1 3.1 Implementation Guide-->
+									<reference typeCode="REFR">
+										<externalDocument classCode="DOCCLIN" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.22.4.115" extension="2014-06-09" />
+											<!-- This refers to the ClinicalDocument/id of the original document -->
+											<id extension="TT661" root="2.16.840.1.113883.19.5.99999.1"/>							
+											<code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="34133-9" displayName="Summary of episode note" />
+											<!-- While not required, there is a benefit of using <setId> and <versionNumber> as a secondary key on documents.   
+							If the flow from a document source system or repository to a destination system is infrequent or  not able to guarantee 
+							sequential transmission of  document revisions.  The setId and versionNumber pair are actually better for detecting which 
+							new document revises a previous older version of that document.  -->
+											<!-- If setId and versionNumber are not available or applicable, they may be omitted -->
+											<setId root="004bb033-b948-4f4c-b5bf-a8dbd7d8dd40"/>
+											<versionNumber value="1"/>
+										</externalDocument>
+									</reference>
+									<!-- This reference refers to the observation within external document the where the problem was documented -->
+									<!-- Other options are the use of reference/externalAct or reference/externalProcedures -->
+									<reference typeCode="REFR">
+										<externalObservation classCode="OBS" moodCode="EVN">
+											<!-- This refers to the observation/id of the original observation -->
+											<id extension="10241104348" root="1.3.6.1.4.1.22812.4.111.0.4.1.2.1"/>
+											<code code="55607006" displayName="Problem" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+												<translation code="75326-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Problem"/>
+											</code>
+										</externalObservation>
+									</reference>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
 			</component>
 
 			<!-- ************************ ENCOUNTERS *********************** -->
