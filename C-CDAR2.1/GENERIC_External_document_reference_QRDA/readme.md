@@ -1,6 +1,6 @@
 ## Approval Status
 
-Approval Status: Not Yet Approved
+Approval Status: Task force approved on 7/13/2016
 SDWG: Not yet reviewed
 
 ## Templates
