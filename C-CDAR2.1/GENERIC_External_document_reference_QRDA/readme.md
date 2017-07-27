@@ -21,12 +21,12 @@ TBD
 
 ## Comments 
 
-This demonstrates how an individual entry may refer to an external document where information was originally provided (e.g. a problem in this example).
+This demonstrates how an individual entry may refer to an external document where information was originally provided (e.g. a problem in this example). In addition, how to also link back to the original observation using externalObservation is also shown. While these elements are optional, they help create a chain of data provenance. 
 
 ## Custodian
 
 John D'Amore jdamore@diameterhealth.com (GitHub: jddamore)
 
 ## Keywords
-externalDocument, reference
+externalDocument, externalObservation, reference
 
