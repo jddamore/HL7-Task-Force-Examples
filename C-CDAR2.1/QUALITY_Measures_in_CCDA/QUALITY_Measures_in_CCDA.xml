@@ -1,0 +1,318 @@
+<!-- This is an example of how to include quality measure information (i.e. reported outcome) on an individual patient's C-CDA document -->
+<!-- This uses templates from the QRDA3, which is not part of C-CDA, but ia CDA conformant and a US national standard for reporting quality measures -->
+<!-- This uses the Measure Section Reoprting section, where all aggregate counts are 0 or 1, since applied to a specific patient -->
+<!-- This example would not suitable for US QRDA reporting since some components and stratifications have been removed -->
+<section>
+	<!-- Templates use QRDA3 1.0 (current reporting standard as of 2017)--> 
+	<templateId root="2.16.840.1.113883.10.20.24.2.2"/>
+	<templateId root="2.16.840.1.113883.10.20.27.2.1"/>
+	<code code="55186-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Measure Document"/>
+	<title>Measure Section</title>
+	<text>
+		<!-- Since this narrative table is designed for an individual patient, it may look substantially different 
+		than a conventional QRDA 3 table used to report outcomes across a wide array of patients --> 
+		<table border="1" width="100%">
+			<thead>
+				<tr>
+					<th>Measure</th>
+					<th>Time</th>
+					<th>Compliance</th>
+					<th>Logic</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<content ID="pop1">Diabetes Hemoglobin A1c Poor Control (CMS 122v5)</content>
+					</td>
+					<td>
+						<content ID="count1">Jan 1 2017 - Dec 31 2017</content>
+					</td>
+					<td>
+						<!-- Compliance here is based on  the measure "Improvement Notation" from the Measure Definition-->
+						<!-- Since lower = better for CMS 122v5, a numerator of zero means complaince-->
+						<content ID="count1">Compliant</content>
+					</td>
+					<td>
+						<content ID="count1">IPP: 1, DEN: 1, NUM: 0 </content>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<content ID="pop1">Colorectal Cancer Screening (CMS 130v5)</content>
+					</td>
+					<td>
+						<content ID="count1">Jan 1 2017 - Dec 31 2017</content>
+					</td>
+					<td>
+						<!-- Compliance here is based on  the measure "Improvement Notation" from the Measure Definition-->
+						<!-- Since higerh = better for CMS 130v5, a numerator of zero means non-complaince-->
+						<content ID="count1">Non-Compliant</content>
+					</td>
+					<td>
+						<content ID="count1">IPP: 1, DEN: 1, NUM: 0 </content>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<content ID="pop1">Pneumococcal Vaccination Status for Older Adults (CMS 127v5)</content>
+					</td>
+					<td>
+						<content ID="count1">Jan 1 2017 - Dec 31 2017</content>
+					</td>
+					<td>
+						<content ID="count1">Not Eligible</content>
+					</td>
+					<td>
+						<content ID="count1">IPP: 0</content>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</text>
+	<entry>
+		<organizer classCode="CLUSTER" moodCode="EVN">
+			<templateId root="2.16.840.1.113883.10.20.24.3.98"/>
+			<templateId root="2.16.840.1.113883.10.20.27.3.1"/>
+			<id root="d7345481-b3b5-41e0-a8ae-03dabcd4a0cc"/>
+			<statusCode code="completed"/>
+			<reference typeCode="REFR">
+				<externalDocument classCode="DOC" moodCode="EVN">
+					<id root="2.16.840.1.113883.4.738" extension="40280381-51f0-825b-0152-229afff616ee"/>
+					<code code="57024-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Health Quality Measure Document"/>
+					<text>Diabetes: Hemoglobin A1c Poor Control</text>
+					<versionNumber value="5"/>
+				</externalDocument>
+			</reference>
+			<!-- There is a requirement that at least 1 component be included (see QRDA3 CONF 2226-18425). 
+			In this example we always include initial population. Numerator and denominator are included where IPP = 1. 
+			Exclusion and Exception criteria could be included as applicable -->
+			<component>
+				<observation classCode="OBS" moodCode="EVN">
+					<templateId root="2.16.840.1.113883.10.20.27.3.5"/>
+					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="Assertion"/>
+					<statusCode code="completed"/>
+					<value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue" displayName="initial patient population"/>
+					<entryRelationship typeCode="SUBJ" inversionInd="true">
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+							<code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="rate aggregation"/>
+							<value xsi:type="INT" value="1"/>
+							<methodCode code="COUNT" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod" displayName="count"/>
+						</observation>
+					</entryRelationship>
+					<!-- Note that a typical QRDA3 would include stratification for reporting purposes. 
+					That may be included as desired but is a MAY conformance statement. 
+					Since this report is for an individual patient, stratifications in this case would duplicate data elsewhere in the document -->
+					<reference typeCode="REFR">
+						<externalObservation classCode="OBS" moodCode="EVN">
+							<id root="0739FE2E-B8DE-4A56-B064-877CC8E0977D"/>
+						</externalObservation>
+					</reference>
+				</observation>
+			</component>
+			<component>
+				<observation classCode="OBS" moodCode="EVN">
+					<templateId root="2.16.840.1.113883.10.20.27.3.5"/>
+					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="Assertion"/>
+					<statusCode code="completed"/>
+					<value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue" displayName="denominator"/>
+					<entryRelationship typeCode="SUBJ" inversionInd="true">
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+							<code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="rate aggregation"/>
+							<value xsi:type="INT" value="1"/>
+							<methodCode code="COUNT" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod" displayName="count"/>
+						</observation>
+					</entryRelationship>
+					<reference typeCode="REFR">
+						<externalObservation classCode="OBS" moodCode="EVN">
+							<id root="D346DA74-F16E-4159-BEDF-331BA28837FB"/>
+						</externalObservation>
+					</reference>
+				</observation>
+			</component>
+			<component>
+				<observation classCode="OBS" moodCode="EVN">
+					<templateId root="2.16.840.1.113883.10.20.27.3.5"/>
+					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="Assertion"/>
+					<statusCode code="completed"/>
+					<value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue" displayName="numerator"/>
+					<entryRelationship typeCode="SUBJ" inversionInd="true">
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+							<code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="rate aggregation"/>
+							<value xsi:type="INT" value="0"/>
+							<methodCode code="COUNT" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod" displayName="count"/>
+						</observation>
+					</entryRelationship>
+					<reference typeCode="REFR">
+						<externalObservation classCode="OBS" moodCode="EVN">
+							<id root="6D01A564-58CC-4CF5-929F-B83583701BFE"/>
+						</externalObservation>
+					</reference>
+				</observation>
+			</component>
+		</organizer>
+	</entry>
+	<entry>
+		<organizer classCode="CLUSTER" moodCode="EVN">
+			<templateId root="2.16.840.1.113883.10.20.24.3.98"/>
+			<templateId root="2.16.840.1.113883.10.20.27.3.1"/>
+			<id root="32f4ad75-9e16-43f8-83f3-a1d906a147ab"/>
+			<statusCode code="completed"/>
+			<reference typeCode="REFR">
+				<externalDocument classCode="DOC" moodCode="EVN">
+					<id root="2.16.840.1.113883.4.738" extension="40280381-51f0-825b-0152-22a1e7e81737"/>
+					<code code="57024-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Health Quality Measure Document"/>
+					<text>Colorectal Cancer Screening</text>
+					<versionNumber value="5"/>
+				</externalDocument>
+			</reference>
+			<component>
+				<observation classCode="OBS" moodCode="EVN">
+					<templateId root="2.16.840.1.113883.10.20.27.3.5"/>
+					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="Assertion"/>
+					<statusCode code="completed"/>
+					<value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue" displayName="initial patient population"/>
+					<entryRelationship typeCode="SUBJ" inversionInd="true">
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+							<code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="rate aggregation"/>
+							<value xsi:type="INT" value="1"/>
+							<methodCode code="COUNT" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod" displayName="count"/>
+						</observation>
+					</entryRelationship>
+					<reference typeCode="REFR">
+						<externalObservation classCode="OBS" moodCode="EVN">
+							<id root="4D1C7452-B908-4616-B9E9-36C9AA71005B"/>
+						</externalObservation>
+					</reference>
+				</observation>
+			</component>
+			<component>
+				<observation classCode="OBS" moodCode="EVN">
+					<templateId root="2.16.840.1.113883.10.20.27.3.5"/>
+					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="Assertion"/>
+					<statusCode code="completed"/>
+					<value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue" displayName="denominator"/>
+					<entryRelationship typeCode="SUBJ" inversionInd="true">
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+							<code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="rate aggregation"/>
+							<value xsi:type="INT" value="1"/>
+							<methodCode code="COUNT" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod" displayName="count"/>
+						</observation>
+					</entryRelationship>
+					<reference typeCode="REFR">
+						<externalObservation classCode="OBS" moodCode="EVN">
+							<id root="589C2FD6-6AA9-4AF8-9E1C-973170361917"/>
+						</externalObservation>
+					</reference>
+				</observation>
+			</component>
+			<component>
+				<observation classCode="OBS" moodCode="EVN">
+					<templateId root="2.16.840.1.113883.10.20.27.3.5"/>
+					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="Assertion"/>
+					<statusCode code="completed"/>
+					<value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue" displayName="numerator"/>
+					<entryRelationship typeCode="SUBJ" inversionInd="true">
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+							<code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="rate aggregation"/>
+							<value xsi:type="INT" value="0"/>
+							<methodCode code="COUNT" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod" displayName="count"/>
+						</observation>
+					</entryRelationship>
+					<reference typeCode="REFR">
+						<externalObservation classCode="OBS" moodCode="EVN">
+							<id root="52ADE511-39D4-4CBC-84B6-A82059741359"/>
+						</externalObservation>
+					</reference>
+				</observation>
+			</component>
+		</organizer>
+	</entry>
+	<entry>
+		<organizer classCode="CLUSTER" moodCode="EVN">
+			<templateId root="2.16.840.1.113883.10.20.24.3.98"/>
+			<templateId root="2.16.840.1.113883.10.20.27.3.1"/>
+			<id root="f243a0e3-0590-4e86-85b7-2b49e86eb7c5"/>
+			<statusCode code="completed"/>
+			<reference typeCode="REFR">
+				<externalDocument classCode="DOC" moodCode="EVN">
+					<id root="2.16.840.1.113883.4.738" extension="40280381-52fc-3a32-0153-1a646a2a0bfa"/>
+					<code code="57024-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Health Quality Measure Document"/>
+					<text>Pneumonia Vaccination Status for Older Adults</text>
+					<versionNumber value="5"/>
+				</externalDocument>
+			</reference>
+			<component>
+				<observation classCode="OBS" moodCode="EVN">
+					<templateId root="2.16.840.1.113883.10.20.27.3.5"/>
+					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="Assertion"/>
+					<statusCode code="completed"/>
+					<value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue" displayName="initial patient population"/>
+					<entryRelationship typeCode="SUBJ" inversionInd="true">
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+							<code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="rate aggregation"/>
+							<value xsi:type="INT" value="0"/>
+							<methodCode code="COUNT" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod" displayName="count"/>
+						</observation>
+					</entryRelationship>
+					<entryRelationship typeCode="COMP">
+						<reference typeCode="REFR">
+							<externalObservation classCode="OBS" moodCode="EVN">
+								<id root="E1A2F7D4-0B24-47FC-9369-0700771B2D40"/>
+							</externalObservation>
+						</reference>
+					</entryRelationship>
+				</observation>
+			</component>
+			<component>
+				<observation classCode="OBS" moodCode="EVN">
+					<templateId root="2.16.840.1.113883.10.20.27.3.5"/>
+					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="Assertion"/>
+					<statusCode code="completed"/>
+					<value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue" displayName="denominator"/>
+					<entryRelationship typeCode="SUBJ" inversionInd="true">
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+							<code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="rate aggregation"/>
+							<value xsi:type="INT" value="0"/>
+							<methodCode code="COUNT" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod" displayName="count"/>
+						</observation>
+					</entryRelationship>
+					<reference typeCode="REFR">
+						<externalObservation classCode="OBS" moodCode="EVN">
+							<id root="B57EA797-15A1-4C60-B34C-BAE292FE3B76"/>
+						</externalObservation>
+					</reference>
+				</observation>
+			</component>
+			<component>
+				<observation classCode="OBS" moodCode="EVN">
+					<templateId root="2.16.840.1.113883.10.20.27.3.5"/>
+					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="Assertion"/>
+					<statusCode code="completed"/>
+					<value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue" displayName="numerator"/>
+					<entryRelationship typeCode="SUBJ" inversionInd="true">
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
+							<code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="rate aggregation"/>
+							<value xsi:type="INT" value="0"/>
+							<methodCode code="COUNT" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod" displayName="count"/>
+						</observation>
+					</entryRelationship>
+					<reference typeCode="REFR">
+						<externalObservation classCode="OBS" moodCode="EVN">
+							<id root="CBD0926D-6088-44EE-883C-0A0F9E77E2A1"/>
+						</externalObservation>
+					</reference>
+				</observation>
+			</component>
+		</organizer>
+	</entry>
+</section>
