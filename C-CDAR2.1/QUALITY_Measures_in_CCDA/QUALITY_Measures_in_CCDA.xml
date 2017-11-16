@@ -23,48 +23,48 @@
 			<tbody>
 				<tr>
 					<td>
-						<content ID="pop1">Diabetes Hemoglobin A1c Poor Control (CMS 122v5)</content>
+						<content>Diabetes Hemoglobin A1c Poor Control (CMS 122v5)</content>
 					</td>
 					<td>
-						<content ID="count1">Jan 1 2017 - Dec 31 2017</content>
+						<content>Jan 1 2017 - Dec 31 2017</content>
 					</td>
 					<td>
 						<!-- Compliance here is based on  the measure "Improvement Notation" from the Measure Definition-->
 						<!-- Since lower = better for CMS 122v5, a numerator of zero means complaince-->
-						<content ID="count1">Compliant</content>
+						<content>Compliant</content>
 					</td>
 					<td>
-						<content ID="count1">IPP: 1, DEN: 1, NUM: 0 </content>
+						<content>IPP: 1, DEN: 1, NUM: 0 </content>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<content ID="pop1">Colorectal Cancer Screening (CMS 130v5)</content>
+						<content>Colorectal Cancer Screening (CMS 130v5)</content>
 					</td>
 					<td>
-						<content ID="count1">Jan 1 2017 - Dec 31 2017</content>
+						<content>Jan 1 2017 - Dec 31 2017</content>
 					</td>
 					<td>
 						<!-- Compliance here is based on  the measure "Improvement Notation" from the Measure Definition-->
 						<!-- Since higerh = better for CMS 130v5, a numerator of zero means non-complaince-->
-						<content ID="count1">Non-Compliant</content>
+						<content>Non-Compliant</content>
 					</td>
 					<td>
-						<content ID="count1">IPP: 1, DEN: 1, NUM: 0 </content>
+						<content>IPP: 1, DEN: 1, NUM: 0 </content>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<content ID="pop1">Pneumococcal Vaccination Status for Older Adults (CMS 127v5)</content>
+						<content>Pneumococcal Vaccination Status for Older Adults (CMS 127v5)</content>
 					</td>
 					<td>
-						<content ID="count1">Jan 1 2017 - Dec 31 2017</content>
+						<content>Jan 1 2017 - Dec 31 2017</content>
 					</td>
 					<td>
-						<content ID="count1">Not Eligible</content>
+						<content>Not Eligible</content>
 					</td>
 					<td>
-						<content ID="count1">IPP: 0</content>
+						<content>IPP: 0</content>
 					</td>
 				</tr>
 			</tbody>
