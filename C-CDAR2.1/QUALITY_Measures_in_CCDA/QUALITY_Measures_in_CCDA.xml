@@ -1,7 +1,7 @@
 <!-- This is an example of how to include quality measure information (i.e. reported outcome) on an individual patient's C-CDA document -->
 <!-- This uses templates from the QRDA3, which is not part of C-CDA, but ia CDA conformant and a US national standard for reporting quality measures -->
 <!-- This uses the Measure Section Reoprting section, where all aggregate counts are 0 or 1, since applied to a specific patient -->
-<!-- This example would not suitable for US QRDA reporting since some components and stratifications have been removed -->
+<!-- This example would not suitable for US QRDA reporting. Use QRDA1 and QRDA3 documents for such -->
 <section>
 	<!-- Templates use QRDA3 1.0 (current reporting standard as of 2017)--> 
 	<templateId root="2.16.840.1.113883.10.20.24.2.2"/>
