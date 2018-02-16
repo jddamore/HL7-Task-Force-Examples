@@ -821,6 +821,13 @@
 									</td>
 									<td>Active</td>
 								</tr>
+								<tr ID="Problem1">
+									<td>Chronic Kidney Disease Stage 5</td>
+									<td>
+										<content>Onset: February 27 2014</content>
+									</td>
+									<td>Active</td>
+								</tr>
 							</tbody>
 						</table>
 					</text>
@@ -910,7 +917,7 @@
 							codeSystemName="LOINC" displayName="Problem"/>
 									</code>
 									<text>
-										<reference value="#Problem1"/>
+										<reference value="#Problem2"/>
 									</text>
 									<statusCode code="completed"/>
 									<effectiveTime>
