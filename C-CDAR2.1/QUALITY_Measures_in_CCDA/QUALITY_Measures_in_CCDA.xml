@@ -1,70 +1,124 @@
 <!-- This is an example of how to include quality measure information (i.e. reported outcome) on an individual patient's C-CDA document -->
-<!-- This uses templates from the QRDA3, which is not part of C-CDA, but ia CDA conformant and a US national standard for reporting quality measures -->
-<!-- This uses the Measure Section Reoprting section, where all aggregate counts are 0 or 1, since applied to a specific patient -->
-<!-- This example would not suitable for US QRDA reporting. Use QRDA1 and QRDA3 documents for such -->
+<!-- This uses templates from the QRDA1, which is not part of C-CDA, but ia CDA conformant and a US national standard for reporting quality measures -->
+<!-- This uses the "Measure Section" section where the measure logic (i.e. denominators, numerators) is imparted using negationInd of measure component observations -->
+<!-- This example complies with QRDA1 measure section but may not suitable for reporting. Refer to QRDA1 and QRDA3 implementation guidance for more details -->
+<!-- Per discussion with clinical quality improvement CQI workgroup, this aligns with how the Joint Commission encourage patient level reporting.-->
 <section>
-	<!-- Templates use QRDA3 1.0 (current reporting standard as of 2017)--> 
+	<!-- Templates use QRDA1 3.1 (current reporting standard as of 2017)--> 
+	<!-- This is the templateId for Measure Section -->
 	<templateId root="2.16.840.1.113883.10.20.24.2.2"/>
-	<templateId root="2.16.840.1.113883.10.20.27.2.1"/>
+	<!-- This is the templateId for Measure Section QDM -->
+	<templateId root="2.16.840.1.113883.10.20.24.2.3"/>
 	<code code="55186-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Measure Document"/>
 	<title>Measure Section</title>
 	<text>
 		<!-- Since this narrative table is designed for an individual patient, it may look substantially different 
 		than a conventional QRDA 3 table used to report outcomes across a wide array of patients --> 
 		<table border="1" width="100%">
+			<colgroup>
+				<col width="31%"/>
+				<col width="15%"/>
+				<col width="15%"/>
+				<col width="15%"/>
+				<col width="8%"/>
+				<col width="8%"/>
+				<col width="8%"/>
+			</colgroup>
 			<thead>
 				<tr>
 					<th>Measure</th>
 					<th>Time</th>
 					<th>Compliance</th>
-					<th>Logic</th>
+					<th>Denominator</th>
+					<th>Numerator</th>
+					<th>Exclusion</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<td>
-						<content>Diabetes Hemoglobin A1c Poor Control (CMS 122v5)</content>
+						Diabetes Hemoglobin A1c Poor Control (CMS 122v5)
 					</td>
 					<td>
-						<content>Jan 1 2017 - Dec 31 2017</content>
+						Jan 1 2017 - Dec 31 2017
 					</td>
 					<td>
 						<!-- Compliance here is based on  the measure "Improvement Notation" from the Measure Definition-->
-						<!-- Since lower = better for CMS 122v5, a numerator of zero means complaince-->
-						<content>Compliant</content>
+						<!-- Since lower = better for CMS 122v5, a false numerator means complaince-->
+						Compliant
 					</td>
 					<td>
-						<content>IPP: 1, DEN: 1, NUM: 0 </content>
+						yes  
+					</td>
+					<td>
+						no
+					</td>
+					<td>
+						no
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<content>Colorectal Cancer Screening (CMS 130v5)</content>
+						Colorectal Cancer Screening (CMS 130v5)
 					</td>
 					<td>
-						<content>Jan 1 2017 - Dec 31 2017</content>
+						Jan 1 2017 - Dec 31 2017
 					</td>
 					<td>
 						<!-- Compliance here is based on  the measure "Improvement Notation" from the Measure Definition-->
-						<!-- Since higerh = better for CMS 130v5, a numerator of zero means non-complaince-->
-						<content>Non-Compliant</content>
+						<!-- Since higher = better for CMS 130v5, a false numerator means non-complaince-->
+						Non-Compliant
 					</td>
 					<td>
-						<content>IPP: 1, DEN: 1, NUM: 0 </content>
+						yes
+					</td>
+					<td>
+						no
+					</td>
+					<td>
+						no
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<content>Pneumococcal Vaccination Status for Older Adults (CMS 127v5)</content>
+						Pneumococcal Vaccination Status for Older Adults (CMS 127v5)
 					</td>
 					<td>
-						<content>Jan 1 2017 - Dec 31 2017</content>
+						Jan 1 2017 - Dec 31 2017
 					</td>
 					<td>
-						<content>Not Eligible</content>
+						<!-- Since this patient was not in initial population of measure, we show as not eligible-->
+						Not Eligible
 					</td>
 					<td>
-						<content>IPP: 0</content>
+						no
+					</td>
+					<td>
+						no
+					</td>
+					<td>
+						no
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Controlling High Blood Pressure (CMS 165v5)
+					</td>
+					<td>
+						Jan 1 2017 - Dec 31 2017
+					</td>
+					<td>
+						<!-- Patient excluded due to a condition (e.g. Stage 5 CKD) -->
+						Excluded
+					</td>
+					<td>
+						yes
+					</td>
+					<td>
+						excl
+					</td>
+					<td>
+						yes
 					</td>
 				</tr>
 			</tbody>
@@ -73,7 +127,7 @@
 	<entry>
 		<organizer classCode="CLUSTER" moodCode="EVN">
 			<templateId root="2.16.840.1.113883.10.20.24.3.98"/>
-			<templateId root="2.16.840.1.113883.10.20.27.3.1"/>
+			<templateId root="2.16.840.1.113883.10.20.24.3.97"/>
 			<id root="d7345481-b3b5-41e0-a8ae-03dabcd4a0cc"/>
 			<statusCode code="completed"/>
 			<reference typeCode="REFR">
@@ -84,47 +138,13 @@
 					<versionNumber value="5"/>
 				</externalDocument>
 			</reference>
-			<!-- There is a requirement that at least 1 component be included (see QRDA3 CONF 2226-18425). 
-			In this example we always include initial population. Numerator and denominator are included where IPP = 1. 
-			Exclusion and Exception criteria could be included as applicable -->
 			<component>
-				<observation classCode="OBS" moodCode="EVN">
-					<templateId root="2.16.840.1.113883.10.20.27.3.5"/>
+				<!-- Set negationInd="false" to assert that the criteria are met by the included data. 
+				Set negationInd="true" to assert that the criteria are NOT met by the included data. 
+				Since this patient is in the denominator, negationInd is set to false -->
+				<observation classCode="OBS" moodCode="EVN" negationInd="false">
 					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="Assertion"/>
-					<statusCode code="completed"/>
-					<value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue" displayName="initial patient population"/>
-					<entryRelationship typeCode="SUBJ" inversionInd="true">
-						<observation classCode="OBS" moodCode="EVN">
-							<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
-							<code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="rate aggregation"/>
-							<value xsi:type="INT" value="1"/>
-							<methodCode code="COUNT" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod" displayName="count"/>
-						</observation>
-					</entryRelationship>
-					<!-- Note that a typical QRDA3 would include stratification for reporting purposes. 
-					That may be included as desired but is a MAY conformance statement. 
-					Since this report is for an individual patient, stratifications in this case would duplicate data elsewhere in the document -->
-					<reference typeCode="REFR">
-						<externalObservation classCode="OBS" moodCode="EVN">
-							<id root="0739FE2E-B8DE-4A56-B064-877CC8E0977D"/>
-						</externalObservation>
-					</reference>
-				</observation>
-			</component>
-			<component>
-				<observation classCode="OBS" moodCode="EVN">
-					<templateId root="2.16.840.1.113883.10.20.27.3.5"/>
-					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="Assertion"/>
-					<statusCode code="completed"/>
-					<value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue" displayName="denominator"/>
-					<entryRelationship typeCode="SUBJ" inversionInd="true">
-						<observation classCode="OBS" moodCode="EVN">
-							<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
-							<code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="rate aggregation"/>
-							<value xsi:type="INT" value="1"/>
-							<methodCode code="COUNT" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod" displayName="count"/>
-						</observation>
-					</entryRelationship>
+					<value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ObservationValue" displayName="denominator"/>
 					<reference typeCode="REFR">
 						<externalObservation classCode="OBS" moodCode="EVN">
 							<id root="D346DA74-F16E-4159-BEDF-331BA28837FB"/>
@@ -133,19 +153,11 @@
 				</observation>
 			</component>
 			<component>
-				<observation classCode="OBS" moodCode="EVN">
-					<templateId root="2.16.840.1.113883.10.20.27.3.5"/>
+				<!-- Since this patient is NOT in the numerator, it is set to true -->
+				<!-- Note that this measure has inverted numerator logic (i.e. numerator events are non-compliant)-->
+				<observation classCode="OBS" moodCode="EVN" negationInd="true">
 					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="Assertion"/>
-					<statusCode code="completed"/>
-					<value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue" displayName="numerator"/>
-					<entryRelationship typeCode="SUBJ" inversionInd="true">
-						<observation classCode="OBS" moodCode="EVN">
-							<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
-							<code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="rate aggregation"/>
-							<value xsi:type="INT" value="0"/>
-							<methodCode code="COUNT" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod" displayName="count"/>
-						</observation>
-					</entryRelationship>
+					<value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ObservationValue" displayName="numerator"/>
 					<reference typeCode="REFR">
 						<externalObservation classCode="OBS" moodCode="EVN">
 							<id root="6D01A564-58CC-4CF5-929F-B83583701BFE"/>
@@ -153,12 +165,13 @@
 					</reference>
 				</observation>
 			</component>
+			<!-- no denominator exclusion criteria available for this measure so omitted -->
 		</organizer>
 	</entry>
 	<entry>
 		<organizer classCode="CLUSTER" moodCode="EVN">
 			<templateId root="2.16.840.1.113883.10.20.24.3.98"/>
-			<templateId root="2.16.840.1.113883.10.20.27.3.1"/>
+			<templateId root="2.16.840.1.113883.10.20.24.3.97"/>
 			<id root="32f4ad75-9e16-43f8-83f3-a1d906a147ab"/>
 			<statusCode code="completed"/>
 			<reference typeCode="REFR">
@@ -170,40 +183,10 @@
 				</externalDocument>
 			</reference>
 			<component>
-				<observation classCode="OBS" moodCode="EVN">
-					<templateId root="2.16.840.1.113883.10.20.27.3.5"/>
+				<!-- Since this patient is in the denominator, negationInd is set to false -->
+				<observation classCode="OBS" moodCode="EVN" negationInd="false">
 					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="Assertion"/>
-					<statusCode code="completed"/>
-					<value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue" displayName="initial patient population"/>
-					<entryRelationship typeCode="SUBJ" inversionInd="true">
-						<observation classCode="OBS" moodCode="EVN">
-							<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
-							<code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="rate aggregation"/>
-							<value xsi:type="INT" value="1"/>
-							<methodCode code="COUNT" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod" displayName="count"/>
-						</observation>
-					</entryRelationship>
-					<reference typeCode="REFR">
-						<externalObservation classCode="OBS" moodCode="EVN">
-							<id root="4D1C7452-B908-4616-B9E9-36C9AA71005B"/>
-						</externalObservation>
-					</reference>
-				</observation>
-			</component>
-			<component>
-				<observation classCode="OBS" moodCode="EVN">
-					<templateId root="2.16.840.1.113883.10.20.27.3.5"/>
-					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="Assertion"/>
-					<statusCode code="completed"/>
-					<value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue" displayName="denominator"/>
-					<entryRelationship typeCode="SUBJ" inversionInd="true">
-						<observation classCode="OBS" moodCode="EVN">
-							<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
-							<code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="rate aggregation"/>
-							<value xsi:type="INT" value="1"/>
-							<methodCode code="COUNT" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod" displayName="count"/>
-						</observation>
-					</entryRelationship>
+					<value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ObservationValue" displayName="denominator"/>
 					<reference typeCode="REFR">
 						<externalObservation classCode="OBS" moodCode="EVN">
 							<id root="589C2FD6-6AA9-4AF8-9E1C-973170361917"/>
@@ -212,22 +195,26 @@
 				</observation>
 			</component>
 			<component>
-				<observation classCode="OBS" moodCode="EVN">
-					<templateId root="2.16.840.1.113883.10.20.27.3.5"/>
+				<!-- Since this patient is NOT in the numerator, negationInd is set to true -->
+				<!-- Note that this measure has typical numerator logic (i.e. numerator events are compliant)-->
+				<observation classCode="OBS" moodCode="EVN" negationInd="true">
 					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="Assertion"/>
-					<statusCode code="completed"/>
-					<value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue" displayName="numerator"/>
-					<entryRelationship typeCode="SUBJ" inversionInd="true">
-						<observation classCode="OBS" moodCode="EVN">
-							<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
-							<code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="rate aggregation"/>
-							<value xsi:type="INT" value="0"/>
-							<methodCode code="COUNT" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod" displayName="count"/>
-						</observation>
-					</entryRelationship>
+					<value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ObservationValue" displayName="numerator"/>
 					<reference typeCode="REFR">
 						<externalObservation classCode="OBS" moodCode="EVN">
 							<id root="52ADE511-39D4-4CBC-84B6-A82059741359"/>
+						</externalObservation>
+					</reference>
+				</observation>
+			</component>
+			<component>
+				<!-- Since this patient is NOT excluded, negationInd is set to true -->
+				<observation classCode="OBS" moodCode="EVN" negationInd="true">
+					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="Assertion"/>
+					<value xsi:type="CD" code="DENEX" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ObservationValue" displayName="denominator exclusions"/>
+					<reference typeCode="REFR">
+						<externalObservation classCode="OBS" moodCode="EVN">
+							<id root="93AA9C96-E1FE-435B-BA0B-FAF0C5592275"/>
 						</externalObservation>
 					</reference>
 				</observation>
@@ -237,7 +224,7 @@
 	<entry>
 		<organizer classCode="CLUSTER" moodCode="EVN">
 			<templateId root="2.16.840.1.113883.10.20.24.3.98"/>
-			<templateId root="2.16.840.1.113883.10.20.27.3.1"/>
+			<templateId root="2.16.840.1.113883.10.20.24.3.97"/>
 			<id root="f243a0e3-0590-4e86-85b7-2b49e86eb7c5"/>
 			<statusCode code="completed"/>
 			<reference typeCode="REFR">
@@ -249,42 +236,12 @@
 				</externalDocument>
 			</reference>
 			<component>
-				<observation classCode="OBS" moodCode="EVN">
-					<templateId root="2.16.840.1.113883.10.20.27.3.5"/>
-					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="Assertion"/>
-					<statusCode code="completed"/>
-					<value xsi:type="CD" code="IPP" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue" displayName="initial patient population"/>
-					<entryRelationship typeCode="SUBJ" inversionInd="true">
-						<observation classCode="OBS" moodCode="EVN">
-							<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
-							<code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="rate aggregation"/>
-							<value xsi:type="INT" value="0"/>
-							<methodCode code="COUNT" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod" displayName="count"/>
-						</observation>
-					</entryRelationship>
-					<entryRelationship typeCode="COMP">
-						<reference typeCode="REFR">
-							<externalObservation classCode="OBS" moodCode="EVN">
-								<id root="E1A2F7D4-0B24-47FC-9369-0700771B2D40"/>
-							</externalObservation>
-						</reference>
-					</entryRelationship>
-				</observation>
 			</component>
 			<component>
-				<observation classCode="OBS" moodCode="EVN">
-					<templateId root="2.16.840.1.113883.10.20.27.3.5"/>
+				<!-- Since this patient is NOT in the denominator, negationInd is set to true -->
+				<observation classCode="OBS" moodCode="EVN" negationInd="true">
 					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="Assertion"/>
-					<statusCode code="completed"/>
-					<value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue" displayName="denominator"/>
-					<entryRelationship typeCode="SUBJ" inversionInd="true">
-						<observation classCode="OBS" moodCode="EVN">
-							<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
-							<code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="rate aggregation"/>
-							<value xsi:type="INT" value="0"/>
-							<methodCode code="COUNT" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod" displayName="count"/>
-						</observation>
-					</entryRelationship>
+					<value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ObservationValue" displayName="denominator"/>
 					<reference typeCode="REFR">
 						<externalObservation classCode="OBS" moodCode="EVN">
 							<id root="B57EA797-15A1-4C60-B34C-BAE292FE3B76"/>
@@ -293,22 +250,66 @@
 				</observation>
 			</component>
 			<component>
-				<observation classCode="OBS" moodCode="EVN">
-					<templateId root="2.16.840.1.113883.10.20.27.3.5"/>
+				<!-- Since this patient is NOT in the numerator, negationInd is set to true -->
+				<observation classCode="OBS" moodCode="EVN" negationInd="true">
 					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="Assertion"/>
-					<statusCode code="completed"/>
-					<value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue" displayName="numerator"/>
-					<entryRelationship typeCode="SUBJ" inversionInd="true">
-						<observation classCode="OBS" moodCode="EVN">
-							<templateId root="2.16.840.1.113883.10.20.27.3.3"/>
-							<code code="MSRAGG" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="rate aggregation"/>
-							<value xsi:type="INT" value="0"/>
-							<methodCode code="COUNT" codeSystem="2.16.840.1.113883.5.84" codeSystemName="ObservationMethod" displayName="count"/>
-						</observation>
-					</entryRelationship>
+					<value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ObservationValue" displayName="numerator"/>
 					<reference typeCode="REFR">
 						<externalObservation classCode="OBS" moodCode="EVN">
 							<id root="CBD0926D-6088-44EE-883C-0A0F9E77E2A1"/>
+						</externalObservation>
+					</reference>
+				</observation>
+			</component>
+			<!-- no denominator exclusion criteria available for this measure so omitted -->
+		</organizer>
+	</entry>
+	<entry>
+		<organizer classCode="CLUSTER" moodCode="EVN">
+			<templateId root="2.16.840.1.113883.10.20.24.3.98"/>
+			<templateId root="2.16.840.1.113883.10.20.27.3.1"/>
+			<id root="ee940592-38b1-44fe-a74b-83e1a479d651"/>
+			<statusCode code="completed"/>
+			<reference typeCode="REFR">
+				<externalDocument classCode="DOC" moodCode="EVN">
+					<id root="2.16.840.1.113883.4.738" extension="40280381-51f0-825b-0152-22b98cff181a"/>
+					<code code="57024-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Health Quality Measure Document"/>
+					<text>Controlling High Blood Pressure</text>
+					<versionNumber value="5"/>
+				</externalDocument>
+			</reference>
+			<component>
+				<!-- Since this patient is in the denominator, negationInd is set to false -->
+				<observation classCode="OBS" moodCode="EVN" negationInd="false">
+					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="Assertion"/>
+					<value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ObservationValue" displayName="denominator"/>
+					<reference typeCode="REFR">
+						<externalObservation classCode="OBS" moodCode="EVN">
+							<id root="E62FEBA3-0F98-460D-93CD-44314D7203A8"/>
+						</externalObservation>
+					</reference>
+				</observation>		
+			</component>
+			<component>
+				<!-- Since this patient is excluded, they are NOT in numerator, negationInd is set to true-->
+				<observation classCode="OBS" moodCode="EVN" negationInd="true">
+					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="Assertion"/>
+					<value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ObservationValue" displayName="numerator"/>
+					<reference typeCode="REFR">
+						<externalObservation classCode="OBS" moodCode="EVN">
+							<id root="F9FEBF42-4B21-47A9-B03E-D2DA5CF8492B"/>
+						</externalObservation>
+					</reference>
+				</observation>
+			</component>
+			<component>
+				<!-- Since this patient is  excluded, negationInd is set to false -->
+				<observation classCode="OBS" moodCode="EVN" negationInd="false">
+					<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" displayName="Assertion"/>
+					<value xsi:type="CD" code="DENEX" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ObservationValue" displayName="denominator exclusions"/>
+					<reference typeCode="REFR">
+						<externalObservation classCode="OBS" moodCode="EVN">
+							<id root="55A6D5F3-2029-4896-B850-4C7894161D7D"/>
 						</externalObservation>
 					</reference>
 				</observation>
