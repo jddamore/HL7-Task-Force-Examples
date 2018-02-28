@@ -27,8 +27,8 @@
 			<thead>
 				<tr>
 					<th>Measure</th>
-					<th>Time</th>
-					<th>Compliance</th>
+					<th>Compliance Period</th>
+					<th>Compliance Explanation</th>
 					<th>Denominator</th>
 					<th>Numerator</th>
 					<th>Exclusion</th>
