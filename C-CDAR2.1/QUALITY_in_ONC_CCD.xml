@@ -821,10 +821,17 @@
 									</td>
 									<td>Active</td>
 								</tr>
-								<tr ID="Problem1">
+								<tr ID="Problem2">
 									<td>Chronic Kidney Disease Stage 5</td>
 									<td>
 										<content>Onset: February 27 2014</content>
+									</td>
+									<td>Active</td>
+								</tr>
+								<tr ID="Problem3">
+									<td>Hypertension</td>
+									<td>
+										<content>Onset: February 7 2009</content>
 									</td>
 									<td>Active</td>
 								</tr>
@@ -842,7 +849,7 @@
 							<statusCode code="active"/>
 							<effectiveTime>
 								<!-- This equates to the time the concern was authored in the patient's chart. This may frequently be an EHR timestamp-->
-								<low value="20140302124536+0500"/>
+								<low value="20140302124532-0500"/>
 							</effectiveTime>
 							<entryRelationship typeCode="SUBJ">
 								<observation classCode="OBS" moodCode="EVN">
@@ -904,7 +911,7 @@
 							<statusCode code="active"/>
 							<effectiveTime>
 								<!-- This equates to the time the concern was authored in the patient's chart. This may frequently be an EHR timestamp-->
-								<low value="20140302124536+0500"/>
+								<low value="20140302124536-0500"/>
 							</effectiveTime>
 							<entryRelationship typeCode="SUBJ">
 								<observation classCode="OBS" moodCode="EVN">
@@ -955,6 +962,68 @@
 							</entryRelationship>
 						</act>
 					</entry>
+					<entry>
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.22.4.3" />
+							<templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01"/>
+							<id root="102ca2e9-884c-4523-a2b4-1b6c3469c397"/>
+							<code code="CONC" codeSystem="2.16.840.1.113883.5.6"/>
+							<!-- Since this is an active problem, the concern status is active. -->
+							<!-- While clinicians can track resolved problems, generally active problems will have active concern status and resolved concerns will be completed -->
+							<statusCode code="active"/>
+							<effectiveTime>
+								<!-- This equates to the time the concern was authored in the patient's chart. This may frequently be an EHR timestamp-->
+								<low value="20090207121205-0500"/>
+							</effectiveTime>
+							<entryRelationship typeCode="SUBJ">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.22.4.4" />
+									<templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01"/>
+									<id extension="10241104348" root="1.3.6.1.4.1.22812.4.111.0.4.1.2.1"/>
+									<code code="55607006" displayName="Problem"
+						codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+										<translation code="75326-9" codeSystem="2.16.840.1.113883.6.1"
+							codeSystemName="LOINC" displayName="Problem"/>
+									</code>
+									<text>
+										<reference value="#Problem3"/>
+									</text>
+									<statusCode code="completed"/>
+									<effectiveTime>
+										<!-- This represents the date of biological onset. -->
+										<low value="20090207"/>
+									</effectiveTime>
+									<!-- This is a SNOMED code as the primary vocabulary for problem lists-->
+									<value xsi:type="CD" code="59621000" codeSystem="2.16.840.1.113883.6.96"
+						codeSystemName="SNOMED CT" displayName="Essential Hypertension"/>
+									<author>
+										<templateId root="2.16.840.1.113883.10.20.22.4.119"/>
+										<time value="20090207121205-0500"/>
+										<assignedAuthor>
+											<id extension="66666" root="2.16.840.1.113883.4.6"/>
+											<code code="207RC0000X" codeSystem="2.16.840.1.113883.6.101"
+								codeSystemName="NUCC" displayName="Cardiovascular Disease"/>
+											<addr>
+												<streetAddressLine>6666 StreetName St.</streetAddressLine>
+												<city>Silver Spring</city>
+												<state>MD</state>
+												<postalCode>20901</postalCode>
+												<country>US</country>
+											</addr>
+											<telecom value="tel:+1(301)666-6666" use="WP"/>
+											<assignedPerson>
+												<name>
+													<given>Heartly</given>
+													<family>Sixer</family>
+													<suffix>MD</suffix>
+												</name>
+											</assignedPerson>
+										</assignedAuthor>
+									</author>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
 				</section>
 			</component>
 
@@ -973,6 +1042,7 @@
 						<table border="1" width="100%">
 							<thead>
 								<tr>
+									<th>Encounter Type (CPT code)</th>
 									<th>Encounter Diagnosis</th>
 									<th>Location</th>
 									<th>Date</th>
@@ -980,6 +1050,7 @@
 							</thead>
 							<tbody>
 								<tr>
+									<td>Preventative Exam (99396)</td>
 									<td ID="Encounter1"> Anemia in Chronic Kidney Disease</td>
 									<td>Community Health and Hospitals</td>
 									<td>June 22, 2017 at 8:00am</td>
@@ -1273,9 +1344,9 @@
 								</tr>
 								<tr>
 									<td ID="result6">Glucose [Mass/volume] in urine by test strip</td>
-									<td ID="resultvalue6">50mg/dl</td>
-									<td ID="referencerange6">Neg</td>
-									<td/>
+									<td ID="resultvalue6">10 mg/dL</td>
+									<td ID="referencerange6">0-15 mg/dL</td>
+									<td>Normal</td>
 									<td>06/22/2017</td>
 								</tr>
 							</tbody>
