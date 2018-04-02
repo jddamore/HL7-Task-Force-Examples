@@ -3,6 +3,7 @@
 <!-- This uses the "Measure Section" section where the measure logic (i.e. denominators, numerators) is imparted using negationInd of measure component observations -->
 <!-- This example complies with QRDA1 measure section but may not suitable for reporting. Refer to QRDA1 and QRDA3 implementation guidance for more details -->
 <!-- Per discussion with clinical quality improvement CQI workgroup, this aligns with how the Joint Commission encourage patient level reporting.-->
+<!-- For the measures shown in this section, the clinical data that support quality calculation would be included in other sections (e.g. problems, procedures, results, vital signs, etc.) --> 
 <section>
 	<!-- Templates use QRDA1 3.1 (current reporting standard as of 2017)--> 
 	<!-- This is the templateId for Measure Section -->
