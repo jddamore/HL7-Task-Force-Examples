@@ -7,7 +7,6 @@ C-CDA 2.1 Example: TBD
 Reference to full CDA sample: TBD
 
 Validation location: https://sitenv.org/sandbox-ccda/ccda-validator
-Note that validation returns error on sdtc:deceasedInd
 
 Comments: This is an example of how to use extension of deceasedInd. See this site for more on CDA extensions: http://wiki.hl7.org/index.php?title=CDA_R2_Extensions
 
