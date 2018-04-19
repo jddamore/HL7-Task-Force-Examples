@@ -17,13 +17,11 @@
 				<given>Adam</given>
 				<family>Deadman</family>
 			</name>
-			<!-- From CDA R2 on administrativeGender Code: This attribute does not include terms related to clinical gender. 
-			Gender is a complex physiological, genetic and sociological concept that requires multiple observations in order to be 
-			comprehensively described. The purpose of this attribute is to provide a high level classification that can additionally 
-			be used for the appropriate allocation of inpatient bed assignment.-->
 			<!-- Sex at birth and gender identity may be specified in social history -->
 			<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" displayName="Male" codeSystemName="AdministrativeGender"/>
 			<birthTime value="19521022"/>
+			<!-- A full CDA example may include the Deceased Observation to indicate cause of death -->
+			<!-- A Deceased Observation may be present in any section -- Problem List is a suitable location -->
 			<sdtc:deceasedInd value="true" />
 			<sdtc:deceasedTime value="20180315" />
 			<maritalStatusCode code="M" displayName="Married" codeSystem="2.16.840.1.113883.5.2" codeSystemName="MaritalStatus"/>
