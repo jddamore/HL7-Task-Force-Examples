@@ -14,7 +14,6 @@
 					<th>Medication</th>
 					<th>Dosage</th>
 					<th>Effective Dates (start - stop)</th>
-					<th>Status</th>
 					<th>Comments</th>
 				</tr>
 			</thead>
@@ -26,8 +25,6 @@
 					</td>
 					<td>NA</td>
 					<td>March 15, 2018</td>
-					<!-- Should this be cancelled??? -->
-					<td>Completed</td>
 					<td ID="Medication_0_comment">Patient refused</td>
 				</tr>
 			</tbody>
@@ -110,6 +107,7 @@
 					<effectiveTime>
 						<low value="20180315112305-0500"/>
 					</effectiveTime>
+					<!-- sdtc:valueset extension is required in many QRDA templates. It's allowed in C-CDA. -->
 					<value xsi:type="CD" code="105480006" codeSystem="2.16.840.1.113883.6.96"  codeSystemName="SNOMED CT" displayName="Refusal of treatment by patient" sdtc:valueSet="2.16.840.1.113883.3.526.3.1008" />
 				</observation>
 			</entryRelationship>
