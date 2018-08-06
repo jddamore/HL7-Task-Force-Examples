@@ -366,10 +366,8 @@
 			<!-- No allergy information  -->
 			<component>
 				<section nullFlavor="NI">
-					<!-- *** Allergies and Intolerances Section (entries required) (V3) *** -->
 					<templateId root="2.16.840.1.113883.10.20.22.2.6.1" extension="2015-08-01"/>
 					<templateId root="2.16.840.1.113883.10.20.22.2.6.1"/>
-					<!-- Alerts section template -->
 					<code code="48765-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
 					<title>Allergies and Adverse Reactions</title>
 					<text>No Known Drug Allergies</text>
@@ -380,7 +378,6 @@
 			<!-- No known medications -->			
 			<component>
 				<section nullFlavor="NI">
-					<!-- *** Medications Section (entries required) (V2) *** -->
 					<templateId root="2.16.840.1.113883.10.20.22.2.1.1" extension="2014-06-09"/>
 					<templateId root="2.16.840.1.113883.10.20.22.2.1.1"/>
 					<code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HISTORY OF MEDICATION USE"/>
@@ -423,14 +420,11 @@
 			<!-- No known problems -->		
 			<component>
 				<section nullFlavor="NI">
-					<!--  *** Problem Section (entries required) (V3) *** -->
 					<templateId root="2.16.840.1.113883.10.20.22.2.5.1" extension="2015-08-01"/>
 					<templateId root="2.16.840.1.113883.10.20.22.2.5.1"/>
 					<code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="PROBLEM LIST"/>
 					<title>Problems</title>
-					<text>
-						No Information
-					</text>
+					<text>No Information</text>
 				</section>
 			</component>
 
@@ -438,7 +432,6 @@
 			<!-- No known encounters -->
 			<component>
 				<section nullFlavor="NI">
-					<!-- *** Encounters section (entries required) (V3) *** -->
 					<templateId root="2.16.840.1.113883.10.20.22.2.22.1" extension="2015-08-01"/>
 					<templateId root="2.16.840.1.113883.10.20.22.2.22.1"/>
 					<code code="46240-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of encounters"/>
@@ -449,10 +442,8 @@
 
 			<!-- ************** PROCEDURES and UDI ***************** -->
 			<component>
-				<!-- nullFlavor of NI indicates No Information.-->
 				<section nullFlavor="NI">
 					<templateId root="2.16.840.1.113883.10.20.22.2.7.1" extension="2014-06-09" />
-					<!-- Procedures section template -->
 					<code code="47519-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="PROCEDURES" />
 					<title>Procedures</title>
 					<text>No Information</text>
@@ -465,6 +456,7 @@
 				<section nullFlavor="NI">
 					<!-- Medical equipment section -->
 					<templateId root="2.16.840.1.113883.10.20.22.2.23" extension="2014-06-09"/>
+					<templateId root="2.16.840.1.113883.10.20.22.2.23" />
 					<code code="46264-8" codeSystem="2.16.840.1.113883.6.1" />
 					<title>Medical Equipment</title>
 					<text>
@@ -477,7 +469,6 @@
 			<!-- ******************** IMMUNIZATIONS ********************* -->
 			<component>
 				<section nullFlavor="NI">
-					<!-- *** Immunizations Section (entries required) (V2) *** -->
 					<templateId root="2.16.840.1.113883.10.20.22.2.2.1" extension="2014-06-09"/>
 					<templateId root="2.16.840.1.113883.10.20.22.2.2.1"/>
 					<code code="11369-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of immunizations"/>
@@ -502,6 +493,7 @@
 				<section>
 					<!--  ** Social History Section (V3) ** -->
 					<templateId root="2.16.840.1.113883.10.20.22.2.17" extension="2015-08-01"/>
+					<templateId root="2.16.840.1.113883.10.20.22.2.17" />
 					<code code="29762-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Social History"/>
 					<title>Social History</title>
 					<text>
@@ -575,7 +567,6 @@
 			<!-- edited as per test doc - all of this data is directly relevant -db -->
 			<component>
 				<section nullFlavor="NI">
-					<!-- Results Section (entries required) (V3) -->
 					<templateId root="2.16.840.1.113883.10.20.22.2.3.1" extension="2015-08-01"/>
 					<templateId root="2.16.840.1.113883.10.20.22.2.3.1"/>
 					<code code="30954-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="RESULTS"/>
@@ -727,6 +718,7 @@
 			<component>
 				<section nullFlavor="NI">
 					<templateId root="2.16.840.1.113883.10.20.21.2.3" extension="2015-08-01" />
+					<templateId root="2.16.840.1.113883.10.20.21.2.3" />
 					<code code="62387-6" displayName="Interventions Provided" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
 					<title>Interventions Section</title>
 					<text>No intervention information</text>
