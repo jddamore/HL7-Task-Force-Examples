@@ -1,0 +1,75 @@
+<section>
+	<templateId root="2.16.840.1.113883.10.20.22.2.10" extension="2014-06-09"/>
+	<templateId root="2.16.840.1.113883.10.20.22.2.10"/>
+	<code code="18776-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Plan of Care"/>
+	<title>Plan of Treatment</title>
+	<!-- one planned encounter in the human readable text and as a discrete entry -->
+	<text>
+		<!-- this section may contain many different Planned items, so we use the table caption to help identify each -->
+		<table>
+			<caption>Planned Referral</caption>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Date</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ID="ID0EFFFFFFCAB3">
+					<td ID="ID0EFAAAAACAB3">Referral to Specialist</td>
+					<td>June 23, 2018</td>
+					<td>Dr. Henry Levine Eighth</td>
+				</tr>
+			</tbody>
+		</table>
+	</text>
+	<!-- a planned encounter entry -->
+	<entry>
+		<encounter moodCode="INT" classCode="ENC">
+			<templateId root="2.16.840.1.113883.10.20.22.4.40" extension="2014-06-09" />
+			<!-- Planned Encounter V2 template -->
+			<!-- This id may be referenced in the note received afterward --> 
+			<id root="9a6d1bac-17d3-4195-89a4-1121bc809b4e" />
+			<code code="103697008" displayName="Patient referral to specialist" codeSystemName="SNOMED CT" codeSystem="2.16.840.1.113883.6.96" >
+				<originalText>
+					<reference value="#ID0EFAAAAACAB3"/>
+				</originalText>
+			</code>
+			<text>
+				<!-- referencing the entire text -->
+				<reference value="#ID0EFFFFFFCAB3"/>
+			</text>
+			<statusCode code="active" />
+			<effectiveTime value="20180623" />
+			<performer>
+				<assignedEntity>
+					<!-- Having this be an NPI may be used to identify completion of referral --> 
+					<id root="2.16.840.1.113883.4.6" extension="1093929010" />
+					<code code="207Q00000X" displayName="Allopathic &amp; Osteopathic Physicians : Family Medicine" codeSystem="2.16.840.1.113883.6.101" codeSystemName="NUCC" />
+					<addr nullFlavor="UNK" />
+					<telecom nullFlavor="UNK" />
+					<assignedPerson>
+						<name>
+							<family>Eighth</family>
+							<given>Henry</given>
+							<given>Levine</given>
+						</name>
+					</assignedPerson>
+					<representedOrganization>
+						<id root="2.16.840.1.113883.3.1.1.1.1." extension="0001" />
+						<name>Default Practice</name>
+						<telecom use="WP" nullFlavor="UNK" />
+						<addr>
+							<streetAddressLine>100 Main St</streetAddressLine>
+							<city>Horsham</city>
+							<state>PA</state>
+							<postalCode>19044</postalCode>
+							<country>US</country>
+						</addr>
+					</representedOrganization>
+				</assignedEntity>
+			</performer>
+		</encounter>
+	</entry>
+</section>
