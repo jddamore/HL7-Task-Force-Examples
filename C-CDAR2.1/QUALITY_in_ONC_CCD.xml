@@ -1552,8 +1552,10 @@
 				<!-- This uses the "Measure Section" section where the measure logic (i.e. denominators, numerators) is imparted using negationInd of measure component observations -->
 				<!-- This example complies with QRDA1 measure section but may not suitable for reporting. Refer to QRDA1 and QRDA3 implementation guidance for more details -->
 				<!-- Per discussion with clinical quality improvement CQI workgroup, this aligns with how the Joint Commission encourage patient level reporting.-->
+				<!-- For the measures shown in this section, the clinical data that support quality calculation would be included in other sections (e.g. problems, procedures, results, vital signs, etc.) --> 
+				<!-- Thank you to Yan Heras and Gay Dolin + other members in CQI workgroup for consultation and feedback regarding the sample --> 
 				<section>
-					<!-- Templates use QRDA1 3.1 (current reporting standard as of 2017)--> 
+					<!-- Templates use QRDA1 1.1 (current reporting standard as of 2018)--> 
 					<!-- This is the templateId for Measure Section -->
 					<templateId root="2.16.840.1.113883.10.20.24.2.2"/>
 					<!-- This is the templateId for Measure Section QDM -->
@@ -1561,114 +1563,63 @@
 					<code code="55186-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Measure Document"/>
 					<title>Measure Section</title>
 					<text>
-						<!-- Since this narrative table is designed for an individual patient, it may look substantially different 
-		than a conventional QRDA 3 table used to report outcomes across a wide array of patients --> 
 						<table border="1" width="100%">
 							<colgroup>
-								<col width="31%"/>
+								<col width="25%"/>
 								<col width="15%"/>
 								<col width="15%"/>
 								<col width="15%"/>
-								<col width="8%"/>
-								<col width="8%"/>
-								<col width="8%"/>
+								<col width="15%"/>
+								<col width="15%"/>
 							</colgroup>
 							<thead>
 								<tr>
 									<th>Measure</th>
-									<th>Time</th>
-									<th>Compliance</th>
+									<th>Compliance Period</th>
 									<th>Denominator</th>
 									<th>Numerator</th>
 									<th>Exclusion</th>
+									<th>Outcome</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>
-						Diabetes Hemoglobin A1c Poor Control (CMS 122v5)
-									</td>
-									<td>
-						Jan 1 2017 - Dec 31 2017
-									</td>
-									<td>
-										<!-- Compliance here is based on  the measure "Improvement Notation" from the Measure Definition-->
-										<!-- Since lower = better for CMS 122v5, a false numerator means complaince-->
-						Compliant
-									</td>
-									<td>
-						yes  
-									</td>
-									<td>
-						no
-									</td>
-									<td>
-						no
-									</td>
+									<td>Diabetes Hemoglobin A1c Poor Control (CMS 122v5)</td>
+									<td>Jan 1 2017 - Dec 31 2017</td>
+									<td>yes</td>
+									<td>no</td>
+									<td>no</td>
+									<!-- Compliance here is based on  the measure "Improvement Notation" from the Measure Definition-->
+									<!-- Since lower = better for CMS 122v5, a false numerator means complaince-->
+									<td>Compliant</td>
 								</tr>
 								<tr>
-									<td>
-						Colorectal Cancer Screening (CMS 130v5)
-									</td>
-									<td>
-						Jan 1 2017 - Dec 31 2017
-									</td>
-									<td>
-										<!-- Compliance here is based on  the measure "Improvement Notation" from the Measure Definition-->
-										<!-- Since higher = better for CMS 130v5, a false numerator means non-complaince-->
-						Non-Compliant
-									</td>
-									<td>
-						yes
-									</td>
-									<td>
-						no
-									</td>
-									<td>
-						no
-									</td>
+									<td>Colorectal Cancer Screening (CMS 130v5)</td>
+									<td>Jan 1 2017 - Dec 31 2017</td>
+									<td>yes</td>
+									<td>no</td>
+									<td>no</td>
+									<!-- Compliance here is based on  the measure "Improvement Notation" from the Measure Definition-->
+									<!-- Since higher = better for CMS 130v5, a false numerator means non-complaince-->
+									<td>Non-Compliant</td>
 								</tr>
 								<tr>
-									<td>
-						Pneumococcal Vaccination Status for Older Adults (CMS 127v5)
-									</td>
-									<td>
-						Jan 1 2017 - Dec 31 2017
-									</td>
-									<td>
-										<!-- Since this patient was not in initial population of measure, we show as not eligible-->
-						Not Eligible
-									</td>
-									<td>
-						no
-									</td>
-									<td>
-						no
-									</td>
-									<td>
-						no
-									</td>
+									<td>Pneumococcal Vaccination Status for Older Adults (CMS 127v5)</td>
+									<td>Jan 1 2017 - Dec 31 2017</td>
+									<td>no</td>
+									<td>no</td>
+									<td>no</td>
+									<!-- Since this patient was not in initial population of measure, we show as not eligible-->
+									<td>Not Eligible</td>
 								</tr>
 								<tr>
-									<td>
-						Controlling High Blood Pressure (CMS 165v5)
-									</td>
-									<td>
-						Jan 1 2017 - Dec 31 2017
-									</td>
-									<td>
-										<!-- Patient excluded due to a condition (e.g. Stage 5 CKD) -->
-						Excluded
-									</td>
-									<td>
-						yes
-									</td>
-									<td>
-						excl
-									</td>
-									<td>
-						yes
-									</td>
+									<td>Controlling High Blood Pressure (CMS 165v5)</td>
+									<td>Jan 1 2017 - Dec 31 2017</td>
+									<td>yes</td>
+									<td>excl</td>
+									<td>yes</td>
+									<!-- Patient excluded due to a condition (e.g. Stage 5 CKD) -->
+									<td>Excluded</td>
 								</tr>
 							</tbody>
 						</table>
