@@ -51,7 +51,8 @@
 			<code code="34109-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Note">
 				<!-- Code must match or be equivalent to section code -->
 				<translation code="11488-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Consultation note"/>
-				<!-- Additional SNOMED code which satisfies Closing the Loop quality measure --> 
+				<!-- Additional SNOMED code which is equivalent to the LOINC consultation note code -->
+				<!-- The quality measure CMS550 v7 requires a concept from 2.16.840.1.113883.3.464.1003.121.12.1006 --> 
 				<translation code="371530004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT" displayName="Clinical consultation report (record artifact)" />
 			</code>
 			<text>
@@ -94,8 +95,9 @@
 			</author>
 			<reference typeCode="REFR">
 				<externalAct classCode="ACT" moodCode="EVN">
-					<!-- This refers to the observation/id of the planned referral -->
-					<id root="9a6d1bac-17d3-4195-89a4-1121bc809b4e" />
+					<!-- This refers to the Patient Referral Act act/id of the planned referral -->
+					<!-- The quality measure CMS550 v7 requires this identifier to link (related) the completed encounter to the requested referral --> 
+					<id root="9a6d1bac-17d3-4195-89a4-1121bc809b4e"/>
 					<code code="103697008" displayName="Patient referral to specialist" codeSystemName="SNOMED CT" codeSystem="2.16.840.1.113883.6.96" />
 				</externalAct>
 			</reference>
