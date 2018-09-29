@@ -1,0 +1,76 @@
+<section>
+	<!-- This example is created to help with the documentation associated with the following quality measure -->
+	<!-- Closing the Referral Loop: https://ecqi.healthit.gov/ecqm/measures/cms50v7 --> 
+	<!-- We've attempted to align/harmonize this example with both C-CDA and guidance from the IHE 360X -->
+	<!-- See information on IHE 360x profile here: https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_360X.pdf --> 
+	<!-- See pages 8 and 44 making recommendation for Patient Referral Act -->  
+	<!-- The interventions section is used below since that was the recommended of IHE 360XS document -->
+	<!-- But this entry could also be used inside of a Reason for Referral section or other open-template section like Plan of Treatment --> 
+	<templateId root="2.16.840.1.113883.10.20.21.2.3" extension="2015-08-01"/>
+	<templateId root="2.16.840.1.113883.10.20.22.2.3"/>
+	<code code="62387-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Interventions Provided"/>
+	<title>Interventions</title>
+	<!-- one patient referral act in the human readable text and as a discrete entry -->
+	<text>
+		<table>
+			<caption>Planned Referral</caption>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Date</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ID="ID0EFFFFFFCAB3">
+					<td ID="ID0EFAAAAACAB3">Referral to Specialist</td>
+					<td>June 23, 2018</td>
+					<td>Dr. Henry Levine Eighth</td>
+				</tr>
+			</tbody>
+		</table>
+	</text>
+	<!-- a planned encounter entry -->
+	<entry>
+		<act moodCode="INT" classCode="PCPR">
+			<templateId root="2.16.840.1.113883.10.20.22.4.140" />
+			<!-- Planned Encounter V2 template -->
+			<!-- This id may be referenced in the note received afterward --> 
+			<id root="9a6d1bac-17d3-4195-89a4-1121bc809b4e" />
+			<code code="103697008" displayName="Patient referral to specialist" codeSystemName="SNOMED CT" codeSystem="2.16.840.1.113883.6.96" >
+				<originalText>
+					<reference value="#ID0EFAAAAACAB3"/>
+				</originalText>
+			</code>
+			<text>
+				<!-- referencing the entire text -->
+				<reference value="#ID0EFFFFFFCAB3"/>
+			</text>
+			<statusCode code="active" />
+			<effectiveTime value="20180623" />
+			<priorityCode code="A" codeSystem="2.16.840.1.113883.5.7" codeSystemName="ActPriority" displayName="ASAP"/>
+			<participant typeCode="REFT">
+				<participantRole>
+					<!-- Having this be an NPI may be used to identify completion of referral --> 
+					<id root="2.16.840.1.113883.4.6" extension="1093929010" />
+					<code code="207Q00000X" displayName="Allopathic &amp; Osteopathic Physicians : Family Medicine" codeSystem="2.16.840.1.113883.6.101" codeSystemName="NUCC" />
+					<addr>
+							<streetAddressLine>100 Main St</streetAddressLine>
+							<city>Horsham</city>
+							<state>PA</state>
+							<postalCode>19044</postalCode>
+							<country>US</country>
+					</addr>
+					<telecom nullFlavor="UNK" />
+					<playingEntitye>
+						<name>
+							<family>Eighth</family>
+							<given>Henry</given>
+							<given>Levine</given>
+						</name>
+					</playingEntitye>
+				</participantRole>
+			</participant>
+		</act>
+	</entry>
+</section>
