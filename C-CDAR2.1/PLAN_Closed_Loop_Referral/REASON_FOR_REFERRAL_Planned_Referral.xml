@@ -30,11 +30,10 @@
 			</tbody>
 		</table>
 	</text>
-	<!-- a planned encounter entry -->
+	<!-- a patient referral act -->
 	<entry>
 		<act moodCode="INT" classCode="PCPR">
 			<templateId root="2.16.840.1.113883.10.20.22.4.140" />
-			<!-- Planned Encounter V2 template -->
 			<!-- This id may be referenced in the note received afterward --> 
 			<id root="9a6d1bac-17d3-4195-89a4-1121bc809b4e" />
 			<code code="103697008" displayName="Patient referral to specialist" codeSystemName="SNOMED CT" codeSystem="2.16.840.1.113883.6.96" >
