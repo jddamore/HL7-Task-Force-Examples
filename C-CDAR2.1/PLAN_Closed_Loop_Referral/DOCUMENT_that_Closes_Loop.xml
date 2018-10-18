@@ -15,7 +15,8 @@
 	<id extension="TT988" root="2.16.840.1.113883.19.5.99999.1"/>
 	<code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="11488-4" displayName="Consultation Note">
 		<!-- Additional SNOMED code which is equivalent to the LOINC consultation note code -->
-		<!-- The quality measure CMS550 v7 requires a concept from 2.16.840.1.113883.3.464.1003.121.12.1006 --> 
+		<!-- The quality measure CMS50 v7 requires a concept from 2.16.840.1.113883.3.464.1003.121.12.1006 --> 
+		<!-- There is a potential for the LOINC codes to be added to the prior value set, although it is not currently available -->
 		<translation code="371530004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT" displayName="Clinical consultation report (record artifact)" />
 	</code>
 	<title>Community Health Consult Note</title>
@@ -234,6 +235,7 @@
 	<inFulfillmentOf typeCode="FLFS">
 		<order classCode="ACT" moodCode="RQO">
 			<!-- Note that the following id corresponds to referral request --> 
+			<!-- The semantics indicate that the referral was closed/completed --> 
 			<id root="9a6d1bac-17d3-4195-89a4-1121bc809b4e"/>
 			<code code="103697008" displayName="Patient referral to specialist" codeSystemName="SNOMED CT" codeSystem="2.16.840.1.113883.6.96" />
 		</order>
