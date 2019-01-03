@@ -81,11 +81,14 @@
 			</tbody>
 		</table>
 	</text>
+	<!-- In a pilot with 8 different sites, the real-value was in providing human readable content in a timely manner --> 
+	<!-- This proposed entry aligns with QRDA standards for that but may not be expected to be imported in near-term --> 
 	<entry>
 		<organizer classCode="CLUSTER" moodCode="EVN">
 			<templateId root="2.16.840.1.113883.10.20.24.3.98"/>
 			<templateId root="2.16.840.1.113883.10.20.24.3.97"/>
 			<id root="d7345481-b3b5-41e0-a8ae-03dabcd4a0cc"/>
+			<!-- A code element could be added to make organizer type more specific, although was not in the original QRDA1 template -->
 			<statusCode code="completed"/>
 			<!-- This reference contains the version specific identifier of the measure--> 
 			<reference typeCode="REFR">
