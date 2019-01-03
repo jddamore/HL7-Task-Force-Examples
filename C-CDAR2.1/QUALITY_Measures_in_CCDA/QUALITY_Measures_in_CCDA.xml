@@ -82,7 +82,7 @@
 		</table>
 	</text>
 	<!-- In a pilot with 8 different sites, the real-value was in providing human readable content in a timely manner --> 
-	<!-- This proposed entry aligns with QRDA standards for that but may not be expected to be imported in near-term --> 
+	<!-- This proposed entry aligns with QRDA standards but is unlikely to be imported in near-term --> 
 	<entry>
 		<organizer classCode="CLUSTER" moodCode="EVN">
 			<templateId root="2.16.840.1.113883.10.20.24.3.98"/>
