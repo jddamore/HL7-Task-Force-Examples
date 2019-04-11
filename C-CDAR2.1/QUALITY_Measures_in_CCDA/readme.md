@@ -1,6 +1,7 @@
-##Approval Status: 
-* Approved Status: Awaiting SDWG
-* Example Task Force: 1/3/2019 approved
+##Approval Status
+* Approval Status: Pending
+* Example Task Force: 1/3/2019
+* SDWG: 
 * CQI Involvement: Reviewed in December 2017 with Examples TF, Reviewed 1/19/2018 with CQI. Reviewed April 2018 with CQI with approval to move forward with example. Reviewed during summer 2019 with Examples TF.   
 
 ###QRDA Examples (for inclusion in C-CDA): 
