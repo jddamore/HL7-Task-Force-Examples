@@ -1,4 +1,4 @@
-Approval Status: Not Yet Approved
+Approval Status: Approved by Task Force on 1/3/2019. Awaiting SDWG approval
 
 SDWG: Reviewed in December 2017 with Examples TF, Reviewed 1/19/2018 with CQI, not yet approved
 
