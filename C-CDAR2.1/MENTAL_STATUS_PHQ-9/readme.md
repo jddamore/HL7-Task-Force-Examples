@@ -1,27 +1,24 @@
-##Approval Status
+## Approval Status
 * Approval Status: Pending
-* Example Task Force: 1/3/2019
-* SDWG: 
-* CQI Involvement: Reviewed in December 2017 with Examples TF, Reviewed 1/19/2018 with CQI. Reviewed April 2018 with CQI with approval to move forward with example. Reviewed during summer 2019 with Examples TF.   
+* Example Task Force: Pending
 
-###QRDA Examples (for inclusion in C-CDA): 
-* QRDA Measure Section 2.16.840.1.113883.10.20.24.2.2
-* QRDA Measure Section QDM 2.16.840.1.113883.10.20.24.2.3
-* QRDA Measure Reference 2.16.840.1.113883.10.20.24.3.97
-* QRDA eMeasure Reference QDM 2.16.840.1.113883.10.20.24.3.98
+### QRDA Examples (for inclusion in C-CDA): 
+* Mental Status Section 2.16.840.1.113883.10.20.22.2.56:2015-08-01
+* Assessment Scale Observation 2.16.840.1.113883.10.20.22.4.69
+* Assessment Scale Supporting Observation 2.16.840.1.113883.10.20.22.4.86
 
-###Reference to full CDA sample
-* https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/C-CDAR2.1/QUALITY_in_ONC_CCD.xml
+### Reference to full CDA sample
+* https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/C-CDAR2.1/MENTAL_STATUS_in_empty_C-CDA_2.1.xml (Passes SITE validator 5/16/2019)
 
-###Validation location
+### Validation location
 * HL7 Schematron (Diameter Health hosted) January 2019
 
-###Comments: 
-* This is an example of how one could report quality measures in a C-CDA document. It is not a C-CDA template, but could be included as a section (since open template) and is conformant to QRDA1 Measure Section constraints. It would not be appropriate for US QRDA submission.
+### Comments: 
+* This is an example of to include a PHQ-9 survey with total score and compoonent questions. While not all questions may be necessary in all uses, the total score has an impact on quality measures related to depression screening. 
 
-###Custodian: 
+### Custodian: 
 * John D'Amore jdamore@diameterhealth.com (GitHub: jddamore)
 
-###Keywords: 
-* QRDA1, eCQM, quality, care gap
+### Keywords: 
+* PHQ-9, mental status, assessment scale
 
