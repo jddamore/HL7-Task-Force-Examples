@@ -1,7 +1,7 @@
 <section>
 	<!-- Mental Status Section --> 
 	<!-- An assessment should be included in the section where it is appropriate in clinical context --> 
-	<!-- Other asssessments may go into other sections, although depression screening made most sense in Mental Status --> 
+	<!-- Other asssessments may go into other sections. Depression screening is clinically appropriate for Mental Status --> 
 	<templateId root="2.16.840.1.113883.10.20.22.2.56" extension="2015-08-01" />
 	<code code="10190-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="MENTAL STATUS" />
 	<title>MENTAL STATUS</title>
