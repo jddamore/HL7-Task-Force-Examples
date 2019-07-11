@@ -24,7 +24,7 @@
 							<content ID="_12d30bb3-f589-4d3b-a011-4b463aafa093">bisexual</content>
 						</td>
 						<td>
-							<content>2001</content>
+							<content>2001 - </content>
 						</td>
 					</tr>
 				</tbody>
@@ -37,7 +37,7 @@
 							<content ID="_71d1b8e1-b3dd-483f-80f3-49656e518994">Female-to-male transsexual</content>						
 						</td>
 						<td/>
-							 <content>2001</content>
+							 <content>2001 - </content>
 						<td/>
 					</tr>
 				</tbody>
@@ -58,6 +58,7 @@
 					<reference value="#_a1305452-cddd-4654-980f-bba6745588c8"/>
 				</text>
 				<statusCode code="completed"/>
+				<!-- interval start with no end to indicate from 2001 -->
 				<effectiveTime xsi:type="IVL_TS">
 					<low value="2001"/>
 				</effectiveTime>
@@ -98,6 +99,7 @@
 					<reference value="#_6e185602-f807-40c6-8003-41c589ae62af"/>
 				</text>
 				<statusCode code="completed"/>
+				<!-- interval start with no end to indicate from 2001 -->
 				<effectiveTime xsi:type="IVL_TS">
 					<low value="2001"/> 
 				</effectiveTime>
