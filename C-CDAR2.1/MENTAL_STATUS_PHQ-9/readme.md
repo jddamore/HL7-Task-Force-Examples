@@ -1,6 +1,6 @@
 ## Approval Status
-* Approval Status: Pending
-* Example Task Force: Pending
+* Example Task Force Approval Status: Approved 7/11/2019
+* Structured Documents Approval Status: Pending
 
 ### QRDA Examples (for inclusion in C-CDA): 
 * Mental Status Section 2.16.840.1.113883.10.20.22.2.56:2015-08-01
