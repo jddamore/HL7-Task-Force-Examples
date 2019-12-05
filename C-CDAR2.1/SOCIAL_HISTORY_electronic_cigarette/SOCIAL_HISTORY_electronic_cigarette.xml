@@ -1,0 +1,63 @@
+<section>
+	<!-- Electronic cigarette behavior may be included in social history to group with other tobacco, drug and alcohol use --> 
+	<templateId root="2.16.840.1.113883.10.20.22.2.17" extension="2015-08-01"/>
+	<templateId root="2.16.840.1.113883.10.20.22.2.17"/>
+	<code code="29762-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+	<title>Social History</title>
+	<text>
+		<table>
+			<thead>
+				<tr>
+					<th>Social History</th>
+					<th>Observation</th>
+					<th>Date</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ID="_a1305452-cddd-4654-980f-bba6745588e8">
+					<td>
+						Health related behavior
+					</td>
+					<td>
+						vaping / electronic cigarette user [Stopped use in August 2018]
+					</td>
+					<td>
+						<content>unknown - Aug 2018</content>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</text>
+	<!-- Only a single entry included for this example. Note that other entries may be required for conformant social history section --> 
+	<entry>
+		<observation classCode="OBS" moodCode="EVN">
+			<templateId root="2.16.840.1.113883.10.20.22.4.38" extension="2015-08-01" /> 
+			<templateId root="2.16.840.1.113883.10.20.22.4.38" /> 
+			<id extension="Z504295^^713914004" root="1.2.840.114350.1.13.861.1.7.1.1040.8" /> 
+			<!-- These are relatively generic codes for a health related behavior -->
+			<!-- As more specific codes are developed in SNOMED/LOINC, other codes may be more appropriate -->
+			<code code="228272008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT" displayName="Health-related behavior">
+				<translation code="75310-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Health concern" /> 
+			</code>
+			<text>
+				<reference value="#_a1305452-cddd-4654-980f-bba6745588e8"/>
+			</text>
+			<statusCode code="completed" /> 
+			<!-- By having a high effectiveTime, this means that the use is behavior is historic and not ongoing -->
+			<effectiveTime>
+				<low nullFlavor="UNK" /> 
+				<high value="201808" /> 
+			</effectiveTime>
+			<!-- This code aligns with 2019 guidance https://www.healthit.gov/isa/representing-patient-electronic-cigarette-use-vaping -->
+			<value code="722499006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Electronic cigarette user" xsi:type="CD" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /> 
+			<author>
+				<!-- This is a reference to an author, where more detail (e.g. name) may be included elsewhere in clinical document --> 
+				<templateId root="2.16.840.1.113883.10.20.22.4.119" /> 
+				<time nullFlavor="UNK" /> 
+				<assignedAuthor>
+					<id extension="259477" root="1.2.840.114350.1.13.861.1.7.2.697780" /> 
+				</assignedAuthor>
+			</author>
+		</observation>
+	</entry>
+</section>
