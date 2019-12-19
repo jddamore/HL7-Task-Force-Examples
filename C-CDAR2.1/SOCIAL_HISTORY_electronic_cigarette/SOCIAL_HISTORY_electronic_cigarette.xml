@@ -18,7 +18,7 @@
 					<td>
 						Things to smoke/vape
 					</td>
-					<td>
+					<td ID="_a1305452-cddd-4654-980f-bba6745588A9">
 						Electronic cigarette user with nicotine (Former user)
 					</td>
 					<td>
@@ -34,13 +34,11 @@
 			<templateId root="2.16.840.1.113883.10.20.22.4.38" extension="2015-08-01" /> 
 			<templateId root="2.16.840.1.113883.10.20.22.4.38" /> 
 			<id extension="Z504295^^713914004" root="1.2.840.114350.1.13.861.1.7.1.1040.8" /> 
-			<!-- This LOINC code was suggested by Regenstrief (Swapna) but is undergoing changed expected in 2020 -->
+			<!-- This LOINC code was suggested by Regenstrief but is undergoing changed expected in 2020 -->
 			<!-- As more specific codes are developed in LOINC (and possibly SNOMED), other codes may be more appropriate -->
 			<code code="66547-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Things to smoke" >
-				<!-- Optional translation under discussion --> 
-				<!-- This code aligns with 2019 guidance https://www.healthit.gov/isa/representing-patient-electronic-cigarette-use-vaping -->
-				<!-- Specifically it may be beneficial to have a term for the "status" rather than "finding" from SNOMED, but not available at time of sample creation -->
-				<translation code="722499006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Electronic cigarette user"/>
+				<!-- Discussed 722499006 in translation and agreed not an appropriate trsnlation.
+				<!-- The code 722499006 aligns with 2019 guidance https://www.healthit.gov/isa/representing-patient-electronic-cigarette-use-vaping -->
 			</code>
 			<text>
 				<reference value="#_a1305452-cddd-4654-980f-bba6745588e8"/>
@@ -54,7 +52,11 @@
 			<!-- value is optional (SHOULD binding) but can include relevant information about use --> 
 			<!-- This code aligns with 2019 guidance https://www.healthit.gov/isa/representing-patient-electronic-cigarette-use-vaping -->
 			<!-- This may be a coded, referenced string or value, so there may be different ways to represent --> 
-			<value xsi:type="CD" code="735240008" codeSystem="2.16.840.1.113883.6.96" displayName="Electronic cigarette liquid containing nicotine" /> 
+			<value xsi:type="CD" code="735240008" codeSystem="2.16.840.1.113883.6.96" displayName="Electronic cigarette liquid containing nicotine"> 
+			<originalText>
+                          <reference value="#_a1305452-cddd-4654-980f-bba6745588A9"/>
+			</originalText>
+			</value>
 			<author>
 				<!-- This is a reference to an author, where more detail (e.g. name) may be included elsewhere in clinical document --> 
 				<templateId root="2.16.840.1.113883.10.20.22.4.119" /> 
