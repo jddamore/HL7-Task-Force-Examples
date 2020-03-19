@@ -17,7 +17,7 @@
 			</thead>
 			<tbody>
 				<tr>
-					<th colspan="4">SARS Coronavirus Panel using Respiratory (Nasal Pharynx) Sample</th>
+					<th colspan="4">Infectious agent detection by nucleic acid (DNA or RNA); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (Coronavirus disease [COVID-19]), amplified probe technique</th>
 				</tr>
 				<tr ID="LabResult3">
 					<td>SARS coronavirus 2 RNA</td>
@@ -36,7 +36,7 @@
 			<!-- This is the LOINC panel code for a COVID sample using a respiratory sample -->
 			<!-- Other panel codes for COVID based on method and sample type include: 94306-8, 94503-0, 94504-8 -->
 			<!-- Please note that these are urgently released LOINC codes and codes may change over time -->
-			<code code="94531-1" displayName="SARS coronavirus 2 RNA panel" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+			<code code="87635" displayName="Infectious agent detection by nucleic acid (DNA or RNA); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (Coronavirus disease [COVID-19]), amplified probe technique" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
 			<statusCode code="completed"/>
 			<effectiveTime>
 				<low value="202003221426-0500"/>
@@ -58,6 +58,7 @@
 					</text>
 					<statusCode code="completed"/>
 					<effectiveTime value="202003221426-0500"/>
+					<!-- Since this is a pre-release code there is not an established answer list and this may vary -->
 					<value xsi:type="CD" code="260373001" codeSystemName="SNOMED-CT" displayName="Detected" codeSystem="2.16.840.1.113883.6.96"/>
 					<interpretationCode code="A" codeSystem="2.16.840.1.113883.5.83"/>
 					<referenceRange>
