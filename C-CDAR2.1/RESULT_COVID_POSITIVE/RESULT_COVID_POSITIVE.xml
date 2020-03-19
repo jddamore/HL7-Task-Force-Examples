@@ -21,9 +21,9 @@
 				</tr>
 				<tr ID="LabResult3">
 					<td>SARS coronavirus 2 RNA</td>
-					<td>Positive</td>
+					<td>Detected</td>
 					<td>Abnormal</td>
-					<td>Negative</td>
+					<td>Reference (Normal) for this test is not detected</td>
 				</tr>
 			</tbody>
 		</table>
@@ -58,12 +58,12 @@
 					</text>
 					<statusCode code="completed"/>
 					<effectiveTime value="202003221426-0500"/>
-					<value xsi:type="CD" code="10828004" codeSystemName="SNOMED-CT" displayName="Positive" codeSystem="2.16.840.1.113883.6.96"/>
+					<value xsi:type="CD" code="260373001" codeSystemName="SNOMED-CT" displayName="Detected" codeSystem="2.16.840.1.113883.6.96"/>
 					<interpretationCode code="A" codeSystem="2.16.840.1.113883.5.83"/>
 					<referenceRange>
 						<observationRange>
-							<text>Reference (Normal) for this test is negative</text>
-							<value xsi:type="CD" code="260385009" codeSystemName="SNOMED-CT" displayName="Negative" codeSystem="2.16.840.1.113883.6.96"/>
+							<text>Reference (Normal) for this test is not detected</text>
+							<value xsi:type="CD" code="260415000" codeSystemName="SNOMED-CT" displayName="Not Detected" codeSystem="2.16.840.1.113883.6.96"/>
 							<!-- This interpretation code denotes that this reference range is for normal results. This is not the interpretation a specific patient value-->
 							<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 						</observationRange>
