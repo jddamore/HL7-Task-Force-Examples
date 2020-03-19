@@ -33,10 +33,10 @@
 			<templateId root="2.16.840.1.113883.10.20.22.4.1"/>
 			<templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2015-08-01"/>
 			<id root="b5684bf0-eb6f-46dd-9f2e-b6cbcc4155fd"/>
-			<!-- This is the LOINC panel code for a COVID sample using a respiratory sample -->
-			<!-- Other panel codes for COVID based on method and sample type include: 94306-8, 94503-0, 94504-8 -->
+			<!-- There are LOINC panel codes for a COVID as well as a CPT code-->
+			<!-- Panel codes include: 94306-8, 94503-0, 94504-8, 94531-1 -->
 			<!-- Please note that these are urgently released LOINC codes and codes may change over time -->
-			<code code="87635" displayName="Infectious agent detection by nucleic acid (DNA or RNA); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (Coronavirus disease [COVID-19]), amplified probe technique" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+			<code code="87635" displayName="Infectious agent detection by nucleic acid (DNA or RNA); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (Coronavirus disease [COVID-19]), amplified probe technique" codeSystem="2.16.840.1.113883.6.12" codeSystemName="CPT"/>
 			<statusCode code="completed"/>
 			<effectiveTime>
 				<low value="202003221426-0500"/>
