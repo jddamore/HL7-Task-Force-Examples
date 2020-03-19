@@ -58,7 +58,7 @@
 					</text>
 					<statusCode code="completed"/>
 					<effectiveTime value="202003221426-0500"/>
-					<value xsi:type="CD" code="260385009" codeSystemName="SNOMED-CT" displayName="Positive" codeSystem="2.16.840.1.113883.6.96"/>
+					<value xsi:type="CD" code="10828004" codeSystemName="SNOMED-CT" displayName="Positive" codeSystem="2.16.840.1.113883.6.96"/>
 					<interpretationCode code="A" codeSystem="2.16.840.1.113883.5.83"/>
 					<referenceRange>
 						<observationRange>
