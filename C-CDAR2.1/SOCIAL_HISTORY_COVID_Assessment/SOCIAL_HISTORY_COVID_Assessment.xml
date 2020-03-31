@@ -1,0 +1,117 @@
+<section>
+	<!-- Social History Section --> 
+	<!-- This COVID-19 assessment is placed in social history since that is where travel and interactions commonly go. --> 
+	<!-- Assessments may also go in other clinical sections and other clinical data related to COVID-19 (e.g. results) would be placed elsewhere --> 
+	<!-- The examples task force selected an assessment template for this section. While assessment scale observations are not referenced as a section --> 
+	<!-- template in social history, it is an open-template section so may be used. Assessments are often used in functional/mental status sections -->
+	<templateId root="2.16.840.1.113883.10.20.22.2.17" extension="2015-08-01"/>
+	<templateId root="2.16.840.1.113883.10.20.22.2.17"/>
+	<code code="29762-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+	<title>Social History</title>
+	<text>
+		<table>
+			<thead>
+				<tr>
+					<th>Date</th>
+					<th>Assessment</th>
+					<th>Value</th>
+					<th>Relevant Reference Range</th>
+					<th>Interpretation</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- Note that this is not a standardized survey instrument, however it is representative of survey questions asked by EHRs --> 
+				<!-- Note that other data like smoking status would typically be included in this section. Examples of other social history observations are available elswhere --> 
+				<tr>
+					<td ID="assessment1" colspan="5">COVID-19 Assessment Questionnaire</td>
+				</tr>
+				<tr ID="assessment_part1">
+					<td>03/22/2020</td>
+					<td ID="assessment_part1_question">In the last month, have you been in contact with someone who was confirmed or suspected to have Coronavirus / COVID-19?</td>
+					<td>Yes</td>
+					<td ID="assessmentReferenceRange1">No</td>
+					<td>High Risk</td>
+				</tr>
+				<tr ID="assessment_part2">
+					<td>03/22/2020</td>
+					<td ID="assessment_part2_question">Have you traveled internationally in the last month?</td>
+					<td>Yes, Italy and Spain</td>
+					<td ID="assessmentReferenceRange2">No</td>
+					<td>High Risk</td>
+				</tr>
+			</tbody>
+		</table>
+	</text>
+	<entry typeCode="DRIV">
+		<observation classCode="OBS" moodCode="EVN">
+			<!-- Assessment Scale Observation --> 
+			<templateId root="2.16.840.1.113883.10.20.22.4.69"/>
+			<id root="e1aa44dd-6f39-4f5c-b267-897c3824b673"/>
+			<!-- At the current time, there is not a code for COVID-19 assessments. When a code is available, it should be used --> 
+			<code nullFlavor="OTH" >
+				<originalText>
+					<reference value="#assessment1" />
+				</originalText>
+			</code>
+			<text>
+				<reference value="#assessment1"/>
+			</text>
+			<statusCode code="completed"/>
+			<effectiveTime value="20200322"/>
+			<!-- Note that the value attribute is required in an assessment scale observation. --> 
+			<!-- This may represent the overall results of the survey and may be quantative (i.e. a total score) or qualitative (i.e. high risk) -->
+			<value xsi:type="ST">High Risk</value>
+			<interpretationCode code="A" codeSystem="2.16.840.1.113883.5.83"/>
+			<entryRelationship typeCode="COMP">
+				<observation classCode="OBS" moodCode="EVN">
+					<!-- Assessment Scale Supporting Observation --> 
+					<templateId root="2.16.840.1.113883.10.20.22.4.86"/>
+					<id root="b6a704ab-271a-4bfa-9f0d-1581da2b1235"/>
+					<!-- At the current time, there is not a code for COVID-19 assessments. When a code is available, it should be used --> 
+					<code nullFlavor="OTH" >
+						<originalText>
+							<reference value="#assessment1_part1_question" />
+						</originalText>
+					</code>
+					<text>
+						<reference value="#assessment1_part1"/>
+					</text>
+					<statusCode code="completed"/>
+					<effectiveTime value="20200322"/>
+					<value xsi:type="ST">Yes</value>													
+				</observation>
+			</entryRelationship>
+			<!-- The total score may be adequate for some use cases, although detail components can be sent as shown below as warranted by use case --> 
+			<entryRelationship typeCode="COMP">
+				<observation classCode="OBS" moodCode="EVN">
+					<templateId root="2.16.840.1.113883.10.20.22.4.86"/>
+					<id root="b6a704ab-271a-4bfa-9f0d-1581da2b1186"/>
+					<!-- At the current time, there is not a code for COVID-19 assessments. When a code is available, it should be used --> 
+					<code nullFlavor="OTH" >
+						<originalText>
+							<reference value="#assessment1_part2_question" />
+						</originalText>
+					</code>
+					<text>
+						<reference value="#assessment1_part2"/>
+					</text>
+					<statusCode code="completed"/>
+					<effectiveTime value="20200322"/>
+					<!-- This could also be shown as xsi:type="ED" with reference to narrative -->
+					<value xsi:type="ST">Yes, Italy and Spain</value>													
+				</observation>
+			</entryRelationship>
+			<referenceRange>
+				<observationRange>
+					<text>
+						<reference value="#assessmentReferenceRange1" />
+					</text>
+					<value xsi:type="ST">No</value>
+					<!-- This interpretation code denotes that this reference range is for normal results. This is not the interpretation a specific patient value-->
+					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
+				</observationRange>
+				<!-- Other ranges may be included as well (such as a high range) as considered appropriate per observation and use case -->
+			</referenceRange>								
+		</observation>
+	</entry>
+</section>
