@@ -17,7 +17,7 @@
 			</thead>
 			<tbody>
 				<tr>
-					<th colspan="4">Infectious agent detection by nucleic acid (DNA or RNA); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (Coronavirus disease [COVID-19]), amplified probe technique</th>
+					<th colspan="4">SARS coronavirus 2 RNA panel</th>
 				</tr>
 				<tr ID="LabResult3">
 					<td>SARS coronavirus 2 RNA</td>
@@ -36,7 +36,9 @@
 			<!-- There are LOINC panel codes for a COVID as well as a CPT code-->
 			<!-- Panel codes include: 94306-8, 94503-0, 94504-8, 94531-1 -->
 			<!-- Please note that these are urgently released LOINC codes and codes may change over time -->
-			<code code="87635" displayName="Infectious agent detection by nucleic acid (DNA or RNA); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (Coronavirus disease [COVID-19]), amplified probe technique" codeSystem="2.16.840.1.113883.6.12" codeSystemName="CPT"/>
+			<code code="94531-1" displayName="SARS coronavirus 2 RNA panel" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+			<!-- Alternatively CPT codes may be used in the panel as what was ordered -->
+			<!-- <code code="87635" displayName="Infectious agent detection by nucleic acid (DNA or RNA); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (Coronavirus disease [COVID-19]), amplified probe technique" codeSystem="2.16.840.1.113883.6.12" codeSystemName="CPT"/> -->
 			<statusCode code="completed"/>
 			<effectiveTime>
 				<low value="202003221426-0500"/>
