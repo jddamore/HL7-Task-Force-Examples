@@ -21,4 +21,4 @@
 * John D"Amore <jdamore@diameterhealth.com>, (GitHub: jddamore)
 
 ### Keywords: 
-* eSigs, electronic cigarettes, nicotine
+* eCigs, electronic cigarettes, nicotine
