@@ -10,7 +10,7 @@
 	<!-- Globally unique identifier for the document  -->
 	<id root="9f27eaec-bbb7-4a5d-879f-ee1fe4ba2e59"/>
 	<code code="34133-9" displayName="Summarization of Episode Note" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-	<title>Patient Summary DECEASED</title>
+	<title>DECEASED Patient Summary</title>
 	<effectiveTime value="20170509124923-0500" />
 	<confidentialityCode code="N" displayName="normal" codeSystem="2.16.840.1.113883.5.25" codeSystemName="Confidentiality"/>
 	<languageCode code="en-US"/>
