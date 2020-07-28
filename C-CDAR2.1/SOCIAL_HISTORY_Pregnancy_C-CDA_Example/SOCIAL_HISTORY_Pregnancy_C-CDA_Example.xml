@@ -1,0 +1,47 @@
+<section>
+	<entry>
+		<observation classCode="OBS" moodCode="EVN">
+			<templateId root="2.16.840.1.113883.10.20.15.3.8"/>
+			<id extension="123456789" root="2.16.840.1.113883.19"/>
+			<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
+			<statusCode code="completed"/>
+			<effectiveTime>
+				<low value="20190101"/>
+			</effectiveTime>
+			<value xsi:type="CD" code="77386006" displayName="pregnant" codeSystem="2.16.840.1.113883.6.96"/>
+			<entryRelationship typeCode="REFR">
+				<templateId root="2.16.840.1.113883.10.20.15.3.1"/>
+				<observation classCode="OBS" moodCode="EVN">
+					<templateId root="2.16.840.1.113883.10.20.15.3.1"/>
+					<code code="11778-8" codeSystem="2.16.840.1.113883.6.1" displayName="Estimated date of delivery"/>
+					<statusCode code="completed"/>
+					<value xsi:type="TS" value="20190924"/>
+				</observation>
+			</entryRelationship>
+			<author>
+				<templateId root="2.16.840.1.113883.10.20.22.4.119"/>
+				<!-- This equates to the date when last updated by the author-->
+				<time value="201903101256-0500"/>
+				<assignedAuthor>
+					<id extension="66666" root="2.16.840.1.113883.4.6"/>
+					<code code="207RC0000X" codeSystem="2.16.840.1.113883.6.101" codeSystemName="NUCC" displayName="Cardiovascular Disease"/>
+					<addr>
+						<streetAddressLine>6666 StreetName St.</streetAddressLine>
+						<city>Silver Spring</city>
+						<state>MD</state>
+						<postalCode>20901</postalCode>
+						<country>US</country>
+					</addr>
+					<telecom value="tel:+1(301)666-6666" use="WP"/>
+					<assignedPerson>
+						<name>
+							<given>Heartly</given>
+							<family>Sixer</family>
+							<suffix>MD</suffix>
+						</name>
+					</assignedPerson>
+				</assignedAuthor>
+			</author>
+		</observation>
+	</entry>
+</section>

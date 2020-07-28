@@ -1,0 +1,701 @@
+<section xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!-- [VRDR STU2] Coded Cause of Death Section  -->
+	<templateId root="2.16.840.1.113883.10.20.26.1.2.5" extension="2016-12-01"/>
+	<code code="86804-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Cause of death classification and related information Document"/>
+	<title>Coded Cause of Death Section</title>
+	<text xmlns:voc="http://www.lantanagroup.com/voc">
+		<table border="1">
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<thead>
+				<tr>
+					<th>Organizer</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Causes of Death</td>
+				</tr>
+				<tr>
+					<td colspan="20">
+						<list styleCode="none">
+							<item>
+								<table>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<thead>
+										<tr>
+											<th>Cause of Death Line # (Pt I: 1+, Pt II: 0)</th>
+											<th>Sequence Within Line</th>
+											<th>Cause of Death Entity Axis Value</th>
+											<th>Cause of Death Entity Axis Code</th>
+											<th>E-code Indicator</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>Unspecified injury of head</td>
+											<td>S09.90</td>
+											<td>E-code indicator</td>
+										</tr>
+									</tbody>
+								</table>
+								<table>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<thead>
+										<tr>
+											<th>Cause of Death Line # (Pt I: 1+, Pt II: 0)</th>
+											<th>Sequence Within Line</th>
+											<th>Cause of Death Entity Axis Value</th>
+											<th>Cause of Death Entity Axis Code</th>
+											<th>E-code Indicator</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>2</td>
+											<td>1</td>
+											<td>Person injured in unspecified vehicle accident</td>
+											<td>V89.9</td>
+											<td/>
+										</tr>
+									</tbody>
+								</table>
+								<table>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<thead>
+										<tr>
+											<th>Cause of Death Line # (Pt I: 1+, Pt II: 0)</th>
+											<th>Sequence Within Line</th>
+											<th>Cause of Death Entity Axis Value</th>
+											<th>Cause of Death Entity Axis Code</th>
+											<th>E-code Indicator</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>3</td>
+											<td>1</td>
+											<td>Epilepsy, unspecified</td>
+											<td>G40.9</td>
+											<td/>
+										</tr>
+									</tbody>
+								</table>
+								<table>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<thead>
+										<tr>
+											<th>Cause of Death Line # (Pt I: 1+, Pt II: 0)</th>
+											<th>Sequence Within Line</th>
+											<th>Cause of Death Entity Axis Value</th>
+											<th>Cause of Death Entity Axis Code</th>
+											<th>E-code Indicator</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>0</td>
+											<td>1</td>
+											<td>Stroke, not specified as hemorrhage or infarction</td>
+											<td>I64</td>
+											<td/>
+										</tr>
+									</tbody>
+								</table>
+								<table>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<thead>
+										<tr>
+											<th>Cause of Death Record Axis Value</th>
+											<th>Cause of Death Record Axis Code</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Unspecified injury of head</td>
+											<td>S09.90</td>
+										</tr>
+										<tr>
+											<td>Person injured in unspecified vehicle accident</td>
+											<td>V89.9</td>
+										</tr>
+										<tr>
+											<td>Epilepsy, unspecified</td>
+											<td>G40.9</td>
+										</tr>
+										<tr>
+											<td>Stroke, not specified as hemorrhage or infarction</td>
+											<td>I64</td>
+										</tr>
+									</tbody>
+								</table>
+								<table>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<thead>
+										<tr>
+											<th>Cause of Death Underlying Coding Type</th>
+											<th>Cause of Death Underlying Value</th>
+											<th>Cause of Death Underlying Code</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Cause of death.underlying [Manual]</td>
+											<td>Epilepsy, unspecified</td>
+											<td>G40.9</td>
+										</tr>
+									</tbody>
+								</table>
+								<table>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<thead>
+										<tr>
+											<th>Conversion Flag</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Artificial code conversion; no other action</td>
+										</tr>
+									</tbody>
+								</table>
+							</item>
+						</list>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<thead>
+				<tr>
+					<th>Activity at Time of Death</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>While engaged in other specified activities</td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<thead>
+				<tr>
+					<th>Organizer</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Injury Details</td>
+				</tr>
+				<tr>
+					<td colspan="20">
+						<list styleCode="none">
+							<item>
+								<table>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<thead>
+										<tr>
+											<th>Injury Involved in Death</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Yes</td>
+										</tr>
+									</tbody>
+								</table>
+								<table>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<thead>
+										<tr>
+											<th>Injury Description</th>
+											<th>Injury Date</th>
+											<th>Place of Injury (address)</th>
+											<th>Place of Injury (coded)</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Car left road, hit tree and rolled over.</td>
+											<td>NOV 1, 2016</td>
+											<td>
+												<list styleCode="none">
+													<item>22 Any Street, Anyville, 12345, US</item>
+												</list>
+											</td>
+											<td>Street/Highway</td>
+										</tr>
+									</tbody>
+								</table>
+								<table>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<thead>
+										<tr>
+											<th>Injury Association with Transportation Event</th>
+											<th>Participant</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Yes</td>
+											<td>
+												<list styleCode="none">
+													<item>
+														<content styleCode="Italics">Driver/Operator</content>
+													</item>
+												</list>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<table>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<col width="10%"/>
+									<thead>
+										<tr>
+											<th>Injury Association with Work</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Yes</td>
+										</tr>
+									</tbody>
+								</table>
+							</item>
+						</list>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<thead>
+				<tr>
+					<th>Pregnancy Status (V2)</th>
+					<th>Pregnancy Edit Flag</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Not pregnant within the past year</td>
+					<td>On (verified)</td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<col width="10%"/>
+			<thead>
+				<tr>
+					<th>Tobacco Use Contributed to Death</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>No</td>
+				</tr>
+			</tbody>
+		</table>
+	</text>
+	<entry typeCode="DRIV">
+		<organizer classCode="CLUSTER" moodCode="EVN">
+			<!-- [VRDR STU2] Coded Death Causal Information Organizer(V2) -->
+			<templateId root="2.16.840.1.113883.10.20.26.1.3.26" extension="2016-12-01"/>
+			<statusCode code="completed"/>
+			<component typeCode="COMP">
+				<!-- This sequence number matches up to the corresponding sequenceNumber 
+                                     of the descriptive text cause of death recorded in the 
+                                     Death Causal Information Organizer in previous documents in 
+                                     the information flow -->
+				<sequenceNumber value="1"/>
+				<seperatableInd value="false"/>
+				<observation classCode="OBS" moodCode="EVN">
+					<!-- [VRDR STU2] Cause of Death Entity Axis Code -->
+					<templateId root="2.16.840.1.113883.10.20.26.1.3.27" extension="2016-12-01"/>
+					<code code="80356-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Cause of death entity axis code"/>
+					<!-- Coded cause of death -->
+					<value xsi:type="CD" code="S09.90" displayName="Unspecified injury of head" codeSystem="2.16.840.1.113883.6.3" codeSystemName="ICD10"/>
+					<entryRelationship typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- [VRDR STU2] Sequence Within Line -->
+							<templateId root="2.16.840.1.113883.10.20.26.1.3.30" extension="2016-12-01"/>
+							<code code="PHC1427" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" displayName="Sequence within line"/>
+							<!-- Sequence within line -->
+							<value xsi:type="INT" value="1"/>
+						</observation>
+					</entryRelationship>
+					<!-- If this entryRelationship is present it indicates
+                                         that the containing cause of death is an e-code -->
+					<entryRelationship typeCode="COMP">
+						<act classCode="ACT" moodCode="EVN">
+							<!-- [VRDR STU2] E-Code Indicator -->
+							<templateId root="2.16.840.1.113883.10.20.26.1.3.32" extension="2016-12-01"/>
+							<code code="PHC1423" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" displayName="E-code indicator"/>
+						</act>
+					</entryRelationship>
+				</observation>
+			</component>
+			<component typeCode="COMP">
+				<!-- This sequence number matches up to the corresponding sequenceNumber 
+                                     of the descriptive text cause of death recorded in the 
+                                     Death Causal Information Organizer in previous documents in 
+                                     the information flow -->
+				<sequenceNumber value="2"/>
+				<seperatableInd value="false"/>
+				<observation classCode="OBS" moodCode="EVN">
+					<!-- [VRDR STU2] Cause of Death Entity Axis Code -->
+					<templateId root="2.16.840.1.113883.10.20.26.1.3.27" extension="2016-12-01"/>
+					<code code="80356-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Cause of death entity axis code"/>
+					<!-- Coded cause of death -->
+					<value xsi:type="CD" code="V89.9" displayName="Person injured in unspecified vehicle accident" codeSystem="2.16.840.1.113883.6.3" codeSystemName="ICD10"/>
+					<entryRelationship typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- [VRDR STU2] Sequence Within Line -->
+							<templateId root="2.16.840.1.113883.10.20.26.1.3.30" extension="2016-12-01"/>
+							<code code="PHC1427" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" displayName="Sequence within line"/>
+							<!-- Sequence within line -->
+							<value xsi:type="INT" value="1"/>
+						</observation>
+					</entryRelationship>
+				</observation>
+			</component>
+			<component typeCode="COMP">
+				<!-- This sequence number matches up to the corresponding sequenceNumber 
+                                     of the descriptive text cause of death recorded in the 
+                                     Death Causal Information Organizer in previous documents in 
+                                     the information flow -->
+				<sequenceNumber value="3"/>
+				<seperatableInd value="false"/>
+				<observation classCode="OBS" moodCode="EVN">
+					<!-- [VRDR STU2] Cause of Death Entity Axis Code -->
+					<templateId root="2.16.840.1.113883.10.20.26.1.3.27" extension="2016-12-01"/>
+					<code code="80356-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Cause of death entity axis code"/>
+					<!-- Coded cause of death -->
+					<value xsi:type="CD" code="G40.9" displayName="Epilepsy, unspecified" codeSystem="2.16.840.1.113883.6.3" codeSystemName="ICD10"/>
+					<entryRelationship typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- [VRDR STU2] Sequence Within Line -->
+							<templateId root="2.16.840.1.113883.10.20.26.1.3.30" extension="2016-12-01"/>
+							<code code="PHC1427" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" displayName="Sequence within line"/>
+							<!-- Sequence within line -->
+							<value xsi:type="INT" value="1"/>
+						</observation>
+					</entryRelationship>
+				</observation>
+			</component>
+			<component typeCode="COMP">
+				<!-- This sequence number matches up to the corresponding sequenceNumber 
+                                     of the descriptive text cause of death recorded in the 
+                                     Death Causal Information Organizer in previous documents in 
+                                     the information flow.
+                                     sequenceNumber/@value="0" indicates that this is an 
+                                     "other cause of death" i.e. from Part II of the Cause of Death 
+                                     section on the death certificate-->
+				<sequenceNumber value="0"/>
+				<seperatableInd value="false"/>
+				<observation classCode="OBS" moodCode="EVN">
+					<!-- [VRDR STU2] Cause of Death Entity Axis Code -->
+					<templateId root="2.16.840.1.113883.10.20.26.1.3.27" extension="2016-12-01"/>
+					<code code="80356-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Cause of death entity axis code"/>
+					<!-- Coded cause of death -->
+					<value xsi:type="CD" code="I64" displayName="Stroke, not specified as hemorrhage or infarction" codeSystem="2.16.840.1.113883.6.3" codeSystemName="ICD10"/>
+					<entryRelationship typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- [VRDR STU2] Sequence Within Line -->
+							<templateId root="2.16.840.1.113883.10.20.26.1.3.30" extension="2016-12-01"/>
+							<code code="PHC1427" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" displayName="Sequence within line"/>
+							<!-- Sequence within line -->
+							<value xsi:type="INT" value="1"/>
+						</observation>
+					</entryRelationship>
+				</observation>
+			</component>
+			<component typeCode="COMP">
+				<observation classCode="OBS" moodCode="EVN">
+					<!-- [VRDR STU2] Cause of Death Record Axis Code -->
+					<templateId root="2.16.840.1.113883.10.20.26.1.3.28" extension="2016-12-01"/>
+					<code code="80357-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Cause of death record axis code"/>
+					<!-- Coded cause of death -->
+					<value xsi:type="CD" code="S09.90" displayName="Unspecified injury of head" codeSystem="2.16.840.1.113883.6.3" codeSystemName="ICD10"/>
+				</observation>
+			</component>
+			<component typeCode="COMP">
+				<observation classCode="OBS" moodCode="EVN">
+					<!-- [VRDR STU2] Cause of Death Record Axis Code -->
+					<templateId root="2.16.840.1.113883.10.20.26.1.3.28" extension="2016-12-01"/>
+					<code code="80357-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Cause of death record axis code"/>
+					<!-- Coded cause of death -->
+					<value xsi:type="CD" code="V89.9" displayName="Person injured in unspecified vehicle accident" codeSystem="2.16.840.1.113883.6.3" codeSystemName="ICD10"/>
+				</observation>
+			</component>
+			<component typeCode="COMP">
+				<observation classCode="OBS" moodCode="EVN">
+					<!-- [VRDR STU2] Cause of Death Record Axis Code -->
+					<templateId root="2.16.840.1.113883.10.20.26.1.3.28" extension="2016-12-01"/>
+					<code code="80357-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Cause of death record axis code"/>
+					<!-- Coded cause of death -->
+					<value xsi:type="CD" code="G40.9" displayName="Epilepsy, unspecified" codeSystem="2.16.840.1.113883.6.3" codeSystemName="ICD10"/>
+				</observation>
+			</component>
+			<component typeCode="COMP">
+				<observation classCode="OBS" moodCode="EVN">
+					<!-- [VRDR STU2] Cause of Death Record Axis Code -->
+					<templateId root="2.16.840.1.113883.10.20.26.1.3.28" extension="2016-12-01"/>
+					<code code="80357-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Cause of death record axis code"/>
+					<!-- Coded cause of death -->
+					<value xsi:type="CD" code="I64" displayName="Stroke, not specified as hemorrhage or infarction" codeSystem="2.16.840.1.113883.6.3" codeSystemName="ICD10"/>
+				</observation>
+			</component>
+			<component typeCode="COMP">
+				<observation classCode="OBS" moodCode="EVN">
+					<!-- [VRDR STU2] Cause of Death Underlying -->
+					<templateId root="2.16.840.1.113883.10.20.26.1.3.29" extension="2016-12-01"/>
+					<!-- Choose coding type automated or manual -->
+					<code code="80359-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Cause of death.underlying [Manual]"/>
+					<!-- Underlying cause of death -->
+					<value xsi:type="CD" code="G40.9" displayName="Epilepsy, unspecified" codeSystem="2.16.840.1.113883.6.3" codeSystemName="ICD10"/>
+				</observation>
+			</component>
+			<component typeCode="COMP">
+				<observation classCode="OBS" moodCode="EVN">
+					<!-- [VRDR STU2] Conversion Flag -->
+					<templateId root="2.16.840.1.113883.10.20.26.1.3.31" extension="2016-12-01"/>
+					<code code="PHC1422" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" displayName="Sequence within line"/>
+					<!-- Transax Conversion Flag -->
+					<value xsi:type="CD" code="PHC1379" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" displayName="Artificial code conversion; no other action"/>
+				</observation>
+			</component>
+		</organizer>
+	</entry>
+	<entry typeCode="DRIV">
+		<observation classCode="OBS" moodCode="EVN">
+			<!-- [VRDR STU2] Activity at Time of Death -->
+			<templateId root="2.16.840.1.113883.10.20.26.1.3.21" extension="2016-12-01"/>
+			<code code="80626-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Activity at time of death"/>
+			<!-- Activity type -->
+			<value code="PHC1352" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" displayName="While engaged in other specified activities" xsi:type="CD"/>
+		</observation>
+	</entry>
+	<entry typeCode="DRIV">
+		<organizer classCode="CLUSTER" moodCode="EVN">
+			<!-- [VRDR STU2] Injury Organizer (V2) -->
+			<templateId root="2.16.840.1.113883.10.20.26.1.3.52" extension="2016-12-01"/>
+			<statusCode code="completed"/>
+			<component typeCode="COMP">
+				<observation classCode="OBS" moodCode="EVN">
+					<!-- [VRDR STU2] Injury Involved in Death -->
+					<templateId root="2.16.840.1.113883.10.20.26.1.3.40" extension="2016-12-01"/>
+					<code code="71481-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Did the death of this person involve injury of any kind"/>
+					<value xsi:type="CD" code="Y" codeSystem="2.16.840.1.113883.12.136" codeSystemName="Yes/no indicator (HL7 Table 0136)" displayName="Yes"/>
+				</observation>
+			</component>
+			<component typeCode="COMP">
+				<observation classCode="OBS" moodCode="EVN">
+					<!-- [VRDR STU2] Injury Details -->
+					<templateId root="2.16.840.1.113883.10.20.26.1.3.33" extension="2016-12-01"/>
+					<code code="11374-6" displayName="Injury incident description" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+					<text mediaType="text/plain">Car left road, hit tree and rolled over.</text>
+					<!-- Date/time of injury -->
+					<effectiveTime value="20161101"/>
+					<!-- Location of injury -->
+					<participant typeCode="LOC">
+						<participantRole classCode="ROL">
+							<!-- Location of injury (address) -->
+							<addr>
+								<streetAddressLine>22 Any Street</streetAddressLine>
+								<city>Anyville</city>
+								<postalCode>12345</postalCode>
+								<country>US</country>
+							</addr>
+							<playingEntity classCode="PLC">
+								<code code="4" displayName="Street/Highway" codeSystem="2.16.840.1.114222.4.5.320" codeSystemName="ICD10 Place of Occurrence"/>
+							</playingEntity>
+						</participantRole>
+					</participant>
+				</observation>
+			</component>
+			<component typeCode="COMP">
+				<observation classCode="OBS" moodCode="EVN">
+					<!-- [VRDR STU2] Injury Association with Transportation Event -->
+					<templateId root="2.16.840.1.113883.10.20.26.1.3.34" extension="2016-12-01"/>
+					<code code="69448-9" displayName="Injury leading to death associated with transportation event" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+					<value xsi:type="CD" code="Y" codeSystem="2.16.840.1.113883.12.136" codeSystemName="Yes/no indicator (HL7 Table 0136)" displayName="Yes"/>
+					<participant typeCode="SBJ">
+						<participantRole>
+							<code code="236320001" displayName="Driver/Operator" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
+						</participantRole>
+					</participant>
+				</observation>
+			</component>
+			<component typeCode="COMP">
+				<observation classCode="OBS" moodCode="EVN">
+					<!-- [VRDR STU2] Injury Association with Work -->
+					<templateId root="2.16.840.1.113883.10.20.26.1.3.41" extension="2016-12-01"/>
+					<code code="69444-8" displayName="Did death result from injury at work" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+					<value xsi:type="CD" code="Y" codeSystem="2.16.840.1.113883.12.136" codeSystemName="Yes/no indicator (HL7 Table 0136)" displayName="Yes"/>
+				</observation>
+			</component>
+		</organizer>
+	</entry>
+	<entry typeCode="DRIV">
+		<observation classCode="OBS" moodCode="EVN">
+			<!-- [VRDR STU2] Pregnancy Status (V2) -->
+			<templateId root="2.16.840.1.113883.10.20.26.1.12" extension="2016-12-01"/>
+			<code code="69442-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Pregnancy Status"/>
+			<!-- The information in this template is only required if the decedent is 
+                                 female and in the age range of 5 to 75 years. In other cases, 
+                                 e.g., male decedent, the nullFlavor="NA", should be provided. -->
+			<!--  <value xsi:type="CD" nullFlavor="NA"/>-->
+			<value xsi:type="CD" code="PHC1260" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" displayName="Not pregnant within the past year"/>
+			<!-- Only required if this is a Jurisdiction Death Information 
+                                 Document or a Coded Cause of Death Document and the decedent is 
+                                 female and in the age range of 5 to 75 years -->
+			<entryRelationship typeCode="SUBJ" inversionInd="true">
+				<observation classCode="OBS" moodCode="EVN">
+					<!-- [VRDR STU2] Pregnancy Edit Flag -->
+					<templateId root="2.16.840.1.113883.10.20.26.1.3.44" extension="2016-12-01"/>
+					<code code="PHC1429" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" displayName="Pregnancy edit flag"/>
+					<value xsi:type="CD" code="PHC1380" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" displayName="On (verified)"/>
+				</observation>
+			</entryRelationship>
+		</observation>
+	</entry>
+	<entry typeCode="DRIV">
+		<observation classCode="OBS" moodCode="EVN">
+			<!-- [VRDR STU2] Tobacco Use Contributed to Death (V2) -->
+			<templateId root="2.16.840.1.113883.10.20.26.1.14" extension="2016-12-01"/>
+			<code code="69443-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Did tobacco use contribute to death"/>
+			<value xsi:type="CD" code="373067005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="No"/>
+		</observation>
+	</entry>
+</section>
