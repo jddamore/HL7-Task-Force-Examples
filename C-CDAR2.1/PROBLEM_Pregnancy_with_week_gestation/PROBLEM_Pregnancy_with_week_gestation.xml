@@ -25,7 +25,7 @@
 						<content>Estimated Conception: Jan 3 2020</content>
 					</td>
 					<td>Active</td>
-					<td>Estimated Due Date: Sep 19 2020</td>
+					<td ID="Problem1Detail">Estimated Due Date: Sep 19 2020</td>
 				</tr>
 			</tbody>
 		</table>
