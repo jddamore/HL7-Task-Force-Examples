@@ -62,7 +62,7 @@
 					<!-- This SNOMED aligns with pregancy observation value set: 2.16.840.1.113762.1.4.1099.24 -->
 					<value xsi:type="CD" code="77386006" displayName="pregnant" codeSystem="2.16.840.1.113883.6.96">
 						<originalText>
-							<reference value="#problem00001"/>
+							<reference value="#ProblemDescription1"/>
 						</originalText>
 						<!-- These translation codes provide additional specificity, may be useful in tracking time and billing -->
 						<translation code="38039008" displayName="Gestation period, 10 weeks" codeSystem="2.16.840.1.113883.6.96"/>
