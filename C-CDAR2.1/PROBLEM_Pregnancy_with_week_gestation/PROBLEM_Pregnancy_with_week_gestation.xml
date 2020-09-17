@@ -1,9 +1,10 @@
 <section>
-	<!-- This is an example of patient pregancy documented in problem list -->
-	<!-- This information may also be recorded in other sections (e.g. Social History or Pregancy Section) -->
-  <!-- This is meant to represent high level information related to a pregnancy, not detailed OB/GYN information -->
+	<!-- This is an example of patient pregnancy documented in problem list -->
+	<!-- This information may also be recorded in other sections (e.g. Pregnancy Section) -->
+	<!-- C-CDA includes the Pregnancy Observation in Social History - field research indicates it's more common to include in Problem Section -->
+ 	<!-- This is meant to represent high level information related to a pregnancy, not detailed OB/GYN information -->
 	<!-- Other sections may include much more detail, such as dates of prior births, fetal plurality, etc. -->
-	<!-- For pregnancy section, refer to IG related to Pregancy Status http://www.hl7.org/implement/standards/product_brief.cfm?product_id=494 -->
+	<!-- For pregnancy section, refer to IG related to Pregnancy Status http://www.hl7.org/implement/standards/product_brief.cfm?product_id=494 -->
 	<templateId root="2.16.840.1.113883.10.20.22.2.5.1"/>
 	<templateId root="2.16.840.1.113883.10.20.22.2.5.1" extension="2015-08-01"/>
 	<code code="11450-4" codeSystem="2.16.840.1.113883.6.1" displayName="Problem List"/>
@@ -14,8 +15,9 @@
 				<tr>
 					<th>Description</th>
 					<th>Dates</th>
-					<th>Status</th>
 					<th>Additional Detail</th>
+					<th>Status</th>
+				
 				</tr>
 			</thead>
 			<tbody>
@@ -24,8 +26,8 @@
 					<td>
 						<content>Estimated Conception: Jan 3 2020</content>
 					</td>
-					<td>Active</td>
 					<td ID="Problem1Detail">Estimated Due Date: Sep 19 2020</td>
+					<td>Active</td>					
 				</tr>
 			</tbody>
 		</table>
@@ -59,7 +61,7 @@
 						<low value="20200103"/>
 					</effectiveTime>
 					<!-- This is a SNOMED code as the primary vocabulary for problem lists-->
-					<!-- This SNOMED aligns with pregancy observation value set: 2.16.840.1.113762.1.4.1099.24 -->
+					<!-- This SNOMED aligns with pregnancy observation value set: 2.16.840.1.113762.1.4.1099.24 -->
 					<value xsi:type="CD" code="77386006" displayName="pregnant" codeSystem="2.16.840.1.113883.6.96">
 						<originalText>
 							<reference value="#ProblemDescription1"/>
@@ -68,6 +70,7 @@
 						<translation code="38039008" displayName="Gestation period, 10 weeks" codeSystem="2.16.840.1.113883.6.96"/>
 						<translation code="Z3A.10" displayName="10 weeks gestation of pregnancy" codeSystem="2.16.840.1.113883.6.90"/>
 					</value>
+					<!-- Represents who document this Pregnancy, which may be different then clinician overseeing the Pregnancy -->
 					<author>
 						<templateId root="2.16.840.1.113883.10.20.22.4.119"/>
 						<!-- This equates to the date when last updated by the author-->
