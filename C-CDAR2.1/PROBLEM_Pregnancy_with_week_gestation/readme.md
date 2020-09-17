@@ -1,6 +1,6 @@
 ## Approval Status
 
-Approval Status: Not Yet Approved
+Approval Status: Examples Task Force 9/17/2020
 
 ## Templates
 
