@@ -8,7 +8,7 @@
 	<templateId root="2.16.840.1.113883.10.20.22.1.10" extension="2015-08-01"/>
 	<id extension="X451212" root="2.16.840.1.113883.19.5.999535454.1"/>
 	<code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="34847-4" displayName="Surgery Consult Note"/>
-	<title>Community Health and Hospitals: Discharge Summary (UD)</title>
+	<title>Community Health and Hospitals: SURGICAL CONSULT</title>
 	<effectiveTime value="202004201918-0800"/>
 	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
 	<languageCode code="en-US"/>
@@ -35,7 +35,7 @@
 				<birthTime value="19530302"/>
 				<maritalStatusCode code="M" displayName="Married" codeSystem="2.16.840.1.113883.5.2" codeSystemName="MaritalStatusCode"/>
 				<religiousAffiliationCode code="1013" displayName="Christian (non-Catholic, non-specific)" codeSystemName="HL7 Religious Affiliation" codeSystem="2.16.840.1.113883.5.1076"/>
-				<raceCode code="1966-1" displayName="Aleut" codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race &amp; Ethnicity - CDC"/>
+				<raceCode code="1002-5" displayName="American Indian or Alaska Native" codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race &amp; Ethnicity - CDC"/>
 				<ethnicGroupCode code="2186-5" displayName="Not Hispanic or Latino" codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race &amp; Ethnicity - CDC"/>
 				<languageCommunication>
 					<languageCode code="en"/>
