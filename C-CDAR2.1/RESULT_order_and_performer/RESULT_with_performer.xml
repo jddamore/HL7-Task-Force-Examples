@@ -124,11 +124,13 @@
 					<value xsi:type="PQ" value="140" unit="mmol/L"/>
 					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 					<!-- This references the original order --> 
-					<entryRelationship inversionInd="true" typeCode="RSON">
-						<observation classCode="OBS" moodCode="INT">
+					<entryRelationship typeCode="REFR">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.22.4.122" />
 							<id root="69bed2f1-5e2c-42f7-a32f-0c0f41f879d8"/>
-							<code code="51990-0" displayName="Basic Metabolic Panel - Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-						</observation>
+							<code nullFlavor="NP"/>
+							<statusCode code="completed" />
+						</act>
 					</entryRelationship>
 					<referenceRange>
 						<observationRange>
@@ -161,11 +163,13 @@
 					<effectiveTime value="20201021182111-0500"/>
 					<value xsi:type="PQ" value="4.2" unit="mmol/L"/>
 					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
-					<entryRelationship inversionInd="true" typeCode="RSON">
-						<observation classCode="OBS" moodCode="INT">
+					<entryRelationship typeCode="REFR">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.22.4.122" />
 							<id root="69bed2f1-5e2c-42f7-a32f-0c0f41f879d8"/>
-							<code code="51990-0" displayName="Basic Metabolic Panel - Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-						</observation>
+							<code nullFlavor="NP"/>
+							<statusCode code="completed" />
+						</act>
 					</entryRelationship>
 					<referenceRange>
 						<observationRange>
@@ -198,11 +202,13 @@
 					<effectiveTime value="20201021182111-0500"/>
 					<value xsi:type="PQ" value="98" unit="mmol/L"/>
 					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
-					<entryRelationship inversionInd="true" typeCode="RSON">
-						<observation classCode="OBS" moodCode="INT">
+					<entryRelationship typeCode="REFR">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.22.4.122" />
 							<id root="69bed2f1-5e2c-42f7-a32f-0c0f41f879d8"/>
-							<code code="51990-0" displayName="Basic Metabolic Panel - Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-						</observation>
+							<code nullFlavor="NP"/>
+							<statusCode code="completed" />
+						</act>
 					</entryRelationship>
 					<referenceRange>
 						<observationRange>
@@ -236,11 +242,13 @@
 					<effectiveTime value="20201021182111-0500"/>
 					<value xsi:type="PQ" value="24" unit="mmol/L"/>
 					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
-					<entryRelationship inversionInd="true" typeCode="RSON">
-						<observation classCode="OBS" moodCode="INT">
+					<entryRelationship typeCode="REFR">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.22.4.122" />
 							<id root="69bed2f1-5e2c-42f7-a32f-0c0f41f879d8"/>
-							<code code="51990-0" displayName="Basic Metabolic Panel - Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-						</observation>
+							<code nullFlavor="NP"/>
+							<statusCode code="completed" />
+						</act>
 					</entryRelationship>
 					<referenceRange>
 						<observationRange>
@@ -273,11 +281,13 @@
 					<effectiveTime value="20201021182111-0500"/>
 					<value xsi:type="PQ" value="10" unit="md/dL"/>
 					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
-					<entryRelationship inversionInd="true" typeCode="RSON">
-						<observation classCode="OBS" moodCode="INT">
+					<entryRelationship typeCode="REFR">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.22.4.122" />
 							<id root="69bed2f1-5e2c-42f7-a32f-0c0f41f879d8"/>
-							<code code="51990-0" displayName="Basic Metabolic Panel - Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-						</observation>
+							<code nullFlavor="NP"/>
+							<statusCode code="completed" />
+						</act>
 					</entryRelationship>
 					<referenceRange>
 						<observationRange>
@@ -310,11 +320,13 @@
 					<effectiveTime value="20201021182111-0500"/>
 					<value xsi:type="PQ" value="1.2" unit="mg/dL"/>
 					<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
-					<entryRelationship inversionInd="true" typeCode="RSON">
-						<observation classCode="OBS" moodCode="INT">
+					<entryRelationship typeCode="REFR">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.22.4.122" />
 							<id root="69bed2f1-5e2c-42f7-a32f-0c0f41f879d8"/>
-							<code code="51990-0" displayName="Basic Metabolic Panel - Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-						</observation>
+							<code nullFlavor="NP"/>
+							<statusCode code="completed" />
+						</act>
 					</entryRelationship>
 					<referenceRange>
 						<observationRange>
@@ -347,11 +359,13 @@
 					<effectiveTime value="20201021182111-0500"/>
 					<value xsi:type="PQ" value="185" unit="mmol/L"/>
 					<interpretationCode code="H" codeSystem="2.16.840.1.113883.5.83"/>
-					<entryRelationship inversionInd="true" typeCode="RSON">
-						<observation classCode="OBS" moodCode="INT">
+					<entryRelationship typeCode="REFR">
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.22.4.122" />
 							<id root="69bed2f1-5e2c-42f7-a32f-0c0f41f879d8"/>
-							<code code="51990-0" displayName="Basic Metabolic Panel - Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-						</observation>
+							<code nullFlavor="NP"/>
+							<statusCode code="completed" />
+						</act>
 					</entryRelationship>
 					<referenceRange>
 						<observationRange>

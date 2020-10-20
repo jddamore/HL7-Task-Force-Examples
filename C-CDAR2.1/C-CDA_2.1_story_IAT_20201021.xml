@@ -1038,11 +1038,13 @@
 									<value xsi:type="PQ" value="140" unit="mmol/L"/>
 									<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
 									<!-- This references the original order -->
-									<entryRelationship inversionInd="true" typeCode="RSON">
-										<observation classCode="OBS" moodCode="INT">
+									<entryRelationship typeCode="REFR">
+										<act classCode="ACT" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.22.4.122"/>
 											<id root="69bed2f1-5e2c-42f7-a32f-0c0f41f879d8"/>
-											<code code="51990-0" displayName="Basic Metabolic Panel - Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-										</observation>
+											<code nullFlavor="NP"/>
+											<statusCode code="completed"/>
+										</act>
 									</entryRelationship>
 									<referenceRange>
 										<observationRange>
@@ -1075,11 +1077,13 @@
 									<effectiveTime value="20201021182111-0500"/>
 									<value xsi:type="PQ" value="4.2" unit="mmol/L"/>
 									<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
-									<entryRelationship inversionInd="true" typeCode="RSON">
-										<observation classCode="OBS" moodCode="INT">
+									<entryRelationship typeCode="REFR">
+										<act classCode="ACT" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.22.4.122"/>
 											<id root="69bed2f1-5e2c-42f7-a32f-0c0f41f879d8"/>
-											<code code="51990-0" displayName="Basic Metabolic Panel - Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-										</observation>
+											<code nullFlavor="NP"/>
+											<statusCode code="completed"/>
+										</act>
 									</entryRelationship>
 									<referenceRange>
 										<observationRange>
@@ -1112,11 +1116,13 @@
 									<effectiveTime value="20201021182111-0500"/>
 									<value xsi:type="PQ" value="98" unit="mmol/L"/>
 									<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
-									<entryRelationship inversionInd="true" typeCode="RSON">
-										<observation classCode="OBS" moodCode="INT">
+									<entryRelationship typeCode="REFR">
+										<act classCode="ACT" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.22.4.122"/>
 											<id root="69bed2f1-5e2c-42f7-a32f-0c0f41f879d8"/>
-											<code code="51990-0" displayName="Basic Metabolic Panel - Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-										</observation>
+											<code nullFlavor="NP"/>
+											<statusCode code="completed"/>
+										</act>
 									</entryRelationship>
 									<referenceRange>
 										<observationRange>
@@ -1150,11 +1156,13 @@
 									<effectiveTime value="20201021182111-0500"/>
 									<value xsi:type="PQ" value="24" unit="mmol/L"/>
 									<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
-									<entryRelationship inversionInd="true" typeCode="RSON">
-										<observation classCode="OBS" moodCode="INT">
+									<entryRelationship typeCode="REFR">
+										<act classCode="ACT" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.22.4.122"/>
 											<id root="69bed2f1-5e2c-42f7-a32f-0c0f41f879d8"/>
-											<code code="51990-0" displayName="Basic Metabolic Panel - Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-										</observation>
+											<code nullFlavor="NP"/>
+											<statusCode code="completed"/>
+										</act>
 									</entryRelationship>
 									<referenceRange>
 										<observationRange>
@@ -1187,11 +1195,13 @@
 									<effectiveTime value="20201021182111-0500"/>
 									<value xsi:type="PQ" value="10" unit="md/dL"/>
 									<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
-									<entryRelationship inversionInd="true" typeCode="RSON">
-										<observation classCode="OBS" moodCode="INT">
+									<entryRelationship typeCode="REFR">
+										<act classCode="ACT" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.22.4.122"/>
 											<id root="69bed2f1-5e2c-42f7-a32f-0c0f41f879d8"/>
-											<code code="51990-0" displayName="Basic Metabolic Panel - Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-										</observation>
+											<code nullFlavor="NP"/>
+											<statusCode code="completed"/>
+										</act>
 									</entryRelationship>
 									<referenceRange>
 										<observationRange>
@@ -1224,11 +1234,13 @@
 									<effectiveTime value="20201021182111-0500"/>
 									<value xsi:type="PQ" value="1.2" unit="mg/dL"/>
 									<interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83"/>
-									<entryRelationship inversionInd="true" typeCode="RSON">
-										<observation classCode="OBS" moodCode="INT">
+									<entryRelationship typeCode="REFR">
+										<act classCode="ACT" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.22.4.122"/>
 											<id root="69bed2f1-5e2c-42f7-a32f-0c0f41f879d8"/>
-											<code code="51990-0" displayName="Basic Metabolic Panel - Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-										</observation>
+											<code nullFlavor="NP"/>
+											<statusCode code="completed"/>
+										</act>
 									</entryRelationship>
 									<referenceRange>
 										<observationRange>
@@ -1261,11 +1273,13 @@
 									<effectiveTime value="20201021182111-0500"/>
 									<value xsi:type="PQ" value="185" unit="mmol/L"/>
 									<interpretationCode code="H" codeSystem="2.16.840.1.113883.5.83"/>
-									<entryRelationship inversionInd="true" typeCode="RSON">
-										<observation classCode="OBS" moodCode="INT">
+									<entryRelationship typeCode="REFR">
+										<act classCode="ACT" moodCode="EVN">
+											<templateId root="2.16.840.1.113883.10.20.22.4.122"/>
 											<id root="69bed2f1-5e2c-42f7-a32f-0c0f41f879d8"/>
-											<code code="51990-0" displayName="Basic Metabolic Panel - Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-										</observation>
+											<code nullFlavor="NP"/>
+											<statusCode code="completed"/>
+										</act>
 									</entryRelationship>
 									<referenceRange>
 										<observationRange>
@@ -1316,78 +1330,77 @@
 			<!-- ******************* PLAN OF TREATMENT ********************** -->
 			<!-- Example 4 first half -->
 			<component>
-			<section>
-        <templateId root="2.16.840.1.113883.10.20.22.2.10" extension="2014-06-09"/>
-        <templateId root="2.16.840.1.113883.10.20.22.2.10"/>
-        <code code="18776-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
-            displayName="Plan of Care"/>
-        <title>Plan of Treatment</title>
-        <!-- one Planned Observation in the human readable text and as a discrete entry -->
-        <text>
-            <!-- this section may contain many different Planned items, so we use the table caption to help identify each -->
-            <table>
-                <caption>Planned Observation</caption>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Date</th>
-                        <th>Details</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ID="ID0EFFFFFFCAB2">
-                        <td ID="ID0EFAAAAACAB2">Metabolic Panel</td>
-                        <td>Oct 22, 2020</td>
-                        <td/>
-                    </tr>
-                </tbody>
-            </table>
-        </text>
-        <!-- a planned observation entry -->
-        <entry>
-            <!-- observation with moodCode indicating Intent -->
-            <observation classCode="OBS" moodCode="INT">
-                <templateId root="2.16.840.1.113883.10.20.22.4.44" extension="2014-06-09"/>
-                <templateId root="2.16.840.1.113883.10.20.22.4.44"/>
-                <id root="69bed2f1-5e2c-42f7-a32f-0c0f41f879d8"/>
-				<code code="51990-0" displayName="Basic Metabolic Panel - Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
-                    <originalText>
-                        <reference value="#ID0EFAAAAACAB2"/>
-                    </originalText>
-                </code>
-                <text>
-                    <!-- referencing the entire text -->
-                    <reference value="#ID0EFFFFFFCAB2"/>
-                </text>
-                <statusCode code="active"/>
-                <effectiveTime value="20201022"/>
-				<author>
-						<templateId root="2.16.840.1.113883.10.20.22.4.119"/>
-						<!-- This is the time of that content was entered in local EHR system-->
-						<time value="20201021173502-0500"/>
-						<assignedAuthor>
-							<id extension="66666" root="2.16.840.1.113883.4.6"/>
-							<code code="207PE0004X" codeSystem="2.16.840.1.113883.6.101" codeSystemName="NUCC" displayName="Emergency Medicine"/>
-							<addr>
-								<streetAddressLine>6666 StreetName St.</streetAddressLine>
-								<city>Silver Spring</city>
-								<state>MD</state>
-								<postalCode>20901</postalCode>
-								<country>US</country>
-							</addr>
-							<telecom value="tel:+1(301)666-6666" use="WP"/>
-							<assignedPerson>
-								<name>
-									<prefix qualifier="TITLE">Dr</prefix>
-									<given>Ed</given>
-									<family>Emergency</family>
-								</name>
-							</assignedPerson>
-						</assignedAuthor>
-					</author>
-            </observation>
-        </entry>
-    </section>
+				<section>
+					<templateId root="2.16.840.1.113883.10.20.22.2.10" extension="2014-06-09"/>
+					<templateId root="2.16.840.1.113883.10.20.22.2.10"/>
+					<code code="18776-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Plan of Care"/>
+					<title>Plan of Treatment</title>
+					<!-- one Planned Observation in the human readable text and as a discrete entry -->
+					<text>
+						<!-- this section may contain many different Planned items, so we use the table caption to help identify each -->
+						<table>
+							<caption>Planned Observation</caption>
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Date</th>
+									<th>Details</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ID="ID0EFFFFFFCAB2">
+									<td ID="ID0EFAAAAACAB2">Metabolic Panel</td>
+									<td>Oct 22, 2020</td>
+									<td/>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- a planned observation entry -->
+					<entry>
+						<!-- observation with moodCode indicating Intent -->
+						<observation classCode="OBS" moodCode="RQO">
+							<templateId root="2.16.840.1.113883.10.20.22.4.44" extension="2014-06-09"/>
+							<templateId root="2.16.840.1.113883.10.20.22.4.44"/>
+							<id root="69bed2f1-5e2c-42f7-a32f-0c0f41f879d8"/>
+							<code code="51990-0" displayName="Basic Metabolic Panel - Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+								<originalText>
+									<reference value="#ID0EFAAAAACAB2"/>
+								</originalText>
+							</code>
+							<text>
+								<!-- referencing the entire text -->
+								<reference value="#ID0EFFFFFFCAB2"/>
+							</text>
+							<statusCode code="active"/>
+							<effectiveTime value="20201022"/>
+							<author>
+								<templateId root="2.16.840.1.113883.10.20.22.4.119"/>
+								<!-- This is the time of that content was entered in local EHR system-->
+								<time value="20201021173502-0500"/>
+								<assignedAuthor>
+									<id extension="66666" root="2.16.840.1.113883.4.6"/>
+									<code code="207PE0004X" codeSystem="2.16.840.1.113883.6.101" codeSystemName="NUCC" displayName="Emergency Medicine"/>
+									<addr>
+										<streetAddressLine>6666 StreetName St.</streetAddressLine>
+										<city>Silver Spring</city>
+										<state>MD</state>
+										<postalCode>20901</postalCode>
+										<country>US</country>
+									</addr>
+									<telecom value="tel:+1(301)666-6666" use="WP"/>
+									<assignedPerson>
+										<name>
+											<prefix qualifier="TITLE">Dr</prefix>
+											<given>Ed</given>
+											<family>Emergency</family>
+										</name>
+									</assignedPerson>
+								</assignedAuthor>
+							</author>
+						</observation>
+					</entry>
+				</section>
 			</component>
 			<!-- Added Goals - original version from C-CDA_R2_Care_Plan.xml from R2.0 IG package.
 			     There are no duplicated template Ids with extensions -
