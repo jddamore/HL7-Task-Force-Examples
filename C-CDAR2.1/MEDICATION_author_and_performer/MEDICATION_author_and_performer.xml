@@ -1,0 +1,151 @@
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="/infrastructure/cda/CDA_SDTC.xsd" xmlns:voc="urn:hl7-org:v3/voc" xmlns:sdtc="urn:hl7-org:sdtc">
+	<section>
+		<templateId root="2.16.840.1.113883.10.20.22.2.1.1" />
+		<templateId root="2.16.840.1.113883.10.20.22.2.1.1" extension="2014-06-09"/>
+		<!-- Medication Section (entries required) -->
+		<code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Medication Use"/>
+		<title>MEDICATIONS</title>
+		<text>
+			<table border="1" width="100%">
+				<thead>
+					<tr>
+						<th>Medication</th>
+						<th>Instructions</th>
+						<th>Dosage</th>
+						<th>Effective Dates (start - stop)</th>
+						<th>Prescriber</th>
+						<th>Status</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ID="Medication_6">
+						<td>
+							<content ID="MedicationName_6">3 ML Insulin Glargine 100 UNT/ML Pen Injector [Lantus]</content>
+						</td>
+						<td>
+							<content ID="MedicationSig_6">Administer 40 units at bedtime</content>
+						</td>
+						<td>
+							<content>40 units</content>
+						</td>
+						<td>Dec-15-2019 - </td>
+						<td>Active</td>
+					</tr>
+				</tbody>
+			</table>
+		</text>
+		<entry typeCode="DRIV">
+			<substanceAdministration classCode="SBADM" moodCode="EVN">
+				<templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+				<templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
+				<id root="1310a2d3-f888-4722-b4c4-a3c5911ac7f9"/>
+				<text>
+					<!-- This reference refers to medication information in unstructured portion of section-->
+					<reference value="#Medication_6"/>
+				</text>
+				<statusCode code="active"/>
+				<!-- This first effectiveTime shows that medication was added on January 9, 2009 (not known to have stopped)-->
+				<effectiveTime xsi:type="IVL_TS">
+					<low value="20191215"/>
+					<high nullFlavor="NI"/>
+				</effectiveTime>
+				<!-- The second effectiveTime specifies dose frequency, which can be either a period (PIVL_TS) or event (EIVL_TS). -->
+				<!-- This long-lasting insulin is administered once per day before bedtime (code = "HS", hour of sleep), which is an event-->
+				<effectiveTime xsi:type="EIVL_TS" operator="A">
+					<event code="HS"/>
+				</effectiveTime>
+				<!-- This route uses the NCI (National Cancer Institute) Thesauraus code system, which is constrained to the value set of 2.16.840.1.113883.3.88.12.3221.8.7 (FDA Medication Route) -->
+				<routeCode code="C38299" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="SUBCUTANEOUS" codeSystemName="NCI Thesaurus"/>
+				<!-- Since this dose is not pre-coordinated, specify both the amount with units in UCUM. [IU] is international units -->
+				<!-- Note that this basal insulin is not administered on a sliding scale and a specific dose is administered-->
+				<doseQuantity value="40" unit="[IU]"/>
+				<consumable typeCode="CSM">
+					<manufacturedProduct classCode="MANU">
+						<!-- ** Medication information ** -->
+						<templateId root="2.16.840.1.113883.10.20.22.4.23" />
+						<templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
+						<manufacturedMaterial>
+							<!-- Medications should be specified at a level corresponding to prescription when possible (branded medication below)-->
+							<!-- Note the medication code specified in the test data is 261551, but that is not used since it's not an administered product (just brand name)-->
+							<code code="847232" codeSystem="2.16.840.1.113883.6.88" displayName="3 ML Insulin Glargine 100 UNT/ML Pen Injector [Lantus]" codeSystemName="RxNorm">
+								<originalText>
+									<reference value="#MedicationName_6"/>
+								</originalText>
+							</code>
+						</manufacturedMaterial>
+						<manufacturerOrganization>
+							<name>SANOFI-AVENTIS</name>
+						</manufacturerOrganization>
+					</manufacturedProduct>
+				</consumable>
+				<performer>
+					<!-- This is the time of original prescription -->
+					<time value="20191212123222-0500"/>
+					<assignedEntity>
+						<id root="2.16.840.1.113883.19.5.9999.456" extension="2981823"/>
+						<code code="207QA0505X" displayName="Adult Medicine" codeSystem="2.16.840.1.113883.6.101" codeSystemName="Healthcare Provider Taxonomy (HIPAA)"/>
+						<telecom use="WP" value="tel:+1(555)-555-5000"/>
+						<assignedPerson>
+							<name>
+								<prefix qualifier="TITLE">Dr</prefix>
+								<given>Mary</given>
+								<family>Primary</family>
+							</name>
+						</assignedPerson>
+						<representedOrganization classCode="ORG">
+							<id root="2.16.840.1.113883.19.5.9999.1393"/>
+							<name>Community Health and Hospitals</name>
+							<telecom use="WP" value="tel:+1(555)-555-5000"/>
+							<addr use="WP">
+								<streetAddressLine>1002 Healthcare Dr</streetAddressLine>
+								<city>Avon</city>
+								<state>CT</state>
+								<postalCode>06032</postalCode>
+								<country>US</country>
+							</addr>
+						</representedOrganization>
+					</assignedEntity>
+				</performer>
+				<author>
+					<templateId root="2.16.840.1.113883.10.20.22.4.119"/>
+					<!-- This is the time of that content was entered in local EHR system-->
+					<time value="20201021173502-0500"/>
+					<assignedAuthor>
+						<id extension="66666" root="2.16.840.1.113883.4.6"/>
+						<code code="207PE0004X" codeSystem="2.16.840.1.113883.6.101" codeSystemName="NUCC" displayName="Emergency Medicine"/>
+						<addr>
+							<streetAddressLine>6666 StreetName St.</streetAddressLine>
+							<city>Silver Spring</city>
+							<state>MD</state>
+							<postalCode>20901</postalCode>
+							<country>US</country>
+						</addr>
+						<telecom value="tel:+1(301)666-6666" use="WP"/>
+						<assignedPerson>
+							<name>
+								<prefix qualifier="TITLE">Dr</prefix>
+								<given>Ed</given>
+								<family>Emergency</family>
+							</name>
+						</assignedPerson>
+					</assignedAuthor>
+				</author>
+				<entryRelationship typeCode="COMP">
+					<substanceAdministration classCode="SBADM" moodCode="EVN">
+						<templateId root="2.16.840.1.113883.10.20.22.4.147"/>
+						<code code="76662-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Medication Instructions"/>
+						<text>
+							<!-- Reference into the section.text to a tag that ONLY contains free text SIG -->
+							<reference value="#MedicationSig_6"/>
+						</text>
+						<consumable>
+							<manufacturedProduct>
+								<manufacturedLabeledDrug nullFlavor="NA"/>
+							</manufacturedProduct>
+						</consumable>
+					</substanceAdministration>
+				</entryRelationship>
+			</substanceAdministration>
+		</entry>
+	</section>
+</ClinicalDocument>
