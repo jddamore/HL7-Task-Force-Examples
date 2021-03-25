@@ -1,0 +1,209 @@
+<section>
+	<!-- This is an example of a medication with a prescriber (first entry) and recorded (second entry) --> 
+	<!-- Author elements are provided in both entries. In the second a functionCode is used to show that the author is not the precriber --> 
+	<!-- Templates for Medication Section with C-CDA 2.1 and 1.1 --> 
+	<templateId root="2.16.840.1.113883.10.20.22.2.1.1" extension="2014-06-09"/>
+	<templateId root="2.16.840.1.113883.10.20.22.2.1.1" />
+	<!-- Medication Section (entries required) -->
+	<code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Medication Use"/>
+	<title>MEDICATIONS</title>
+	<text>
+		<table border="1" width="100%">
+			<thead>
+				<tr>
+					<th>Medication</th>
+					<th>Instructions</th>
+					<th>Effective Dates (start - stop)</th>
+					<th>Status</th>
+					<th>Notes</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- This medication is being prescribed (moodCode=INT, author = prescriber) in current encounter -->
+				<tr ID="Medication_1">
+					<td>
+						<content ID="MedicationName_1">metFORMIN hydrochloride 500 MG Oral Tablet</content>
+					</td>
+					<td>
+						<content ID="MedicationSig_1">Take 1 tablet every day</content>
+					</td>
+					<td>Mar-25-2021 - </td>
+					<td>Active</td>
+					<td />
+				</tr>
+				<!-- This medication is being recorded (moodCode=EVN, author = recorded) in current encounter -->
+				<tr ID="Medication_2">
+					<td>
+						<content ID="MedicationName_2">aspirin 81 MG Oral Tablet</content>
+					</td>
+					<td>
+						<content ID="MedicationSig_2">Take 1 tablet every day</content>
+					</td>
+					<td>2015 - </td>
+					<td>Active</td>
+					<td ID="MedicationNote_2">Patient buys medication over-the-counter </td>
+				</tr>
+			</tbody>
+		</table>
+	</text>
+	<entry typeCode="DRIV">
+		<substanceAdministration classCode="SBADM" moodCode="INT">
+			<templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
+			<templateId root="2.16.840.1.113883.10.20.22.4.16" />
+			<id root="1310a2d3-f888-4722-b4c4-a3c5911ac7f7"/>
+			<text>
+				<!-- This reference refers to medication information in human-readable portion of section-->
+				<reference value="#Medication_1"/>
+			</text>
+			<statusCode code="active"/>
+			<effectiveTime xsi:type="IVL_TS">
+				<low value="20210325"/>
+			</effectiveTime>
+			<effectiveTime xsi:type="PIVL_TS" operator="A">
+				<period value="1" unit="d" />
+			</effectiveTime>
+			<routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" displayName="Oral"/>
+			<doseQuantity value="1" unit="{tablet}"/>
+			<consumable typeCode="CSM">
+				<manufacturedProduct classCode="MANU">
+					<!-- ** Medication information ** -->
+					<templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
+					<templateId root="2.16.840.1.113883.10.20.22.4.23" />
+					<manufacturedMaterial>
+						<code code="861007" codeSystem="2.16.840.1.113883.6.88" displayName="metFORMIN hydrochloride 500 MG Oral Tablet" codeSystemName="RxNorm">
+							<originalText>
+								<reference value="#MedicationName_1"/>
+							</originalText>
+						</code>
+					</manufacturedMaterial>
+				</manufacturedProduct>
+			</consumable>
+			<author>
+                <templateId root="2.16.840.1.113883.10.20.22.4.119"/>
+                <!-- Time the author made the prescription -->
+                <time value="20210324140532-0500"/>
+                <assignedAuthor>
+                    <id extension="66666" root="2.16.840.1.113883.4.6"/>
+                    <code code="207RC0000X" codeSystem="2.16.840.1.113883.6.101"
+                        codeSystemName="NUCC" displayName="Cardiovascular Disease"/>
+                    <addr>
+                        <streetAddressLine>6666 StreetName St.</streetAddressLine>
+                        <city>Silver Spring</city>
+                        <state>MD</state>
+                        <postalCode>20901</postalCode>
+                        <country>US</country>
+                    </addr>
+                    <telecom value="tel:+1(301)666-6666" use="WP"/>
+                    <assignedPerson>
+                        <name>
+                            <given>Heartly</given>
+                            <family>Sixer</family>
+                            <suffix>MD</suffix>
+                        </name>
+                    </assignedPerson>
+                </assignedAuthor>
+            </author>
+			<entryRelationship typeCode="COMP">
+				<substanceAdministration classCode="SBADM" moodCode="EVN">
+					<templateId root="2.16.840.1.113883.10.20.22.4.147"/>
+					<code code="76662-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Medication Instructions"/>
+					<text>
+						<!-- Reference into the section.text to a tag that ONLY contains free text SIG -->
+						<reference value="#MedicationSig_1"/>
+					</text>
+					<consumable>
+						<manufacturedProduct>
+							<manufacturedLabeledDrug nullFlavor="NA"/>
+						</manufacturedProduct>
+					</consumable>
+				</substanceAdministration>
+			</entryRelationship>
+		</substanceAdministration>
+	</entry>
+	<entry typeCode="DRIV">
+		<substanceAdministration classCode="SBADM" moodCode="EVN">
+			<templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
+			<templateId root="2.16.840.1.113883.10.20.22.4.16" />
+			<id root="1310a2d3-f888-4722-b4c4-a3c5911ac7f7"/>
+			<text>
+				<!-- This reference refers to medication information in human-readable portion of section-->
+				<reference value="#Medication_2"/>
+			</text>
+			<statusCode code="active"/>
+			<!-- A time can be truncated to the year when more specificity is not known -->
+			<effectiveTime xsi:type="IVL_TS">
+				<low value="2015"/>
+			</effectiveTime>
+			<effectiveTime xsi:type="PIVL_TS" operator="A">
+				<period value="1" unit="d" />
+			</effectiveTime>
+			<routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" displayName="Oral"/>
+			<doseQuantity value="1" unit="{tablet}"/>
+			<consumable typeCode="CSM">
+				<manufacturedProduct classCode="MANU">
+					<!-- ** Medication information ** -->
+					<templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
+					<templateId root="2.16.840.1.113883.10.20.22.4.23" />
+					<manufacturedMaterial>
+						<code code="243670" codeSystem="2.16.840.1.113883.6.88" displayName="aspirin 81 MG Oral Tablet" codeSystemName="RxNorm">
+							<originalText>
+								<reference value="#MedicationName_2"/>
+							</originalText>
+						</code>
+					</manufacturedMaterial>
+				</manufacturedProduct>
+			</consumable>
+			<author>
+                <templateId root="2.16.840.1.113883.10.20.22.4.119"/>
+				<!-- This functionCode can be specifically added when the author was not a prescriber -->
+				<functionCode code="TRANS" codeSystem="2.16.840.1.113883.5.90" displayName="Transcriber" />
+                <!-- Time the author recorded that patient was taking the medication-->
+                <time value="20210324140532-0500"/>
+                <assignedAuthor>
+                    <id extension="66666" root="2.16.840.1.113883.4.6"/>
+                    <code code="207RC0000X" codeSystem="2.16.840.1.113883.6.101"
+                        codeSystemName="NUCC" displayName="Cardiovascular Disease"/>
+                    <addr>
+                        <streetAddressLine>6666 StreetName St.</streetAddressLine>
+                        <city>Silver Spring</city>
+                        <state>MD</state>
+                        <postalCode>20901</postalCode>
+                        <country>US</country>
+                    </addr>
+                    <telecom value="tel:+1(301)666-6666" use="WP"/>
+                    <assignedPerson>
+                        <name>
+                            <given>Heartly</given>
+                            <family>Sixer</family>
+                            <suffix>MD</suffix>
+                        </name>
+                    </assignedPerson>
+                </assignedAuthor>
+            </author>
+			<entryRelationship typeCode="COMP">
+				<substanceAdministration classCode="SBADM" moodCode="EVN">
+					<templateId root="2.16.840.1.113883.10.20.22.4.147"/>
+					<code code="76662-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Medication Instructions"/>
+					<text>
+						<!-- Reference into the section.text to a tag that ONLY contains free text SIG -->
+						<reference value="#MedicationSig_2"/>
+					</text>
+					<consumable>
+						<manufacturedProduct>
+							<manufacturedLabeledDrug nullFlavor="NA"/>
+						</manufacturedProduct>
+					</consumable>
+				</substanceAdministration>
+			</entryRelationship>
+			<entryRelationship typeCode="COMP">
+				<act classCode="ACT" moodCode="EVN">
+					<templateId root="2.16.840.1.113883.10.20.22.4.64"/>
+					<code code="48767-8" displayName="Annotation Comment" codeSystemName="LOINC" codeSystem="2.16.840.1.113883.6.1"/>
+					<text>
+						<reference value="#MedicationNote_2"/>
+					</text>
+				</act>
+			</entryRelationship>
+		</substanceAdministration>
+	</entry>
+</section>
