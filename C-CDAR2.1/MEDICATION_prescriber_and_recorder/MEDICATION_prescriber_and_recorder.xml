@@ -79,30 +79,30 @@
 				</manufacturedProduct>
 			</consumable>
 			<author>
-                <templateId root="2.16.840.1.113883.10.20.22.4.119"/>
-                <!-- Time the author made the prescription -->
-                <time value="20210324140532-0500"/>
-                <assignedAuthor>
-                    <id extension="66666" root="2.16.840.1.113883.4.6"/>
-                    <code code="207RC0000X" codeSystem="2.16.840.1.113883.6.101"
-                        codeSystemName="NUCC" displayName="Cardiovascular Disease"/>
-                    <addr>
-                        <streetAddressLine>6666 StreetName St.</streetAddressLine>
-                        <city>Silver Spring</city>
-                        <state>MD</state>
-                        <postalCode>20901</postalCode>
-                        <country>US</country>
-                    </addr>
-                    <telecom value="tel:+1(301)666-6666" use="WP"/>
-                    <assignedPerson>
-                        <name>
-                            <given>Heartly</given>
-                            <family>Sixer</family>
-                            <suffix>MD</suffix>
-                        </name>
-                    </assignedPerson>
-                </assignedAuthor>
-            </author>
+                		<templateId root="2.16.840.1.113883.10.20.22.4.119"/>
+				<!-- Time the author made the prescription -->
+				<time value="20210324140532-0500"/>
+				<assignedAuthor>
+				    <id extension="66666" root="2.16.840.1.113883.4.6"/>
+				    <code code="207RC0000X" codeSystem="2.16.840.1.113883.6.101"
+					codeSystemName="NUCC" displayName="Cardiovascular Disease"/>
+				    <addr>
+					<streetAddressLine>6666 StreetName St.</streetAddressLine>
+					<city>Silver Spring</city>
+					<state>MD</state>
+					<postalCode>20901</postalCode>
+					<country>US</country>
+				    </addr>
+				    <telecom value="tel:+1(301)666-6666" use="WP"/>
+				    <assignedPerson>
+					<name>
+					    <given>Heartly</given>
+					    <family>Sixer</family>
+					    <suffix>MD</suffix>
+					</name>
+				    </assignedPerson>
+				</assignedAuthor>
+			</author>
 			<entryRelationship typeCode="COMP">
 				<substanceAdministration classCode="SBADM" moodCode="EVN">
 					<templateId root="2.16.840.1.113883.10.20.22.4.147"/>
@@ -154,32 +154,32 @@
 				</manufacturedProduct>
 			</consumable>
 			<author>
-                <templateId root="2.16.840.1.113883.10.20.22.4.119"/>
+				<templateId root="2.16.840.1.113883.10.20.22.4.119"/>
 				<!-- This functionCode can be specifically added when the author was not a prescriber -->
 				<functionCode code="TRANS" codeSystem="2.16.840.1.113883.5.90" displayName="Transcriber" />
-                <!-- Time the author recorded that patient was taking the medication-->
-                <time value="20210324140532-0500"/>
-                <assignedAuthor>
-                    <id extension="66666" root="2.16.840.1.113883.4.6"/>
-                    <code code="207RC0000X" codeSystem="2.16.840.1.113883.6.101"
-                        codeSystemName="NUCC" displayName="Cardiovascular Disease"/>
-                    <addr>
-                        <streetAddressLine>6666 StreetName St.</streetAddressLine>
-                        <city>Silver Spring</city>
-                        <state>MD</state>
-                        <postalCode>20901</postalCode>
-                        <country>US</country>
-                    </addr>
-                    <telecom value="tel:+1(301)666-6666" use="WP"/>
-                    <assignedPerson>
-                        <name>
-                            <given>Heartly</given>
-                            <family>Sixer</family>
-                            <suffix>MD</suffix>
-                        </name>
-                    </assignedPerson>
-                </assignedAuthor>
-            </author>
+				<!-- Time the author recorded that patient was taking the medication-->
+				<time value="20210324140532-0500"/>
+				<assignedAuthor>
+				    <id extension="66666" root="2.16.840.1.113883.4.6"/>
+				    <code code="207RC0000X" codeSystem="2.16.840.1.113883.6.101"
+					codeSystemName="NUCC" displayName="Cardiovascular Disease"/>
+				    <addr>
+					<streetAddressLine>6666 StreetName St.</streetAddressLine>
+					<city>Silver Spring</city>
+					<state>MD</state>
+					<postalCode>20901</postalCode>
+					<country>US</country>
+				    </addr>
+				    <telecom value="tel:+1(301)666-6666" use="WP"/>
+				    <assignedPerson>
+					<name>
+					    <given>Heartly</given>
+					    <family>Sixer</family>
+					    <suffix>MD</suffix>
+					</name>
+				    </assignedPerson>
+				</assignedAuthor>
+            		</author>
 			<entryRelationship typeCode="COMP">
 				<substanceAdministration classCode="SBADM" moodCode="EVN">
 					<templateId root="2.16.840.1.113883.10.20.22.4.147"/>
