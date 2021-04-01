@@ -1,5 +1,5 @@
 <section>
-	<!-- This is an example of a medication with a prescriber (first entry) and recorded (second entry) --> 
+	<!-- This is an example of a medication with a prescriber (first entry) and recorder (second entry) --> 
 	<!-- Author elements are provided in both entries. In the second a functionCode is used to show that the author is not the precriber --> 
 	<!-- Templates for Medication Section with C-CDA 2.1 and 1.1 --> 
 	<templateId root="2.16.840.1.113883.10.20.22.2.1.1" extension="2014-06-09"/>
