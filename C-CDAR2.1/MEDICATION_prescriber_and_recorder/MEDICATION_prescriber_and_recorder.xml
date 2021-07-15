@@ -1,6 +1,7 @@
 <section>
 	<!-- This is an example of a medication with a prescriber (first entry) and recorder (second entry) --> 
 	<!-- Author elements are provided in both entries. In the second a functionCode is used to show that the author is not the precriber --> 
+	<!-- This example also shows how a pharmacy may be recorded for a new prescription (first entry) -->
 	<!-- Templates for Medication Section with C-CDA 2.1 and 1.1 --> 
 	<templateId root="2.16.840.1.113883.10.20.22.2.1.1" extension="2014-06-09"/>
 	<templateId root="2.16.840.1.113883.10.20.22.2.1.1" />
@@ -19,7 +20,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<!-- This medication is being prescribed (moodCode=INT, author = prescriber) in current encounter -->
+				<!-- This medication is being prescribed (moodCode=INT, example of author = prescriber) in current encounter -->
 				<tr ID="Medication_1">
 					<td>
 						<content ID="MedicationName_1">metFORMIN hydrochloride 500 MG Oral Tablet</content>
@@ -31,7 +32,7 @@
 					<td>Active</td>
 					<td />
 				</tr>
-				<!-- This medication is being recorded (moodCode=EVN, author = recorded) in current encounter -->
+				<!-- This medication is being recorded (moodCode=EVN, example of author = recorder) in current encounter -->
 				<tr ID="Medication_2">
 					<td>
 						<content ID="MedicationName_2">aspirin 81 MG Oral Tablet</content>
@@ -47,6 +48,7 @@
 		</table>
 	</text>
 	<entry typeCode="DRIV">
+		<!-- This is a new prescription in the moodCode of INT where the author is the prescriber-->
 		<substanceAdministration classCode="SBADM" moodCode="INT">
 			<templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
 			<templateId root="2.16.840.1.113883.10.20.22.4.16" />
@@ -79,30 +81,61 @@
 				</manufacturedProduct>
 			</consumable>
 			<author>
-                		<templateId root="2.16.840.1.113883.10.20.22.4.119"/>
+				<templateId root="2.16.840.1.113883.10.20.22.4.119"/>
 				<!-- Time the author made the prescription -->
+				<!-- Since this author is the prescriber, no functionCode is necessary. If the author were not prescriber, function code should be included as shown in second medication entry -->
 				<time value="20210324140532-0500"/>
 				<assignedAuthor>
-				    <id extension="66666" root="2.16.840.1.113883.4.6"/>
-				    <code code="207RC0000X" codeSystem="2.16.840.1.113883.6.101"
-					codeSystemName="NUCC" displayName="Cardiovascular Disease"/>
-				    <addr>
-					<streetAddressLine>6666 StreetName St.</streetAddressLine>
-					<city>Silver Spring</city>
-					<state>MD</state>
-					<postalCode>20901</postalCode>
-					<country>US</country>
-				    </addr>
-				    <telecom value="tel:+1(301)666-6666" use="WP"/>
-				    <assignedPerson>
-					<name>
-					    <given>Heartly</given>
-					    <family>Sixer</family>
-					    <suffix>MD</suffix>
-					</name>
-				    </assignedPerson>
+					<id extension="66666" root="2.16.840.1.113883.4.6"/>
+					<code code="207RC0000X" codeSystem="2.16.840.1.113883.6.101" codeSystemName="NUCC" displayName="Cardiovascular Disease"/>
+					<addr>
+						<streetAddressLine>6666 StreetName St.</streetAddressLine>
+						<city>Silver Spring</city>
+						<state>MD</state>
+						<postalCode>20901</postalCode>
+						<country>US</country>
+					</addr>
+					<telecom value="tel:+1(301)666-6666" use="WP"/>
+					<assignedPerson>
+						<name>
+							<given>Heartly</given>
+							<family>Sixer</family>
+							<suffix>MD</suffix>
+						</name>
+					</assignedPerson>
 				</assignedAuthor>
 			</author>
+			<!-- This supply order contains pharmacy information where prescription was sent --> 
+			<entryRelationship typeCode="REFR">
+				<supply classCode="SPLY" moodCode="INT">
+					<templateId root="2.16.840.1.113883.10.20.22.4.17" extension="2014-06-09" />
+					<id root="ada2fc75-1a43-435f-8309-d24e4be5f1ce" />
+					<statusCode code="completed" />
+					<effectiveTime xsi:type="IVL_TS">
+						<low value="20210325" />
+						<high nullFlavor="NA" />
+					</effectiveTime>
+					<repeatNumber value="1" />
+					<quantity value="30" />
+					<!-- The performer represents who will supply the medication (i.e. the pharmacy) --> 
+					<performer>
+						<assignedEntity>
+							<id root="2.16.840.1.113883.19.5" extension="ABC123"/>
+							<representedOrganization>
+								<name>Value Pharmacy</name>
+								<telecom value="tel:+1-(555)666-1002"/>
+								<addr>
+									<streetAddressLine>2474, Rocky place</streetAddressLine>
+									<city>Beaverton</city>
+									<state>OR</state>
+									<postalCode>97006</postalCode>
+								</addr>
+							</representedOrganization>
+						</assignedEntity>
+					</performer>
+				</supply>
+			</entryRelationship>
+			<!-- This denotes a free text sig of the medication --> 
 			<entryRelationship typeCode="COMP">
 				<substanceAdministration classCode="SBADM" moodCode="EVN">
 					<templateId root="2.16.840.1.113883.10.20.22.4.147"/>
@@ -160,26 +193,26 @@
 				<!-- Time the author recorded that patient was taking the medication-->
 				<time value="20210324140532-0500"/>
 				<assignedAuthor>
-				    <id extension="66666" root="2.16.840.1.113883.4.6"/>
-				    <code code="207RC0000X" codeSystem="2.16.840.1.113883.6.101"
+					<id extension="66666" root="2.16.840.1.113883.4.6"/>
+					<code code="207RC0000X" codeSystem="2.16.840.1.113883.6.101"
 					codeSystemName="NUCC" displayName="Cardiovascular Disease"/>
-				    <addr>
-					<streetAddressLine>6666 StreetName St.</streetAddressLine>
-					<city>Silver Spring</city>
-					<state>MD</state>
-					<postalCode>20901</postalCode>
-					<country>US</country>
-				    </addr>
-				    <telecom value="tel:+1(301)666-6666" use="WP"/>
-				    <assignedPerson>
-					<name>
-					    <given>Heartly</given>
-					    <family>Sixer</family>
-					    <suffix>MD</suffix>
-					</name>
-				    </assignedPerson>
+					<addr>
+						<streetAddressLine>6666 StreetName St.</streetAddressLine>
+						<city>Silver Spring</city>
+						<state>MD</state>
+						<postalCode>20901</postalCode>
+						<country>US</country>
+					</addr>
+					<telecom value="tel:+1(301)666-6666" use="WP"/>
+					<assignedPerson>
+						<name>
+							<given>Heartly</given>
+							<family>Sixer</family>
+							<suffix>MD</suffix>
+						</name>
+					</assignedPerson>
 				</assignedAuthor>
-            		</author>
+			</author>
 			<entryRelationship typeCode="COMP">
 				<substanceAdministration classCode="SBADM" moodCode="EVN">
 					<templateId root="2.16.840.1.113883.10.20.22.4.147"/>
